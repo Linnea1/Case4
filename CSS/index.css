@@ -11,3 +11,13 @@ input {
     border: none;
     border-bottom: 1px solid #B6B6B6;
 }
+
+button {
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+}
