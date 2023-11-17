@@ -1,0 +1,41 @@
+.login-page {
+  margin: 20px ;
+}
+
+.login-welcome {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  height: 20px;
+  padding-top: 20px;
+}
+
+.go-to-home-page {
+    flex-grow: 1;
+    background-color: rgb(192, 192, 192);
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.message-login {
+      margin-bottom: 160px;
+}
+
+.sign-up-from-login {
+  text-align: center;
+}
+
+.sign-up-from-login button {
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
