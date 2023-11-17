@@ -10,7 +10,7 @@ function renderLoginPage() {
     <form class="login-form" action="PHP/login.php" method="POST">
       <input type="text" class="login-email" placeholder="Email">
       <input type="password" class="login-password" placeholder="Password">
-      <button class="loginButton" type="submit">Continue</button>
+      <button class="goToHomePage" type="submit">Continue</button>
       <p class="message"></p>
     </form>
     <footer>Don’t have an account?
