@@ -12,4 +12,6 @@ main.innerHTML=`
         </div>
     </div>
 `
+
+document.querySelector(".loginButton").addEventListener("click", renderLoginPage);
 }
