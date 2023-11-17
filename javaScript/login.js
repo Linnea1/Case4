@@ -8,8 +8,8 @@ function renderLoginPage() {
       <p>Log in to continue</p>
     </div>
     <form class="login-form" action="PHP/login.php" method="POST">
-      <input type="text" class="required" placeholder="Email">
-      <input type="password" class="required" placeholder="Password">
+      <input type="text" class="login-email" placeholder="Email">
+      <input type="password" class="login-password" placeholder="Password">
       <button class="loginButton" type="submit">Continue</button>
       <p class="message"></p>
     </form>
