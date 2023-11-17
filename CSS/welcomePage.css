@@ -1,0 +1,15 @@
+.welcomePageWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.welcomePagePicture{
+    height: 40vh;
+    width: 100vw;
+    background-color: rgb(192, 192, 192);
+}
+.loginButton{
+    flex-grow: 1;
+    background-color: rgb(192, 192, 192);
+}
