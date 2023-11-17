@@ -1,7 +1,13 @@
-body{
+body {
     width: 100vw;
     margin: 0;
 }
-main{
+
+main {
     width: 100%;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #B6B6B6;
 }
