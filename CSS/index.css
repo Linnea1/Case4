@@ -7,6 +7,23 @@ main {
     width: 100%;
 }
 
+ul, ol {
+  list-style: none;
+}
+
+a, img {
+  border: 0;
+}
+
+button {
+  border: none;
+  padding: 0;
+}
+
+header, main, nav {
+  display: block;
+}
+
 input {
     border: none;
     border-bottom: 1px solid #B6B6B6;
