@@ -19,4 +19,6 @@ function renderLoginPage() {
       </footer>
     </div>
   `;
+
+  document.querySelector(".fa-arrow-left").addEventListener("click", renderWelcomePage);
 }
