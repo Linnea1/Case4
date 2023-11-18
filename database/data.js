@@ -431,7 +431,7 @@ const awards = [
             uri: "Mary-J-Blige.jpeg",
           },
         ],
-        winner: "Harry’s House",
+        winner: "Harry Styles",
       },
       {
         category: "Best Pop Solo Performance",
