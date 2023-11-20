@@ -14,9 +14,11 @@ function renderRegisterPage(){
 
             <button class="sendRegisterForm" type="button">Continue</button>
         </form>
+        <p class="alreadyAccount">Already have an account? Log In</p>
     </div>
     `
     document.querySelector(".sendRegisterForm").addEventListener("click", register);
+    document.querySelector(".registerGoBack").addEventListener("click", renderWelcomePage);
     async function register() {
         try {
           var username = document.querySelector(".username").value;

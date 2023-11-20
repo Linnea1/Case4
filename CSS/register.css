@@ -10,7 +10,6 @@ main{
     height: 100vh;
 }
 #registrationForm{
-    grid-row: span 2;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -19,5 +18,12 @@ main{
     width: 100%;
     border: none;
     border-bottom: solid 1px black;
-    
+}
+.sendRegisterForm{
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px 0px;
+}
+.alreadyAccount{
+    align-self: end;
 }
