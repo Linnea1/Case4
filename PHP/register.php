@@ -7,7 +7,7 @@ $inputData = json_decode(file_get_contents('php://input'), true);
 
 if (isDuplicateUser($inputData['username'], $inputData['email'], $data['users'])) {
     echo json_encode(['error' => 'Username or email already exists']);
-    exit; // Stop further execution
+    exit;
 }
 
 $newUser = [
@@ -27,10 +27,10 @@ echo json_encode(['message' => 'Registration successful']);
 function isDuplicateUser($username, $email, $users) {
     foreach ($users as $user) {
       if ($user['username'] === $username || $user['email'] === $email) {
-        return true; // Username or email exists
+        return true;
       }
     }
-    return false; // Username and email do not exist
+    return false;
 }
 
 ?>

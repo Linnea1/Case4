@@ -8,9 +8,9 @@ function renderRegisterPage(){
             <p>Create an account to continue</p>
         </div>
         <form id="registrationForm">
-            <input type="text" class="username" name="username" placeholder="Username" required><br>
-            <input type="text" class="email" name="email" placeholder="Email" required><br>
-            <input type="password" class="password" name="password" placeholder="Password" required><br>
+            <input type="text" class="username registerBox" name="username" placeholder="Username" required><br>
+            <input type="text" class="email registerBox" name="email" placeholder="Email" required><br>
+            <input type="password" class="password registerBox" name="password" placeholder="Password" required><br>
 
             <button class="sendRegisterForm" type="button">Continue</button>
         </form>
