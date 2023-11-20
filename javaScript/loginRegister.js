@@ -12,4 +12,5 @@ main.innerHTML=`
         </div>
     </div>
 `
+document.querySelector(".registerButton").addEventListener("click",renderRegisterPage);
 }

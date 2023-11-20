@@ -3,17 +3,49 @@
         {
             "userId": 1,
             "username": "Elin",
+            "email": "elin@.com",
             "password": 123,
             "pointsInAllGroups": 40,
-            "groups": [1, 4]
+            "groups": [
+                1,
+                4
+            ]
+        },
+        {
+            "userId": "65578954ddb42",
+            "username": "hejsan",
+            "email": "hejsan@.com",
+            "password": "123",
+            "pointsInAllGroups": 0,
+            "groups": []
+        },
+        {
+            "userId": "65578a6ca1f97",
+            "username": "testing",
+            "email": "testing@.com",
+            "password": "123",
+            "pointsInAllGroups": 0,
+            "groups": []
+        },
+        {
+            "userId": "65578af865ac4",
+            "username": "test123",
+            "email": "test123@email.se",
+            "password": "12345",
+            "pointsInAllGroups": 0,
+            "groups": []
         }
     ],
-
     "groups": [
         {
             "groupId": 1,
-            "groupName":"Golden Team",
-            "members": [1, 3, 5, 7],
+            "groupName": "Golden Team",
+            "members": [
+                1,
+                3,
+                5,
+                7
+            ],
             "Elin": {
                 "userId": 1,
                 "games": {
@@ -21,17 +53,23 @@
                         "bestPicture": {
                             "guess": "Avatar: The Way of Water",
                             "pointsReceived": 0,
-                            "winner": [3, 5]
+                            "winner": [
+                                3,
+                                5
+                            ]
                         },
                         "leadActor": {
                             "guess": "Paul Mescal",
-                            "film":"The Whale",
+                            "film": "The Whale",
                             "pointsReceived": 1,
-                            "winner": [1, 3]
+                            "winner": [
+                                1,
+                                3
+                            ]
                         },
                         "usertotalPointsForGame": 5
                     },
-                    "grammy": {},
+                    "grammy": [],
                     "userTotalPointsForGroup": 12
                 }
             }

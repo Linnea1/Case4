@@ -36,3 +36,7 @@
     padding: 10px;
     border-radius: 10px;
 }
+.registerPageWrapper{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
