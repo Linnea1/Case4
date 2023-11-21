@@ -50,6 +50,7 @@ async function submitLogin(event, loginForm, message) {
       message.textContent = data.message;
     } else {
       window.localStorage.setItem("user", JSON.stringify(data));
+      renderHomePage();
     }
   } catch (err) {
     message.textContent = `Error: ${err.message}`;
