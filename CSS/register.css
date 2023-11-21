@@ -1,0 +1,30 @@
+.registerPageWrapper{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+main{
+    height: 100vh;
+}
+#registrationForm{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.registerBox{
+    width: 100%;
+    border: none;
+    border-bottom: solid 1px black;
+}
+.sendRegisterForm{
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px 0px;
+    background-color: rgb(192, 192, 192);
+}
+.alreadyAccount{
+    align-self: end;
+}

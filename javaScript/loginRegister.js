@@ -14,4 +14,7 @@ main.innerHTML=`
 `
 
 document.querySelector(".loginButton").addEventListener("click", renderLoginPage);
+document.querySelector(".registerButton").addEventListener("click",renderRegisterPage);
 }
+
+
