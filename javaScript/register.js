@@ -15,11 +15,12 @@ function renderRegisterPage(){
             <p class="registerErrorMessage"></p>
             <button class="sendRegisterForm" type="button">Continue</button>
         </form>
-        <p class="alreadyAccount">Already have an account? Log In</p>
+        <p class="alreadyAccount button">Already have an account? Log In</p>
     </div>
     `
     document.querySelector(".sendRegisterForm").addEventListener("click", register);
     document.querySelector(".registerGoBack").addEventListener("click", renderWelcomePage);
+    document.querySelector(".alreadyAccount").addEventListener("click", renderLoginPage);
     async function register() {
         try {
           var username = document.querySelector(".username").value;
@@ -43,7 +44,7 @@ function renderRegisterPage(){
           });
       
           const data = await response.json();
-          if(data.error){
+          if (!response.ok){
             document.querySelector(".registerErrorMessage").textContent=data.error;
           }else{
             console.log("Registration successful:", data);
