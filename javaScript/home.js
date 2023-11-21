@@ -1,6 +1,14 @@
 "use strict";
 
+function getUserData() {
+  const userData = localStorage.getItem("user");
+  return JSON.parse(userData);
+}
+
 async function renderHomePage() {
+  let response = await fetch(`../PHP/getUserData.php?userId=${getUserData().userId}`);
+
+  const userData = await response.json();
   main.innerHTML = `
     <img src="" alt="">
     <button class="logoutButton">Logout</button>
