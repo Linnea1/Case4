@@ -6,7 +6,9 @@
             "email": "elin@gmail.com",
             "password": "123",
             "pointsInAllGroups": 3,
-            "groups": [1]
+            "groups": [
+                1
+            ]
         },
         {
             "userId": 2,
@@ -14,7 +16,9 @@
             "email": "emily@gmail.com",
             "password": "123",
             "pointsInAllGroups": 1,
-            "groups": [1]
+            "groups": [
+                1
+            ]
         },
         {
             "userId": 3,
@@ -22,7 +26,9 @@
             "email": "james@gmail.com",
             "password": "123",
             "pointsInAllGroups": 6,
-            "groups": [2]
+            "groups": [
+                2
+            ]
         },
         {
             "userId": 4,
@@ -30,7 +36,10 @@
             "email": "olivia@gmail.com",
             "password": "123",
             "pointsInAllGroups": 27,
-            "groups": [2, 3]
+            "groups": [
+                2,
+                3
+            ]
         },
         {
             "userId": 5,
@@ -38,7 +47,9 @@
             "email": "benjamin@gmail.com",
             "password": "123",
             "pointsInAllGroups": 5,
-            "groups": [1]
+            "groups": [
+                1
+            ]
         },
         {
             "userId": 6,
@@ -46,7 +57,9 @@
             "email": "ava@gmail.com",
             "password": "123",
             "pointsInAllGroups": 3,
-            "groups": [1]
+            "groups": [
+                1
+            ]
         },
         {
             "userId": 7,
@@ -54,7 +67,10 @@
             "email": "ethan@gmail.com",
             "password": "123",
             "pointsInAllGroups": 26,
-            "groups": [2, 3]
+            "groups": [
+                2,
+                3
+            ]
         },
         {
             "userId": 8,
@@ -62,7 +78,9 @@
             "email": "sophia@gmail.com",
             "password": "123",
             "pointsInAllGroups": 10,
-            "groups": [2]
+            "groups": [
+                2
+            ]
         },
         {
             "userId": 9,
@@ -70,7 +88,9 @@
             "email": "liam@gmail.com",
             "password": "123",
             "pointsInAllGroups": 6,
-            "groups": [2]
+            "groups": [
+                2
+            ]
         },
         {
             "userId": 10,
@@ -78,7 +98,9 @@
             "email": "emma@gmail.com",
             "password": "123",
             "pointsInAllGroups": 7,
-            "groups": [3]
+            "groups": [
+                3
+            ]
         },
         {
             "userId": 11,
@@ -86,7 +108,9 @@
             "email": "noah@gmail.com",
             "password": "123",
             "pointsInAllGroups": 4,
-            "groups": [3]
+            "groups": [
+                3
+            ]
         },
         {
             "userId": 12,
@@ -94,50 +118,82 @@
             "email": "mia@gmail.com",
             "password": "123",
             "pointsInAllGroups": 7,
-            "groups": [3]
+            "groups": [
+                3
+            ]
+        },
+        {
+            "userId": "655c77a3e290e",
+            "username": "linnea",
+            "email": "linnea@.com",
+            "password": "123",
+            "pointsInAllGroups": 0,
+            "groups": []
         }
     ],
     "groups": [
         {
             "groupId": 1,
             "groupName": "Star Betters",
-            "members": [1, 2, 5, 6],
+            "members": [
+                1,
+                2,
+                5,
+                6
+            ],
             "users": [
                 {
                     "name": "Elin",
                     "userId": 1,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [1, 5, 6]
+                                "winner": [
+                                    1,
+                                    5,
+                                    6
+                                ]
                             },
                             "leadActor": {
                                 "guess": "Brendan Fraser",
-                                "film":"The Whale",
+                                "film": "The Whale",
                                 "pointsReceived": 1,
-                                "winner": [1, 5, 6]
+                                "winner": [
+                                    1,
+                                    5,
+                                    6
+                                ]
                             },
                             "leadActress": {
                                 "guess": "Cate Blanchett",
-                                "film":"Tár",
+                                "film": "T\u00e1r",
                                 "pointsReceived": 0,
-                                "winner": [5]
+                                "winner": [
+                                    5
+                                ]
                             },
                             "supportActor": {
                                 "guess": "Ke Huy Quan",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [1, 2, 5, 6]
+                                "winner": [
+                                    1,
+                                    2,
+                                    5,
+                                    6
+                                ]
                             },
                             "supportActress": {
                                 "guess": "Angela Bassett",
                                 "film": "Black Panther: Wakanda Forever",
                                 "pointsReceived": 0,
-                                "winner": [5]
+                                "winner": [
+                                    5
+                                ]
                             },
                             "usertotalPointsForGame": 3
                         },
@@ -148,37 +204,54 @@
                     "name": "Emily",
                     "userId": 2,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Avatar: The Way of Water",
                                 "pointsReceived": 0,
-                                "winner": [1, 5, 6]
+                                "winner": [
+                                    1,
+                                    5,
+                                    6
+                                ]
                             },
                             "leadActor": {
                                 "guess": "Colin Farrell",
-                                "film":"The Banshees of Inisherin",
+                                "film": "The Banshees of Inisherin",
                                 "pointsReceived": 0,
-                                "winner": [1, 5, 6]
+                                "winner": [
+                                    1,
+                                    5,
+                                    6
+                                ]
                             },
                             "leadActress": {
                                 "guess": "Michelle Williams",
-                                "film":"The Fabelmans",
+                                "film": "The Fabelmans",
                                 "pointsReceived": 0,
-                                "winner": [5]
+                                "winner": [
+                                    5
+                                ]
                             },
                             "supportActor": {
                                 "guess": "Ke Huy Quan",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [1, 2, 5, 6]
+                                "winner": [
+                                    1,
+                                    2,
+                                    5,
+                                    6
+                                ]
                             },
                             "supportActress": {
                                 "guess": "Stephanie Hsu",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 0,
-                                "winner": [5]
+                                "winner": [
+                                    5
+                                ]
                             },
                             "usertotalPointsForGame": 1
                         },
@@ -189,37 +262,54 @@
                     "name": "Benjamin",
                     "userId": 5,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [1, 5, 6]
+                                "winner": [
+                                    1,
+                                    5,
+                                    6
+                                ]
                             },
                             "leadActor": {
                                 "guess": "Brendan Fraser",
                                 "film": "The Whale",
                                 "pointsReceived": 1,
-                                "winner": [1, 5, 6]
+                                "winner": [
+                                    1,
+                                    5,
+                                    6
+                                ]
                             },
                             "leadActress": {
                                 "guess": "Michelle Yeoh",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [5]
+                                "winner": [
+                                    5
+                                ]
                             },
                             "supportActor": {
                                 "guess": "Ke Huy Quan",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [1, 2, 5, 6]
+                                "winner": [
+                                    1,
+                                    2,
+                                    5,
+                                    6
+                                ]
                             },
                             "supportActress": {
                                 "guess": "Jamie Lee Curtis",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [5]
+                                "winner": [
+                                    5
+                                ]
                             },
                             "usertotalPointsForGame": 5
                         },
@@ -230,37 +320,54 @@
                     "name": "Ava",
                     "userId": 6,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [1, 5, 6]
+                                "winner": [
+                                    1,
+                                    5,
+                                    6
+                                ]
                             },
                             "leadActor": {
                                 "guess": "Brendan Fraser",
                                 "film": "The Whale",
                                 "pointsReceived": 1,
-                                "winner": [1, 5, 6]
+                                "winner": [
+                                    1,
+                                    5,
+                                    6
+                                ]
                             },
                             "leadActress": {
                                 "guess": "Cate Blanchett",
-                                "film":"Tár",
+                                "film": "T\u00e1r",
                                 "pointsReceived": 0,
-                                "winner": [5]
+                                "winner": [
+                                    5
+                                ]
                             },
                             "supportActor": {
                                 "guess": "Ke Huy Quan",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [1, 2, 5, 6]
+                                "winner": [
+                                    1,
+                                    2,
+                                    5,
+                                    6
+                                ]
                             },
                             "supportActress": {
                                 "guess": "Stephanie Hsu",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 0,
-                                "winner": [5]
+                                "winner": [
+                                    5
+                                ]
                             },
                             "usertotalPointsForGame": 3
                         },
@@ -272,7 +379,13 @@
         {
             "groupId": 2,
             "groupName": "Red Carpet Bets",
-            "members": [3, 4, 7, 8, 9],
+            "members": [
+                3,
+                4,
+                7,
+                8,
+                9
+            ],
             "users": [
                 {
                     "name": "James",
@@ -282,32 +395,53 @@
                             "outstandingDrama": {
                                 "guess": "The Last Of Us",
                                 "pointsReceived": 0,
-                                "winner": [4]
+                                "winner": [
+                                    4
+                                ]
                             },
                             "outstandingComedy": {
                                 "guess": "Wednesday",
                                 "pointsReceived": 0,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "outstandingDramaLeadActor": {
                                 "guess": "Kieran Culkin",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    8,
+                                    9
+                                ]
                             },
                             "outstandingDramaLeadActress": {
                                 "guess": "Sarah Snook",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 7, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    7,
+                                    8,
+                                    9
+                                ]
                             },
                             "outstandingComedyLeadActress": {
                                 "guess": "Christina Applegate",
                                 "pointsReceived": 0,
-                                "winner": [7]
+                                "winner": [
+                                    7
+                                ]
                             },
                             "outstandingComedyLeadActor": {
                                 "guess": "Jason Sudeikis",
                                 "pointsReceived": 0,
-                                "winner": [8]
+                                "winner": [
+                                    8
+                                ]
                             },
                             "usertotalPointsForGame": 2
                         },
@@ -315,59 +449,96 @@
                             "yearRecord": {
                                 "guess": "Lizzo",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 7]
+                                "winner": [
+                                    3,
+                                    4,
+                                    7
+                                ]
                             },
                             "yearSong": {
                                 "guess": "Bonnie Raitt",
                                 "pointsReceived": 1,
-                                "winner": [3, 4]
+                                "winner": [
+                                    3,
+                                    4
+                                ]
                             },
                             "bestNewArtist": {
                                 "guess": "Anitta",
                                 "pointsReceived": 0,
-                                "winner": [4, 7]
+                                "winner": [
+                                    4,
+                                    7
+                                ]
                             },
                             "yearAlbum": {
                                 "guess": "Special",
                                 "pointsReceived": 0,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "bestPopSolo": {
                                 "guess": "Harry Styles",
                                 "pointsReceived": 0,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "usertotalPointsForGame": 2
                         },
                         "oscars": {
                             "bestPicture": {
-                                "guess": "Tár",
+                                "guess": "T\u00e1r",
                                 "pointsReceived": 0,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "leadActor": {
                                 "guess": "Austin Butler",
                                 "film": "Elvis",
                                 "pointsReceived": 0,
-                                "winner": [7, 8]
+                                "winner": [
+                                    7,
+                                    8
+                                ]
                             },
                             "leadActress": {
                                 "guess": "Michelle Yeoh",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [3, 7, 9]
+                                "winner": [
+                                    3,
+                                    7,
+                                    9
+                                ]
                             },
                             "supportActor": {
                                 "guess": "Ke Huy Quan",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    8,
+                                    9
+                                ]
                             },
                             "supportActress": {
                                 "guess": "Jamie Lee Curtis",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 0,
-                                "winner": [8, 9]
+                                "winner": [
+                                    8,
+                                    9
+                                ]
                             },
                             "usertotalPointsForGame": 2
                         },
@@ -382,32 +553,53 @@
                             "outstandingDrama": {
                                 "guess": "Succession",
                                 "pointsReceived": 1,
-                                "winner": [4]
+                                "winner": [
+                                    4
+                                ]
                             },
                             "outstandingComedy": {
                                 "guess": "The Bear",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "outstandingDramaLeadActor": {
                                 "guess": "Kieran Culkin",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    8,
+                                    9
+                                ]
                             },
                             "outstandingDramaLeadActress": {
                                 "guess": "Sarah Snook",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 7, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    7,
+                                    8,
+                                    9
+                                ]
                             },
                             "outstandingComedyLeadActress": {
                                 "guess": "Rachel Brosnahan",
                                 "pointsReceived": 0,
-                                "winner": [7]
+                                "winner": [
+                                    7
+                                ]
                             },
                             "outstandingComedyLeadActor": {
                                 "guess": "Bill Hader",
                                 "pointsReceived": 0,
-                                "winner": [8]
+                                "winner": [
+                                    8
+                                ]
                             },
                             "usertotalPointsForGame": 4
                         },
@@ -415,27 +607,45 @@
                             "yearRecord": {
                                 "guess": "Lizzo",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 7]
+                                "winner": [
+                                    3,
+                                    4,
+                                    7
+                                ]
                             },
                             "yearSong": {
                                 "guess": "Bonnie Raitt",
                                 "pointsReceived": 1,
-                                "winner": [3, 4]
+                                "winner": [
+                                    3,
+                                    4
+                                ]
                             },
                             "bestNewArtist": {
                                 "guess": "Samara Joy",
                                 "pointsReceived": 1,
-                                "winner": [4, 7]
+                                "winner": [
+                                    4,
+                                    7
+                                ]
                             },
                             "yearAlbum": {
                                 "guess": "Harry Styles",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "bestPopSolo": {
                                 "guess": "Adele",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "usertotalPointsForGame": 5
                         },
@@ -443,31 +653,50 @@
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "leadActor": {
                                 "guess": "Austin Butler",
                                 "film": "Elvis",
                                 "pointsReceived": 0,
-                                "winner": [7, 8]
+                                "winner": [
+                                    7,
+                                    8
+                                ]
                             },
                             "leadActress": {
                                 "guess": "Ana de Armas",
                                 "film": "Blonde",
                                 "pointsReceived": 0,
-                                "winner": [3, 7, 9]
+                                "winner": [
+                                    3,
+                                    7,
+                                    9
+                                ]
                             },
                             "supportActor": {
                                 "guess": "Ke Huy Quan",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    8,
+                                    9
+                                ]
                             },
                             "supportActress": {
                                 "guess": "Kerry Condon",
                                 "film": "The Banshees of Inisherin",
                                 "pointsReceived": 0,
-                                "winner": [8, 9]
+                                "winner": [
+                                    8,
+                                    9
+                                ]
                             },
                             "usertotalPointsForGame": 2
                         },
@@ -482,32 +711,53 @@
                             "outstandingDrama": {
                                 "guess": "House of the Dragon",
                                 "pointsReceived": 0,
-                                "winner": [4]
+                                "winner": [
+                                    4
+                                ]
                             },
                             "outstandingComedy": {
                                 "guess": "The Bear",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "outstandingDramaLeadActor": {
                                 "guess": "Pedro Pascal",
                                 "pointsReceived": 0,
-                                "winner": [3, 4, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    8,
+                                    9
+                                ]
                             },
                             "outstandingDramaLeadActress": {
                                 "guess": "Sarah Snook",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 7, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    7,
+                                    8,
+                                    9
+                                ]
                             },
                             "outstandingComedyLeadActress": {
                                 "guess": "Quinta Brunson",
                                 "pointsReceived": 1,
-                                "winner": [7]
+                                "winner": [
+                                    7
+                                ]
                             },
                             "outstandingComedyLeadActor": {
                                 "guess": "Bill Hader",
                                 "pointsReceived": 0,
-                                "winner": [8]
+                                "winner": [
+                                    8
+                                ]
                             },
                             "usertotalPointsForGame": 3
                         },
@@ -515,27 +765,45 @@
                             "yearRecord": {
                                 "guess": "Lizzo",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 7]
+                                "winner": [
+                                    3,
+                                    4,
+                                    7
+                                ]
                             },
                             "yearSong": {
                                 "guess": "Adele",
                                 "pointsReceived": 0,
-                                "winner": [3, 4]
+                                "winner": [
+                                    3,
+                                    4
+                                ]
                             },
                             "bestNewArtist": {
                                 "guess": "Samara Joy",
                                 "pointsReceived": 1,
-                                "winner": [4, 7]
+                                "winner": [
+                                    4,
+                                    7
+                                ]
                             },
                             "yearAlbum": {
                                 "guess": "Harry Styles",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "bestPopSolo": {
                                 "guess": "Adele",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "usertotalPointsForGame": 4
                         },
@@ -543,31 +811,50 @@
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "leadActor": {
                                 "guess": "Brendan Fraser",
                                 "film": "The Whale",
                                 "pointsReceived": 1,
-                                "winner": [7, 8]
+                                "winner": [
+                                    7,
+                                    8
+                                ]
                             },
                             "leadActress": {
                                 "guess": "Michelle Yeoh",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [3, 7, 9]
+                                "winner": [
+                                    3,
+                                    7,
+                                    9
+                                ]
                             },
                             "supportActor": {
                                 "guess": "Brian Tyree Henry",
                                 "film": "Causeway",
                                 "pointsReceived": 0,
-                                "winner": [3, 4, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    8,
+                                    9
+                                ]
                             },
                             "supportActress": {
                                 "guess": "Stephanie Hsu",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 0,
-                                "winner": [8, 9]
+                                "winner": [
+                                    8,
+                                    9
+                                ]
                             },
                             "usertotalPointsForGame": 3
                         },
@@ -582,60 +869,99 @@
                             "outstandingDrama": {
                                 "guess": "House of the Dragon",
                                 "pointsReceived": 0,
-                                "winner": [4]
+                                "winner": [
+                                    4
+                                ]
                             },
                             "outstandingComedy": {
                                 "guess": "The Bear",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "outstandingDramaLeadActor": {
                                 "guess": "Kieran Culkin",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    8,
+                                    9
+                                ]
                             },
                             "outstandingDramaLeadActress": {
                                 "guess": "Sarah Snook",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 7, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    7,
+                                    8,
+                                    9
+                                ]
                             },
                             "outstandingComedyLeadActress": {
                                 "guess": "Christina Applegate",
                                 "pointsReceived": 0,
-                                "winner": [7]
+                                "winner": [
+                                    7
+                                ]
                             },
                             "outstandingComedyLeadActor": {
                                 "guess": "Jeremy Allen White",
                                 "pointsReceived": 1,
-                                "winner": [8]
+                                "winner": [
+                                    8
+                                ]
                             },
                             "usertotalPointsForGame": 4
                         },
                         "grammys": {
                             "yearRecord": {
-                                "guess": "Beyoncé",
+                                "guess": "Beyonc\u00e9",
                                 "pointsReceived": 0,
-                                "winner": [3, 4, 7]
+                                "winner": [
+                                    3,
+                                    4,
+                                    7
+                                ]
                             },
                             "yearSong": {
-                                "guess": "Beyoncé",
+                                "guess": "Beyonc\u00e9",
                                 "pointsReceived": 0,
-                                "winner": [3, 4]
+                                "winner": [
+                                    3,
+                                    4
+                                ]
                             },
                             "bestNewArtist": {
                                 "guess": "Muni Long",
                                 "pointsReceived": 0,
-                                "winner": [4, 7]
+                                "winner": [
+                                    4,
+                                    7
+                                ]
                             },
                             "yearAlbum": {
                                 "guess": "Harry Styles",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "bestPopSolo": {
                                 "guess": "Adele",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "usertotalPointsForGame": 2
                         },
@@ -643,31 +969,50 @@
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "leadActor": {
                                 "guess": "Brendan Fraser",
                                 "film": "The Whale",
                                 "pointsReceived": 1,
-                                "winner": [7, 8]
+                                "winner": [
+                                    7,
+                                    8
+                                ]
                             },
                             "leadActress": {
                                 "guess": "Ana de Armas",
                                 "film": "Blonde",
                                 "pointsReceived": 0,
-                                "winner": [3, 7, 9]
+                                "winner": [
+                                    3,
+                                    7,
+                                    9
+                                ]
                             },
                             "supportActor": {
                                 "guess": "Ke Huy Quan",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    8,
+                                    9
+                                ]
                             },
                             "supportActress": {
                                 "guess": "Jamie Lee Curtis",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [8, 9]
+                                "winner": [
+                                    8,
+                                    9
+                                ]
                             },
                             "usertotalPointsForGame": 4
                         },
@@ -682,32 +1027,53 @@
                             "outstandingDrama": {
                                 "guess": "The Crown",
                                 "pointsReceived": 0,
-                                "winner": [4]
+                                "winner": [
+                                    4
+                                ]
                             },
                             "outstandingComedy": {
                                 "guess": "Barry",
                                 "pointsReceived": 0,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "outstandingDramaLeadActor": {
                                 "guess": "Kieran Culkin",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    8,
+                                    9
+                                ]
                             },
                             "outstandingDramaLeadActress": {
                                 "guess": "Sarah Snook",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 7, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    7,
+                                    8,
+                                    9
+                                ]
                             },
                             "outstandingComedyLeadActress": {
                                 "guess": "Natasha Lyonne",
                                 "pointsReceived": 0,
-                                "winner": [7]
+                                "winner": [
+                                    7
+                                ]
                             },
                             "outstandingComedyLeadActor": {
                                 "guess": "Jason Sudeikis",
                                 "pointsReceived": 0,
-                                "winner": [8]
+                                "winner": [
+                                    8
+                                ]
                             },
                             "usertotalPointsForGame": 2
                         },
@@ -715,27 +1081,46 @@
                             "yearRecord": {
                                 "guess": "ABBA",
                                 "pointsReceived": 0,
-                                "winner": [3, 4, 7]
+                                "winner": [
+                                    3,
+                                    4,
+                                    7
+                                ]
                             },
                             "yearSong": {
                                 "guess": "Harry Styles",
                                 "pointsReceived": 0,
-                                "winner": [3, 4]
+                                "winner": [
+                                    3,
+                                    4
+                                ]
                             },
                             "bestNewArtist": {
                                 "guess": "Samara Joy",
                                 "pointsReceived": 1,
-                                "winner": [4, 7, 9]
+                                "winner": [
+                                    4,
+                                    7,
+                                    9
+                                ]
                             },
                             "yearAlbum": {
                                 "guess": "ABBA",
                                 "pointsReceived": 0,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "bestPopSolo": {
                                 "guess": "Harry Styles",
                                 "pointsReceived": 0,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "usertotalPointsForGame": 1
                         },
@@ -743,31 +1128,50 @@
                             "bestPicture": {
                                 "guess": "Elvis",
                                 "pointsReceived": 0,
-                                "winner": [4, 7, 8]
+                                "winner": [
+                                    4,
+                                    7,
+                                    8
+                                ]
                             },
                             "leadActor": {
                                 "guess": "Austin Butler",
                                 "film": "Elvis",
                                 "pointsReceived": 0,
-                                "winner": [7, 8]
+                                "winner": [
+                                    7,
+                                    8
+                                ]
                             },
                             "leadActress": {
                                 "guess": "Michelle Yeoh",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [3, 7, 9]
+                                "winner": [
+                                    3,
+                                    7,
+                                    9
+                                ]
                             },
                             "supportActor": {
                                 "guess": "Ke Huy Quan",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [3, 4, 8, 9]
+                                "winner": [
+                                    3,
+                                    4,
+                                    8,
+                                    9
+                                ]
                             },
                             "supportActress": {
                                 "guess": "Jamie Lee Curtis",
                                 "film": "Everything Everywhere All at Once",
                                 "pointsReceived": 1,
-                                "winner": [8, 9]
+                                "winner": [
+                                    8,
+                                    9
+                                ]
                             },
                             "usertotalPointsForGame": 3
                         },
@@ -779,508 +1183,844 @@
         {
             "groupId": 3,
             "groupName": "A-List Predicts",
-            "members": [4, 7, 10, 11, 12],
+            "members": [
+                4,
+                7,
+                10,
+                11,
+                12
+            ],
             "users": [
-              {
-                "name": "Olivia",
-                "userId": 4,
-                "games": {
-                "emmys": {
-                    "outstandingDrama": {
-                      "guess": "Succession",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11]
-                    },
-                    "outstandingComedy": {
-                      "guess": "The Bear",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "outstandingDramaLeadActor": {
-                      "guess": "Kieran Culkin",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 12]
-                    },
-                    "outstandingDramaLeadActress": {
-                      "guess": "Sarah Snook",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11, 12]
-                    },
-                    "outstandingComedyLeadActress": {
-                      "guess": "Quinta Brunson",
-                      "pointsReceived": 1,
-                      "winner": [4, 7]
-                    },
-                    "outstandingComedyLeadActor": {
-                      "guess": "Jeremy Allen White",
-                      "pointsReceived": 1,
-                      "winner": [4, 7]
-                    },
-                    "usertotalPointsForGame": 6
-                  },
-                  "grammys": {
-                    "yearRecord": {
-                      "guess": "Lizzo",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "yearSong": {
-                      "guess": "Bonnie Raitt",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "bestNewArtist": {
-                      "guess": "Samara Joy",
-                      "pointsReceived": 1,
-                      "winner": [4, 7]
-                    },
-                    "yearAlbum": {
-                      "guess": "Harry Styles",
-                      "pointsReceived": 1,
-                      "winner": [4, 7]
-                    },
-                    "bestPopSolo": {
-                      "guess": "Adele",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10]
-                    },
-                    "usertotalPointsForGame": 5
-                  },
-                  "oscars": {
-                    "bestPicture": {
-                      "guess": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11]
-                    },
-                    "leadActor": {
-                      "guess": "Brendan Fraser",
-                      "film": "The Whale",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10]
-                    },
-                    "leadActress": {
-                      "guess": "Michelle Yeoh",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10]
-                    },
-                    "supportActor": {
-                      "guess": "Ke Huy Quan",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 11, 12]
-                    },
-                    "supportActress": {
-                      "guess": "Jamie Lee Curtis",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "usertotalPointsForGame": 5
-                  },
-                  "userTotalPointsForGroup": 16
+                {
+                    "name": "Olivia",
+                    "userId": 4,
+                    "games": {
+                        "emmys": {
+                            "outstandingDrama": {
+                                "guess": "Succession",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11
+                                ]
+                            },
+                            "outstandingComedy": {
+                                "guess": "The Bear",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "outstandingDramaLeadActor": {
+                                "guess": "Kieran Culkin",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    12
+                                ]
+                            },
+                            "outstandingDramaLeadActress": {
+                                "guess": "Sarah Snook",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11,
+                                    12
+                                ]
+                            },
+                            "outstandingComedyLeadActress": {
+                                "guess": "Quinta Brunson",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "outstandingComedyLeadActor": {
+                                "guess": "Jeremy Allen White",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "usertotalPointsForGame": 6
+                        },
+                        "grammys": {
+                            "yearRecord": {
+                                "guess": "Lizzo",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "yearSong": {
+                                "guess": "Bonnie Raitt",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "bestNewArtist": {
+                                "guess": "Samara Joy",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "yearAlbum": {
+                                "guess": "Harry Styles",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "bestPopSolo": {
+                                "guess": "Adele",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "usertotalPointsForGame": 5
+                        },
+                        "oscars": {
+                            "bestPicture": {
+                                "guess": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11
+                                ]
+                            },
+                            "leadActor": {
+                                "guess": "Brendan Fraser",
+                                "film": "The Whale",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "leadActress": {
+                                "guess": "Michelle Yeoh",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "supportActor": {
+                                "guess": "Ke Huy Quan",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    11,
+                                    12
+                                ]
+                            },
+                            "supportActress": {
+                                "guess": "Jamie Lee Curtis",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "usertotalPointsForGame": 5
+                        },
+                        "userTotalPointsForGroup": 16
+                    }
+                },
+                {
+                    "name": "Ethan",
+                    "userId": 7,
+                    "games": {
+                        "emmys": {
+                            "outstandingDrama": {
+                                "guess": "Succession",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11
+                                ]
+                            },
+                            "outstandingComedy": {
+                                "guess": "The Bear",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "outstandingDramaLeadActor": {
+                                "guess": "Kieran Culkin",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    12
+                                ]
+                            },
+                            "outstandingDramaLeadActress": {
+                                "guess": "Sarah Snook",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11,
+                                    12
+                                ]
+                            },
+                            "outstandingComedyLeadActress": {
+                                "guess": "Quinta Brunson",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "outstandingComedyLeadActor": {
+                                "guess": "Jeremy Allen White",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "usertotalPointsForGame": 6
+                        },
+                        "grammys": {
+                            "yearRecord": {
+                                "guess": "Lizzo",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "yearSong": {
+                                "guess": "Bonnie Raitt",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "bestNewArtist": {
+                                "guess": "Samara Joy",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "yearAlbum": {
+                                "guess": "Harry Styles",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "bestPopSolo": {
+                                "guess": "Adele",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "usertotalPointsForGame": 5
+                        },
+                        "oscars": {
+                            "bestPicture": {
+                                "guess": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11
+                                ]
+                            },
+                            "leadActor": {
+                                "guess": "Brendan Fraser",
+                                "film": "The Whale",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "leadActress": {
+                                "guess": "Michelle Yeoh",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "supportActor": {
+                                "guess": "Ke Huy Quan",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    11,
+                                    12
+                                ]
+                            },
+                            "supportActress": {
+                                "guess": "Jamie Lee Curtis",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "usertotalPointsForGame": 5
+                        },
+                        "userTotalPointsForGroup": 16
+                    }
+                },
+                {
+                    "name": "Emma",
+                    "userId": 10,
+                    "games": {
+                        "emmys": {
+                            "outstandingDrama": {
+                                "guess": "Succession",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11
+                                ]
+                            },
+                            "outstandingComedy": {
+                                "guess": "Barry",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "outstandingDramaLeadActor": {
+                                "guess": "Kieran Culkin",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    12
+                                ]
+                            },
+                            "outstandingDramaLeadActress": {
+                                "guess": "Sarah Snook",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11,
+                                    12
+                                ]
+                            },
+                            "outstandingComedyLeadActress": {
+                                "guess": "Christina Applegate",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "outstandingComedyLeadActor": {
+                                "guess": "Bill Hader",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "usertotalPointsForGame": 3
+                        },
+                        "grammys": {
+                            "yearRecord": {
+                                "guess": "Adele",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "yearSong": {
+                                "guess": "Adele",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "bestNewArtist": {
+                                "guess": "Anitta",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "yearAlbum": {
+                                "guess": "Adele",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "bestPopSolo": {
+                                "guess": "Adele",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "usertotalPointsForGame": 1
+                        },
+                        "oscars": {
+                            "bestPicture": {
+                                "guess": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11
+                                ]
+                            },
+                            "leadActor": {
+                                "guess": "Brendan Fraser",
+                                "film": "The Whale",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "leadActress": {
+                                "guess": "Michelle Yeoh",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "supportActor": {
+                                "guess": "Barry Keoghan",
+                                "film": "The Banshees of Inisherin",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    11,
+                                    12
+                                ]
+                            },
+                            "supportActress": {
+                                "guess": "Stephanie Hsu",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "usertotalPointsForGame": 3
+                        },
+                        "userTotalPointsForGroup": 7
+                    }
+                },
+                {
+                    "name": "Noah",
+                    "userId": 11,
+                    "games": {
+                        "emmys": {
+                            "outstandingDrama": {
+                                "guess": "Succession",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11
+                                ]
+                            },
+                            "outstandingComedy": {
+                                "guess": "Ted Lasso",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "outstandingDramaLeadActor": {
+                                "guess": "Jeremy Strong",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    12
+                                ]
+                            },
+                            "outstandingDramaLeadActress": {
+                                "guess": "Sarah Snook",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11,
+                                    12
+                                ]
+                            },
+                            "outstandingComedyLeadActress": {
+                                "guess": "Natasha Lyonne",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "outstandingComedyLeadActor": {
+                                "guess": "Martin Short",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "usertotalPointsForGame": 2
+                        },
+                        "grammys": {
+                            "yearRecord": {
+                                "guess": "Beyonc\u00e9",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "yearSong": {
+                                "guess": "Adele",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "bestNewArtist": {
+                                "guess": "Latto",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "yearAlbum": {
+                                "guess": "ABBA",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "bestPopSolo": {
+                                "guess": "Steve Lacy",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "usertotalPointsForGame": 0
+                        },
+                        "oscars": {
+                            "bestPicture": {
+                                "guess": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11
+                                ]
+                            },
+                            "leadActor": {
+                                "guess": "Austin Butler",
+                                "film": "Elvis",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "leadActress": {
+                                "guess": "Ana de Armas",
+                                "film": "Blonde",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "supportActor": {
+                                "guess": "Ke Huy Quan",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    11,
+                                    12
+                                ]
+                            },
+                            "supportActress": {
+                                "guess": "Stephanie Hsu",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "usertotalPointsForGame": 2
+                        },
+                        "userTotalPointsForGroup": 4
+                    }
+                },
+                {
+                    "name": "Mia",
+                    "userId": 12,
+                    "games": {
+                        "emmys": {
+                            "outstandingDrama": {
+                                "guess": "House of the Dragon",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11
+                                ]
+                            },
+                            "outstandingComedy": {
+                                "guess": "The Bear",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "outstandingDramaLeadActor": {
+                                "guess": "Kieran Culkin",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    12
+                                ]
+                            },
+                            "outstandingDramaLeadActress": {
+                                "guess": "Sarah Snook",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11,
+                                    12
+                                ]
+                            },
+                            "outstandingComedyLeadActress": {
+                                "guess": "Natasha Lyonne",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "outstandingComedyLeadActor": {
+                                "guess": "Martin Short",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "usertotalPointsForGame": 3
+                        },
+                        "grammys": {
+                            "yearRecord": {
+                                "guess": "Lizzo",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "yearSong": {
+                                "guess": "Bonnie Raitt",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "bestNewArtist": {
+                                "guess": "Omar Apollo",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "yearAlbum": {
+                                "guess": "Beyonc\u00e9",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            "bestPopSolo": {
+                                "guess": "Steve Lacy",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "usertotalPointsForGame": 2
+                        },
+                        "oscars": {
+                            "bestPicture": {
+                                "guess": "Elvis",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10,
+                                    11
+                                ]
+                            },
+                            "leadActor": {
+                                "guess": "Austin Butler",
+                                "film": "Elvis",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "leadActress": {
+                                "guess": "Cate Blanchett",
+                                "film": "T\u00e1r",
+                                "pointsReceived": 0,
+                                "winner": [
+                                    4,
+                                    7,
+                                    10
+                                ]
+                            },
+                            "supportActor": {
+                                "guess": "Ke Huy Quan",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    11,
+                                    12
+                                ]
+                            },
+                            "supportActress": {
+                                "guess": "Jamie Lee Curtis",
+                                "film": "Everything Everywhere All at Once",
+                                "pointsReceived": 1,
+                                "winner": [
+                                    4,
+                                    7,
+                                    12
+                                ]
+                            },
+                            "usertotalPointsForGame": 2
+                        },
+                        "userTotalPointsForGroup": 7
+                    }
                 }
-              },
-              {
-                "name": "Ethan",
-                "userId": 7,
-                "games": {
-                  "emmys": {
-                    "outstandingDrama": {
-                      "guess": "Succession",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11]
-                    },
-                    "outstandingComedy": {
-                      "guess": "The Bear",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "outstandingDramaLeadActor": {
-                      "guess": "Kieran Culkin",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 12]
-                    },
-                    "outstandingDramaLeadActress": {
-                      "guess": "Sarah Snook",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11, 12]
-                    },
-                    "outstandingComedyLeadActress": {
-                      "guess": "Quinta Brunson",
-                      "pointsReceived": 1,
-                      "winner": [4, 7]
-                    },
-                    "outstandingComedyLeadActor": {
-                      "guess": "Jeremy Allen White",
-                      "pointsReceived": 1,
-                      "winner": [4, 7]
-                    },
-                    "usertotalPointsForGame": 6
-                  },
-                  "grammys": {
-                    "yearRecord": {
-                      "guess": "Lizzo",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "yearSong": {
-                      "guess": "Bonnie Raitt",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "bestNewArtist": {
-                      "guess": "Samara Joy",
-                      "pointsReceived": 1,
-                      "winner": [4, 7]
-                    },
-                    "yearAlbum": {
-                      "guess": "Harry Styles",
-                      "pointsReceived": 1,
-                      "winner": [4, 7]
-                    },
-                    "bestPopSolo": {
-                      "guess": "Adele",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10]
-                    },
-                    "usertotalPointsForGame": 5
-                  },
-                  "oscars": {
-                    "bestPicture": {
-                      "guess": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11]
-                    },
-                    "leadActor": {
-                      "guess": "Brendan Fraser",
-                      "film": "The Whale",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10]
-                    },
-                    "leadActress": {
-                      "guess": "Michelle Yeoh",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10]
-                    },
-                    "supportActor": {
-                      "guess": "Ke Huy Quan",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 11, 12]
-                    },
-                    "supportActress": {
-                      "guess": "Jamie Lee Curtis",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "usertotalPointsForGame": 5
-                  },
-                  "userTotalPointsForGroup": 16
-                }
-              },
-              {
-                "name": "Emma",
-                "userId": 10,
-                "games": {
-                  "emmys": {
-                    "outstandingDrama": {
-                      "guess": "Succession",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11]
-                    },
-                    "outstandingComedy": {
-                      "guess": "Barry",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 12]
-                    },
-                    "outstandingDramaLeadActor": {
-                      "guess": "Kieran Culkin",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 12]
-                    },
-                    "outstandingDramaLeadActress": {
-                      "guess": "Sarah Snook",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11, 12]
-                    },
-                    "outstandingComedyLeadActress": {
-                      "guess": "Christina Applegate",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "outstandingComedyLeadActor": {
-                      "guess": "Bill Hader",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "usertotalPointsForGame": 3
-                  },
-                  "grammys": {
-                    "yearRecord": {
-                      "guess": "Adele",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 12]
-                    },
-                    "yearSong": {
-                      "guess": "Adele",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 12]
-                    },
-                    "bestNewArtist": {
-                      "guess": "Anitta",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "yearAlbum": {
-                      "guess": "Adele",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "bestPopSolo": {
-                      "guess": "Adele",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10]
-                    },
-                    "usertotalPointsForGame": 1
-                  },
-                  "oscars": {
-                    "bestPicture": {
-                      "guess": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11]
-                    },
-                    "leadActor": {
-                      "guess": "Brendan Fraser",
-                      "film": "The Whale",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10]
-                    },
-                    "leadActress": {
-                      "guess": "Michelle Yeoh",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10]
-                    },
-                    "supportActor": {
-                      "guess": "Barry Keoghan",
-                      "film": "The Banshees of Inisherin",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 11, 12]
-                    },
-                    "supportActress": {
-                      "guess": "Stephanie Hsu",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 12]
-                    },
-                    "usertotalPointsForGame": 3
-                  },
-                  "userTotalPointsForGroup": 7
-                }
-              },
-              {
-                "name": "Noah",
-                "userId": 11,
-                "games": {
-                  "emmys": {
-                    "outstandingDrama": {
-                      "guess": "Succession",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11]
-                    },
-                    "outstandingComedy": {
-                      "guess": "Ted Lasso",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 12]
-                    },
-                    "outstandingDramaLeadActor": {
-                      "guess": "Jeremy Strong",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 10, 12]
-                    },
-                    "outstandingDramaLeadActress": {
-                      "guess": "Sarah Snook",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11, 12]
-                    },
-                    "outstandingComedyLeadActress": {
-                      "guess": "Natasha Lyonne",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "outstandingComedyLeadActor": {
-                      "guess": "Martin Short",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "usertotalPointsForGame": 2
-                  },
-                  "grammys": {
-                    "yearRecord": {
-                      "guess": "Beyoncé",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 12]
-                    },
-                    "yearSong": {
-                      "guess": "Adele",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 12]
-                    },
-                    "bestNewArtist": {
-                      "guess": "Latto",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "yearAlbum": {
-                      "guess": "ABBA",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "bestPopSolo": {
-                      "guess": "Steve Lacy",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 10]
-                    },
-                    "usertotalPointsForGame": 0
-                  },
-                  "oscars": {
-                    "bestPicture": {
-                      "guess": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11]
-                    },
-                    "leadActor": {
-                      "guess": "Austin Butler",
-                      "film": "Elvis",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 10]
-                    },
-                    "leadActress": {
-                      "guess": "Ana de Armas",
-                      "film": "Blonde",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 10]
-                    },
-                    "supportActor": {
-                      "guess": "Ke Huy Quan",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 11, 12]
-                    },
-                    "supportActress": {
-                      "guess": "Stephanie Hsu",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 12]
-                    },
-                    "usertotalPointsForGame": 2
-                  },
-                  "userTotalPointsForGroup": 4
-                }
-              },
-              {
-                "name": "Mia",
-                "userId": 12,
-                "games": {
-                  "emmys": {
-                    "outstandingDrama": {
-                      "guess": "House of the Dragon",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 10, 11]
-                    },
-                    "outstandingComedy": {
-                      "guess": "The Bear",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "outstandingDramaLeadActor": {
-                      "guess": "Kieran Culkin",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 12]
-                    },
-                    "outstandingDramaLeadActress": {
-                      "guess": "Sarah Snook",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 10, 11, 12]
-                    },
-                    "outstandingComedyLeadActress": {
-                      "guess": "Natasha Lyonne",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "outstandingComedyLeadActor": {
-                      "guess": "Martin Short",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "usertotalPointsForGame": 3
-                  },
-                  "grammys": {
-                    "yearRecord": {
-                      "guess": "Lizzo",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "yearSong": {
-                      "guess": "Bonnie Raitt",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "bestNewArtist": {
-                      "guess": "Omar Apollo",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "yearAlbum": {
-                      "guess": "Beyoncé",
-                      "pointsReceived": 0,
-                      "winner": [4, 7]
-                    },
-                    "bestPopSolo": {
-                      "guess": "Steve Lacy",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 10]
-                    },
-                    "usertotalPointsForGame": 2
-                  },
-                  "oscars": {
-                    "bestPicture": {
-                      "guess": "Elvis",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 10, 11]
-                    },
-                    "leadActor": {
-                      "guess": "Austin Butler",
-                      "film": "Elvis",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 10]
-                    },
-                    "leadActress": {
-                      "guess": "Cate Blanchett",
-                      "film": "Tár",
-                      "pointsReceived": 0,
-                      "winner": [4, 7, 10]
-                    },
-                    "supportActor": {
-                      "guess": "Ke Huy Quan",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 11, 12]
-                    },
-                    "supportActress": {
-                      "guess": "Jamie Lee Curtis",
-                      "film": "Everything Everywhere All at Once",
-                      "pointsReceived": 1,
-                      "winner": [4, 7, 12]
-                    },
-                    "usertotalPointsForGame": 2
-                  },
-                  "userTotalPointsForGroup": 7
-                }
-              }
             ]
         }
     ]

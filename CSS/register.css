@@ -23,6 +23,7 @@ main{
     border: 0px;
     border-radius: 10px;
     padding: 10px 0px;
+    background-color: rgb(192, 192, 192);
 }
 .alreadyAccount{
     align-self: end;
