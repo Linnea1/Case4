@@ -4,7 +4,7 @@
             "userId": 1,
             "username": "Elin",
             "email": "elin@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 3,
             "groups": [1]
         },
@@ -12,7 +12,7 @@
             "userId": 2,
             "username": "Emily",
             "email": "emily@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 1,
             "groups": [1]
         },
@@ -20,7 +20,7 @@
             "userId": 3,
             "username": "James",
             "email": "james@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 6,
             "groups": [2]
         },
@@ -28,7 +28,7 @@
             "userId": 4,
             "username": "Olivia",
             "email": "olivia@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 27,
             "groups": [2, 3]
         },
@@ -36,7 +36,7 @@
             "userId": 5,
             "username": "Benjamin",
             "email": "benjamin@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 5,
             "groups": [1]
         },
@@ -44,7 +44,7 @@
             "userId": 6,
             "username": "Ava",
             "email": "ava@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 3,
             "groups": [1]
         },
@@ -52,7 +52,7 @@
             "userId": 7,
             "username": "Ethan",
             "email": "ethan@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 26,
             "groups": [2, 3]
         },
@@ -60,7 +60,7 @@
             "userId": 8,
             "username": "Sophia",
             "email": "sophia@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 10,
             "groups": [2]
         },
@@ -68,7 +68,7 @@
             "userId": 9,
             "username": "Liam",
             "email": "liam@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 6,
             "groups": [2]
         },
@@ -76,7 +76,7 @@
             "userId": 10,
             "username": "Emma",
             "email": "emma@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 7,
             "groups": [3]
         },
@@ -84,7 +84,7 @@
             "userId": 11,
             "username": "Noah",
             "email": "noah@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 4,
             "groups": [3]
         },
@@ -92,7 +92,7 @@
             "userId": 12,
             "username": "Mia",
             "email": "mia@gmail.com",
-            "password": 123,
+            "password": "123",
             "pointsInAllGroups": 7,
             "groups": [3]
         }
