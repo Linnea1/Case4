@@ -10,33 +10,13 @@ async function renderHomePage() {
 
   const userData = await response.json();
   main.innerHTML = `
-    <img src="" alt="">
-    <button class="logoutButton">Logout</button>
-    <div>Hi
-      <span></span>
-    </div>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias nesciunt tempora officiis, qui placeat dicta deleniti quidem iure.</p>
-    <div class="navigation icons">
-      <i class="fa-solid fa-house"></i>
-      <i class="fa-solid fa-people-group"></i>
-      <i class="fa-solid fa-user"></i>
-      <i class="fa-solid fa-gears"></i>
-    </div>
-    <div>
-      <div>
-          <img src="" alt="">
-          <div>Name</div>
-          <div>Date</div>
-      </div>
-      <div>
-          <img src="" alt="">
-          <div>Name</div>
-          <div>Date</div>
-      </div>
-      <div>
-          <img src="" alt="">
-          <div>Name</div>
-          <div>Date</div>
+    <div class="page-home">
+      <button class="logoutButton">Logout</button>
+      <div class="home-welcome">
+        <h1>Hi
+          <span>${userData.username}</span>
+        </h1>
+        <p>Ready to predict like a pro? Let's start the betting frenzy!</p>
       </div>
     </div>
   `;
