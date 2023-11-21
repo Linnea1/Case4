@@ -21,4 +21,37 @@ function renderLoginPage() {
   `;
 
   document.querySelector(".fa-arrow-left").addEventListener("click", renderWelcomePage);
+
+  let loginMain = document.querySelector("main");
+  let loginForm = loginMain.querySelector("form");
+  let message = loginForm.querySelector(".message-login");
+  loginForm.addEventListener("submit", (event) =>
+    submitLogin(event, loginForm, message)
+  );
+}
+
+async function submitLogin(event, loginForm, message) {
+  event.preventDefault();
+
+  try {
+    let response = await fetch("../PHP/login.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: loginForm.querySelector(".login-email").value,
+        password: loginForm.querySelector(".login-password").value,
+      }),
+    });
+
+
+    let data = await response.json();
+
+    if (!response.ok) {
+      message.textContent = data.message;
+    } else {
+      window.localStorage.setItem("user", JSON.stringify(data));
+    }
+  } catch (err) {
+    message.textContent = `Error: ${err.message}`;
+  }
 }
