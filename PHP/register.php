@@ -41,7 +41,7 @@ $data['users'][] = $newUser;
 file_put_contents($jsonFile, json_encode($data, JSON_PRETTY_PRINT));
 
 http_response_code(200);
-echo json_encode(['message' => 'Registration successful']);
+echo json_encode(['message' => 'Registration successful', 'user' => $newUser]);
 
 function isDuplicateUser($username, $email, $users)
 {
