@@ -16,7 +16,7 @@
 .home-welcome {
     border-left: 2px solid var(--color-white);
     padding-left: 10px;
-    margin: 500px 10px 0;
+    margin: 420px 10px 0;
 }
 
 .home-welcome h1 {
@@ -28,10 +28,39 @@
 }
 
 .awards {
-    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0 100px;
     box-sizing: border-box;
-    background-color: var(--color-black);
-    color: var(--color-white);
-
+    background-color: var(--color-background);
 }
 
+.award-item {
+    background-color: var(--color-black);
+    padding: 20px;
+    color: var(--color-white);
+    width: 90%;
+}
+
+.emmys {
+    background-image: url('../images/emmys.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.grammys {
+    background-image: url('../images/grammys.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.oscars {
+    background-image: url('../images/oscars.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}

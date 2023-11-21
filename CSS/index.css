@@ -48,4 +48,5 @@ button {
   --color-white: rgb(255, 255, 255);
   --color-black: rgb(0, 0, 0);
   --color-grey: rgb(158, 158, 158);
+  --color-background: rgb(24, 24, 24);
 }
