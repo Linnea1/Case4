@@ -6,8 +6,8 @@ main.innerHTML=`
             <h1>Hello!</h1>
             <p>Lorem ipsum dolor sit amet consectetur. Phasellus hac est pellentesque elementum massa vel.</p>
             <div class="loginRegisterButtonContainer">
-                <div class="loginButton">Log In</div>
-                <div class="registerButton">Create Account</div>
+                <div class="loginButton button">Log In</div>
+                <div class="registerButton button">Create Account</div>
             </div>
         </div>
     </div>

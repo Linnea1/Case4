@@ -28,3 +28,6 @@ main{
 .alreadyAccount{
     align-self: end;
 }
+.registerErrorMessage{
+    color: rgb(151, 16, 16);
+}

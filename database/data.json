@@ -123,9 +123,17 @@
             ]
         },
         {
-            "userId": "655c77a3e290e",
+            "userId": 13,
             "username": "linnea",
             "email": "linnea@.com",
+            "password": "123",
+            "pointsInAllGroups": 0,
+            "groups": []
+        },
+        {
+            "userId": 14,
+            "username": "Julia",
+            "email": "Julia@.com",
             "password": "123",
             "pointsInAllGroups": 0,
             "groups": []
