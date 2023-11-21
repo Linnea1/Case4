@@ -1,4 +1,4 @@
-"user strict";
+"use strict";
 
 function renderLoginPage() {
   main.innerHTML = `
@@ -9,12 +9,12 @@ function renderLoginPage() {
         <p>Log in to continue</p>
       </div>
       <form class="login-form" action="PHP/login.php" method="POST">
-        <input type="text" class="login-email" placeholder="Email">
-        <input type="password" class="login-password" placeholder="Password">
+        <input type="text" class="login-email" placeholder="Email" name="email">
+        <input type="password" class="login-password" placeholder="Password" name="password">
         <button class="go-to-home-page" type="submit">Continue</button>
         <p class="message-login"></p>
       </form>
-      <footer class=sign-up-from-login>Don’t have an account?
+      <footer class="sign-up-from-login">Don’t have an account?
         <button>Sign up</button>
       </footer>
     </div>
