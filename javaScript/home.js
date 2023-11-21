@@ -3,7 +3,7 @@
 async function renderHomePage() {
   main.innerHTML = `
     <img src="" alt="">
-    <div>Hi</div>
+    <button class="logoutButton">Logout</button>
     <div>Hi
       <span></span>
     </div>
