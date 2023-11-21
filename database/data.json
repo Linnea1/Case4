@@ -129,6 +129,14 @@
             "password": "123",
             "pointsInAllGroups": 0,
             "groups": []
+        },
+        {
+            "userId": "655c7f408d679",
+            "username": "emma",
+            "email": "emma123@.com",
+            "password": "emmaaa",
+            "pointsInAllGroups": 0,
+            "groups": []
         }
     ],
     "groups": [

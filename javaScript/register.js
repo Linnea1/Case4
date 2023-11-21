@@ -2,7 +2,7 @@ function renderRegisterPage(){
     
     main.innerHTML=`
     <div class="registerPageWrapper">
-        <div class="registerGoBack">←</div>
+        <div class="registerGoBack button">←</div>
         <div class="registerTextContainer">
             <h1>Hi!</h1>
             <p>Create an account to continue</p>
@@ -12,6 +12,7 @@ function renderRegisterPage(){
             <input type="text" class="email registerBox" name="email" placeholder="Email" required><br>
             <input type="password" class="password registerBox" name="password" placeholder="Password" required><br>
 
+            <p class="registerErrorMessage"></p>
             <button class="sendRegisterForm" type="button">Continue</button>
         </form>
         <p class="alreadyAccount">Already have an account? Log In</p>
@@ -42,7 +43,11 @@ function renderRegisterPage(){
           });
       
           const data = await response.json();
-          console.log("Registration successful:", data);
+          if(data.error){
+            document.querySelector(".registerErrorMessage").textContent=data.error;
+          }else{
+            console.log("Registration successful:", data);
+          }
         } catch (error) {
           console.error("Error during registration:", error);
         }

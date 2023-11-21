@@ -15,6 +15,9 @@
     align-items: center;
     box-sizing: border-box;
 }
+.button:hover{
+    cursor: pointer;
+}
 .loginRegisterButtonContainer{
     display: flex;
     flex-direction: column;
