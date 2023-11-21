@@ -9,6 +9,9 @@ async function renderHomePage() {
   let response = await fetch(`../PHP/getUserData.php?userId=${getUserData().userId}`);
 
   const userData = await response.json();
+
+  main.classList.add("bg-home");
+
   main.innerHTML = `
     <div class="page-home">
       <button class="logoutButton">Logout</button>
