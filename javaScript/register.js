@@ -50,7 +50,7 @@ function renderRegisterPage(){
             console.log("Registration successful:", data);
             localStorage.setItem("user", JSON.stringify(data.user));
 
-            renderProfilePage();
+            renderHomePage();
           }
         } catch (error) {
           console.error("Error during registration:", error);

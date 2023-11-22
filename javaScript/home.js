@@ -33,6 +33,7 @@ async function renderHomePage() {
     </div>
   `;
 
+  document.querySelector(".fa-user").addEventListener("click", renderProfilePage);
   document.querySelector(".logoutButton").addEventListener("click", logoutFromAccount);
 }
 

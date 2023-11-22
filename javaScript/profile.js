@@ -8,9 +8,9 @@ function renderProfilePage(){
             <div class="avatar"></div>
             <div class="profileName"></div>
             <div class="profileButtons">
-                <div class="profileTeams">My Teams</div>
-                <div class="profileAwards">Awards</div>
-                <div class="profileSettings">Settings</div>
+                <div class="profileTeams button">My Teams</div>
+                <div class="profileAwards button">Awards</div>
+                <div class="profileSettings button active">Settings</div>
             </div>
         </div>
         <div class="profileContent"></div>
@@ -55,7 +55,7 @@ function renderProfilePage(){
     function teamContent(){
         profileContent.innerHTML=`
             <div class="groupContentWrapper">
-               hej hopp
+               Groups....
             </div>
         `
     }
