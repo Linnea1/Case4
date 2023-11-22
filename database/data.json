@@ -132,8 +132,16 @@
         },
         {
             "userId": 14,
-            "username": "Julia",
-            "email": "Julia@.com",
+            "username": "linnea2",
+            "email": "linnea2@.com",
+            "password": "123",
+            "pointsInAllGroups": 0,
+            "groups": []
+        },
+        {
+            "userId": 15,
+            "username": "linnea3",
+            "email": "linnea3.a",
             "password": "123",
             "pointsInAllGroups": 0,
             "groups": []

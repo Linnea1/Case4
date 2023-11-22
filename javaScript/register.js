@@ -48,6 +48,9 @@ function renderRegisterPage(){
             document.querySelector(".registerErrorMessage").textContent=data.error;
           }else{
             console.log("Registration successful:", data);
+            localStorage.setItem("user", JSON.stringify(data.user));
+
+            renderProfilePage();
           }
         } catch (error) {
           console.error("Error during registration:", error);
