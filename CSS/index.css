@@ -1,5 +1,14 @@
+:root {
+  --color-white: rgb(255, 255, 255);
+  --color-black: rgb(0, 0, 0);
+  --color-grey: rgb(158, 158, 158);
+  --color-background: rgb(24, 24, 24);
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  color: var(--color-white);
 }
 
 body {
@@ -31,7 +40,7 @@ header, main, nav {
 
 input {
     border: none;
-    border-bottom: 1px solid #B6B6B6;
+    border-bottom: 1px solid var(--color-grey);
 }
 
 button {
@@ -44,9 +53,3 @@ button {
     background-color: transparent;
 }
 
-:root {
-  --color-white: rgb(255, 255, 255);
-  --color-black: rgb(0, 0, 0);
-  --color-grey: rgb(158, 158, 158);
-  --color-background: rgb(24, 24, 24);
-}
