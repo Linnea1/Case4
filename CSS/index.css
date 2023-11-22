@@ -47,11 +47,12 @@ input {
 
 button {
     border: none;
-    padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
 }
 
