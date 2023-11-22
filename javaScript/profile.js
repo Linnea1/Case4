@@ -52,15 +52,9 @@ function renderProfilePage(){
         `
     }
 
-    function teamContent(){
-        profileContent.innerHTML=`
-            <div class="groupContentWrapper">
-               Groups....
-            </div>
-        `
-    }
-
-    profileTeams.addEventListener("click", teamContent);
+    profileTeams.addEventListener("click", () => {
+      teamContent(profileContent);
+    });
     profileAwards.addEventListener("click", awardContent);
     profileSettings.addEventListener("click", settingsContent);
 
