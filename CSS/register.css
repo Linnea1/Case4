@@ -1,19 +1,26 @@
-.registerPageWrapper{
+.registerPageWrapper {
+    background: linear-gradient(rgb(33, 61, 86), rgb(0, 0, 0));
     height: 100%;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
     box-sizing: border-box;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
-main{
+
+main {
     height: 100vh;
 }
-#registrationForm{
+
+.registerTextContainer p {
+  color: var(--color-grey);
+}
+
+.registrationForm {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
+
 .registrationForm input {
     border: none;
     border-bottom: 1px solid var(--color-grey);
@@ -21,19 +28,18 @@ main{
     padding-bottom: 10px;
 }
 
+.registerBox {
     width: 100%;
     border: none;
     border-bottom: solid 1px black;
 }
-.sendRegisterForm{
-    border: 0px;
-    border-radius: 10px;
-    padding: 10px 0px;
-    background-color: rgb(192, 192, 192);
-}
-.alreadyAccount{
+
+.alreadyAccount {
     align-self: end;
+    color: var(--color-grey);
+    text-align: center;
 }
-.registerErrorMessage{
+
+.registerErrorMessage {
     color: rgb(151, 16, 16);
 }
