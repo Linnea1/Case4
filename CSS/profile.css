@@ -1,0 +1,11 @@
+.profileButtons{
+    display: flex;
+    gap: 10px;
+}
+.profileButtons>div{
+    background-color: orange;
+    padding: 10px;
+}
+.active:hover{
+    cursor:default;
+}
