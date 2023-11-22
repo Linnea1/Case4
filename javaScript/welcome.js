@@ -11,8 +11,8 @@ function renderWelcomePage() {
             </div>
         </div>
         <div class="welcome-buttons">
-            <div class="login-button button">Log In</div>
-            <div class="register-button button">Create Account</div>
+            <div class="login-button button btn-main">Log In</div>
+            <div class="register-button button btn-main">Create Account</div>
         </div>
     `;
 

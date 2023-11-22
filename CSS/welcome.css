@@ -56,8 +56,7 @@
     margin-bottom: -20px;
 }
 
-.login-button,
-.register-button {
+.btn-main {
     text-align: center;
     padding: 10px;
     border-radius: 10px;
@@ -69,7 +68,6 @@
     align-items: center;
 }
 
-.login-button:hover,
-.register-button:hover {
+.btn-main:hover {
     background-color: darkgray;
 }
