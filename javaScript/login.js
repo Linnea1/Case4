@@ -21,6 +21,7 @@ function renderLoginPage() {
   `;
 
   document.querySelector(".fa-arrow-left").addEventListener("click", renderWelcomePage);
+  document.querySelector(".sign-up-from-login button").addEventListener("click", renderRegisterPage);
 
   let loginMain = document.querySelector("main");
   let loginForm = loginMain.querySelector("form");
