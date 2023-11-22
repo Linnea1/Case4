@@ -19,46 +19,6 @@ function renderRegisterPage() {
     </div>
     `
 
-    document.querySelector(".sendRegisterForm").addEventListener("click", register);
-    document.querySelector(".registerGoBack").addEventListener("click", renderWelcomePage);
-    document.querySelector(".alreadyAccount").addEventListener("click", renderLoginPage);
-
-    async function register() {
-        try {
-          var username = document.querySelector(".username").value;
-          var email = document.querySelector(".email").value;
-          var password = document.querySelector(".password").value;
-
-          var newUser = {
-            username: username,
-            email: email,
-            password: password,
-            totalPoints: 0,
-            groups: []
-          };
-
-          const response = await fetch("PHP/register.php", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(newUser),
-          });
-
-          const data = await response.json();
-          if (!response.ok){
-            document.querySelector(".registerErrorMessage").textContent=data.error;
-          }else{
-            console.log("Registration successful:", data);
-            localStorage.setItem("user", JSON.stringify(data.user));
-
-            renderHomePage();
-          }
-        } catch (error) {
-          console.error("Error during registration:", error);
-        }
-    }
-
   document.querySelector(".sendRegisterForm").addEventListener("click", register);
   document.querySelector(".fa-arrow-left").addEventListener("click", renderWelcomePage);
   document.querySelector(".alreadyAccount button").addEventListener("click", renderLoginPage);
