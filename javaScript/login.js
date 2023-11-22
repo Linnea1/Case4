@@ -3,7 +3,7 @@
 function renderLoginPage() {
   main.innerHTML = `
     <div class="login-page">
-      <i class="fa-solid fa-arrow-left"></i>
+      <div><i class="fa-solid fa-arrow-left"></i></div>
       <div class="login-welcome">
         <h1>Welcome back!</h1>
         <p>Log in to continue</p>
