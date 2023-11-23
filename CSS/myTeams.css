@@ -1,0 +1,13 @@
+.team {
+  background-color: var(--color-black);
+  padding: 20px;
+  margin: 20px;
+}
+
+.team-info {
+  padding-top: 10px;
+}
+
+.team-info p {
+  color: var(--color-grey);
+}

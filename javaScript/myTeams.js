@@ -7,12 +7,26 @@ async function teamContent(profileContent) {
     <div class="teams">
       ${renderTeams(userTeams)}
     </div>
-            <div class="groupContentWrapper">
-               Groups....
-            </div>
-        `;
+    <nav class="sticky-nav">${stickyNav()}</nav>
   `;
 }
 
 function renderTeams(userTeams) {
+  const team = userTeams
+    .map(
+      (element) => `
+      <div class="team">
+        <h3>${element.groupName}</h3>
+        <div class="team-info">
+          <p>${element.members.length} members</p>
+          <p>/${element.members.length} members have placed their bet</p>
+        </div>
+      </div>
+    `
+    )
+    .join("");
+
+  return `
+    ${team}
+  `;
 }
