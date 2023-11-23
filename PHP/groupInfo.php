@@ -29,7 +29,6 @@ if (isset($id)) {
       foreach($userGroups as $userGroup) {
         foreach($groups as $group) {
           if ($userGroup === $group["groupId"]) {
-            file_put_contents("./dump.txt", "works");
             array_push($groupsFound, $group);
           }
         }
