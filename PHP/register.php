@@ -1,9 +1,10 @@
 <?php
-$databasePath = dirname(__DIR__) . '/database';
-$jsonFile = $databasePath . '/data.json';
+$databasePath = "../database'";
+$jsonFile = "../database/data.json";
 $jsonData = file_get_contents($jsonFile);
 $data = json_decode($jsonData, true);
 $inputData = json_decode(file_get_contents('php://input'), true);
+//file_put_contents("./dump.txt", json_encode($data));
 
 if (
     !isset(
@@ -48,6 +49,7 @@ function isDuplicateUser($username, $email, $users)
     foreach ($users as $user) {
         if ($user['username'] === $username || $user['email'] === $email) {
             return true;
+            break;
         }
     }
     return false;
