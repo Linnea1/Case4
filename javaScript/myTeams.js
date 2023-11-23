@@ -9,6 +9,10 @@ async function teamContent(profileContent) {
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
+
+  document
+    .querySelector(".sticky-nav .home")
+    .addEventListener("click", renderHomePage);
 }
 
 function renderTeams(userTeams) {
