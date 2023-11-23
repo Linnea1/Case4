@@ -19,7 +19,7 @@ function renderTeams(userTeams) {
   const team = userTeams
     .map(
       (element) => `
-      <div class="team">
+      <div class="team ${element.groupName.toLowerCase().replace(/\s+/g, "-")}">
         <h3>${element.groupName}</h3>
         <div class="team-info">
           <p>${element.members.length} members</p>
