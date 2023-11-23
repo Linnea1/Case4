@@ -73,7 +73,7 @@ function renderBettingPage(event) {
     <div id="bettingPageContainer">
         <h1></h1>
         <div id="bettingsContainerBettingPage"></div>
-        <div id="continueButton">Continue</div>
+        <div id="continueButton">Next</div>
         
         <div id="navBarAIPage">
             <div id="navHome"></div>
@@ -127,12 +127,23 @@ function renderBettingPage(event) {
         usersChoices[i].addEventListener("click", displayUserChoice);
     }
 
+    let continueButton = document.querySelector("div#continueButton");
+    continueButton.style.pointerEvents = "none";
+    continueButton.style.backgroundColor = "#343434";
+    continueButton.addEventListener("click", continueBetting);
+
     function displayUserChoice(event) {
 
         if(this.style.backgroundColor !== "darkgrey") {
+            
             this.style.backgroundColor = "darkgrey";
+            continueButton.style.pointerEvents = "auto";
+            continueButton.style.backgroundColor = "darkgrey";
         } else if(this.style.backgroundColor === "darkgrey") {
+
             this.style.backgroundColor = "black";
+            continueButton.style.pointerEvents = "none";
+            continueButton.style.backgroundColor = "#343434";
         }
 
         for(let i = 0; i < usersChoices.length; i++) {
@@ -144,5 +155,11 @@ function renderBettingPage(event) {
                 usersChoices[i].style.backgroundColor = "black";
             } 
         }
+    }
+
+    function continueBetting(event) {
+
+        let usersChoices = document.querySelectorAll(".bettingChoiceContainer");
+      
     }
 }
