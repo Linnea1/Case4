@@ -19,8 +19,7 @@ function renderTeams(userTeams) {
   const team = userTeams
     .map(
       (element) => `
-      <button class="team ${element.groupName.toLowerCase().replace(/\s+/g, "-")}">
-        <h3>${element.groupName}</h3>
+        <h3>${element.groupName.toUpperCase()}</h3>
         <div class="team-info">
           <p>${element.members.length} members</p>
           <p>/${element.members.length} members have placed their bet</p>
