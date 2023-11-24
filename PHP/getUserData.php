@@ -19,13 +19,13 @@ if (file_exists($filename)) {
 if (isset($id)) {
   foreach($users as $user) {
     if (trim($user["userId"]) === $id) {
-      send(200, $user);
+      send($user, 200);
     }
   }
 
   $error = ["error" => "User is not found"];
-  abort(404, $error);
+  abort($error, 404);
 } else {
-  send(200, $users);
+  send($users, 200);
 }
 ?>

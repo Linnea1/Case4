@@ -26,7 +26,7 @@ if(
   )
 ) {
   $error = ["message" => "Input box(es) cannot be empty"];
-  abort(400, $error);
+  abort($error, 400);
 } else {
   $email = $requestData["email"];
   $password = $requestData["password"];
@@ -47,10 +47,10 @@ if(
   }
 
   if ($userIsFound) {
-    send(200, $userToSend);
+    send($userToSend, 200);
   } else {
     $error = ["message" => "Invalid user or password"];
-    abort(404, $error);
+    abort($error, 404);
   }
 }
 ?>

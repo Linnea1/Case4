@@ -13,26 +13,25 @@ function allowCORS() {
 
 function allowJSON() {
   if ($_SERVER["CONTENT_TYPE"] != "application/json") {
-    abort(400, ["error" => "Invalid content type(only JSON is allowed)"]);
+    abort(["error" => "Invalid content type(only JSON is allowed)"], 400);
   }
 }
 
 function allowMethod($method) {
   if ($_SERVER["REQUEST_METHOD"] != $method) {
-    abort(405, ["error" => "Method is not allowed"]);
+    abort(["error" => "Method is not allowed"], 405);
   }
 }
 
-function abort($statusCode = 400, $message = []) {
-  send($statusCode, $message);
+function abort($message = [], $statusCode = 400) {
+  send($message, $statusCode);
 }
 
-function send($statusCode = 200, $data) {
+function send($data, $statusCode = 200) {
   header("Content-Type: application/json");
   http_response_code($statusCode);
   $json = json_encode($data);
   echo $json;
   exit();
 }
-
 ?>

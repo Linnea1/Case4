@@ -33,13 +33,13 @@ if (isset($id)) {
           }
         }
       }
-      send(200, $groupsFound);
+      send($groupsFound, 200);
     }
   }
 
   $error = ["error" => "User is not found"];
-  abort(404, $error);
+  abort($error, 404);
 } else {
-  send(200, $groupsFound);
+  send($groupsFound, 200);
 }
 ?>
