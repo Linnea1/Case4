@@ -1,7 +1,7 @@
 .sticky-nav {
   height: 84px;
   width: 100%;
-  background-color: #0C0C0C;
+  background-color: var(--color-nav);
   bottom: 0;
   position: fixed;
 }
