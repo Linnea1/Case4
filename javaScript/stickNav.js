@@ -3,10 +3,18 @@
 function stickyNav() {
   return `
     <ul>
-      <li class="home"><i class="fa-solid fa-house"></i></li>
-      <li class="teams"><i class="fa-solid fa-people-group"></i></li>
-      <li class="profile"><i class="fa-solid fa-user"></i></li>
-      <li class="setting"><i class="fa-solid fa-gears"></i></li>
+      <li class="nav-groups">
+        <i class="fa-solid fa-people-group"></i>
+        <p class="nav-icon-name">Groups</p>
+      </li>
+      <li class="nav-groups">
+        <i class="fa-solid fa-trophy"></i>
+        <p class="nav-icon-name">Awards</p>
+      </li>
+      <li class="nav-profile">
+        <i class="fa-solid fa-user"></i>
+        <p class="nav-icon-name">Profile</p>
+        </li>
     </ul>
   `;
 }

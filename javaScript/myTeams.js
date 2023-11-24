@@ -10,10 +10,6 @@ async function teamContent(profileContent) {
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
 
-  document
-    .querySelector(".sticky-nav .home")
-    .addEventListener("click", renderHomePage);
-
   let teams = document.querySelectorAll(".team");
 
   teams.forEach((team) => {

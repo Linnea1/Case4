@@ -25,4 +25,11 @@
 
 .sticky-nav .fa-solid {
   color: var(--color-grey);
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+
+.nav-icon-name {
+  margin: 3px;
+  color: var(--color-grey);
 }

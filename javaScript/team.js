@@ -13,10 +13,6 @@ function navigateToTeamPage(selectedTeam) {
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
-
-  document
-    .querySelector(".sticky-nav .home")
-    .addEventListener("click", renderHomePage);
 }
 
 function putUsersInOrder(selectedTeam) {
