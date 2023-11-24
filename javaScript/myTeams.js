@@ -22,6 +22,8 @@ async function teamContent(profileContent) {
       navigateToTeamPage(selectedTeam);
     });
   });
+
+  document.querySelector(".fa-trophy").addEventListener("click", () => renderAwardsPage(awards));
 }
 
 function renderTeams(userTeams) {
