@@ -79,6 +79,18 @@
     padding-top: 6.7px;
 }
 
+#startBettingAwardBettingPage {
+    height: 63px;
+    width: 350px;
+    color: #9E9E9E;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
 
 /*Betting page CSS below*/
 

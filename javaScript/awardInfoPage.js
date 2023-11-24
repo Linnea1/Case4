@@ -38,21 +38,26 @@ function renderAwardInfoPage() {
                 <div class="bettingChoiceAIPage">No bet</div>
             </div>
         </div>
-        <div id="sendBetsAIPage">Send bets</div>
+        <div id="startBettingAwardBettingPage">Start betting</div>
     </div>
     `;
 
 
     let navButtons = document.querySelectorAll("#navBarAIPage > div");
 
-    let awardCategories = document.querySelectorAll("div.categoryAIPage");
+    //let awardCategories = document.querySelectorAll("div.categoryAIPage");
+    //Denna ovan behövs kanske inte, i alla fall inte nu
 
-    for(let i = 0; i < awardCategories.length; i++) {
-        awardCategories[i].addEventListener("click", renderBettingPage);
-    }
+    let startBettingButton = document.querySelector("div#startBettingAwardBettingPage");
+    startBettingButton.addEventListener("click", renderBettingPage);
 }
 
 function renderBettingPage(event) {
+    //Renders when user clicks on a category on the award page
+    //Need to place a previous button if user did not click on the first one?
+
+    //Need to check which category the user clicked on, what number
+
     let awardCategories = document.querySelectorAll("div.categoryAIPage");
     let firstCategoryOfCurrentAward = awardCategories[0].firstElementChild.textContent;
 
@@ -62,6 +67,7 @@ function renderBettingPage(event) {
         console.log(awards[i]);
         if(firstCategoryOfCurrentAward === awards[i]["categories"][0].category) {
             currentAward = awards[i]["award"];
+            //Find right award
         }
 
         i++
@@ -69,11 +75,12 @@ function renderBettingPage(event) {
 
     console.log(currentAward);
 
+    //Ändra continue-knappen nedan, ska inte alltid vara där
     main.innerHTML =  `
     <div id="bettingPageContainer">
         <h1></h1>
         <div id="bettingsContainerBettingPage"></div>
-        <div id="continueButton">Next</div>
+        <div id="continueButton">Next</div> 
         
         <div id="navBarAIPage">
             <div id="navHome"></div>
@@ -85,12 +92,15 @@ function renderBettingPage(event) {
     `;
 
     let categoryNameHeading = document.querySelector("div#bettingPageContainer > h1");
-
+    categoryNameHeading.textContent = firstCategoryOfCurrentAward;
     console.log(event);
     console.log(this);
     console.log(event.currentTarget);
 
-    let categoryClicked = this.children[0].textContent;
+    //Current category below
+
+    //When this page renders, it will always be displaying the first category for the award
+    /*let categoryClicked = this.children[0].textContent;
     console.log(categoryClicked);
     categoryNameHeading.textContent = categoryClicked;
 
@@ -103,6 +113,22 @@ function renderBettingPage(event) {
             for(let ii = 0; ii < awards[i].categories.length; ii++) {
                 if(awards[i].categories[ii].category === categoryClicked) {
                     nomineesArray = awards[i].categories[ii].nominees;
+                    //Find array with nominees for the right category, for the right award
+                    //The elements of the nominees array are made of objects
+                }
+            }
+        }
+    }*/
+
+    let nomineesArray;
+
+    for(let i = 0; i < awards.length; i++) {
+        if(awards[i].award === currentAward) {
+            for(let ii = 0; ii < awards[i].categories.length; ii++) {
+                if(awards[i].categories[ii].category === firstCategoryOfCurrentAward) {
+                    nomineesArray = awards[i].categories[ii].nominees;
+                    //Find array with nominees for the first category, for the right award
+                    //The elements of the nominees array are made of objects
                 }
             }
         }
@@ -110,7 +136,7 @@ function renderBettingPage(event) {
 
     let bettingsContainer = document.querySelector("div#bettingsContainerBettingPage");
 
-    if(categoryClicked === "Best Picture") {
+    if(firstCategoryOfCurrentAward === "Best Picture") {
         for(let i = 0; i < nomineesArray.length; i++) {
             let bettingChoiceContainer = document.createElement("div");
             bettingChoiceContainer.classList.add("bettingChoiceContainer");
@@ -122,9 +148,13 @@ function renderBettingPage(event) {
         }
     }
 
-    let usersChoices = document.querySelectorAll(".bettingChoiceContainer");
-    for(let i = 0; i < usersChoices.length; i++) {
-        usersChoices[i].addEventListener("click", displayUserChoice);
+
+
+    let nomineeAlternativesContainers = document.querySelectorAll("div.nomineeAlternativeBettingPage");
+
+    let usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
+    for(let i = 0; i < usersPossibleChoices.length; i++) {
+        usersPossibleChoices[i].addEventListener("click", displayUserChoice);
     }
 
     let continueButton = document.querySelector("div#continueButton");
@@ -146,20 +176,22 @@ function renderBettingPage(event) {
             continueButton.style.backgroundColor = "#343434";
         }
 
-        for(let i = 0; i < usersChoices.length; i++) {
-           if(usersChoices[i] === this) {
+        for(let i = 0; i < usersPossibleChoices.length; i++) {
+           if(usersPossibleChoices[i] === this) {
             continue;
            }
 
-            if(usersChoices[i].style.backgroundColor === "darkgrey") {
-                usersChoices[i].style.backgroundColor = "black";
+            if(usersPossibleChoices[i].style.backgroundColor === "darkgrey") {
+                usersPossibleChoices[i].style.backgroundColor = "black";
             } 
         }
     }
 
     function continueBetting(event) {
-
-        let usersChoices = document.querySelectorAll(".bettingChoiceContainer");
+        //Vilken kategori i ordningen
+        //Nomineringarna för denna kategorin
+        //Spara föregående nominering som valdes -- i objekt?
+        let usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
       
     }
 }
