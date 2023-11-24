@@ -1,17 +1,13 @@
-function renderProfilePage(){
-    let storedUser = JSON.parse(localStorage.getItem("user"));
-    console.log(storedUser);
+async function renderProfilePage(){
+    let response = await fetch(`../PHP/getUserData.php?userId=${getUserData().userId}`);
 
+    const userData = await response.json();
+    console.log(userData.profilePicture)
     main.innerHTML=`
     <div class="profilePageWrapper">
         <div class="backgroundPictureProfile">
-            <div class="avatar"></div>
-            <div class="profileName"></div>
-            <div class="profileButtons">
-                <div class="profileTeams button">My Teams</div>
-                <div class="profileAwards button">Awards</div>
-                <div class="profileSettings button active">Settings</div>
-            </div>
+            <img class="profilePicture" src=${userData.profilePicture} alt="Standard Avatar"> 
+            <h2 class="profileName"><span>${userData.username}</span></h2>
         </div>
         <div class="profileContent"></div>
         <div class="profileNavigationBar"></div>
@@ -20,6 +16,7 @@ function renderProfilePage(){
     let profileTeams=document.querySelector(".profileTeams");
     let profileAwards=document.querySelector(".profileAwards");
     let profileSettings=document.querySelector(".profileSettings");
+
 
     let profileContent=document.querySelector(".profileContent");
 
@@ -51,12 +48,6 @@ function renderProfilePage(){
             </div>
         `
     }
-
-    profileTeams.addEventListener("click", () => {
-      teamContent(profileContent);
-    });
-    profileAwards.addEventListener("click", awardContent);
-    profileSettings.addEventListener("click", settingsContent);
 
     settingsContent();
 }

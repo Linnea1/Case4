@@ -9,3 +9,7 @@
 .active:hover{
     cursor:default;
 }
+.profilePicture{
+    width: 30%;
+    border-radius: 15px;
+}

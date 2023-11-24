@@ -34,6 +34,7 @@ $newUser = [
     'username' => $inputData['username'],
     'email' => $inputData['email'],
     'password' => $inputData['password'],
+    'profilePicture' => "../images/profilePictures/standardPP.jpg",
     'pointsInAllGroups' => 0,
     'groups' => []
 ];
