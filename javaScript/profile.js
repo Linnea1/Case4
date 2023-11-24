@@ -12,6 +12,7 @@ async function renderProfilePage(){
         <div class="profileContent"></div>
         <div class="profileNavigationBar"></div>
     </div>
+    <nav class="sticky-nav">${stickyNav()}</nav>
     `
     let profileTeams=document.querySelector(".profileTeams");
     let profileAwards=document.querySelector(".profileAwards");
@@ -23,18 +24,29 @@ async function renderProfilePage(){
     function settingsContent(){
         profileContent.innerHTML=`
             <div class="settingsContentWrapper">
-                <form id="settingsForm">
-                    <label for="username">Username:</label>
-                    <input type="text" class="username registerBox" name="username" placeholder="Username" required><br>
-
-                    <label for="email">Email:</label>
-                    <input type="text" class="email registerBox" name="email" placeholder="Email" required><br>
-
-                    <label for="password">Password:</label>
-                    <input type="password" class="password registerBox" name="password" placeholder="Password" required><br>
-
-                    <button class="sendRegisterForm" type="button">Save</button>
-                </form>
+                <div class="settingsContainer">
+                    <div class="inputBox">
+                        <p>Username:</p>
+                        <p><span>${userData.username}</span></p>
+                        <div class="editBox">
+                            <div class="usernameEdit">edit</div>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <p>Email: </p>
+                        <p><span>${userData.email}</span></p>
+                        <div class="editBox">
+                            <div class="emailEdit">edit</div>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <p>Password: </p>
+                        <p type="password">${userData.password}</p>
+                        <div class="editBox">
+                            <div class="passwordEdit">edit</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         `
     }
