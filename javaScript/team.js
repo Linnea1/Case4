@@ -13,6 +13,8 @@ function navigateToTeamPage(selectedTeam) {
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
+
+  document.querySelector(".fa-trophy").addEventListener("click", () => renderAwardsPage(awards));
 }
 
 function putUsersInOrder(selectedTeam) {
