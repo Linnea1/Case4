@@ -26,22 +26,22 @@ async function renderProfilePage(){
             <div class="settingsContentWrapper">
                 <div class="settingsContainer">
                     <div class="inputBox">
-                        <p>Username:</p>
-                        <p><span>${userData.username}</span></p>
+                        <div>Username: </div>
+                        <div><span>${userData.username}</span></div>
                         <div class="editBox">
                             <div class="usernameEdit">edit</div>
                         </div>
                     </div>
                     <div class="inputBox">
-                        <p>Email: </p>
-                        <p><span>${userData.email}</span></p>
+                        <div>Email: </div>
+                        <div><span>${userData.email}</span></div>
                         <div class="editBox">
                             <div class="emailEdit">edit</div>
                         </div>
                     </div>
                     <div class="inputBox">
-                        <p>Password: </p>
-                        <p type="password">${userData.password}</p>
+                        <div>Password: </div>
+                        <div type="password">${userData.password}</div>
                         <div class="editBox">
                             <div class="passwordEdit">edit</div>
                         </div>
