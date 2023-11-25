@@ -32,3 +32,11 @@
     justify-content: flex-end;
     align-items: flex-end;
 }
+.settingsInput{
+    width: 100%;
+}
+.settingsButton{
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+padding: 10px;
+}

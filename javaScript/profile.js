@@ -49,6 +49,12 @@ async function renderProfilePage(){
                 </div>
             </div>
         `
+        document.querySelector(".usernameEdit").addEventListener("click",e=>
+        {popup(`<div class="settingsContentWrapper">
+            <input type="text" class="settingsInput" placeholder="New Username">
+            <button class="settingsButton">Change username</button>
+            </div>`
+        )});
     }
 
     function awardContent(){
@@ -59,6 +65,12 @@ async function renderProfilePage(){
                 <div>Oscar</div>
             </div>
         `
+    }
+
+    function popup(htmlContent){
+        document.querySelector(".exitPopup").addEventListener("click", e=>{document.querySelector(".popup").style.display = 'none';})
+        document.querySelector(".inputContent").innerHTML=htmlContent;
+        document.querySelector(".popup").style.display = 'block';
     }
 
     settingsContent();
