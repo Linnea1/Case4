@@ -1,45 +1,60 @@
-function renderProfilePage(){
-    let storedUser = JSON.parse(localStorage.getItem("user"));
-    console.log(storedUser);
+async function renderProfilePage(){
+    let response = await fetch(`../PHP/getUserData.php?userId=${getUserData().userId}`);
 
+    const userData = await response.json();
+    console.log(userData.profilePicture)
     main.innerHTML=`
     <div class="profilePageWrapper">
         <div class="backgroundPictureProfile">
-            <div class="avatar"></div>
-            <div class="profileName"></div>
-            <div class="profileButtons">
-                <div class="profileTeams button">My Teams</div>
-                <div class="profileAwards button">Awards</div>
-                <div class="profileSettings button active">Settings</div>
-            </div>
+            <img class="profilePicture" src=${userData.profilePicture} alt="Standard Avatar"> 
+            <h2 class="profileName"><span>${userData.username}</span></h2>
         </div>
         <div class="profileContent"></div>
         <div class="profileNavigationBar"></div>
     </div>
+    <nav class="sticky-nav">${stickyNav()}</nav>
     `
     let profileTeams=document.querySelector(".profileTeams");
     let profileAwards=document.querySelector(".profileAwards");
     let profileSettings=document.querySelector(".profileSettings");
+
 
     let profileContent=document.querySelector(".profileContent");
 
     function settingsContent(){
         profileContent.innerHTML=`
             <div class="settingsContentWrapper">
-                <form id="settingsForm">
-                    <label for="username">Username:</label>
-                    <input type="text" class="username registerBox" name="username" placeholder="Username" required><br>
-
-                    <label for="email">Email:</label>
-                    <input type="text" class="email registerBox" name="email" placeholder="Email" required><br>
-
-                    <label for="password">Password:</label>
-                    <input type="password" class="password registerBox" name="password" placeholder="Password" required><br>
-
-                    <button class="sendRegisterForm" type="button">Save</button>
-                </form>
+                <div class="settingsContainer">
+                    <div class="inputBox">
+                        <div>Username: </div>
+                        <div><span>${userData.username}</span></div>
+                        <div class="editBox">
+                            <div class="usernameEdit">edit</div>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <div>Email: </div>
+                        <div><span>${userData.email}</span></div>
+                        <div class="editBox">
+                            <div class="emailEdit">edit</div>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <div>Password: </div>
+                        <div type="password">${userData.password}</div>
+                        <div class="editBox">
+                            <div class="passwordEdit">edit</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         `
+        document.querySelector(".usernameEdit").addEventListener("click",e=>
+        {popup(`<div class="settingsContentWrapper">
+            <input type="text" class="settingsInput" placeholder="New Username">
+            <button class="settingsButton">Change username</button>
+            </div>`
+        )});
     }
 
     function awardContent(){
@@ -52,11 +67,11 @@ function renderProfilePage(){
         `
     }
 
-    profileTeams.addEventListener("click", () => {
-      teamContent(profileContent);
-    });
-    profileAwards.addEventListener("click", awardContent);
-    profileSettings.addEventListener("click", settingsContent);
+    function popup(htmlContent){
+        document.querySelector(".exitPopup").addEventListener("click", e=>{document.querySelector(".popup").style.display = 'none';})
+        document.querySelector(".inputContent").innerHTML=htmlContent;
+        document.querySelector(".popup").style.display = 'block';
+    }
 
     settingsContent();
 }

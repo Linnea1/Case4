@@ -9,3 +9,34 @@
 .active:hover{
     cursor:default;
 }
+.profilePicture{
+    width: 30%;
+    border-radius: 15px;
+}
+.backgroundPictureProfile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputBox{
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    border-bottom: 2px solid black;
+}
+.editBox{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.settingsInput{
+    width: 100%;
+}
+.settingsButton{
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+padding: 10px;
+}
