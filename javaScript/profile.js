@@ -50,26 +50,101 @@ async function renderProfilePage(){
             </div>
         `
         document.querySelector(".usernameEdit").addEventListener("click",e=>
-        {popup(`<div class="settingsContentWrapper">
-            <input type="text" class="settingsInput" placeholder="New Username">
-            <button class="settingsButton">Change username</button>
-            </div>`
-        )});
-    }
+        {popup(`
+            <div class="exitPopup">X</div>
+            <input type="text" class="settingsInput inputUsername inputOrder1" placeholder="New username">
+            <p class="settingsErrorMessage"></p>
+            <button class="settingsButton settingsButtonUsername">Change username</button>
+            `
+            )
+            document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
+                var settingsUserID=userData.userId;
+                var newUsername=document.querySelector(".inputUsername").value;
+                var newUser = {
+                    id:settingsUserID,
+                    newUsername: newUsername
+                };
+                changeUser(newUser)
+            })
+           
+        });
 
-    function awardContent(){
-        profileContent.innerHTML=`
-            <div class="awardContentWrapper">
-                <div>Emmys</div>
-                <div>Grammys</div>
-                <div>Oscar</div>
-            </div>
-        `
+        document.querySelector(".emailEdit").addEventListener("click",e=>
+        {popup(`
+            <div class="exitPopup">X</div>
+            <input type="text" class="settingsInput inputEmail inputOrder1" placeholder="New email">
+            <input type="text" class="settingsInput inputEmailRepeat inputOrder2" placeholder="Repeat new email">
+            <p class="settingsErrorMessage"></p>
+            <button class="settingsButton settingsButtonUsername">Change email</button>
+            `
+            )
+            document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
+                var settingsUserID=userData.userId;
+                var newEmail=document.querySelector(".inputEmailRepeat").value;
+                var newEmailRepeat=document.querySelector(".inputEmail").value;
+                if(newEmail===newEmailRepeat){
+                    var newUser = {
+                        id:settingsUserID,
+                        newEmail: newEmail
+                    };
+                    changeUser(newUser)
+                }else{
+                    document.querySelector(".settingsErrorMessage").textContent="Email does not match";
+                }
+            })
+        });
+
+        document.querySelector(".passwordEdit").addEventListener("click",e=>
+        {popup(`
+            <div class="exitPopup">X</div>
+            <input type="text" class="settingsInput inputPassword inputOrder1" placeholder="New password">
+            <input type="text" class="settingsInput inputPasswordRepeat inputOrder2" placeholder="Repeat new password">
+            <p class="settingsErrorMessage"></p>
+            <button class="settingsButton settingsButtonUsername">Change password</button>
+            `
+            )
+            document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
+                var settingsUserID=userData.userId;
+                var newPassword=document.querySelector(".inputPasswordRepeat").value;
+                var newPasswordRepeat=document.querySelector(".inputPassword").value;
+                if(newPassword===newPasswordRepeat){
+                    var newUser = {
+                        id:settingsUserID,
+                        newPassword: newPassword
+                    };
+                    changeUser(newUser)
+                }else{
+                    document.querySelector(".settingsErrorMessage").textContent="Password does not match";
+                }
+            })
+        });
+        async function changeUser(newUser){
+            try {
+              const response = await fetch("PHP/settings.php", {
+                method: "PATCH",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newUser),
+              });
+        
+              const data = await response.json();
+              if (!response.ok) {
+                document.querySelector(".settingsErrorMessage").textContent = data.error;
+              } else {
+                console.log("Change successful:", data);
+                document.querySelector(".popup").style.display = 'none';
+                renderProfilePage()
+              }
+            } catch (error) {
+              console.error("Error during change:", error);
+            }
+        }
     }
 
     function popup(htmlContent){
-        document.querySelector(".exitPopup").addEventListener("click", e=>{document.querySelector(".popup").style.display = 'none';})
         document.querySelector(".inputContent").innerHTML=htmlContent;
+        document.querySelector(".exitPopup").addEventListener("click", e=>{document.querySelector(".popup").style.display = 'none';})
         document.querySelector(".popup").style.display = 'block';
     }
 

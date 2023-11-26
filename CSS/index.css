@@ -69,6 +69,7 @@ button {
   left: 50%;
   background: rgb(0, 0, 0);
   padding: 20px;
+  box-sizing: border-box;
   transform: translate(-50%, -50%);
   height: 40vh;
   width: 90%;
