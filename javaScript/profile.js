@@ -46,6 +46,8 @@ async function renderProfilePage(){
                             <div class="passwordEdit">edit</div>
                         </div>
                     </div>
+                    <label for="fileInput">Change profile picture</label>
+                    <input class="changePicture" type="file" id="fileInput" name="fileInput">
                 </div>
             </div>
         `
