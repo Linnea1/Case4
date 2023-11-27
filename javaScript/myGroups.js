@@ -1,9 +1,9 @@
 "use strict";
 
-async function renderMyGroups(homePage) {
+async function renderMyGroups() {
   let userGroups = await getUserTeams();
 
-  homePage.innerHTML = `
+  main.innerHTML = `
     <div class="page-my-groups">
       <h2>My Groups</h2>
       <button class="btn-main create-team">Create new team</button>
