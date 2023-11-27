@@ -5,6 +5,7 @@
             "username": "Elin",
             "email": "elin@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 3,
             "groups": [
                 1
@@ -15,6 +16,7 @@
             "username": "Emily",
             "email": "emily@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 1,
             "groups": [
                 1
@@ -25,6 +27,7 @@
             "username": "James",
             "email": "james@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 6,
             "groups": [
                 2
@@ -35,6 +38,7 @@
             "username": "Olivia",
             "email": "olivia@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 27,
             "groups": [
                 2,
@@ -46,6 +50,7 @@
             "username": "Benjamin",
             "email": "benjamin@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 5,
             "groups": [
                 1
@@ -56,6 +61,7 @@
             "username": "Ava",
             "email": "ava@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 3,
             "groups": [
                 1
@@ -66,6 +72,7 @@
             "username": "Ethan",
             "email": "ethan@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 26,
             "groups": [
                 2,
@@ -77,6 +84,7 @@
             "username": "Sophia",
             "email": "sophia@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 10,
             "groups": [
                 2
@@ -87,6 +95,7 @@
             "username": "Liam",
             "email": "liam@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 6,
             "groups": [
                 2
@@ -97,6 +106,7 @@
             "username": "Emma",
             "email": "emma@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 7,
             "groups": [
                 3
@@ -107,6 +117,7 @@
             "username": "Noah",
             "email": "noah@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 4,
             "groups": [
                 3
@@ -117,6 +128,7 @@
             "username": "Mia",
             "email": "mia@gmail.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 7,
             "groups": [
                 3
@@ -127,6 +139,7 @@
             "username": "linnea",
             "email": "linnea@.com",
             "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 0,
             "groups": []
         }

@@ -1,3 +1,7 @@
+.profilePageWrapper{
+    padding: 20px;
+    box-sizing: border-box;
+}
 .profileButtons{
     display: flex;
     gap: 10px;
@@ -8,4 +12,65 @@
 }
 .active:hover{
     cursor:default;
+}
+.profilePicture{
+    width: 30%;
+    border-radius: 15px;
+}
+.backgroundPictureProfile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.settingsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.inputBox{
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    border-bottom: 2px solid black;
+}
+.editBox{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.settingsInput{
+    width: 100%;
+}
+
+.settingsButton{
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    padding: 10px;
+    grid-row: 8;
+    border-radius: 5px;
+}
+.inputContent{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 0.5fr 1.5fr 1.5fr 1fr;
+}
+.inputOrder1{
+    grid-row: 3;
+}
+
+.inputOrder2{
+    grid-row: 5;
+}
+.settingsErrorMessage{
+    font-size: 12px;
+    grid-row: 7;
+    color: rgb(151, 16, 16);
+}
+.changePicture{
+    visibility: hidden;
 }
