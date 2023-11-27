@@ -1,14 +1,14 @@
-function navigateToTeamPage(selectedTeam) {
+function navigateToGroupPage(selectedGroup) {
   main.classList.remove("bg-home");
   main.innerHTML = `
-    <div class="team-container">
+    <div class="group-container">
       <div class="profile-heading-bg">
-        <h2 class="group-name">${selectedTeam.groupName.toUpperCase()}</h2>
-        <button>Leave Team</button>
+        <h2 class="group-name">${selectedGroup.groupName.toUpperCase()}</h2>
+        <button>Leave Group</button>
       </div>
-      <div class="team-rank">
+      <div class="group-rank">
         <h3>Ranking</h3>
-        <div class="users-in-rank">${putUsersInOrder(selectedTeam)}</div>
+        <div class="users-in-rank">${putUsersInOrder(selectedGroup)}</div>
       </div>
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>
@@ -17,8 +17,8 @@ function navigateToTeamPage(selectedTeam) {
   document.querySelector(".fa-trophy").addEventListener("click", () => renderAwardsPage(awards));
 }
 
-function putUsersInOrder(selectedTeam) {
-  const users = selectedTeam.users;
+function putUsersInOrder(selectedGroup) {
+  const users = selectedGroup.users;
 
   const sortByTotalPoints = (a, b) =>
     b.games.userTotalPointsForGroup - a.games.userTotalPointsForGroup;

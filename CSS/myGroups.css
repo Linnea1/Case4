@@ -1,19 +1,29 @@
-.teams {
+.page-my-groups {
+  background-color: var(--color-background);
+  height: 100vh;
+  padding: 30px;
+}
+
+.page-my-groups h2 {
+  margin: 0;
+}
+
+.groups {
   display: flex;
   flex-direction: column;
 }
 
-.team {
+.group {
   background-color: var(--color-black);
   padding: 20px;
   margin: 20px;
   text-align: left;
 }
 
-.team-info {
+.group-info {
   padding-top: 10px;
 }
 
-.team-info p {
+.group-info p {
   color: var(--color-grey);
 }

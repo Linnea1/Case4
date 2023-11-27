@@ -1,25 +1,29 @@
 "use strict";
 
 async function renderMyGroups(homePage) {
-  let userTeams = await getUserTeams();
+  let userGroups = await getUserTeams();
 
   homePage.innerHTML = `
     <div class="teams">
       ${renderTeams(userTeams)}
+      <div class="groups">
+        ${renderGroups(userGroups)}
+      </div>
     </div>
+
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
 
-  let teams = document.querySelectorAll(".team");
+  let groups = document.querySelectorAll(".group");
 
-  teams.forEach((team) => {
-    const teamId = team.id;
-    team.addEventListener("click", () => {
-      const selectedTeam = userTeams.find(
+  groups.forEach((group) => {
+    const groupId = group.id;
+    group.addEventListener("click", () => {
+      const selectedGroup = userGroups.find(
         (element) =>
-          element.groupName.toLowerCase().replace(/\s+/g, "-") === teamId
+          element.groupName.toLowerCase().replace(/\s+/g, "-") === groupId
       );
-      navigateToTeamPage(selectedTeam);
+      navigateToGroupPage(selectedGroup);
     });
   });
 
@@ -28,15 +32,15 @@ async function renderMyGroups(homePage) {
     .addEventListener("click", () => renderAwardsPage(awards));
 }
 
-function renderTeams(userTeams) {
-  const team = userTeams
+function renderGroups(userGroups) {
+  const group = userGroups
     .map(
       (element) => `
-      <button class="team" id="${element.groupName
+      <button class="group" id="${element.groupName
         .toLowerCase()
         .replace(/\s+/g, "-")}">
         <h3>${element.groupName.toUpperCase()}</h3>
-        <div class="team-info">
+        <div class="group-info">
           <p>${element.members.length} members</p>
           <p>/${element.members.length} members have placed their bet</p>
         </div>
@@ -46,6 +50,6 @@ function renderTeams(userTeams) {
     .join("");
 
   return `
-    ${team}
+    ${group}
   `;
 }

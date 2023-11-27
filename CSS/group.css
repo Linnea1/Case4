@@ -23,7 +23,7 @@
   z-index: 1;
 }
 
-.team-container {
+.group-container {
   height: 100vh;
 }
 
@@ -42,12 +42,12 @@
   color: var(--color-grey);
 }
 
-.team-rank {
+.group-rank {
   background-color: var(--color-background);
   height: 65vh;
   padding: 20px;
 }
 
-.team-rank h3 {
+.group-rank h3 {
   margin: 0 0 10px 0;
 }
