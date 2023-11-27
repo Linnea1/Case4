@@ -4,8 +4,9 @@ async function renderMyGroups(homePage) {
   let userGroups = await getUserTeams();
 
   homePage.innerHTML = `
-    <div class="teams">
-      ${renderTeams(userTeams)}
+    <div class="page-my-groups">
+      <h2>My Groups</h2>
+      <button class="btn-main create-team">Create new team</button>
       <div class="groups">
         ${renderGroups(userGroups)}
       </div>

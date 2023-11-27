@@ -8,6 +8,11 @@
   margin: 0;
 }
 
+.create-team {
+  margin: 20px 0;
+  width: 100%;
+}
+
 .groups {
   display: flex;
   flex-direction: column;
@@ -16,7 +21,6 @@
 .group {
   background-color: var(--color-black);
   padding: 20px;
-  margin: 20px;
   text-align: left;
 }
 
