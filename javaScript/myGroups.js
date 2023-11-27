@@ -29,8 +29,11 @@ async function renderMyGroups(homePage) {
   });
 
   document
-    .querySelector(".fa-trophy")
+    .querySelector(".nav-awards")
     .addEventListener("click", () => renderAwardsPage(awards));
+  document
+    .querySelector(".nav-profile")
+    .addEventListener("click", renderProfilePage);
 }
 
 function renderGroups(userGroups) {
