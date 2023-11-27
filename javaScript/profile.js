@@ -8,7 +8,6 @@ function renderProfilePage(){
             <div class="avatar"></div>
             <div class="profileName"></div>
             <div class="profileButtons">
-                <div class="profileTeams button">My Teams</div>
                 <div class="profileAwards button">Awards</div>
                 <div class="profileSettings button active">Settings</div>
             </div>
@@ -17,7 +16,6 @@ function renderProfilePage(){
         <div class="profileNavigationBar"></div>
     </div>
     `
-    let profileTeams=document.querySelector(".profileTeams");
     let profileAwards=document.querySelector(".profileAwards");
     let profileSettings=document.querySelector(".profileSettings");
 
@@ -52,9 +50,6 @@ function renderProfilePage(){
         `
     }
 
-    profileTeams.addEventListener("click", () => {
-      teamContent(profileContent);
-    });
     profileAwards.addEventListener("click", awardContent);
     profileSettings.addEventListener("click", settingsContent);
 
