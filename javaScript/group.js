@@ -14,7 +14,15 @@ function navigateToGroupPage(selectedGroup) {
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
 
-  document.querySelector(".fa-trophy").addEventListener("click", () => renderAwardsPage(awards));
+  document
+    .querySelector(".nav-groups")
+    .addEventListener("click", renderMyGroups);
+  document
+    .querySelector(".nav-awards")
+    .addEventListener("click", () => renderAwardsPage(awards));
+  document
+    .querySelector(".nav-profile")
+    .addEventListener("click", renderProfilePage);
 }
 
 function putUsersInOrder(selectedGroup) {
