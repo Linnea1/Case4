@@ -20,10 +20,13 @@ async function renderHomePage() {
     </div>
   `;
 
-  let homePage = document.querySelector(".page-home");
-  document.querySelector(".fa-user").addEventListener("click", renderProfilePage);
-  document.querySelector(".fa-trophy").addEventListener("click", () => renderAwardsPage(awards));
-  document.querySelector(".fa-people-group").addEventListener("click", () => renderMyGroups(homePage));
+  document
+    .querySelector(".nav-groups")
+    .addEventListener("click", renderMyGroups);
+  document
+    .querySelector(".nav-awards")
+    .addEventListener("click", () => renderAwardsPage(awards));
+  document.querySelector(".nav-profile").addEventListener("click", renderProfilePage);
 
   document.querySelector(".logoutButton").addEventListener("click", logoutFromAccount);
 }
