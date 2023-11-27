@@ -7,7 +7,7 @@ function stickyNav() {
         <i class="fa-solid fa-people-group"></i>
         <p class="nav-icon-name">Groups</p>
       </li>
-      <li class="nav-groups">
+      <li class="nav-awards">
         <i class="fa-solid fa-trophy"></i>
         <p class="nav-icon-name">Awards</p>
       </li>
