@@ -1,0 +1,19 @@
+.teams {
+  display: flex;
+  flex-direction: column;
+}
+
+.team {
+  background-color: var(--color-black);
+  padding: 20px;
+  margin: 20px;
+  text-align: left;
+}
+
+.team-info {
+  padding-top: 10px;
+}
+
+.team-info p {
+  color: var(--color-grey);
+}
