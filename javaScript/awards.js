@@ -26,7 +26,12 @@ function renderAwardsPage(awards) {
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
 
-  document.querySelector(".fa-user").addEventListener("click", renderProfilePage);
+  document
+    .querySelector(".nav-groups")
+    .addEventListener("click", renderMyGroups);
+  document
+    .querySelector(".nav-profile")
+    .addEventListener("click", renderProfilePage);
 
   return renderedContent;
 }
