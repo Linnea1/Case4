@@ -27,7 +27,40 @@ async function renderCreateNewGroupPage() {
       </div>
     <div>
   `;
+
   const usernames = await getAllUsernames();
+
+  const usernameInputField = document.querySelector(".new-group-member");
+  usernameInputField.addEventListener("input", () => {
+    const usernameInput = usernameInputField.value;
+    searchUsername(usernames, usernameInput, usernameInputField);
+  });
+}
+
+function searchUsername(usernames, usernameInput, usernameInputField) {
+  const dropdown = document.querySelector(".dropdownList");
+  dropdown.innerHTML = "";
+
+  const filteredUsernames = usernames.filter((username) =>
+    username.toLowerCase().startsWith(usernameInput)
+  );
+
+  filteredUsernames.forEach((username) => {
+    const option = document.createElement("option");
+    option.classList.add("dropdown-option");
+    option.textContent = username;
+
+    option.addEventListener("click", () => {
+      usernameInputField.value = username;
+      dropdown.innerHTML = "";
+      console.log(usernameInputField.value);
+    });
+
+    dropdown.appendChild(option);
+
+  });
+}
+
 async function getAllUsernames() {
   const allUsers = await getAllUsers();
   const usernames = allUsers.map((user) => user.username);
