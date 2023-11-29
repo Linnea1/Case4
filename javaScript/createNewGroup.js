@@ -27,4 +27,9 @@ async function renderCreateNewGroupPage() {
       </div>
     <div>
   `;
+  const usernames = await getAllUsernames();
+async function getAllUsernames() {
+  const allUsers = await getAllUsers();
+  const usernames = allUsers.map((user) => user.username);
+  return usernames;
 }

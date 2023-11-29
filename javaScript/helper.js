@@ -11,3 +11,10 @@ async function getUserTeams() {
   let userTeams = await response.json();
   return userTeams;
 }
+
+async function getAllUsers() {
+  const request = "../PHP/getAllUsers.php";
+  const response = await fetch(request);
+  const allUsers = await response.json();
+  return allUsers;
+}
