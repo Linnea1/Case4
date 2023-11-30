@@ -12,11 +12,7 @@ async function renderCreateNewGroupPage() {
           </div>
           <div class="new-group-member-container">
             <label for="new-group-member">Add group member</label>
-            <div class="input-row">
-              <input type="text" class="new-group-member" placeholder="Enter username" name="new-group-member" oninput="searchUsername()" required>
-              <i class="fa-solid fa-plus"></i>
-            </div>
-            <div class="dropdownList"></div>
+            <input type="text" class="new-group-member" placeholder="Enter username" name="new-group-member" required>
           </div>
           <div class="group-members-list">
             <div>Group members</div>
