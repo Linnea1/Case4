@@ -75,7 +75,12 @@ function addUserToList(username, usernameInputField, dropdown) {
     listItemContainer.appendChild(removeListItem);
     memberNames.appendChild(listItemContainer);
     usernameInputField.value = "";
+
+    removeListItem.addEventListener("click", () => {
+      listItemContainer.remove();
+    })
   }
+
 }
 
 async function getAllUsernames() {
