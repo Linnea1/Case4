@@ -13,20 +13,22 @@ async function renderCreateNewGroupPage() {
           <div class="new-group-member-container">
             <label for="new-group-member">Add group member</label>
             <input type="text" class="new-group-member" placeholder="Enter username" name="new-group-member" required>
+            <div class="dropdown-list"></div>
           </div>
           <div class="group-members-list">
             <div>Group members</div>
-            <ul></ul>
+            <ul class="group-members-names"></ul>
           </div>
         </form>
         <button class="create-new-group">Done</button>
       </div>
-    <div>
+    </div>
   `;
 
   const usernames = await getAllUsernames();
 
   const usernameInputField = document.querySelector(".new-group-member");
+
   usernameInputField.addEventListener("input", () => {
     const usernameInput = usernameInputField.value;
     searchUsername(usernames, usernameInput, usernameInputField);
@@ -34,7 +36,7 @@ async function renderCreateNewGroupPage() {
 }
 
 function searchUsername(usernames, usernameInput, usernameInputField) {
-  const dropdown = document.querySelector(".dropdownList");
+  const dropdown = document.querySelector(".dropdown-list");
   dropdown.innerHTML = "";
 
   const filteredUsernames = usernames.filter((username) =>
@@ -46,15 +48,25 @@ function searchUsername(usernames, usernameInput, usernameInputField) {
     option.classList.add("dropdown-option");
     option.textContent = username;
 
-    option.addEventListener("click", () => {
-      usernameInputField.value = username;
-      dropdown.innerHTML = "";
-      console.log(usernameInputField.value);
-    });
+    option.addEventListener("click", () =>
+      addUserToList(username, usernameInputField, dropdown)
+    );
 
     dropdown.appendChild(option);
-
   });
+}
+
+function addUserToList(username, usernameInputField, dropdown) {
+  usernameInputField.value = username;
+  dropdown.innerHTML = "";
+  const foundUsername = usernameInputField.value;
+  const memberNames = document.querySelector(".group-members-names");
+  if (foundUsername) {
+    const listItem = document.createElement("li");
+    listItem.textContent = foundUsername;
+    memberNames.appendChild(listItem);
+    usernameInputField.value = "";
+  }
 }
 
 async function getAllUsernames() {
