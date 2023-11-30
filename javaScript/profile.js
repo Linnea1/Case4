@@ -14,10 +14,6 @@ async function renderProfilePage(){
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>
     `
-    let profileTeams=document.querySelector(".profileTeams");
-    let profileAwards=document.querySelector(".profileAwards");
-    let profileSettings=document.querySelector(".profileSettings");
-
 
     let profileContent=document.querySelector(".profileContent");
 
@@ -46,14 +42,13 @@ async function renderProfilePage(){
                             <div class="passwordEdit">edit</div>
                         </div>
                     </div>
-                    <label for="fileInput">Change profile picture</label>
-                    <input class="changePicture" type="file" id="fileInput" name="fileInput">
+                    <div class="profilePictureButton">Change profile picture</div>
                 </div>
             </div>
         `
         document.querySelector(".usernameEdit").addEventListener("click",e=>
         {popup(`
-            <div class="exitPopup">X</div>
+            <div class="exitPopup">x</div>
             <input type="text" class="settingsInput inputUsername inputOrder1" placeholder="New username">
             <p class="settingsErrorMessage"></p>
             <button class="settingsButton settingsButtonUsername">Change username</button>
@@ -73,7 +68,7 @@ async function renderProfilePage(){
 
         document.querySelector(".emailEdit").addEventListener("click",e=>
         {popup(`
-            <div class="exitPopup">X</div>
+            <div class="exitPopup">x</div>
             <input type="text" class="settingsInput inputEmail inputOrder1" placeholder="New email">
             <input type="text" class="settingsInput inputEmailRepeat inputOrder2" placeholder="Repeat new email">
             <p class="settingsErrorMessage"></p>
@@ -98,7 +93,7 @@ async function renderProfilePage(){
 
         document.querySelector(".passwordEdit").addEventListener("click",e=>
         {popup(`
-            <div class="exitPopup">X</div>
+            <div class="exitPopup">x</div>
             <input type="text" class="settingsInput inputPassword inputOrder1" placeholder="New password">
             <input type="text" class="settingsInput inputPasswordRepeat inputOrder2" placeholder="Repeat new password">
             <p class="settingsErrorMessage"></p>
@@ -120,35 +115,84 @@ async function renderProfilePage(){
                 }
             })
         });
-        async function changeUser(newUser){
-            try {
-              const response = await fetch("PHP/settings.php", {
-                method: "PATCH",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(newUser),
-              });
-        
-              const data = await response.json();
-              if (!response.ok) {
-                document.querySelector(".settingsErrorMessage").textContent = data.error;
-              } else {
-                console.log("Change successful:", data);
-                document.querySelector(".popup").style.display = 'none';
-                renderProfilePage()
-              }
-            } catch (error) {
-              console.error("Error during change:", error);
-            }
-        }
-    }
 
-    function popup(htmlContent){
-        document.querySelector(".inputContent").innerHTML=htmlContent;
-        document.querySelector(".exitPopup").addEventListener("click", e=>{document.querySelector(".popup").style.display = 'none';})
-        document.querySelector(".popup").style.display = 'block';
+        document.querySelector(".profilePictureButton").addEventListener("click",e=>
+        { 
+            popup(`
+        <div class="exitPopup">x</div>
+        <form class="profilePictureForm" action="PHP/settings.php" method="POST" enctype="multipart/form-data">
+            <label for="fileInput">Change profile picture</label>
+            <input class="changePicture" type="file" id="fileInput" name="pfp">
+            <button class="profilePictureFormButton">Change profile Picture</button>
+        </form>
+        `);
+            document.querySelector(".profilePictureFormButton").addEventListener("click", e=>{
+                changeProfilePicture();
+            });
+        });
+        
+       
     }
 
     settingsContent();
+
+    async function changeProfilePicture() {
+        console.log(userData.userId)
+        let fileForm = document.querySelector(".profilePictureForm");
+        let formData = new FormData(fileForm);
+        
+        
+        
+       
+        try {
+            formData.append("id", userData.userId);
+            console.log(formData);
+            const response = await fetch("PHP/settings.php", {
+                method: "POST",
+                body: formData,
+            });
+    
+            if (!response.ok) {
+                console.error("Error in response:", response);
+                const data = await response.json();
+                console.error("Server error:", data.error);
+                document.querySelector(".settingsErrorMessage").textContent = data.error;
+            } else {
+                const data = await response.json();
+                console.log("Change successful:", data);
+                document.querySelector(".popup").style.display = 'none';
+                renderProfilePage();
+            }
+        } catch (error) {
+            console.error("Error during change:", error);
+        }
+    
+    }
+}
+function popup(htmlContent){
+    document.querySelector(".inputContent").innerHTML=htmlContent;
+    document.querySelector(".exitPopup").addEventListener("click", e=>{document.querySelector(".popup").style.display = 'none';})
+    document.querySelector(".popup").style.display = 'block';
+}
+async function changeUser(newUser){
+    try {
+        const response = await fetch("PHP/settings.php", {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newUser),
+        });
+
+        const data = await response.json();
+        if (!response.ok) {
+            document.querySelector(".settingsErrorMessage").textContent = data.error;
+        } else {
+            console.log("Change successful:", data);
+            document.querySelector(".popup").style.display = 'none';
+            renderProfilePage()
+        }
+    } catch (error) {
+        console.error("Error during change:", error);
+    }
 }

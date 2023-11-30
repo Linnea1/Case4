@@ -136,9 +136,9 @@
         },
         {
             "userId": 13,
-            "username": "linnea",
+            "username": "Linnea",
             "email": "linnea@.com",
-            "password": "123",
+            "password": "hej",
             "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
             "pointsInAllGroups": 0,
             "groups": []

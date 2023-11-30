@@ -71,6 +71,12 @@
     grid-row: 7;
     color: rgb(151, 16, 16);
 }
+.profilePictureFormButton{
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
 .changePicture{
-    visibility: hidden;
+    
 }
