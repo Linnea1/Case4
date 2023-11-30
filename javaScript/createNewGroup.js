@@ -62,9 +62,18 @@ function addUserToList(username, usernameInputField, dropdown) {
   const foundUsername = usernameInputField.value;
   const memberNames = document.querySelector(".group-members-names");
   if (foundUsername) {
-    const listItem = document.createElement("li");
+    const listItemContainer = document.createElement("li");
+    const listItem = document.createElement("div");
+    const removeListItem = document.createElement("button");
+
+    removeListItem.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+    listItemContainer.classList.add("listItemContainer");
     listItem.textContent = foundUsername;
-    memberNames.appendChild(listItem);
+    listItem.classList.add(foundUsername);
+    listItem.classList.add("new-member");
+    listItemContainer.appendChild(listItem);
+    listItemContainer.appendChild(removeListItem);
+    memberNames.appendChild(listItemContainer);
     usernameInputField.value = "";
   }
 }

@@ -108,6 +108,11 @@
   color: var(--color-grey);
   border-radius: 6px;
   font-size: 16px;
-  padding-left: 14px;
+  padding: 14px;
+  margin-bottom: 8px;
+}
 
+.listItemContainer {
+  display: flex;
+  justify-content: space-between;
 }
