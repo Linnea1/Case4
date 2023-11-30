@@ -7,7 +7,7 @@ async function renderCreateNewGroupPage() {
       <div class="create-new-group-container">
         <form class="new-group-form" action="PHP/createNewGroup.php" method="POST">
           <div class="new-group-name-container">
-            <input type="text" class="new-group-name" placeholder="Enter group name &#xf304;" name="new-group-name" required">
+            <input type="text" class="new-group-name" placeholder="Enter group name" name="new-group-name" required>
             <i class="fa-solid fa-pen"></i>
           </div>
           <div class="new-group-member-container">
