@@ -25,21 +25,21 @@ async function renderProfilePage(){
                         <div>Username: </div>
                         <div><span>${userData.username}</span></div>
                         <div class="editBox">
-                            <div class="usernameEdit">edit</div>
+                            <div class="usernameEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
                     <div class="inputBox">
                         <div>Email: </div>
                         <div><span>${userData.email}</span></div>
                         <div class="editBox">
-                            <div class="emailEdit">edit</div>
+                            <div class="emailEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
                     <div class="inputBox">
                         <div>Password: </div>
                         <div type="password">${userData.password}</div>
                         <div class="editBox">
-                            <div class="passwordEdit">edit</div>
+                            <div class="passwordEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
                     <div class="profilePictureButton">Change profile picture</div>
@@ -141,11 +141,11 @@ async function renderProfilePage(){
         let fileForm = document.querySelector(".profilePictureForm");
         let formData = new FormData(fileForm);
         
-        
+        formData.append("id", userData.userId);
         
        
         try {
-            formData.append("id", userData.userId);
+           
             console.log(formData);
             const response = await fetch("PHP/settings.php", {
                 method: "POST",
