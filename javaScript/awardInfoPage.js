@@ -121,9 +121,10 @@ function renderBettingPage(event) {
     }*/
 
     let nomineesArray;
-
+    let categoriesArray;
     for(let i = 0; i < awards.length; i++) {
         if(awards[i].award === currentAward) {
+            categoriesArray = awards[i].categories;
             for(let ii = 0; ii < awards[i].categories.length; ii++) {
                 if(awards[i].categories[ii].category === firstCategoryOfCurrentAward) {
                     nomineesArray = awards[i].categories[ii].nominees;
@@ -141,8 +142,8 @@ function renderBettingPage(event) {
             let bettingChoiceContainer = document.createElement("div");
             bettingChoiceContainer.classList.add("bettingChoiceContainer");
             bettingChoiceContainer.innerHTML = `
-            <div>Alt ${i+1}</div>
             <div class="nomineeAlternativeBettingPage">${nomineesArray[i].film}</div>
+            <div>Alternative ${i+1}</div>
             `;
             bettingsContainer.appendChild(bettingChoiceContainer);
         }
@@ -187,11 +188,18 @@ function renderBettingPage(event) {
         }
     }
 
+    let categoryIndex = 0;
     function continueBetting(event) {
         //Vilken kategori i ordningen
         //Nomineringarna för denna kategorin
         //Spara föregående nominering som valdes -- i objekt?
         let usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
+
+        //everytime the continue button is pressed, increment variable to show next 
+        //category nominees
+        if(firstCategoryOfCurrentAward === "Best Picture") {
+            console.log(categoriesArray);
+        }
       
     }
 }
