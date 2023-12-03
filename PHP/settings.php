@@ -59,57 +59,57 @@ if($method==="PATCH"){
         http_response_code(400);
         echo json_encode(['error' => 'newUsername is missing or empty']);
     }
-}elseif($method==="POST"){
-    var_dump($_FILES);
-    if($_FILES){
+}elseif ($method === "POST") {
+    file_put_contents("../dump2.txt", json_encode($data['users']));
+
+    if (isset($_FILES["pfp"])) {
         $inputData = json_decode(file_get_contents("php://input"), true);
-        
+        $userID = $_POST["id"];
+
         $source = $_FILES["pfp"]["tmp_name"];
-        $destination = "images/profilePictures/".$_FILES["pfp"]["name"];
+        $destination = "images/profilePictures/" . $_FILES["pfp"]["name"];
         $size = $_FILES["pfp"]["size"];
         $type = $_FILES["pfp"]["type"];
         $time = time();
-        
-        // these are needed for giving the right person the pfp
-        $userID = $inputData["id"];
-        file_put_contents("../dump2.txt", json_encode($userID));
 
         $allowedFiles = ["image/jpeg", "image/png", "image/gif"];
-        if (!in_array($type, $allowedFiles)){
+        if (!in_array($type, $allowedFiles)) {
             http_response_code(400);
-            echo json_encode(["error"=>"Wrong filetype"]);
+            echo json_encode(["error" => "Wrong filetype"]);
         }
 
         $ending = str_replace("image/", ".", $type);
         $filePath = "images/profilePictures/";
         $name = $time . $ending;
-        
-        foreach($data['users'] as $index => $user){
-            if($user["userId"] == $userID){
+
+        foreach ($data['users'] as &$user) {
+            if ($user["userId"] == $userID) {
+                // Delete the old profile picture
+                if (!empty($user["profilePicture"])) {
+                    unlink("../" . $user["profilePicture"]);
+                }
 
                 $user["profilePicture"] = $filePath . $name;
 
-                if(move_uploaded_file($source, "../images/profilePictures/" . $name)){
+                if (move_uploaded_file($source, "../images/profilePictures/" . $name)) {
                     $correctName =  $filePath . $name;
                     $user["profilePicture"] = $correctName;
-                    file_put_contents($jsonFile, json_encode($data['users'], JSON_PRETTY_PRINT));
+                    file_put_contents($jsonFile, json_encode($data, JSON_PRETTY_PRINT));
 
                     http_response_code(200);
                     echo json_encode($filePath . $name);
+                    exit;
                 } else {
                     http_response_code(400);
-                    echo json_encode(["error"=>"File could not be added to server, please try again"]);
+                    echo json_encode(["error" => "File could not be added to the server, please try again"]);
                 }
-
             }
-            
         }
         http_response_code(400);
-        echo json_encode(["error"=>"Problems with finding user"]);
+        echo json_encode(["error" => "Problems with finding user"]);
     }
-    http_response_code(400);
-    echo json_encode(["error"=>"Send a file"]);
 }
+
 
 
 function updateProfile($userID, $newValue, $key, &$users, $jsonFile, &$data)

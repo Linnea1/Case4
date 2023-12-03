@@ -14,8 +14,11 @@
     cursor:default;
 }
 .profilePicture{
-    width: 30%;
+    width: 25vw;
+    height: 25vw;
     border-radius: 15px;
+    background-position: center;
+    background-size: cover;
 }
 .backgroundPictureProfile{
     width: 100%;

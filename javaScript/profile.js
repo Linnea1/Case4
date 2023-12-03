@@ -3,10 +3,16 @@ async function renderProfilePage(){
 
     const userData = await response.json();
     console.log(userData.profilePicture)
+    let userProfilePicture;
+    if(userData.profilePicture===undefined){
+        userProfilePicture="../images/profilePictures/standardPP.jpg"
+    }else{
+        userProfilePicture=userData.profilePicture;
+    }
     main.innerHTML=`
     <div class="profilePageWrapper">
         <div class="backgroundPictureProfile">
-            <img class="profilePicture" src=${userData.profilePicture} alt="Standard Avatar"> 
+            <div class="profilePicture"></div> 
             <h2 class="profileName"><span>${userData.username}</span></h2>
         </div>
         <div class="profileContent"></div>
@@ -14,7 +20,7 @@ async function renderProfilePage(){
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>
     `
-
+    document.querySelector(".profilePicture").style.backgroundImage=`url('${userProfilePicture}')`;
     let profileContent=document.querySelector(".profileContent");
 
     function settingsContent(){
@@ -120,29 +126,56 @@ async function renderProfilePage(){
         { 
             popup(`
         <div class="exitPopup">x</div>
-        <form class="profilePictureForm" action="PHP/settings.php" method="POST" enctype="multipart/form-data">
+        <form id="profilePictureForm" method="POST" enctype="multipart/form-data">
             <label for="fileInput">Change profile picture</label>
             <input class="changePicture" type="file" id="fileInput" name="pfp">
-            <button class="profilePictureFormButton">Change profile Picture</button>
+            <button type="submit" class="profilePictureFormButton">Change profile Picture</button>
         </form>
-        `);
-            document.querySelector(".profilePictureFormButton").addEventListener("click", e=>{
-                changeProfilePicture();
+        `); 
+            document.getElementById("profilePictureForm").addEventListener("submit", async function(event){
+                event.preventDefault();
+                let fileForm = document.getElementById("profilePictureForm");
+                const formData = new FormData(fileForm);
+                formData.append("id", userData.userId);
+                console.log(formData);
+                
+                try {
+
+                    const response = await fetch("PHP/settings.php", {
+                        method: "POST",
+                        body: formData,
+                    });
+            
+                    if (!response.ok) {
+                        console.error("Error in response:", response);
+
+                        const data = await response.json();
+                        console.error("Server error:", data.error);
+                        document.querySelector(".settingsErrorMessage").textContent = data.error;
+                    } else {
+                        const data = await response.json();
+                        console.log("Change successful:", data);
+                        document.querySelector(".popup").style.display = 'none';
+                        renderProfilePage();
+                    }
+                } catch (error) {
+                    console.error("Error during change:", error);
+                }
+                
             });
         });
-        
+    
        
     }
 
     settingsContent();
 
     async function changeProfilePicture() {
-        console.log(userData.userId)
         let fileForm = document.querySelector(".profilePictureForm");
         let formData = new FormData(fileForm);
         
         formData.append("id", userData.userId);
-        
+        console.log("FormData:", formData);
        
         try {
            
@@ -150,6 +183,9 @@ async function renderProfilePage(){
             const response = await fetch("PHP/settings.php", {
                 method: "POST",
                 body: formData,
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
             });
     
             if (!response.ok) {
@@ -196,3 +232,5 @@ async function changeUser(newUser){
         console.error("Error during change:", error);
     }
 }
+// document.getElementById("profilePictureForm").addEventListener("submit", async function(event){
+// document.getElementById("profilePictureForm").addEventListener("submit", async function(event){
