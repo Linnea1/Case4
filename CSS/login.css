@@ -40,3 +40,7 @@
 .sign-up-from-login {
   color: var(--color-grey);
 }
+
+.message-login {
+  color: var(--color-red);
+}

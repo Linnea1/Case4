@@ -49,7 +49,7 @@ if(
   if ($userIsFound) {
     send($userToSend, 200);
   } else {
-    $error = ["message" => "Invalid user or password"];
+    $error = ["message" => "Wrong email or password"];
     abort($error, 404);
   }
 }

@@ -9,8 +9,8 @@ function renderLoginPage() {
         <p>Log in to continue</p>
       </div>
       <form class="login-form" action="PHP/login.php" method="POST">
-        <input type="text" class="login-email" placeholder="Email" name="email" required>
-        <input type="password" class="login-password" placeholder="Password" name="password" required>
+        <input type="text" class="login-email" placeholder="Email" name="email">
+        <input type="password" class="login-password" placeholder="Password" name="password">
         <button class="btn-main go-to-home-page" type="submit">Continue</button>
         <p class="message-login"></p>
       </form>
@@ -33,6 +33,7 @@ function renderLoginPage() {
 
 async function submitLogin(event, loginForm, message) {
   event.preventDefault();
+  message.textContent = "";
 
   try {
     let response = await fetch("../PHP/login.php", {
