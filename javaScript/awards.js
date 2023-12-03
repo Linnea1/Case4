@@ -26,6 +26,9 @@ function renderAwardsPage(awards) {
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
 
+  document.querySelector(".fa-trophy").classList.add("current-page");
+  document.querySelector(".text-awards").classList.add("current-page");
+
   document
     .querySelector(".nav-home")
     .addEventListener("click", renderHomePage);

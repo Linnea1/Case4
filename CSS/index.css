@@ -2,6 +2,7 @@
   --color-white: rgb(255, 255, 255);
   --color-black: rgb(0, 0, 0);
   --color-grey: rgb(158, 158, 158);
+  --color-orange: rgb(252, 197, 146);
   --color-red: rgb(219, 64, 64);
   --color-background: rgb(24, 24, 24);
   --color-nav: rgb(12, 12, 12);
@@ -74,4 +75,9 @@ button {
   transform: translate(-50%, -50%);
   height: 40vh;
   width: 90%;
+}
+
+.current-page {
+  color: var(--color-orange);
+  text-shadow: 0 0 10px rgba(255, 165, 0, 0.9);
 }

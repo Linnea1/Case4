@@ -20,6 +20,9 @@ async function renderHomePage() {
     </div>
   `;
 
+  document.querySelector(".fa-house").classList.add("current-page");
+  document.querySelector(".text-house").classList.add("current-page");
+
   document
     .querySelector(".nav-groups")
     .addEventListener("click", renderMyGroups);

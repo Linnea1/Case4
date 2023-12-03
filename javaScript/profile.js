@@ -149,6 +149,9 @@ async function renderProfilePage(){
         document.querySelector(".popup").style.display = 'block';
     }
 
+    document.querySelector(".fa-user").classList.add("current-page");
+    document.querySelector(".text-profile").classList.add("current-page");
+
     profileAwards.addEventListener("click", awardContent);
     profileSettings.addEventListener("click", settingsContent);
 }

@@ -28,6 +28,10 @@ async function renderMyGroups() {
     });
   });
 
+
+  document.querySelector(".fa-people-group").classList.add("current-page");
+  document.querySelector(".text-groups").classList.add("current-page");
+
   document.querySelector(".create-group").addEventListener("click", renderCreateNewGroupPage);
   document
     .querySelector(".nav-home")

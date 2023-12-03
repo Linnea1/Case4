@@ -14,6 +14,9 @@ function navigateToGroupPage(selectedGroup) {
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
 
+  document.querySelector(".fa-people-group").classList.add("current-page");
+  document.querySelector(".text-groups").classList.add("current-page");
+
   document
     .querySelector(".nav-home")
     .addEventListener("click", renderHomePage);
