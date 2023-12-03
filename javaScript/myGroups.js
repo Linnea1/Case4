@@ -6,7 +6,7 @@ async function renderMyGroups() {
   main.innerHTML = `
     <div class="page-my-groups">
       <h2>My Groups</h2>
-      <button class="btn-main create-team">Create new team</button>
+      <button class="btn-main create-group">Create new team</button>
       <div class="groups">
         ${renderGroups(userGroups)}
       </div>

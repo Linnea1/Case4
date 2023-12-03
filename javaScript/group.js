@@ -45,7 +45,7 @@ function renderUsers(sortedUsersInOrder) {
       (element) => `
         <div class="user-perfomance">
           <div class="rank-number">${rankCounter++}. </div>
-          <img src="" alt="">
+          <img src="" alt="${element.name}">
           <div class="user-in-rank">
             <div>${element.name}</div>
             <div>${element.games.userTotalPointsForGroup} points</div>
