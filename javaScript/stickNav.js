@@ -3,6 +3,10 @@
 function stickyNav() {
   return `
     <ul>
+      <li class="nav-home">
+        <i class="fa-solid fa-house"></i>
+        <p class="nav-icon-name">Home</p>
+      </li>
       <li class="nav-groups">
         <i class="fa-solid fa-people-group"></i>
         <p class="nav-icon-name">Groups</p>
