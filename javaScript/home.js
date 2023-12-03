@@ -34,4 +34,5 @@ async function renderHomePage() {
 function logoutFromAccount() {
   window.localStorage.removeItem("user");
   renderWelcomePage();
+  main.classList.remove("bg-home");
 }
