@@ -135,17 +135,6 @@
             ]
         },
         {
-            "userId": 13,
-            "username": "linnea",
-            "email": "linnea@.com",
-            "password": "123",
-            "profilePicture": "..\/images\/profilePictures\/Linnea.jpg",
-            "pointsInAllGroups": 0,
-            "groups": [
-                4
-            ]
-        },
-        {
             "userId": 14,
             "username": "Zoe",
             "email": "zoe@gmail.com",
@@ -188,6 +177,15 @@
             "groups": [
                 4
             ]
+        },
+        {
+            "userId": 18,
+            "username": "Linnea",
+            "email": "linnea@.com",
+            "password": "123",
+            "profilePicture": "..\/images\/profilePictures\/standardPP.jpg",
+            "pointsInAllGroups": 0,
+            "groups": []
         }
     ],
     "groups": [
@@ -2078,64 +2076,6 @@
                             "usertotalPointsForGame": 2
                         },
                         "userTotalPointsForGroup": 7
-                    }
-                }
-            ]
-        },
-        {
-            "groupId": 4,
-            "groupName": "Super Group",
-            "members": [
-                15,
-                17,
-                14,
-                13,
-                16
-            ],
-            "users": [
-                {
-                    "name": "Chloe",
-                    "userId": 15,
-                    "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
-                    }
-                },
-                {
-                    "name": "Charlie",
-                    "userId": 17,
-                    "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
-                    }
-                },
-                {
-                    "name": "Zoe",
-                    "userId": 14,
-                    "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
-                    }
-                },
-                {
-                    "name": "linnea",
-                    "userId": 13,
-                    "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
-                    }
-                },
-                {
-                    "name": "Shane",
-                    "userId": 16,
-                    "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
                     }
                 }
             ]

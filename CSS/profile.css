@@ -14,8 +14,11 @@
     cursor:default;
 }
 .profilePicture{
-    width: 30%;
+    width: 25vw;
+    height: 25vw;
     border-radius: 15px;
+    background-position: center;
+    background-size: cover;
 }
 .backgroundPictureProfile{
     width: 100%;
@@ -71,6 +74,12 @@
     grid-row: 7;
     color: rgb(151, 16, 16);
 }
+.profilePictureFormButton{
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
 .changePicture{
-    visibility: hidden;
+    
 }
