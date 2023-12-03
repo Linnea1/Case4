@@ -27,6 +27,9 @@ function renderAwardsPage(awards) {
   `;
 
   document
+    .querySelector(".nav-home")
+    .addEventListener("click", renderHomePage);
+  document
     .querySelector(".nav-groups")
     .addEventListener("click", renderMyGroups);
   document

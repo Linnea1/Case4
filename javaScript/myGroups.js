@@ -30,6 +30,9 @@ async function renderMyGroups() {
 
   document.querySelector(".create-group").addEventListener("click", renderCreateNewGroupPage);
   document
+    .querySelector(".nav-home")
+    .addEventListener("click", renderHomePage);
+  document
     .querySelector(".nav-awards")
     .addEventListener("click", () => renderAwardsPage(awards));
   document
