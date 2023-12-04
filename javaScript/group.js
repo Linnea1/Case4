@@ -3,12 +3,15 @@ function navigateToGroupPage(selectedGroup) {
   main.innerHTML = `
     <div class="group-container">
       <div class="profile-heading-bg">
-        <h2 class="group-name">${selectedGroup.groupName.toUpperCase()}</h2>
-        <button>Leave Group</button>
+        <h2>And the winner is...</h2>
+          <img src="" alt="">
+          <h1>X</h1>
       </div>
-      <div class="group-rank">
-        <h3>Ranking</h3>
-        <div class="users-in-rank">${putUsersInOrder(selectedGroup)}</div>
+      <div class="group-text">
+        <h2 class="group-name">${selectedGroup.groupName.toUpperCase()}</h2>
+        <button class="button-leave">Leave Group</button>
+        <h3>Results</h3>
+        <button class="btn-main button-history">RESULT HISTORY</button>
       </div>
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>

@@ -55,19 +55,3 @@
     padding: 20px;
     margin-bottom: -20px;
 }
-
-.btn-main {
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
-    background-color: rgb(43, 43, 43);
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-main:hover {
-    background-color: darkgray;
-}
