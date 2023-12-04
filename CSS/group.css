@@ -30,6 +30,7 @@
 
 .user-perfomance {
   display: flex;
+  align-items: center;
   padding: 10px;
   border-bottom: 1px solid var(--color-grey);
 }
@@ -58,6 +59,6 @@
   width: 40px;
   height: 40px;
   object-fit: cover;
-  margin: 0 10px;
+  margin: 0 15px;
   border-radius: 10px;
 }
