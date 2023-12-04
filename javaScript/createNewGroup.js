@@ -95,7 +95,6 @@ async function createNewGroup(event, newGroupForm, message) {
     });
 
     let data = await response.json();
-    console.log(data);
 
     if (!response.ok) {
       message.textContent = data.message;

@@ -50,7 +50,6 @@ if(
     "users" => [],
   );
 
-  $userToSend = null;
   $userIsFound = false;
 
   foreach($groupMembers as $groupMember) {
