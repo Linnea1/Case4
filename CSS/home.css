@@ -1,0 +1,22 @@
+
+
+.bg-home {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('../images/bg-home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-welcome {
+    border-left: 2px solid var(--color-white);
+    padding-left: 10px;
+    margin: 420px 10px 0;
+}
+
+.home-welcome h1 {
+    color: var(--color-white);
+}
+
+.home-welcome p {
+    color: var(--color-grey);
+}

@@ -1,0 +1,60 @@
+.profile-heading-bg {
+  background-image: url('../images/bg-stage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 45vh;
+  padding: 110px 20px;
+  text-align: center;
+}
+
+.profile-heading-bg h2,
+.profile-heading-bg button {
+  position: relative;
+  z-index: 1;
+}
+
+.group-container {
+  height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 84px;
+}
+
+.group-name {
+  margin-top: 0;
+}
+
+.button-leave {
+  padding-bottom: 50px;
+}
+
+.user-perfomance {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.rank-number,
+.user-in-rank div {
+  color: var(--color-grey);
+}
+
+.group-text {
+  background-color: var(--color-background);
+  height: auto;
+  padding: 30px 20px 60px 20px;
+}
+
+.group-text h3 {
+  margin: 0 0 10px 0;
+}
+
+.rank-user-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin: 0 15px;
+  border-radius: 10px;
+}
+

@@ -1,0 +1,34 @@
+.page-my-groups {
+  background-color: var(--color-background);
+  height: 100vh;
+  padding: 30px;
+}
+
+.page-my-groups h2 {
+  margin: 0;
+}
+
+.create-group {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  background-color: var(--color-black);
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.group-info {
+  padding-top: 10px;
+}
+
+.group-info p {
+  color: var(--color-grey);
+}

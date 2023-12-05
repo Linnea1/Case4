@@ -1,0 +1,33 @@
+.sticky-nav {
+  height: 84px;
+  width: 100%;
+  background-color: var(--color-nav);
+  bottom: 0;
+  position: fixed;
+}
+
+.sticky-nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.sticky-nav li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 33.3%;
+}
+
+.sticky-nav .fa-solid {
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+
+.nav-icon-name {
+  margin: 3px;
+}

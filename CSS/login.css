@@ -1,10 +1,14 @@
 .login-page {
-  margin: 20px ;
+  padding: 30px;
+  background: linear-gradient(rgb(33, 61, 86), rgb(0, 0, 0));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.login-welcome {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.login-welcome p {
+  color: var(--color-grey);
 }
 
 .login-form {
@@ -13,21 +17,16 @@
 }
 
 .login-form input {
-  height: 20px;
-  padding-top: 20px;
+    margin: 20px 0;
+    padding-bottom: 10px;
 }
 
 .go-to-home-page {
     flex-grow: 1;
-    background-color: rgb(192, 192, 192);
     text-align: center;
     padding: 10px;
     margin-top: 30px;
     border-radius: 10px;
-}
-
-.message-login {
-      margin-bottom: 160px;
 }
 
 .sign-up-from-login {
@@ -36,6 +35,12 @@
 
 .sign-up-from-login button {
   padding: 0;
-  font-family: inherit;
-  font-size: inherit;
+}
+
+.sign-up-from-login {
+  color: var(--color-grey);
+}
+
+.message-login {
+  color: var(--color-red);
 }
