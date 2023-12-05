@@ -43,16 +43,11 @@
 .group-text {
   background-color: var(--color-background);
   height: auto;
-  padding: 20px;
+  padding: 30px 20px 60px 20px;
 }
 
 .group-text h3 {
   margin: 0 0 10px 0;
-}
-
-.button-history {
-  width: 95%;
-  margin: 40px auto;
 }
 
 .rank-user-image {
@@ -62,3 +57,4 @@
   margin: 0 15px;
   border-radius: 10px;
 }
+

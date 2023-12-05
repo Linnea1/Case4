@@ -1,4 +1,5 @@
 async function navigateToGroupPage(selectedGroup) {
+  const loggedInUser = getUserData();
   main.classList.remove("bg-home");
   main.innerHTML = `
     <div class="group-container">
@@ -12,7 +13,6 @@ async function navigateToGroupPage(selectedGroup) {
         <button class="button-leave">Leave Group</button>
         <h3>Results</h3>
         <div class="users-in-rank">${await putUsersInOrder(selectedGroup)}</div>
-        <button class="btn-main button-history">RESULT HISTORY</button>
       </div>
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>
@@ -21,6 +21,9 @@ async function navigateToGroupPage(selectedGroup) {
   document.querySelector(".fa-people-group").classList.add("current-page");
   document.querySelector(".text-groups").classList.add("current-page");
 
+  document
+    .querySelector(".button-leave")
+    .addEventListener("click", () => leaveGroup(loggedInUser, selectedGroup));
   document
     .querySelector(".nav-home")
     .addEventListener("click", renderHomePage);
@@ -33,6 +36,24 @@ async function navigateToGroupPage(selectedGroup) {
   document
     .querySelector(".nav-profile")
     .addEventListener("click", renderProfilePage);
+}
+
+async function leaveGroup(loggedInUser, selectedGroup) {
+  const userId = loggedInUser.userId;
+  const userGroupId = selectedGroup.groupId;
+
+  const response = await fetch("../PHP/removeGroupFromUser.php", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      userId: userId,
+      userGroupId: userGroupId,
+    }),
+  });
+
+  let data = await response.json();
 }
 
 async function putUsersInOrder(selectedGroup) {
