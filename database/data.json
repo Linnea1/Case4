@@ -172,7 +172,7 @@
             "username": "Charlie",
             "email": "charlie@gmail.com",
             "password": "123",
-            "profilePicture": "..\/images\/profilePictures\/Linnea.jpg",
+            "profilePicture": "..\/images\/profilePictures\/Charlie.jpg",
             "pointsInAllGroups": 0,
             "groups": [
                 4
@@ -203,8 +203,8 @@
                     "name": "Elin",
                     "userId": 1,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
+                        "emmys": {},
+                        "grammys": {},
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
@@ -261,8 +261,8 @@
                     "name": "Emily",
                     "userId": 2,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
+                        "emmys": {},
+                        "grammys": {},
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Avatar: The Way of Water",
@@ -319,8 +319,8 @@
                     "name": "Benjamin",
                     "userId": 5,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
+                        "emmys": {},
+                        "grammys": {},
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
@@ -377,8 +377,8 @@
                     "name": "Ava",
                     "userId": 6,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
+                        "emmys": {},
+                        "grammys": {},
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",

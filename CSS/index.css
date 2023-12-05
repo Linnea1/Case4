@@ -75,9 +75,45 @@ button {
   transform: translate(-50%, -50%);
   height: 40vh;
   width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 1px var(--color-white);
+}
+
+.inputContent {
+  text-align: center;
+}
+
+.popup-cross {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .current-page {
   color: var(--color-orange);
   text-shadow: 0 0 10px rgba(255, 165, 0, 0.9);
 }
+
+.btn-main {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--color-grey);
+  background-color: rgb(43, 43, 43);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-main:hover {
+  background-color: darkgray;
+}
+
+.shown {
+  display: inline;
+}
+

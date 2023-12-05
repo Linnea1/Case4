@@ -1,14 +1,18 @@
-function navigateToGroupPage(selectedGroup) {
+async function navigateToGroupPage(selectedGroup) {
+  const loggedInUser = getUserData();
   main.classList.remove("bg-home");
   main.innerHTML = `
     <div class="group-container">
       <div class="profile-heading-bg">
-        <h2 class="group-name">${selectedGroup.groupName.toUpperCase()}</h2>
-        <button>Leave Group</button>
+        <h2>And the winner is...</h2>
+          <img src="" alt="">
+          <h1>X</h1>
       </div>
-      <div class="group-rank">
-        <h3>Ranking</h3>
-        <div class="users-in-rank">${putUsersInOrder(selectedGroup)}</div>
+      <div class="group-text">
+        <h2 class="group-name">${selectedGroup.groupName.toUpperCase()}</h2>
+        <button class="button-leave">Leave Group</button>
+        <h3>Results</h3>
+        <div class="users-in-rank">${await putUsersInOrder(selectedGroup)}</div>
       </div>
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>
@@ -17,6 +21,9 @@ function navigateToGroupPage(selectedGroup) {
   document.querySelector(".fa-people-group").classList.add("current-page");
   document.querySelector(".text-groups").classList.add("current-page");
 
+  document
+    .querySelector(".button-leave")
+    .addEventListener("click", () => leaveGroup(loggedInUser, selectedGroup));
   document
     .querySelector(".nav-home")
     .addEventListener("click", renderHomePage);
@@ -31,7 +38,33 @@ function navigateToGroupPage(selectedGroup) {
     .addEventListener("click", renderProfilePage);
 }
 
-function putUsersInOrder(selectedGroup) {
+async function leaveGroup(loggedInUser, selectedGroup) {
+  const userId = loggedInUser.userId;
+  const userGroupId = selectedGroup.groupId;
+
+  const response = await fetch("../PHP/removeGroupFromUser.php", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      userId: userId,
+      userGroupId: userGroupId,
+    }),
+  });
+
+  let data = await response.json();
+  let popUp = document.querySelector(".popup");
+  let popUpContent = document.querySelector(".inputContent");
+  popUp.classList.add("shown");
+  popUpContent.innerHTML = data.message;
+
+  document
+    .querySelector(".popup-cross")
+    .addEventListener("click", renderMyGroups);
+}
+
+async function putUsersInOrder(selectedGroup) {
   const users = selectedGroup.users;
 
   const sortByTotalPoints = (a, b) =>
@@ -39,19 +72,19 @@ function putUsersInOrder(selectedGroup) {
 
   const sortedUsersInOrder = users.sort(sortByTotalPoints);
 
-  return `
-    ${renderUsers(sortedUsersInOrder)}
-  `;
+  return await renderUsers(sortedUsersInOrder);
 }
 
-function renderUsers(sortedUsersInOrder) {
+async function renderUsers(sortedUsersInOrder) {
+  let imagesArray = await findUsersImages(sortedUsersInOrder);
+
   let rankCounter = 1;
   const ranking = sortedUsersInOrder
     .map(
-      (element) => `
+      (element, index) => `
         <div class="user-perfomance">
-          <div class="rank-number">${rankCounter++}. </div>
-          <img src="" alt="${element.name}">
+          <div class="rank-number">${rankCounter++}.</div>
+          <img src="${imagesArray[index]}" alt="${element.name}" class="rank-user-image">
           <div class="user-in-rank">
             <div>${element.name}</div>
             <div>${element.games.userTotalPointsForGroup} points</div>
@@ -61,7 +94,24 @@ function renderUsers(sortedUsersInOrder) {
     )
     .join("");
 
-  return `
-    ${ranking}
-  `;
+
+  return ranking;
+}
+
+async function findUsersImages(sortedUsersInOrder) {
+  const usernamesArray = sortedUsersInOrder.map((element) => element.name);
+
+  const response = await fetch("../PHP/findUsersImages.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      usernames: usernamesArray
+    }),
+  });
+
+  let imagesArray = await response.json();
+
+  return imagesArray;
 }
