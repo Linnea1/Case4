@@ -54,6 +54,14 @@ async function leaveGroup(loggedInUser, selectedGroup) {
   });
 
   let data = await response.json();
+  let popUp = document.querySelector(".popup");
+  let popUpContent = document.querySelector(".inputContent");
+  popUp.classList.add("shown");
+  popUpContent.innerHTML = data.message;
+
+  document
+    .querySelector(".popup-cross")
+    .addEventListener("click", renderMyGroups);
 }
 
 async function putUsersInOrder(selectedGroup) {

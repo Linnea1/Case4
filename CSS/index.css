@@ -75,6 +75,21 @@ button {
   transform: translate(-50%, -50%);
   height: 40vh;
   width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 1px var(--color-white);
+}
+
+.inputContent {
+  text-align: center;
+}
+
+.popup-cross {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .current-page {
@@ -97,3 +112,8 @@ button {
 .btn-main:hover {
   background-color: darkgray;
 }
+
+.shown {
+  display: inline;
+}
+
