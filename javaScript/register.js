@@ -47,9 +47,11 @@ function renderRegisterPage() {
 
       const data = await response.json();
       if (!response.ok) {
+        document.querySelector(".registerErrorMessage").style.color="rgb(151, 16, 16)";
         document.querySelector(".registerErrorMessage").textContent = data.error;
       } else {
-        console.log("Registration successful:", data);
+        document.querySelector(".registerErrorMessage").style.color="white"
+        document.querySelector(".registerErrorMessage").textContent="Registration successful";
       }
     } catch (error) {
       console.error("Error during registration:", error);
