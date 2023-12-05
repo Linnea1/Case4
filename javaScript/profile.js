@@ -16,34 +16,42 @@ async function renderProfilePage(){
             <h2 class="profileName"><span>${userData.username}</span></h2>
         </div>
         <div class="profileContent"></div>
+        <button class="logoutButton">Logout</button>
         <div class="profileNavigationBar"></div>
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>
     `
     document.querySelector(".profilePicture").style.backgroundImage=`url('${userProfilePicture}')`;
     let profileContent=document.querySelector(".profileContent");
+    document.querySelector(".logoutButton").addEventListener("click", logoutFromAccount);
+    const hiddenPassword = hidePassword(userData.password);
 
-    function settingsContent(){
-        profileContent.innerHTML=`
+    function logoutFromAccount() {
+        window.localStorage.removeItem("user");
+        renderWelcomePage();
+        main.classList.remove("bg-home");
+    }
+    
+    profileContent.innerHTML=`
             <div class="settingsContentWrapper">
                 <div class="settingsContainer">
                     <div class="inputBox">
                         <div>Username: </div>
-                        <div><span>${userData.username}</span></div>
+                        <div class="userInfo"><span>${userData.username}</span></div>
                         <div class="editBox">
                             <div class="usernameEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
                     <div class="inputBox">
                         <div>Email: </div>
-                        <div><span>${userData.email}</span></div>
+                        <div class="userInfo"><span>${userData.email}</span></div>
                         <div class="editBox">
                             <div class="emailEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
                     <div class="inputBox">
                         <div>Password: </div>
-                        <div type="password">${userData.password}</div>
+                        <div class="userInfo hiddenPassword">${hiddenPassword}</div>
                         <div class="editBox">
                             <div class="passwordEdit fa-solid fa-pen"></div>
                         </div>
@@ -52,6 +60,16 @@ async function renderProfilePage(){
                 </div>
             </div>
         `
+        
+        document
+            .querySelector(".nav-groups")
+            .addEventListener("click", renderMyGroups);
+        document
+            .querySelector(".nav-awards")
+            .addEventListener("click", () => renderAwardsPage(awards));
+        document
+            .querySelector(".nav-home")
+            .addEventListener("click", renderHomePage);
         document.querySelector(".usernameEdit").addEventListener("click",e=>
         {popup(`
             <div class="exitPopup">x</div>
@@ -127,52 +145,60 @@ async function renderProfilePage(){
             popup(`
         <div class="exitPopup">x</div>
         <form id="profilePictureForm" method="POST" enctype="multipart/form-data">
-            <label for="fileInput">Change profile picture</label>
+            <label for="fileInput" class="PPlabel">Change profile picture</label>
             <input class="changePicture" type="file" id="fileInput" name="pfp">
+            <p class="settingsErrorMessagePP"></p>
             <button type="submit" class="profilePictureFormButton">Change profile Picture</button>
         </form>
         `); 
             document.getElementById("profilePictureForm").addEventListener("submit", async function(event){
                 event.preventDefault();
                 let fileForm = document.getElementById("profilePictureForm");
-                const formData = new FormData(fileForm);
-                formData.append("id", userData.userId);
-                console.log(formData);
+                let fileInput = document.getElementById("fileInput");
+    
+                if (fileInput.files.length === 0) {
+                    console.log("File input is empty");
+                    document.querySelector(".settingsErrorMessagePP").textContent = "Please upload a picture";
+                    return;
+                }else{
+                    const formData = new FormData(fileForm);
+                    formData.append("id", userData.userId);
+                    console.log(formData);
+    
+                    try {
+
+                        const response = await fetch("PHP/settings.php", {
+                            method: "POST",
+                            body: formData,
+                        });
                 
-                try {
+                        if (!response.ok) {
+                            console.error("Error in response:", response);
 
-                    const response = await fetch("PHP/settings.php", {
-                        method: "POST",
-                        body: formData,
-                    });
-            
-                    if (!response.ok) {
-                        console.error("Error in response:", response);
-
-                        const data = await response.json();
-                        console.error("Server error:", data.error);
-                        document.querySelector(".settingsErrorMessage").textContent = data.error;
-                    } else {
-                        const data = await response.json();
-                        console.log("Change successful:", data);
-                        document.querySelector(".popup").style.display = 'none';
-                        renderProfilePage();
+                            const data = await response.json();
+                            console.error("Server error:", data.error);
+                            document.querySelector(".settingsErrorMessagePP").textContent = data.error;
+                        } else {
+                            const data = await response.json();
+                            console.log("Change successful:", data);
+                            document.querySelector(".popup").style.display = 'none';
+                            renderProfilePage();
+                        }
+                    } catch (error) {
+                        document.querySelector(".settingsErrorMessagePP").textContent=error;
                     }
-                } catch (error) {
-                    console.error("Error during change:", error);
                 }
-                
             });
         });
-    
-       
-    }
 
     document.querySelector(".fa-user").classList.add("current-page");
     document.querySelector(".text-profile").classList.add("current-page");
 
-    settingsContent();
+    
 
+}
+function hidePassword(password) {
+    return '*'.repeat(password.length);
 }
 function popup(htmlContent){
     document.querySelector(".inputContent").innerHTML=htmlContent;
@@ -201,4 +227,3 @@ async function changeUser(newUser){
         console.error("Error during change:", error);
     }
 }
-
