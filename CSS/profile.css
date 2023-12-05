@@ -66,6 +66,7 @@
     padding: 10px;
     grid-row: 8;
     border-radius: 5px;
+    margin-bottom: 40px;
 }
 .inputContent{
     width: 100%;
@@ -82,9 +83,14 @@
     grid-row: 5;
 }
 .settingsErrorMessage{
+    display: flex;
     font-size: 12px;
     grid-row: 7;
     color: rgb(151, 16, 16);
+    height: 28px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .settingsErrorMessagePP{
     font-size: 12px;

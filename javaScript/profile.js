@@ -72,7 +72,7 @@ async function renderProfilePage(){
             .addEventListener("click", renderHomePage);
         document.querySelector(".usernameEdit").addEventListener("click",e=>
         {popup(`
-            <div class="exitPopup">x</div>
+            <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
             <input type="text" class="settingsInput inputUsername inputOrder1" placeholder="New username">
             <p class="settingsErrorMessage"></p>
             <button class="settingsButton settingsButtonUsername">Change username</button>
@@ -92,7 +92,7 @@ async function renderProfilePage(){
 
         document.querySelector(".emailEdit").addEventListener("click",e=>
         {popup(`
-            <div class="exitPopup">x</div>
+            <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
             <input type="text" class="settingsInput inputEmail inputOrder1" placeholder="New email">
             <input type="text" class="settingsInput inputEmailRepeat inputOrder2" placeholder="Repeat new email">
             <p class="settingsErrorMessage"></p>
@@ -117,7 +117,7 @@ async function renderProfilePage(){
 
         document.querySelector(".passwordEdit").addEventListener("click",e=>
         {popup(`
-            <div class="exitPopup">x</div>
+            <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
             <input type="text" class="settingsInput inputPassword inputOrder1" placeholder="New password">
             <input type="text" class="settingsInput inputPasswordRepeat inputOrder2" placeholder="Repeat new password">
             <p class="settingsErrorMessage"></p>
@@ -143,7 +143,7 @@ async function renderProfilePage(){
         document.querySelector(".profilePictureButton").addEventListener("click",e=>
         { 
             popup(`
-        <div class="exitPopup">x</div>
+        <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
         <form id="profilePictureForm" method="POST" enctype="multipart/form-data">
             <label for="fileInput" class="PPlabel">Change profile picture</label>
             <input class="changePicture" type="file" id="fileInput" name="pfp">
