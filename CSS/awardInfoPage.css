@@ -10,7 +10,7 @@
 }
 
 
-#navBarAIPage {
+/*#navBarAIPage {
     background-color: #343434;
     display: flex;
 }
@@ -21,7 +21,7 @@
     box-sizing: border-box;
     height: 69px;
 
-}
+}*/
 
 #awardImageContainerAIPage {
     height: 775px;
@@ -127,15 +127,34 @@
     color: white;
 }
 
-#continueButton {
+#continueButtonBettingPage {
     color: white;
-    width: 350px;
     height: 63px;
     margin: 20px;
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
-    background-color: rgba(236, 234, 234, 40%);
+    background-color: #343434;
+    align-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#changeCategoryContainerBettingPage {
+    display: flex;
+    flex-direction: row;
+}
+
+#previousCategoryBettingPage {
+    color: white;
+    height: 63px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #343434;
     align-self: center;
 
     display: flex;
