@@ -28,6 +28,8 @@ async function renderMyGroups() {
     });
   });
 
+  let popUp = document.querySelector(".popup");
+  popUp.classList.remove("shown");
 
   document.querySelector(".fa-people-group").classList.add("current-page");
   document.querySelector(".text-groups").classList.add("current-page");
