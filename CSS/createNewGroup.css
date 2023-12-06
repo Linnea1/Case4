@@ -1,3 +1,4 @@
+/* mobile portrait */
 .page-create-new-group {
   background-color: var(--color-background);
   height: 100vh;
@@ -16,6 +17,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: scroll;
 }
 
 .new-group-form {
@@ -168,11 +170,19 @@
   padding: 20px;
 }
 
-.logged-in-user-on-list {
-
-}
-
 .new-member {
   flex-grow: 1;
   padding-left: 10px;
+}
+
+/* tablet portrait */
+@media only screen and (min-width: 600px) {
+  .create-new-group-container {
+    width: 60%;
+    padding: 40px 50px;
+  }
+
+  .new-group-name {
+    width: 50%;
+  }
 }

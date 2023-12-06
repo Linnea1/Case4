@@ -2,8 +2,6 @@
 
 async function renderCreateNewGroupPage() {
   let loggedInUser = getUserData();
-  // console.log(loggedInUser);
-  // console.log(loggedInUser.profilePicture);
   main.classList.remove("bg-home");
   main.innerHTML = `
     <div class="page-create-new-group">
