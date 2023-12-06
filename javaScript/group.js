@@ -57,10 +57,15 @@ async function leaveGroup(loggedInUser, selectedGroup) {
   let popUp = document.querySelector(".popup");
   let popUpContent = document.querySelector(".inputContent");
   popUp.classList.add("shown");
-  popUpContent.innerHTML = data.message;
+  popUpContent.classList.remove("inputContent");
+  popUpContent.classList.add("leave-group-popup");
+  popUpContent.innerHTML = `
+    ${data.message}
+    <i class="fa-solid fa-xmark button-close"></i>
+  `;
 
   document
-    .querySelector(".popup-cross")
+    .querySelector(".button-close")
     .addEventListener("click", renderMyGroups);
 }
 
