@@ -43,3 +43,15 @@ main {
 .registerErrorMessage {
     color: rgb(151, 16, 16);
 }
+
+@media only screen and (min-width: 1200px) {
+    .registerPageWrapper {
+        background: linear-gradient(rgb(86, 33, 33), rgb(34, 175, 194));
+        height: 100%;
+        width: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
