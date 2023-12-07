@@ -1,6 +1,6 @@
 /* mobile portrait */
 .login-bg {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent), linear-gradient(to bottom, rgba(30, 87, 153, 0.4), transparent),url('../images/bg-welcome.png');
+  background: linear-gradient(rgb(33, 61, 86), rgb(0, 0, 0));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,10 +12,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.goldenbet {
-  display: none;
 }
 
 .login-welcome p {
@@ -64,6 +60,7 @@
   }
 
   .login-bg {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent), linear-gradient(to bottom, rgba(30, 87, 153, 0.4), transparent),url('../images/bg-welcome.png');
     display: flex;
     justify-content: space-between;
   }
