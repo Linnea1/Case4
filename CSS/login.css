@@ -1,10 +1,21 @@
+/* mobile portrait */
+.login-bg {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent), linear-gradient(to bottom, rgba(30, 87, 153, 0.4), transparent),url('../images/bg-welcome.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .login-page {
   padding: 30px;
-  background: linear-gradient(rgb(33, 61, 86), rgb(0, 0, 0));
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.goldenbet {
+  display: none;
 }
 
 .login-welcome p {
@@ -43,4 +54,65 @@
 
 .message-login {
   color: var(--color-red);
+}
+
+/* tablet portrait */
+@media only screen and (min-width: 600px) {
+  .goldenbet {
+    display: block;
+    padding: 50px 0 0 50px;
+  }
+
+  .login-bg {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .login-page {
+    background-color: var(--color-background);
+    padding: 180px 55px;
+  }
+}
+
+
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .login-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .login-page {
+    height: auto;
+    width: 55vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 30px;
+  }
+
+  .goldenbet {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+  }
+
+  .login-welcome {
+    width: 80%;
+    margin-bottom: 5vh;
+  }
+
+  .login-form {
+    width: 80%;
+  }
+
+  .sign-up-from-login {
+    width: 80%;
+  }
+
+  .go-to-home-page {
+    margin: 5vh 0;
+  }
 }
