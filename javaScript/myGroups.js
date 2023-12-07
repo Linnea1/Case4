@@ -4,23 +4,27 @@ async function renderMyGroups() {
   let userGroups = await getUserTeams();
 
   main.innerHTML = `
-    <div class="bg-group">
-      <div class="tablet-group-title-button">
-        <h2>My Groups</h2>
-        <button class="btn-main tablet-create-group">Create new team</button>
+    <div class="groups-container">
+      <div class="bg-group">
+        <div class="tablet-group-title-button">
+          <h2>My Groups</h2>
+          <button class="btn-main tablet-create-group">Create new team</button>
+        </div>
       </div>
-    </div>
-    <div class="page-my-groups">
-      <div class="groups-title-button">
-        <h2>My Groups</h2>
-        <button class="btn-main create-group">Create new team</button>
-      </div>
-      <div class="groups">
-        ${renderGroups(userGroups)}
+      <div class="page-my-groups">
+        <div class="groups-title-button">
+          <h2>My Groups</h2>
+          <button class="btn-main create-group">Create new team</button>
+        </div>
+        <div class="groups">
+          ${renderGroups(userGroups)}
+        </div>
       </div>
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
+
+  main.classList.remove("bg-home");
 
   let groups = document.querySelectorAll(".group");
 

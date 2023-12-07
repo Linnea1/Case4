@@ -55,6 +55,13 @@
 
 /* tablet portrait */
 @media only screen and (min-width: 600px) {
+  .groups-container {
+    margin-left: 8%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
   .bg-group {
     height: 35vh;
     width: 100%;
@@ -70,15 +77,11 @@
     align-items: center;
     z-index: 1;
     width: 100%;
-    padding: 30px 30px 30px 110px;
+    padding: 30px;
   }
 
   .tablet-group-title-button button {
     width: 20%;
-  }
-
-  .page-my-groups {
-    padding: 30px 30px 30px 110px;
   }
 
   .groups-title-button {
@@ -94,9 +97,21 @@
   .sticky-nav {
     z-index: 2;
   }
+
+  .page-my-groups {
+    height: auto;
+    flex-grow: 1;
+  }
 }
 
 @media only screen and (min-width: 600px) and (orientation: portrait) {
+  .groups-container {
+    margin-left: 14%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh
+  }
+
   .groups {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -111,5 +126,9 @@
 
   .tablet-group-title-button button {
     width: 30%;
+  }
+
+  .page-my-groups {
+    flex-grow: 1;
   }
 }
