@@ -1,3 +1,4 @@
+/* mobile portrait */
 .profile-heading-bg {
   background-image: url('../images/bg-stage.jpg');
   background-size: cover;
@@ -15,7 +16,7 @@
 }
 
 .group-container {
-  height: 100vh;
+  height: auto;
   overflow-y: auto;
   padding-bottom: 84px;
 }
@@ -67,4 +68,120 @@
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+.tablet-button-leave {
+  display: none;
+}
+
+.see-bets {
+  display: none;
+}
+
+.tablet-rank-username {
+  display: none;
+}
+
+.user-in-rank-left {
+  display: flex;
+  align-items: center;
+}
+
+.tablet-group-left {
+  display: none;
+}
+
+/* tablet portrait */
+@media only screen and (min-width: 600px) {
+  .group-container {
+    display: flex;
+    padding-bottom: 0;
+    margin-left: 8%;
+    height: auto;
+  }
+
+  .user-in-rank {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .see-bets {
+    display: block;
+    background-color: var(--color-black);
+  }
+
+  .rank-username {
+    display: none;
+  }
+
+  .tablet-rank-username {
+    display: block;
+  }
+
+  .user-in-rank-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .user-perfomance {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tablet-group-left {
+    display: block;
+    background-color: var(--color-background);
+    width: 30%;
+    padding: 20px;
+  }
+
+  .tablet-group-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .profile-heading-bg {
+    width: 100%;
+  }
+
+  .group-text {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .group-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 14%;
+    height: 100vh;
+  }
+
+  .group-text {
+    flex-grow: 1;
+  }
+
+  .button-leave {
+    display: none;
+  }
+
+  .tablet-button-leave {
+    display: block;
+    border: 1px solid #B45B5B;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #B45B5B;
+  }
+
+  .page-my-groups {
+    display: block;
+  }
+
+  .tablet-group-left {
+    display: none;
+  }
 }

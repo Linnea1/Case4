@@ -1,28 +1,58 @@
 async function navigateToGroupPage(selectedGroup) {
+  let userGroups = await getUserTeams();
+
   const loggedInUser = getUserData();
   main.classList.remove("bg-home");
   main.innerHTML = `
     <div class="group-container">
-      <div class="profile-heading-bg">
-        <h2>And the winner is...</h2>
-          <img src="" alt="">
-          <h1>X</h1>
+      <div class="tablet-group-left">
+        <h2>My Groups</h2>
+        <div class="tablet-groups">
+          ${renderGroups(userGroups)}
+        </div>
       </div>
-      <div class="group-text">
-        <h2 class="group-name">${selectedGroup.groupName.toUpperCase()}</h2>
-        <button class="button-leave">Leave Group</button>
-        <h3>Results</h3>
-        <div class="users-in-rank">${await putUsersInOrder(selectedGroup)}</div>
+
+      <div class="tablet-group-right">
+        <div class="profile-heading-bg">
+          <h2>And the winner is...</h2>
+            <img src="" alt="">
+            <h1>X</h1>
+        </div>
+        <div class="group-text">
+          <h2 class="group-name">${selectedGroup.groupName.toUpperCase()}</h2>
+          <button class="button-leave">Leave Group</button>
+          <h3>Results</h3>
+          <div class="users-in-rank">${await putUsersInOrder(
+            selectedGroup
+          )}</div>
+          <button class="tablet-button-leave">Leave Group</button>
+        </div>
       </div>
     </div>
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
+
+  let tabletGroups = document.querySelectorAll(".group");
+
+  tabletGroups.forEach((group) => {
+    const groupId = group.id;
+    group.addEventListener("click", () => {
+      const selectedGroup = userGroups.find(
+        (element) =>
+          element.groupName.toLowerCase().replace(/\s+/g, "-") === groupId
+      );
+      navigateToGroupPage(selectedGroup);
+    });
+  });
 
   document.querySelector(".fa-people-group").classList.add("current-page");
   document.querySelector(".text-groups").classList.add("current-page");
 
   document
     .querySelector(".button-leave")
+    .addEventListener("click", () => leaveGroup(loggedInUser, selectedGroup));
+  document
+    .querySelector(".tablet-button-leave")
     .addEventListener("click", () => leaveGroup(loggedInUser, selectedGroup));
   document
     .querySelector(".nav-home")
@@ -88,11 +118,16 @@ async function renderUsers(sortedUsersInOrder) {
     .map(
       (element, index) => `
         <div class="user-perfomance">
-          <div class="rank-number">${rankCounter++}.</div>
-          <img src="${imagesArray[index]}" alt="${element.name}" class="rank-user-image">
+          <div class="user-in-rank-left">
+            <div class="rank-number">${rankCounter++}.</div>
+            <img src="${imagesArray[index]}" alt="${element.name}" class="rank-user-image">
+            <div class="tablet-rank-username">${element.name}</div>
+          </div>
+
           <div class="user-in-rank">
-            <div>${element.name}</div>
+            <div class="rank-username">${element.name}</div>
             <div>${element.games.userTotalPointsForGroup} points</div>
+            <button class="see-bets btn-main">See bets</button>
           </div>
         </div>
       `
