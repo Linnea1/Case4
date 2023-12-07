@@ -1,6 +1,9 @@
 "use strict";
 
 async function renderHomePage() {
+  main.classList.remove("register-bg");
+  main.classList.remove("login-bg");
+
   let response = await fetch(`../PHP/getUserData.php?userId=${getUserData().userId}`);
 
   const userData = await response.json();
