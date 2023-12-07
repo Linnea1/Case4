@@ -47,7 +47,7 @@
 @media only screen and (min-width: 600px) {
   .sticky-nav {
     height: 100%;
-    width: 84px;
+    width: 8%;
   }
 
   .sticky-nav ul {
@@ -67,6 +67,12 @@
     font-size: 40px;
     position: absolute;
     top: 27px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .sticky-nav {
+    width: 14%;
   }
 }
 
