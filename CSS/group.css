@@ -58,3 +58,13 @@
   border-radius: 10px;
 }
 
+.leave-group-popup {
+  display: flex;
+  justify-content: center;
+}
+
+.button-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

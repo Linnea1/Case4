@@ -97,7 +97,7 @@ button {
 }
 
 .current-page {
-  color: var(--color-orange);
+  color: var(--color-orange) !important;
   text-shadow: 0 0 10px rgba(255, 165, 0, 0.9);
 }
 
