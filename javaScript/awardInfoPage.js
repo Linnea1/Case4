@@ -46,7 +46,6 @@ function renderAwardInfoPage() {
     let navButtons = document.querySelectorAll("#navBarAIPage > div");
 
     //let awardCategories = document.querySelectorAll("div.categoryAIPage");
-    //Denna ovan behövs kanske inte, i alla fall inte nu
 
     let startBettingButton = document.querySelector("div#startBettingAwardBettingPage");
     startBettingButton.addEventListener("click", renderBettingPage);
@@ -54,6 +53,8 @@ function renderAwardInfoPage() {
 
 function renderBettingPage(event) {
 
+    //Need to try and get saved array, if there is one
+    //Check if textContent of currentTarget is Start betting or Change bets
     let userAwardArray = [];
     let awardCategories = document.querySelectorAll("div.categoryAIPage");
     let firstCategoryOfCurrentAward = awardCategories[0].firstElementChild.textContent;
@@ -113,13 +114,10 @@ function renderBettingPage(event) {
             bettingChoiceContainer.classList.add("bettingChoiceContainer");
             bettingChoiceContainer.innerHTML = `
             <div class="nomineeAlternativeBettingPage">${nomineesArray[i].film}</div>
-            <div>Alternative ${i+1}</div>
             `;
             bettingsContainer.appendChild(bettingChoiceContainer);
         }
     }
-
-    let nomineeAlternativesContainers = document.querySelectorAll("div.nomineeAlternativeBettingPage");
 
     let usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
     for(let i = 0; i < usersPossibleChoices.length; i++) {
@@ -178,8 +176,14 @@ function renderBettingPage(event) {
             let usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
             for(let i = 0; i < usersPossibleChoices.length; i++) {
                 if(usersPossibleChoices[i].style.backgroundColor === "darkgrey") {
-                    let bettingChoice = usersPossibleChoices[i].children[0].textContent;
                     let awardObject = {};
+
+                    let bettingChoice = usersPossibleChoices[i].children[0].textContent;
+                    if(usersPossibleChoices[i].children[1]) {
+                        let nomineeFromWhere = usersPossibleChoices[i].children[1].textContent;
+                        awardObject.nomineeContext = nomineeFromWhere;
+
+                    }
                     awardObject.category = categoryNameHeading.textContent;
                     awardObject.categoryChoice = bettingChoice;
                     userAwardArray.push(awardObject);
@@ -190,8 +194,14 @@ function renderBettingPage(event) {
                 if(i === categoryIndex-1) {
                     for(let ii = 0; ii < usersPossibleChoices.length; ii++) {
                         if(usersPossibleChoices[ii].style.backgroundColor === "darkgrey") {
-                            let bettingChoice = usersPossibleChoices[ii].children[0].textContent;
                             let awardObject = {};
+
+                            let bettingChoice = usersPossibleChoices[ii].children[0].textContent;
+                            if(usersPossibleChoices[ii].children[1]) {
+                                let nomineeFromWhere = usersPossibleChoices[ii].children[1].textContent;
+                                awardObject.nomineeContext = nomineeFromWhere;
+
+                            }
                             awardObject.category = categoryNameHeading.textContent;
                             awardObject.categoryChoice = bettingChoice;
                             userAwardArray[i] = awardObject;
@@ -242,8 +252,8 @@ function renderBettingPage(event) {
                 let bettingChoiceContainer = document.createElement("div");
                 bettingChoiceContainer.classList.add("bettingChoiceContainer");
                 bettingChoiceContainer.innerHTML = `
-                <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}, ${nextObjectToShow.nominees[i].film}</div>
-                <div>Alternative ${i+1}</div>
+                <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}</div>
+                <div>${nextObjectToShow.nominees[i].film}</div>
                 `;
                 bettingsContainer.appendChild(bettingChoiceContainer);
                 bettingChoiceContainer.addEventListener("click", displayUserChoice);
@@ -317,7 +327,6 @@ function renderBettingPage(event) {
                     bettingChoiceContainer.classList.add("bettingChoiceContainer");
                     bettingChoiceContainer.innerHTML = `
                     <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].film}</div>
-                    <div>Alternative ${i+1}</div>
                     `;
                     bettingsContainer.appendChild(bettingChoiceContainer);
                     bettingChoiceContainer.addEventListener("click", displayUserChoice);
@@ -345,8 +354,8 @@ function renderBettingPage(event) {
                 let bettingChoiceContainer = document.createElement("div");
                 bettingChoiceContainer.classList.add("bettingChoiceContainer");
                 bettingChoiceContainer.innerHTML = `
-                <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}, ${nextObjectToShow.nominees[i].film}</div>
-                <div>Alternative ${i+1}</div>
+                <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}</div>
+                <div>${nextObjectToShow.nominees[i].film}</div>
                 `;
                 bettingsContainer.appendChild(bettingChoiceContainer);
                 bettingChoiceContainer.addEventListener("click", displayUserChoice);
@@ -367,7 +376,7 @@ function renderBettingPage(event) {
         }
     }
 
-    function showDoneAwardInfoPage(event) {
+    async function showDoneAwardInfoPage(event) {
 
             //if event currentTarget is one thing, send to API
             //otherwise, get from API and display
@@ -380,8 +389,14 @@ function renderBettingPage(event) {
             let usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
             for(let i = 0; i < usersPossibleChoices.length; i++) {
                 if(usersPossibleChoices[i].style.backgroundColor === "darkgrey") {
-                    let bettingChoice = usersPossibleChoices[i].children[0].textContent;
                     let awardObject = {};
+
+                    let bettingChoice = usersPossibleChoices[i].children[0].textContent;
+                    if(usersPossibleChoices[i].children[1]) {
+                        let nomineeFromWhere = usersPossibleChoices[i].children[1].textContent;
+                        awardObject.nomineeContext = nomineeFromWhere;
+
+                    }
                     awardObject.category = categoryNameHeading.textContent;
                     awardObject.categoryChoice = bettingChoice;
                     userAwardArray.push(awardObject);
@@ -392,8 +407,14 @@ function renderBettingPage(event) {
                 if(i === categoryIndex-1) {
                     for(let ii = 0; ii < usersPossibleChoices.length; ii++) {
                         if(usersPossibleChoices[ii].style.backgroundColor === "darkgrey") {
-                            let bettingChoice = usersPossibleChoices[ii].children[0].textContent;
                             let awardObject = {};
+
+                            let bettingChoice = usersPossibleChoices[ii].children[0].textContent;
+                            if(usersPossibleChoices[ii].children[1]) {
+                                let nomineeFromWhere = usersPossibleChoices[ii].children[1].textContent;
+                                awardObject.nomineeContext = nomineeFromWhere;
+
+                            }
                             awardObject.category = categoryNameHeading.textContent;
                             awardObject.categoryChoice = bettingChoice;
                             userAwardArray[i] = awardObject;
@@ -403,28 +424,53 @@ function renderBettingPage(event) {
             }
         }
 
+        let user = JSON.parse(localStorage.getItem("user"));
+        let userId = user.userId;
+
         let lastArrayObject = {
             currentAward: currentAward,
-            date: dateOfAward
+            date: dateOfAward,
+            userId: userId
         };
 
         userAwardArray.push(lastArrayObject);
       
+
+        //userId måste skickas med, tillsammans med array
         console.log(userAwardArray);
+        let postRequestDetails = {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(userAwardArray)
+        };
+
+        let response = await fetch("PHP/userBettingChoices.php", postRequestDetails);
+        let resource = await response.json();
+
+        if(!response.ok) {
+            //do something
+            console.log(response);
+
+        } else {
+            //do something else
+            console.log(response);
+            console.log(resource);
+
+        }
 
         main.innerHTML = `
         <div id="awardInfoContainerAIPage">
-        <div id="awardImageContainerAIPage">
-            <div id="awardNameAndDate">
-                <h1>${userAwardArray[userAwardArray.length-1].currentAward}</h1>
-                <p>${userAwardArray[userAwardArray.length-1].date}</p>
+            <div id="awardImageContainerAIPage">
+                <div id="awardNameAndDate">
+                    <h1>${userAwardArray[userAwardArray.length-1].currentAward}</h1>
+                    <p>${userAwardArray[userAwardArray.length-1].date}</p>
+                </div>
             </div>
-        </div>
 
-        <h2>Categories</h2>
-        <div id="awardCategoriesContainer"></div>
-        <div id="startBettingAwardBettingPage">Change bets</div>
-    </div>
+            <h2>Categories</h2>
+            <div id="awardCategoriesContainer"></div>
+            <div id="startBettingAwardBettingPage">Change bets</div>
+        </div>
         `;
    
         let awardCategoriesContainer = document.querySelector("div#awardCategoriesContainer");
@@ -444,8 +490,5 @@ function renderBettingPage(event) {
         }
 
         document.querySelector("div#startBettingAwardBettingPage").addEventListener("click", renderBettingPage);
-
     }
-
-   
 }

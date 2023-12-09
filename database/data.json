@@ -203,66 +203,49 @@
                     "name": "Elin",
                     "userId": 1,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
-                            "bestPicture": {
-                                "guess": "Everything Everywhere All at Once",
-                                "pointsReceived": 1,
-                                "winner": [
-                                    1,
-                                    5,
-                                    6
-                                ]
-                            },
-                            "leadActor": {
-                                "guess": "Brendan Fraser",
-                                "film": "The Whale",
-                                "pointsReceived": 1,
-                                "winner": [
-                                    1,
-                                    5,
-                                    6
-                                ]
-                            },
-                            "leadActress": {
-                                "guess": "Cate Blanchett",
-                                "film": "T\u00e1r",
+                            "BestPicture": {
+                                "guess": "Women Talking",
                                 "pointsReceived": 0,
-                                "winner": [
-                                    5
-                                ]
+                                "winner": []
                             },
-                            "supportActor": {
+                            "ActorinaLeadingRole": {
+                                "guess": "Bill Nighy",
+                                "context": "Living",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActressinaLeadingRole": {
+                                "guess": "Michelle Yeoh",
+                                "context": "Everything Everywhere All at Once",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaSupportingRole": {
                                 "guess": "Ke Huy Quan",
-                                "film": "Everything Everywhere All at Once",
-                                "pointsReceived": 1,
-                                "winner": [
-                                    1,
-                                    2,
-                                    5,
-                                    6
-                                ]
-                            },
-                            "supportActress": {
-                                "guess": "Angela Bassett",
-                                "film": "Black Panther: Wakanda Forever",
+                                "context": "Everything Everywhere All at Once",
                                 "pointsReceived": 0,
-                                "winner": [
-                                    5
-                                ]
+                                "winner": []
                             },
-                            "usertotalPointsForGame": 3
+                            "ActressinaSupportingRole": {
+                                "guess": "Stephanie Hsu",
+                                "context": "Everything Everywhere All at Once",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "userTotalPointsForGame": 0
                         },
-                        "userTotalPointsForGroup": 3
+                        "userTotalPointsForGroup": 0
                     }
                 },
                 {
                     "name": "Emily",
                     "userId": 2,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Avatar: The Way of Water",
@@ -319,8 +302,8 @@
                     "name": "Benjamin",
                     "userId": 5,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
@@ -377,8 +360,8 @@
                     "name": "Ava",
                     "userId": 6,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
