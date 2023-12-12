@@ -1,16 +1,21 @@
-
-
+/* mobile portrait */
 .bg-home {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('../images/bg-home.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 90vh;
+}
+
+.home-container {
+    background-color: var(--color-background);
+    height: 190vh;
 }
 
 .home-welcome {
     border-left: 2px solid var(--color-white);
-    padding-left: 10px;
-    margin: 420px 10px 0;
+    margin: 375px 15px 20px;
+    padding: 5px 20px;
 }
 
 .home-welcome h1 {
@@ -19,4 +24,105 @@
 
 .home-welcome p {
     color: var(--color-grey);
+}
+
+.fa-chevron-down {
+    display: flex;
+    justify-content: center;
+    color: rgb(72, 72, 72);
+    padding: 10px;
+}
+
+.awardCountdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.countdownTimers {
+    padding-top: 20px;
+}
+
+.countdown {
+    padding: 40px 30px;
+}
+
+.awardCountdown {
+    background-color: rgba(28, 28, 28);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 26px;
+}
+
+.timers h3 {
+    margin-top: 0;
+}
+
+.days div,
+.hours div,
+.minutes div,
+.seconds div {
+    color: var(--color-grey);
+}
+
+.days div:first-child,
+.hours div:first-child,
+.minutes div:first-child,
+.seconds div:first-child {
+    padding-bottom: 10px;
+}
+
+/* tablet portrait */
+@media only screen and (min-width: 600px) {
+    .home-content {
+        margin-left: 8%;
+    }
+
+    .home-welcome {
+        margin: 150px 15px 20px;
+    }
+
+    .bg-home {
+        height: 45vh;
+    }
+
+    .home-container {
+        height: 100vh;
+    }
+
+    .countdownTimers {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .oscars-grammys {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        flex-grow: 2;
+    }
+
+    .timers:first-child {
+        flex-grow: 1;
+    }
+}
+
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+    .home-content {
+        margin-left: 14%;
+    }
+
+    .bg-home {
+        height: 30vh;
+    }
+
+    .countdownTimers {
+        display: block;
+    }
+
+    .countdownTimers > .timers > .awardCountdown:first-of-type {
+        gap: 80px;
+    }
 }
