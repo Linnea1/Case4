@@ -10,16 +10,16 @@ async function renderProfilePage(){
         userProfilePicture=userData.profilePicture;
     }
     main.innerHTML=`
-    <div class="profilePageWrapper">
-        <div class="backgroundPictureProfile">
+        <div class="profilePageWrapper">
+            <div class="backgroundPictureProfile">
             <div class="profilePicture"></div> 
             <h2 class="profileName"><span>${userData.username}</span></h2>
         </div>
         <div class="profileContent"></div>
-        <button class="logoutButton">Logout</button>
-        <div class="profileNavigationBar"></div>
-    </div>
-    <nav class="sticky-nav">${stickyNav()}</nav>
+            <button class="logoutButton">Logout</button>
+            <div class="profileNavigationBar"></div>
+        </div>
+        <nav class="sticky-nav">${stickyNav()}</nav>
     `
     document.querySelector(".profilePicture").style.backgroundImage=`url('${userProfilePicture}')`;
     let profileContent=document.querySelector(".profileContent");
