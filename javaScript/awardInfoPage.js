@@ -1,54 +1,127 @@
 "use strict";
 
-function renderAwardInfoPage() {
-    main.innerHTML = `
-    <div id="awardInfoContainerAIPage">
-        <div id="awardImageContainerAIPage">
-            <div id="awardNameAndDate">
-                <h1>The Oscars</h1>
-                <p>March 10, 2024</p>
-            </div>
-        </div>
-        <div id="navBarAIPage">
-            <div id="navHome"></div>
-            <div id="navFriends"></div>
-            <div id="navProfile"></div>
-            <div id="navSettings"></div>
-        </div>
-        <h2>Place your bets</h2>
-        <div id="awardCategoriesContainer">
-            <div class="categoryAIPage">
-                <h3 class="categoryNameAIPage">Best Picture</h3>
-                <div class="bettingChoiceAIPage">No bet</div>
-            </div>
-            <div class="categoryAIPage">
-                <h3 class="categoryNameAIPage">Actor in a Leading Role</h3>
-                <div class="bettingChoiceAIPage">No bet</div>
-            </div>
-            <div class="categoryAIPage">
-                <h3 class="categoryNameAIPage">Actress in a Leading Role</h3>
-                <div class="bettingChoiceAIPage">No bet</div>
-            </div>
-            <div class="categoryAIPage">
-                <h3 class="categoryNameAIPage">Actor in a Supporting Role</h3>
-                <div class="bettingChoiceAIPage">No bet</div>
-            </div>
-            <div class="categoryAIPage">
-                <h3 class="categoryNameAIPage">Actress in a Supporting Role</h3>
-                <div class="bettingChoiceAIPage">No bet</div>
-            </div>
-        </div>
-        <div id="startBettingAwardBettingPage">Start betting</div>
-    </div>
-    `;
+async function renderAwardInfoPage(event) {
+    //if event currentTarget is one thing, send to API
+    //otherwise, get from API and display
+    //based on award, search json array, if award object is empty, user hasn't made bet yet,
+    //-> render starting betting page?
+    //if award object is not empty, have the server send back array and run last part of 
+    //this function
 
+    //let response = await fetch(`../PHP/groupInfo.php?userId=${userId}`);
+    
 
-    let navButtons = document.querySelectorAll("#navBarAIPage > div");
+    if((event !== undefined) && (event.currentTarget.classList[0] === "award-item")) {
+        let award = event.currentTarget.classList[1];
+        console.log(award);
+        let user = JSON.parse(localStorage.getItem("user"));
+        let userId = JSON.stringify(user.userId);
+    
+        let response = await fetch(`../PHP/userBettingChoices.php?award=${award}&userId=${userId}`);
+        let resource = await response.json();
 
-    //let awardCategories = document.querySelectorAll("div.categoryAIPage");
+     
 
-    let startBettingButton = document.querySelector("div#startBettingAwardBettingPage");
-    startBettingButton.addEventListener("click", renderBettingPage);
+        if(resource.message !== undefined) {
+            console.log(award.charAt(0).toUpperCase());
+            console.log(award.slice(1));
+            let awardFirstLetterUppercase = award.charAt(0).toUpperCase() + award.slice(1);
+
+            let dateOfAward;
+            
+            for(let i = 0; i < awards.length; i++) {
+                if(awards[i].award === awardFirstLetterUppercase) {
+                    dateOfAward = awards[i].date;
+                   
+                }
+            }
+            
+            main.innerHTML = `
+            <div id="awardInfoContainerAIPage">
+                <div id="awardImageContainerAIPage">
+                    <div id="awardNameAndDate">
+                        <h1>${awardFirstLetterUppercase}</h1>
+                        <p>${dateOfAward}</p>
+                    </div>
+                </div>
+              
+                <h2>Välj nominering</h2>
+                <div id="awardCategoriesContainer">
+                </div>
+                <div id="startBettingAwardBettingPage">Tippa</div>
+            </div>
+            `;
+        
+            for(let i = 0; i < awards.length; i++) {
+                if(awards[i].award === awardFirstLetterUppercase) {
+                    let categoriesArray = awards[i].categories;
+                    for(let ii = 0; ii < categoriesArray.length; ii++) {
+                        console.log(categoriesArray);
+                        let categoryContainer = document.createElement("div");
+                        categoryContainer.classList.add("categoryAIPage");
+                        let categoryName = document.createElement("h3");
+                        categoryName.classList.add("categoryNameAIPage");
+                        categoryName.textContent = categoriesArray[ii].category;
+                        let bettingChoice = document.createElement("div");
+                        bettingChoice.classList.add("bettingChoiceAIPage");
+                        bettingChoice.textContent = "No bet";
+                        categoryContainer.appendChild(categoryName);
+                        categoryContainer.appendChild(bettingChoice);
+                        document.querySelector("div#awardCategoriesContainer").appendChild(categoryContainer);
+                    }
+                }
+            }
+
+                
+            let startBettingButton = document.querySelector("div#startBettingAwardBettingPage");
+            startBettingButton.addEventListener("click", renderBettingPage);
+        } else {
+            let array = resource;
+            award = array[array.length-1].currentAward;
+            for(let i = 0; i < awards.length; i++) {
+                if(awards[i].award === award) {
+                    let dateOfAward = awards[i].date;
+                    array[array.length-1]["date"] = dateOfAward;
+                    console.log(array);
+                }
+            }
+
+            let userAwardArray = array;
+            main.innerHTML = `
+            <div id="awardInfoContainerAIPage">
+                <div id="awardImageContainerAIPage">
+                    <div id="awardNameAndDate">
+                        <h1>${userAwardArray[userAwardArray.length-1].currentAward}</h1>
+                        <p>${userAwardArray[userAwardArray.length-1].date}</p>
+                    </div>
+                </div>
+
+                <h2>Categories</h2>
+                <div id="awardCategoriesContainer"></div>
+                <div id="startBettingAwardBettingPage">Change bets</div>
+            </div>
+            `;
+
+            let awardCategoriesContainer = document.querySelector("div#awardCategoriesContainer");
+            for(let i = 0; i < userAwardArray.length - 1; i++) {
+                let categoryContainer = document.createElement("div");
+                categoryContainer.classList.add("categoryAIPage");
+                let categoryName = document.createElement("h3");
+                categoryName.classList.add("categoryNameAIPage");
+                let userBettingChoice = document.createElement("div");
+                userBettingChoice.classList.add("bettingChoiceAIPage");
+                categoryContainer.appendChild(categoryName);
+                categoryContainer.appendChild(userBettingChoice);
+
+                awardCategoriesContainer.appendChild(categoryContainer);
+                categoryName.textContent = `${userAwardArray[i].category}`;
+                userBettingChoice.textContent = `${userAwardArray[i].categoryChoice}`;
+            }
+
+            document.querySelector("div#startBettingAwardBettingPage").addEventListener("click", renderBettingPage);
+        }
+    }
+
 }
 
 function renderBettingPage(event) {
@@ -74,7 +147,7 @@ function renderBettingPage(event) {
     }
 
     console.log(currentAward);
-
+    console.log(firstCategoryOfCurrentAward);
     main.innerHTML =  `
     <div id="bettingPageContainer">
         <h1></h1>
@@ -114,6 +187,25 @@ function renderBettingPage(event) {
             bettingChoiceContainer.classList.add("bettingChoiceContainer");
             bettingChoiceContainer.innerHTML = `
             <div class="nomineeAlternativeBettingPage">${nomineesArray[i].film}</div>
+            `;
+            bettingsContainer.appendChild(bettingChoiceContainer);
+        }
+    } else if(firstCategoryOfCurrentAward === "Record of the Year") {
+        for(let i = 0; i < nomineesArray.length; i++) {
+            let bettingChoiceContainer = document.createElement("div");
+            bettingChoiceContainer.classList.add("bettingChoiceContainer");
+            bettingChoiceContainer.innerHTML = `
+            <div class="nomineeAlternativeBettingPage">${nomineesArray[i].name}</div>
+            <div>${nomineesArray[i].song}</div>
+            `;
+            bettingsContainer.appendChild(bettingChoiceContainer);
+        }
+    } else if(firstCategoryOfCurrentAward === "Outstanding Drama Series") {
+        for(let i = 0; i < nomineesArray.length; i++) {
+            let bettingChoiceContainer = document.createElement("div");
+            bettingChoiceContainer.classList.add("bettingChoiceContainer");
+            bettingChoiceContainer.innerHTML = `
+            <div class="nomineeAlternativeBettingPage">${nomineesArray[i].name}</div>
             `;
             bettingsContainer.appendChild(bettingChoiceContainer);
         }
@@ -259,23 +351,90 @@ function renderBettingPage(event) {
                 bettingChoiceContainer.addEventListener("click", displayUserChoice);
             }
 
-            if(userHasBeenHere) {
-                for(let i = 0; i < userAwardArray.length; i++) {
-                    if(i === categoryIndex) {
-                        let choiceToHighlight = userAwardArray[i].categoryChoice;
-                        usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
-                        let nomineeAlternatives = document.querySelectorAll(".nomineeAlternativeBettingPage");
+        } else if(firstCategoryOfCurrentAward === "Record of the Year") {
+            bettingsContainer.innerHTML = "";
+            for(let i = 0; i < nextObjectToShow.nominees.length; i++) {
+                let rightKey;
+                if(nextObjectToShow.nominees[i].song !== undefined) {
+                    rightKey = "song";
+                } else if(nextObjectToShow.nominees[i].album !== undefined) {
+                    rightKey = "album";
+                } else {
+                    let bettingChoiceContainer = document.createElement("div");
+                    bettingChoiceContainer.classList.add("bettingChoiceContainer");
+                    bettingChoiceContainer.innerHTML = `
+                    <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}</div>
+                    `;
+                    bettingsContainer.appendChild(bettingChoiceContainer);
+                    bettingChoiceContainer.addEventListener("click", displayUserChoice);
+                    if(nextObjectToShow.nominees[i] === nextObjectToShow.nominees.length-1) {
+                        break;
+                    } else {
+                        continue;
+                    }
+                }
 
-                        for(let i = 0; i < nomineeAlternatives.length; i++) {
-                            if(nomineeAlternatives[i].textContent === choiceToHighlight) {
-                                usersPossibleChoices[i].style.backgroundColor = "darkgrey";
-                                continueButton.style.pointerEvents = "auto";
-                                continueButton.style.backgroundColor = "darkgrey";
-                            }
+                let rightValue = nextObjectToShow.nominees[i][rightKey];
+                let bettingChoiceContainer = document.createElement("div");
+                bettingChoiceContainer.classList.add("bettingChoiceContainer");
+                bettingChoiceContainer.innerHTML = `
+                <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}</div>
+                <div>${rightValue}</div>
+                `;
+                bettingsContainer.appendChild(bettingChoiceContainer);
+                bettingChoiceContainer.addEventListener("click", displayUserChoice);
+                
+            }
+        } else if(firstCategoryOfCurrentAward === "Outstanding Drama Series") {
+            bettingsContainer.innerHTML = "";
+            for(let i = 0; i < nextObjectToShow.nominees.length; i++) {
+                let rightKey;
+                if(nextObjectToShow.nominees[i].series !== undefined) {
+                    rightKey = "series";
+                } else {
+                    let bettingChoiceContainer = document.createElement("div");
+                    bettingChoiceContainer.classList.add("bettingChoiceContainer");
+                    bettingChoiceContainer.innerHTML = `
+                    <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}</div>
+                    `;
+                    bettingsContainer.appendChild(bettingChoiceContainer);
+                    bettingChoiceContainer.addEventListener("click", displayUserChoice);
+                    if(nextObjectToShow.nominees[i] === nextObjectToShow.nominees.length-1) {
+                        break;
+                    } else {
+                        continue;
+                    }
+                }
+
+                let rightValue = nextObjectToShow.nominees[i][rightKey];
+                let bettingChoiceContainer = document.createElement("div");
+                bettingChoiceContainer.classList.add("bettingChoiceContainer");
+                bettingChoiceContainer.innerHTML = `
+                <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}</div>
+                <div>${rightValue}</div>
+                `;
+                bettingsContainer.appendChild(bettingChoiceContainer);
+                bettingChoiceContainer.addEventListener("click", displayUserChoice);
+            }
+        }
+
+        if(userHasBeenHere) {
+            for(let i = 0; i < userAwardArray.length; i++) {
+                if(i === categoryIndex) {
+                    let choiceToHighlight = userAwardArray[i].categoryChoice;
+                    usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
+                    let nomineeAlternatives = document.querySelectorAll(".nomineeAlternativeBettingPage");
+
+                    for(let i = 0; i < nomineeAlternatives.length; i++) {
+                        if(nomineeAlternatives[i].textContent === choiceToHighlight) {
+                            usersPossibleChoices[i].style.backgroundColor = "darkgrey";
+                            continueButton.style.pointerEvents = "auto";
+                            continueButton.style.backgroundColor = "darkgrey";
                         }
                     }
                 }
             }
+        
         }
       
     }
@@ -311,6 +470,7 @@ function renderBettingPage(event) {
         categoryNameHeading.textContent = nextObjectToShow.category;
 
         if(categoryIndex === 0) {
+            console.log(nextObjectToShow);
             changeCategoryContainer.innerHTML = `
             <div id="continueButtonBettingPage">Next</div> 
             `;
@@ -327,6 +487,31 @@ function renderBettingPage(event) {
                     bettingChoiceContainer.classList.add("bettingChoiceContainer");
                     bettingChoiceContainer.innerHTML = `
                     <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].film}</div>
+                    `;
+                    bettingsContainer.appendChild(bettingChoiceContainer);
+                    bettingChoiceContainer.addEventListener("click", displayUserChoice);
+                }
+            } else if(firstCategoryOfCurrentAward === "Record of the Year") {
+                bettingsContainer.innerHTML = "";
+
+                for(let i = 0; i < nomineesArray.length; i++) {
+                    let bettingChoiceContainer = document.createElement("div");
+                    bettingChoiceContainer.classList.add("bettingChoiceContainer");
+                    bettingChoiceContainer.innerHTML = `
+                    <div class="nomineeAlternativeBettingPage">${nomineesArray[i].name}</div>
+                    <div>${nomineesArray[i].song}</div>
+                    `;
+                    bettingsContainer.appendChild(bettingChoiceContainer);
+                    bettingChoiceContainer.addEventListener("click", displayUserChoice);
+                }
+            } else if(firstCategoryOfCurrentAward === "Outstanding Drama Series") {
+                bettingsContainer.innerHTML = "";
+
+                for(let i = 0; i < nomineesArray.length; i++) {
+                    let bettingChoiceContainer = document.createElement("div");
+                    bettingChoiceContainer.classList.add("bettingChoiceContainer");
+                    bettingChoiceContainer.innerHTML = `
+                    <div class="nomineeAlternativeBettingPage">${nomineesArray[i].name}</div>
                     `;
                     bettingsContainer.appendChild(bettingChoiceContainer);
                     bettingChoiceContainer.addEventListener("click", displayUserChoice);
@@ -360,6 +545,72 @@ function renderBettingPage(event) {
                 bettingsContainer.appendChild(bettingChoiceContainer);
                 bettingChoiceContainer.addEventListener("click", displayUserChoice);
             }
+        } else if(firstCategoryOfCurrentAward === "Record of the Year") {
+            bettingsContainer.innerHTML = "";
+            for(let i = 0; i < nextObjectToShow.nominees.length; i++) {
+                let rightKey;
+                if(nextObjectToShow.nominees[i].song !== undefined) {
+                    rightKey = "song";
+                } else if(nextObjectToShow.nominees[i].album !== undefined) {
+                    rightKey = "album";
+                } else {
+                    let bettingChoiceContainer = document.createElement("div");
+                    bettingChoiceContainer.classList.add("bettingChoiceContainer");
+                    bettingChoiceContainer.innerHTML = `
+                    <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}</div>
+                    `;
+                    bettingsContainer.appendChild(bettingChoiceContainer);
+                    bettingChoiceContainer.addEventListener("click", displayUserChoice);
+                    if(nextObjectToShow.nominees[i] === nextObjectToShow.nominees.length-1) {
+                        break;
+                    } else {
+                        continue;
+                    }
+                }
+
+                console.log(rightKey);
+                let rightValue = nextObjectToShow.nominees[i][rightKey];
+                console.log(rightValue);
+                let bettingChoiceContainer = document.createElement("div");
+                bettingChoiceContainer.classList.add("bettingChoiceContainer");
+                bettingChoiceContainer.innerHTML = `
+                <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}</div>
+                <div>${rightValue}</div>
+                `;
+                bettingsContainer.appendChild(bettingChoiceContainer);
+                bettingChoiceContainer.addEventListener("click", displayUserChoice);
+            }
+        } else if(firstCategoryOfCurrentAward === "Outstanding Drama Series") {
+            bettingsContainer.innerHTML = "";
+            for(let i = 0; i < nextObjectToShow.nominees.length; i++) {
+                let rightKey;
+                if(nextObjectToShow.nominees[i].series !== undefined) {
+                    rightKey = "series";
+                } else {
+                    let bettingChoiceContainer = document.createElement("div");
+                    bettingChoiceContainer.classList.add("bettingChoiceContainer");
+                    bettingChoiceContainer.innerHTML = `
+                    <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}</div>
+                    `;
+                    bettingsContainer.appendChild(bettingChoiceContainer);
+                    bettingChoiceContainer.addEventListener("click", displayUserChoice);
+                    if(nextObjectToShow.nominees[i] === nextObjectToShow.nominees.length-1) {
+                        break;
+                    } else {
+                        continue;
+                    }
+                }
+
+                let rightValue = nextObjectToShow.nominees[i][rightKey];
+                let bettingChoiceContainer = document.createElement("div");
+                bettingChoiceContainer.classList.add("bettingChoiceContainer");
+                bettingChoiceContainer.innerHTML = `
+                <div class="nomineeAlternativeBettingPage">${nextObjectToShow.nominees[i].name}</div>
+                <div>${rightValue}</div>
+                `;
+                bettingsContainer.appendChild(bettingChoiceContainer);
+                bettingChoiceContainer.addEventListener("click", displayUserChoice);
+            }
         }
 
         let nomineeAlternatives = document.querySelectorAll(".nomineeAlternativeBettingPage");
@@ -377,12 +628,9 @@ function renderBettingPage(event) {
     }
 
     async function showDoneAwardInfoPage(event) {
-
-            //if event currentTarget is one thing, send to API
-            //otherwise, get from API and display
-
-
         //-Make checkmark show on award page with all the awards
+
+        console.log(event);
         categoryIndex++;
 
         if(userAwardArray.length === categoryIndex-1) {
@@ -434,7 +682,7 @@ function renderBettingPage(event) {
         };
 
         userAwardArray.push(lastArrayObject);
-      
+
 
         //userId måste skickas med, tillsammans med array
         console.log(userAwardArray);
@@ -448,11 +696,9 @@ function renderBettingPage(event) {
         let resource = await response.json();
 
         if(!response.ok) {
-            //do something
             console.log(response);
 
         } else {
-            //do something else
             console.log(response);
             console.log(resource);
 
@@ -472,7 +718,7 @@ function renderBettingPage(event) {
             <div id="startBettingAwardBettingPage">Change bets</div>
         </div>
         `;
-   
+
         let awardCategoriesContainer = document.querySelector("div#awardCategoriesContainer");
         for(let i = 0; i < userAwardArray.length - 1; i++) {
             let categoryContainer = document.createElement("div");
@@ -490,5 +736,7 @@ function renderBettingPage(event) {
         }
 
         document.querySelector("div#startBettingAwardBettingPage").addEventListener("click", renderBettingPage);
+
+  
     }
 }

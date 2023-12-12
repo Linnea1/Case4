@@ -1,7 +1,7 @@
 let username;
 let main = document.querySelector("main");
 
-/*function checkIfUserLoggedIn() {
+function checkIfUserLoggedIn() {
   if (window.localStorage.getItem("user")) {
     renderHomePage();
   } else {
@@ -9,6 +9,6 @@ let main = document.querySelector("main");
   }
 }
 
-checkIfUserLoggedIn();*/
+checkIfUserLoggedIn();
 
-renderAwardInfoPage();
+//renderAwardInfoPage();
