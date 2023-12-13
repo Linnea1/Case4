@@ -331,7 +331,6 @@
                         "emmys": [],
                         "grammys": [],
                         "oscars": {
-                            "usertotalPointsForGame": 1
                         },
                         "userTotalPointsForGroup": 0
                     }
@@ -343,7 +342,6 @@
                         "emmys": [],
                         "grammys": [],
                         "oscars": {
-                            "usertotalPointsForGame": 5
                         },
                         "userTotalPointsForGroup": 0
                     }
@@ -355,7 +353,6 @@
                         "emmys": [],
                         "grammys": [],
                         "oscars": {
-                            "usertotalPointsForGame": 3
                         },
                         "userTotalPointsForGroup": 0
                     }
@@ -503,13 +500,10 @@
                     "userId": 3,
                     "games": {
                         "emmys": {
-                            "usertotalPointsForGame": 2
                         },
                         "grammys": {
-                            "usertotalPointsForGame": 2
                         },
                         "oscars": {
-                            "usertotalPointsForGame": 2
                         },
                         "userTotalPointsForGroup": 0
                     }
@@ -519,13 +513,10 @@
                     "userId": 4,
                     "games": {
                         "emmys": {
-                            "usertotalPointsForGame": 4
                         },
                         "grammys": {
-                            "usertotalPointsForGame": 5
                         },
                         "oscars": {
-                            "usertotalPointsForGame": 2
                         },
                         "userTotalPointsForGroup": 0
                     }
@@ -535,13 +526,10 @@
                     "userId": 7,
                     "games": {
                         "emmys": {
-                            "usertotalPointsForGame": 3
                         },
                         "grammys": {
-                            "usertotalPointsForGame": 4
                         },
                         "oscars": {
-                            "usertotalPointsForGame": 3
                         },
                         "userTotalPointsForGroup": 0
                     }
@@ -551,13 +539,10 @@
                     "userId": 8,
                     "games": {
                         "emmys": {
-                            "usertotalPointsForGame": 0
                         },
                         "grammys": {
-                            "usertotalPointsForGame": 0
                         },
                         "oscars": {
-                            "usertotalPointsForGame": 4
                         },
                         "userTotalPointsForGroup": 0
                     }
@@ -567,13 +552,10 @@
                     "userId": 9,
                     "games": {
                         "emmys": {
-                            "usertotalPointsForGame": 2
                         },
                         "grammys": {
-                            "usertotalPointsForGame": 1
                         },
                         "oscars": {
-                            "usertotalPointsForGame": 3
                         },
                         "userTotalPointsForGroup": 0
                     }
@@ -606,7 +588,6 @@
                     "userId": 7,
                     "games": {
                         "emmys": {
-                            "usertotalPointsForGame": 6
                         },
                         "grammys": [],
                         "oscars": [],
@@ -619,7 +600,6 @@
                     "games": {
                         "emmys": [],
                         "grammys": {
-                            "usertotalPointsForGame": 1
                         },
                         "oscars": [],
                         "userTotalPointsForGroup": 0
@@ -630,13 +610,10 @@
                     "userId": 11,
                     "games": {
                         "emmys": {
-                            "usertotalPointsForGame": 2
                         },
                         "grammys": {
-                            "usertotalPointsForGame": 0
                         },
                         "oscars": {
-                            "usertotalPointsForGame": 2
                         },
                         "userTotalPointsForGroup": 0
                     }
@@ -646,13 +623,10 @@
                     "userId": 12,
                     "games": {
                         "emmys": {
-                            "usertotalPointsForGame": 3
                         },
                         "grammys": {
-                            "usertotalPointsForGame": 2
                         },
                         "oscars": {
-                            "usertotalPointsForGame": 2
                         },
                         "userTotalPointsForGroup": 0
                     }
