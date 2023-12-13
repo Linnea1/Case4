@@ -36,7 +36,14 @@
     background-position: center;
     background-size: cover;
 }
-
+.awardsWrapper{
+    display: flex;
+}
+.betButton{
+    flex-grow:1;
+    text-align: center;
+    border-bottom: 2px solid rgb(43, 43, 43);
+}
 .settingsContainer{
     padding: 40px 20px;
     display: flex;

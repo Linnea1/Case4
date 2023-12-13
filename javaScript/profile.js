@@ -11,12 +11,12 @@ async function renderProfilePage(){
     }
     main.innerHTML=`
         <div class="profilePageWrapper">
+            <button class="logoutButton">Logout</button>
             <div class="backgroundPictureProfile">
             <div class="profilePicture"></div> 
             <h2 class="profileName"><span>${userData.username}</span></h2>
         </div>
         <div class="profileContent"></div>
-            <button class="logoutButton">Logout</button>
             <div class="profileNavigationBar"></div>
         </div>
         <nav class="sticky-nav">${stickyNav()}</nav>
@@ -33,7 +33,17 @@ async function renderProfilePage(){
     }
     
     profileContent.innerHTML=`
+            <div class="myBetsWrapper">
+                <h2>My Bets</h2>
+                <div class="awardsWrapper">
+                    <div class="emmysBetButton betButton">Emmys</div>
+                    <div class="grammysBetButton betButton">Grammys</div>
+                    <div class="oscarsBetButton betButton">Oscars</div>
+                </div>
+                <div class="awardsContentWrapper"></div>
+            </div>
             <div class="settingsContentWrapper">
+                <h2>Settings</h2>
                 <div class="settingsContainer">
                     <div class="inputBox">
                         <div>Username: </div>
@@ -60,7 +70,7 @@ async function renderProfilePage(){
                 </div>
             </div>
         `
-        
+        getBets("emmys");
         document
             .querySelector(".nav-groups")
             .addEventListener("click", renderMyGroups);
@@ -204,6 +214,10 @@ function popup(htmlContent){
     document.querySelector(".inputContent").innerHTML=htmlContent;
     document.querySelector(".exitPopup").addEventListener("click", e=>{document.querySelector(".popup").style.display = 'none';})
     document.querySelector(".popup").style.display = 'block';
+}
+async function getBets(award){
+    let userGroups = await getUserTeams();
+    console.log(userGroups)
 }
 async function changeUser(newUser){
     try {

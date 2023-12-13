@@ -30,7 +30,8 @@
             "profilePicture": "..\/images\/profilePictures\/James.jpg",
             "pointsInAllGroups": 6,
             "groups": [
-                2
+                2,
+                4
             ]
         },
         {
@@ -109,7 +110,8 @@
             "profilePicture": "..\/images\/profilePictures\/Emma.jpg",
             "pointsInAllGroups": 7,
             "groups": [
-                3
+                3,
+                4
             ]
         },
         {
@@ -131,7 +133,8 @@
             "profilePicture": "..\/images\/profilePictures\/Mia.jpg",
             "pointsInAllGroups": 7,
             "groups": [
-                3
+                3,
+                4
             ]
         },
         {
@@ -185,7 +188,9 @@
             "password": "123",
             "profilePicture": "images\/profilePictures\/1701780363.jpeg",
             "pointsInAllGroups": 0,
-            "groups": []
+            "groups": [
+                4
+            ]
         }
     ],
     "groups": [
@@ -203,8 +208,8 @@
                     "name": "Elin",
                     "userId": 1,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
@@ -261,8 +266,8 @@
                     "name": "Emily",
                     "userId": 2,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Avatar: The Way of Water",
@@ -319,8 +324,8 @@
                     "name": "Benjamin",
                     "userId": 5,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
@@ -377,8 +382,8 @@
                     "name": "Ava",
                     "userId": 6,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
                             "bestPicture": {
                                 "guess": "Everything Everywhere All at Once",
@@ -2076,6 +2081,54 @@
                             "usertotalPointsForGame": 2
                         },
                         "userTotalPointsForGroup": 7
+                    }
+                }
+            ]
+        },
+        {
+            "groupId": 4,
+            "groupName": "Linn\u00e9a's team",
+            "members": [
+                18,
+                10,
+                3,
+                12
+            ],
+            "users": [
+                {
+                    "name": "Linnea",
+                    "userId": 18,
+                    "games": {
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
+                    }
+                },
+                {
+                    "name": "Emma",
+                    "userId": 10,
+                    "games": {
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
+                    }
+                },
+                {
+                    "name": "James",
+                    "userId": 3,
+                    "games": {
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
+                    }
+                },
+                {
+                    "name": "Mia",
+                    "userId": 12,
+                    "games": {
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
                     }
                 }
             ]

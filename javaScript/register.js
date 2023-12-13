@@ -2,6 +2,7 @@ function renderRegisterPage() {
   main.innerHTML = `
   <div class="registerBackground">
     <div class="b"></div>
+    <h1 class="logoRegister">GoldenBet</h1>
       <div class="registerPageWrapper">
           <div><i class="fa-solid fa-arrow-left"></i></div>
           <div class="registerTextContainer">
@@ -19,7 +20,7 @@ function renderRegisterPage() {
             <button>Log In</button>
           </footer>
       </div>
-    </div>
+  </div>
     `
   document.querySelector(".sendRegisterForm").addEventListener("click", register);
   document.querySelector(".fa-arrow-left").addEventListener("click", renderWelcomePage);
