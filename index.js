@@ -10,5 +10,3 @@ function checkIfUserLoggedIn() {
 }
 
 checkIfUserLoggedIn();
-
-//renderAwardInfoPage();
