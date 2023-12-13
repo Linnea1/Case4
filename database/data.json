@@ -205,65 +205,65 @@
                     "userId": 1,
                     "games": {
                         "emmys": {
+                            "userTotalPointsForGame": 0,
                             "OutstandingDramaSeries": {
-                                "guess": "The Crown",
+                                "guess": "House of the Dragon",
                                 "categoryName": "Outstanding Drama Series",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "OutstandingComedySeries": {
-                                "guess": "The Bear",
+                                "guess": "The Marvelous Mrs. Maisel",
                                 "categoryName": "Outstanding Comedy Series",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "OutstandingLeadActorinaDramaSeries": {
-                                "guess": "Jeff Bridges",
-                                "context": "The Old Man",
+                                "guess": "Pedro Pascal",
+                                "context": "The Last Of Us",
                                 "categoryName": "Outstanding Lead Actor in a Drama Series",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "OutstandingLeadActressinaDramaSeriess": {
-                                "guess": "Sharon Horgan",
-                                "context": "Bad Sisters",
+                                "guess": "Bella Ramsey",
+                                "context": "The Last Of Us",
                                 "categoryName": "Outstanding Lead Actress in a Drama Seriess",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "OutstandingLeadActressinaComedySeries": {
-                                "guess": "Quinta Brunson",
-                                "context": "Abbott Elementary",
+                                "guess": "Jenna Ortega",
+                                "context": "Wednesday",
                                 "categoryName": "Outstanding Lead Actress in a Comedy Series",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "OutstandingLeadActorinaComedySeries": {
-                                "guess": "Jason Segel",
-                                "context": "Shrinking",
+                                "guess": "Martin Short",
+                                "context": "Only Murders In The Building",
                                 "categoryName": "Outstanding Lead Actor in a Comedy Series",
                                 "pointsReceived": 0,
                                 "winner": []
-                            },
-                            "userTotalPointsForGame": 0
+                            }
                         },
                         "grammys": {
                             "RecordoftheYear": {
-                                "guess": "Lizzo",
-                                "context": "About Damn Time",
+                                "guess": "Brandi Carlile Featuring Lucius",
+                                "context": "You and Me on the Rock",
                                 "categoryName": "Record of the Year",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "SongOfTheYear": {
-                                "guess": "Steve Lacy",
-                                "context": "Bad Habit",
+                                "guess": "Taylor Swift",
+                                "context": "All Too Well: The Short Film",
                                 "categoryName": "Song Of The Year",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "BestNewArtist": {
-                                "guess": "Domi & JD Beck",
+                                "guess": "Wet Leg",
                                 "categoryName": "Best New Artist",
                                 "pointsReceived": 0,
                                 "winner": []
@@ -292,29 +292,29 @@
                                 "winner": []
                             },
                             "ActorinaLeadingRole": {
-                                "guess": "Brendan Fraser",
-                                "context": "The Whale",
+                                "guess": "Bill Nighy",
+                                "context": "Living",
                                 "categoryName": "Actor in a Leading Role",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "ActressinaLeadingRole": {
-                                "guess": "Ana de Armas",
-                                "context": "Blonde",
+                                "guess": "Andrea Riseborough",
+                                "context": "To Leslie",
                                 "categoryName": "Actress in a Leading Role",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "ActorinaSupportingRole": {
-                                "guess": "Brian Tyree Henry",
-                                "context": "Causeway",
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
                                 "categoryName": "Actor in a Supporting Role",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "ActressinaSupportingRole": {
-                                "guess": "Hong Chau",
-                                "context": "The Whale",
+                                "guess": "Stephanie Hsu",
+                                "context": "Everything Everywhere All at Once",
                                 "categoryName": "Actress in a Supporting Role",
                                 "pointsReceived": 0,
                                 "winner": []
@@ -517,65 +517,65 @@
                     "userId": 1,
                     "games": {
                         "emmys": {
+                            "userTotalPointsForGame": 0,
                             "OutstandingDramaSeries": {
-                                "guess": "The Crown",
+                                "guess": "House of the Dragon",
                                 "categoryName": "Outstanding Drama Series",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "OutstandingComedySeries": {
-                                "guess": "The Bear",
+                                "guess": "The Marvelous Mrs. Maisel",
                                 "categoryName": "Outstanding Comedy Series",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "OutstandingLeadActorinaDramaSeries": {
-                                "guess": "Jeff Bridges",
-                                "context": "The Old Man",
+                                "guess": "Pedro Pascal",
+                                "context": "The Last Of Us",
                                 "categoryName": "Outstanding Lead Actor in a Drama Series",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "OutstandingLeadActressinaDramaSeriess": {
-                                "guess": "Sharon Horgan",
-                                "context": "Bad Sisters",
+                                "guess": "Bella Ramsey",
+                                "context": "The Last Of Us",
                                 "categoryName": "Outstanding Lead Actress in a Drama Seriess",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "OutstandingLeadActressinaComedySeries": {
-                                "guess": "Quinta Brunson",
-                                "context": "Abbott Elementary",
+                                "guess": "Jenna Ortega",
+                                "context": "Wednesday",
                                 "categoryName": "Outstanding Lead Actress in a Comedy Series",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "OutstandingLeadActorinaComedySeries": {
-                                "guess": "Jason Segel",
-                                "context": "Shrinking",
+                                "guess": "Martin Short",
+                                "context": "Only Murders In The Building",
                                 "categoryName": "Outstanding Lead Actor in a Comedy Series",
                                 "pointsReceived": 0,
                                 "winner": []
-                            },
-                            "userTotalPointsForGame": 0
+                            }
                         },
                         "grammys": {
                             "RecordoftheYear": {
-                                "guess": "Lizzo",
-                                "context": "About Damn Time",
+                                "guess": "Brandi Carlile Featuring Lucius",
+                                "context": "You and Me on the Rock",
                                 "categoryName": "Record of the Year",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "SongOfTheYear": {
-                                "guess": "Steve Lacy",
-                                "context": "Bad Habit",
+                                "guess": "Taylor Swift",
+                                "context": "All Too Well: The Short Film",
                                 "categoryName": "Song Of The Year",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "BestNewArtist": {
-                                "guess": "Domi & JD Beck",
+                                "guess": "Wet Leg",
                                 "categoryName": "Best New Artist",
                                 "pointsReceived": 0,
                                 "winner": []
@@ -604,29 +604,29 @@
                                 "winner": []
                             },
                             "ActorinaLeadingRole": {
-                                "guess": "Brendan Fraser",
-                                "context": "The Whale",
+                                "guess": "Bill Nighy",
+                                "context": "Living",
                                 "categoryName": "Actor in a Leading Role",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "ActressinaLeadingRole": {
-                                "guess": "Ana de Armas",
-                                "context": "Blonde",
+                                "guess": "Andrea Riseborough",
+                                "context": "To Leslie",
                                 "categoryName": "Actress in a Leading Role",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "ActorinaSupportingRole": {
-                                "guess": "Brian Tyree Henry",
-                                "context": "Causeway",
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
                                 "categoryName": "Actor in a Supporting Role",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "ActressinaSupportingRole": {
-                                "guess": "Hong Chau",
-                                "context": "The Whale",
+                                "guess": "Stephanie Hsu",
+                                "context": "Everything Everywhere All at Once",
                                 "categoryName": "Actress in a Supporting Role",
                                 "pointsReceived": 0,
                                 "winner": []

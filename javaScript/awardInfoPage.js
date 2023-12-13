@@ -74,6 +74,8 @@ async function renderAwardInfoPage(event) {
             startBettingButton.addEventListener("click", renderBettingPage);
         } else {
             let array = resource;
+            console.log(array);
+
             award = array[array.length-1].currentAward;
             for(let i = 0; i < awards.length; i++) {
                 if(awards[i].award === award) {
@@ -123,8 +125,6 @@ async function renderAwardInfoPage(event) {
 
 function renderBettingPage(event) {
 
-    //Need to try and get saved array, if there is one
-    //Check if textContent of currentTarget is Start betting or Change bets
     let userAwardArray = [];
     let awardCategories = document.querySelectorAll("div.categoryAIPage");
     let firstCategoryOfCurrentAward = awardCategories[0].firstElementChild.textContent;
@@ -553,7 +553,6 @@ function renderBettingPage(event) {
                 }
 
                 let rightValue = nextObjectToShow.nominees[i][rightKey];
-                console.log(rightValue);
                 let bettingChoiceContainer = document.createElement("div");
                 bettingChoiceContainer.classList.add("bettingChoiceContainer");
                 bettingChoiceContainer.innerHTML = `
@@ -611,6 +610,7 @@ function renderBettingPage(event) {
 
     async function showDoneAwardInfoPage(event) {
         //-Make checkmark show on award page with all the awards
+        document.querySelector("div#continueButtonBettingPage").style.pointerEvents = "none";
 
         categoryIndex++;
 

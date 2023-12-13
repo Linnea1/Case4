@@ -123,7 +123,7 @@ function checkIfUserHasBetted() {
                     
                         foreach($games as $gameName => $gameData) {
                             if($gameName == $awardToFind) {
-                                if(count($games[$gameName]) == 0) {
+                                if((count($games[$gameName]) == 1) ||  (count($games[$gameName]) == 0)) {
                                     $userFirstTime = true;
                                 } else {
                                     $arrayToSendBack = [];
@@ -141,21 +141,21 @@ function checkIfUserHasBetted() {
                                         if(isset($array["guess"]) && isset($array["categoryName"])) {
                                             $string = $array["guess"];
                                             $stringCategory = $array["categoryName"];
+
+                                            if($contextKeyExists) {
+                                                $arrayToSendBack[] = array(
+                                                    "category" => $array["categoryName"],
+                                                    "categoryChoice" => $array["guess"],
+                                                    "nomineeContext" => $array["context"]
+                                                );
+                                            } else {
+                                                $arrayToSendBack[] = array(
+                                                    "category" => $stringCategory,
+                                                    "categoryChoice" => $string
+                                                );
+                                            }
                                         }
-                                        
-                                        if($contextKeyExists) {
-                                            $arrayToSendBack[] = array(
-                                                "category" => $array["categoryName"],
-                                                "categoryChoice" => $array["guess"],
-                                                "nomineeContext" => $array["context"]
-                                                
-                                            );
-                                        } else {
-                                            $arrayToSendBack[] = array(
-                                                "category" => $stringCategory,
-                                                "categoryChoice" => $string
-                                            );
-                                        }  
+                                          
                                     }
                                 }
                             }
