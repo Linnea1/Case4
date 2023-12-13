@@ -74,9 +74,6 @@ function saveUserChoices() {
                                         );
                                     }
                     
-                                    /*if($nomineeContext !== undefined) {
-                                        $games[$gameName][$keyName]["context"] = $nomineeContext;
-                                    }*/
                                     $userArrayIndex++;
                                 }
                                 $data["groups"][$index]["users"][$userIndex]["games"][$gameName]["userTotalPointsForGame"] = 0;
@@ -90,12 +87,10 @@ function saveUserChoices() {
             }
         }
     }
-     // $data["groups"][$group]["users"][$user]["games"]
      $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
      file_put_contents($filename, $newJsonString);
      $message = ["message" => "Saving betting choices were successful"];
      send($message);
-     //changeUserBettings($group, $userInGroup, $userChoicesArray);
     
 }
 
@@ -186,46 +181,5 @@ function checkIfUserHasBetted() {
     }
 
 }
-
-function changeUserBettings($group, $user, $userChoicesArray) {
-    $arrayLength = count($userChoicesArray);
-    $currentAward = strtolower($userChoicesArray[$arrayLength-1]["currentAward"]);
-
-    $games = $user["games"];
-
-    foreach($games as $gameName => $gameData) {
-        if($gameName == $currentAward) {
-            $userArrayIndex = 0;
-            while($userArrayIndex < count($userChoicesArray)-1) {
-
-                $valueToSave = $userChoicesArray[$userArrayIndex]["categoryChoice"];
-                $nomineeContext = $userChoicesArray[$userArrayIndex]["nomineeContext"];
-                $nameToCategory = $userChoicesArray[$userArrayIndex]["category"];
-                $keyName = str_replace(" ", "", $nameToCategory);
-
-                $games[$gameName][$keyName] = array(
-                    "guess" => $valueToSave,
-                    "pointsReceived" => array(),
-                    "winner" => []
-                );
-
-                if($nomineeContext !== null) {
-                    $games[$gameName][$keyName]["context"] = $nomineeContext;
-                }
-                $userArrayIndex++;
-            }
-        }
-
-        $group["users"][$user]["games"][$gameName] = $gameData;
-    }
-    
-    // $data["groups"][$group]["users"][$user]["games"]
-    $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
-    file_put_contents($filename, $newJsonString);
-    send($data);
-
-}
-
-
 
 ?>
