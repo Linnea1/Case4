@@ -70,7 +70,10 @@ async function renderProfilePage(){
                 </div>
             </div>
         `
-        getBets("emmys");
+        getBets("emmys", userData.userId);
+        document.querySelector(".emmysBetButton").addEventListener("click",e=>{getBets("emmys", userData.userId);})
+        document.querySelector(".grammysBetButton").addEventListener("click",e=>{getBets("grammys", userData.userId);})
+        document.querySelector(".oscarsBetButton").addEventListener("click",e=>{getBets("oscars", userData.userId);})
         document
             .querySelector(".nav-groups")
             .addEventListener("click", renderMyGroups);
@@ -215,9 +218,43 @@ function popup(htmlContent){
     document.querySelector(".exitPopup").addEventListener("click", e=>{document.querySelector(".popup").style.display = 'none';})
     document.querySelector(".popup").style.display = 'block';
 }
-async function getBets(award){
-    let userGroups = await getUserTeams();
-    console.log(userGroups)
+async function getBets(award, userId){
+    let response = await fetch(`../PHP/userBettingChoices.php?award=${award}&userId=${userId}`);
+    let userBet = await response.json();
+    console.log(userBet);
+
+    let awardsBox = document.querySelector(".awardsContentWrapper");
+    awardsBox.innerHTML="";
+    if(userBet.message){
+        awards.forEach(element => {
+            if(element.award.toLowerCase()===award){
+                element.categories.forEach(category=>{
+                    let betContainer=document.createElement("div");
+                    betContainer.classList.add("betContainer");
+                    betContainer.innerHTML=`
+                    <h3>${category.category}</h3>
+                    <p>No Bet</p>
+                    `;
+                    awardsBox.appendChild(betContainer);
+                })
+            }
+        });
+    }else{
+        userBet.forEach(betObject => {
+            let betContainer=document.createElement("div");
+            betContainer.classList.add("betContainer");
+            betContainer.innerHTML=`
+                <h3>${betObject.category}</h3>
+                <p>${betObject.categoryChoice}</p>
+            `;
+            awardsBox.appendChild(betContainer);
+        });
+    }
+    
+    document.querySelectorAll(".betButton").forEach(function(element) {
+        element.classList.remove("chosenAward");
+    });
+    document.querySelector(`.${award}BetButton`).classList.add("chosenAward");
 }
 async function changeUser(newUser){
     try {

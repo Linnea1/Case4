@@ -335,8 +335,7 @@
                     "games": {
                         "emmys": [],
                         "grammys": [],
-                        "oscars": {
-                        },
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -346,8 +345,7 @@
                     "games": {
                         "emmys": [],
                         "grammys": [],
-                        "oscars": {
-                        },
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -357,8 +355,7 @@
                     "games": {
                         "emmys": [],
                         "grammys": [],
-                        "oscars": {
-                        },
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 }
@@ -504,12 +501,9 @@
                     "name": "James",
                     "userId": 3,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -517,12 +511,9 @@
                     "name": "Olivia",
                     "userId": 4,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -530,12 +521,9 @@
                     "name": "Ethan",
                     "userId": 7,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -543,12 +531,9 @@
                     "name": "Sophia",
                     "userId": 8,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -556,12 +541,9 @@
                     "name": "Liam",
                     "userId": 9,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 }
@@ -592,8 +574,7 @@
                     "name": "Ethan",
                     "userId": 7,
                     "games": {
-                        "emmys": {
-                        },
+                        "emmys": [],
                         "grammys": [],
                         "oscars": [],
                         "userTotalPointsForGroup": 0
@@ -604,8 +585,7 @@
                     "userId": 10,
                     "games": {
                         "emmys": [],
-                        "grammys": {
-                        },
+                        "grammys": [],
                         "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
@@ -614,12 +594,9 @@
                     "name": "Noah",
                     "userId": 11,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -627,12 +604,9 @@
                     "name": "Mia",
                     "userId": 12,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 }
@@ -652,36 +626,79 @@
                     "name": "Linnea",
                     "userId": 18,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
+                        "emmys": {
+                            "OutstandingDramaSeries": {
+                                "guess": "The Last Of Us",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Pedro Pascal",
+                                "context": "The Last Of Us",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeriess": {
+                                "guess": "Elisabeth Moss",
+                                "context": "The Handmaid's Tale",
+                                "categoryName": "Outstanding Lead Actress in a Drama Seriess",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Rachel Brosnahan",
+                                "context": "The Marvelous Mrs. Maisel",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Martin Short",
+                                "context": "Only Murders In The Building",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "userTotalPointsForGame": 0
+                        },
+                        "grammys": [],
+                        "oscars": [],
+                        "userTotalPointsForGroup": 0
                     }
                 },
                 {
                     "name": "Emma",
                     "userId": 10,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
                     }
                 },
                 {
                     "name": "James",
                     "userId": 3,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
                     }
                 },
                 {
                     "name": "Mia",
                     "userId": 12,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
                     }
                 }
             ]

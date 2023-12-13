@@ -104,6 +104,15 @@
     grid-row: 6;
     color: rgb(151, 16, 16);
 }
+.chosenAward{
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+    color: var(--color-orange);
+    box-shadow: -6px 5px 5px 0 rgba(255, 165, 0, 0.5);
+    border-bottom: 2px solid var(--color-orange);
+}
+.betContainer{
+    border-bottom: 2px solid rgb(43, 43, 43);
+}
 .profilePictureFormButton{
     background-color: rgb(29, 29, 29);
     width: 100%;
