@@ -330,8 +330,7 @@
                     "games": {
                         "emmys": [],
                         "grammys": [],
-                        "oscars": {
-                        },
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -341,8 +340,7 @@
                     "games": {
                         "emmys": [],
                         "grammys": [],
-                        "oscars": {
-                        },
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -352,8 +350,7 @@
                     "games": {
                         "emmys": [],
                         "grammys": [],
-                        "oscars": {
-                        },
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 }
@@ -499,12 +496,9 @@
                     "name": "James",
                     "userId": 3,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -512,12 +506,9 @@
                     "name": "Olivia",
                     "userId": 4,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -525,12 +516,9 @@
                     "name": "Ethan",
                     "userId": 7,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -538,11 +526,44 @@
                     "name": "Sophia",
                     "userId": 8,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
                         "oscars": {
+                            "BestPicture": {
+                                "guess": "Elvis",
+                                "categoryName": "Best Picture",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaLeadingRole": {
+                                "guess": "Bill Nighy",
+                                "context": "Living",
+                                "categoryName": "Actor in a Leading Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActressinaLeadingRole": {
+                                "guess": "Michelle Yeoh",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Leading Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaSupportingRole": {
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actor in a Supporting Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActressinaSupportingRole": {
+                                "guess": "Stephanie Hsu",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Supporting Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "userTotalPointsForGame": 0
                         },
                         "userTotalPointsForGroup": 0
                     }
@@ -551,12 +572,9 @@
                     "name": "Liam",
                     "userId": 9,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 }
@@ -587,8 +605,7 @@
                     "name": "Ethan",
                     "userId": 7,
                     "games": {
-                        "emmys": {
-                        },
+                        "emmys": [],
                         "grammys": [],
                         "oscars": [],
                         "userTotalPointsForGroup": 0
@@ -599,8 +616,7 @@
                     "userId": 10,
                     "games": {
                         "emmys": [],
-                        "grammys": {
-                        },
+                        "grammys": [],
                         "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
@@ -609,12 +625,9 @@
                     "name": "Noah",
                     "userId": 11,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -622,12 +635,9 @@
                     "name": "Mia",
                     "userId": 12,
                     "games": {
-                        "emmys": {
-                        },
-                        "grammys": {
-                        },
-                        "oscars": {
-                        },
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
                 }

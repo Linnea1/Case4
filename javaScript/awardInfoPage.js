@@ -127,9 +127,10 @@ function renderBettingPage(event) {
 
     let userAwardArray = [];
     let awardCategories = document.querySelectorAll("div.categoryAIPage");
-    let firstCategoryOfCurrentAward = awardCategories[0].firstElementChild.textContent;
+    let firstCategoryOfCurrentAward = awardCategories[0].firstElementChild.innerHTML;
     console.log(firstCategoryOfCurrentAward);
     
+    console.log(awardCategories[0]);
     let currentAward;
     let dateOfAward;
     let i = 0;
