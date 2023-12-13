@@ -1,3 +1,4 @@
+/* mobile portrait */
 .page-my-groups {
   background-color: var(--color-background);
   height: 100vh;
@@ -31,4 +32,103 @@
 
 .group-info p {
   color: var(--color-grey);
+}
+
+.bg-group {
+  position: relative;
+  background-image: url('../images/bg-stage-2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.bg-group::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* tablet portrait */
+@media only screen and (min-width: 600px) {
+  .groups-container {
+    margin-left: 8%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .bg-group {
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 180px;
+  }
+
+  .tablet-group-title-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .tablet-group-title-button button {
+    width: 20%;
+  }
+
+  .groups-title-button {
+    display: none;
+  }
+
+  .groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2%;
+  }
+
+  .sticky-nav {
+    z-index: 2;
+  }
+
+  .page-my-groups {
+    height: auto;
+    flex-grow: 1;
+  }
+}
+
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .groups-container {
+    margin-left: 14%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh
+  }
+
+  .groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+  }
+
+  .bg-group {
+    background-size: initial;
+    background-position: left;
+    height: 25vh;
+  }
+
+  .tablet-group-title-button button {
+    width: 30%;
+  }
+
+  .page-my-groups {
+    flex-grow: 1;
+  }
 }

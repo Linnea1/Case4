@@ -1,27 +1,33 @@
-.registerPageWrapper {
-    background: linear-gradient(rgb(33, 61, 86), rgb(0, 0, 0));
-    height: 100%;
-    width: 100%;
+/* mobile portrait */
+.register-bg {
+  background: linear-gradient(rgb(33, 61, 86), rgb(0, 0, 0));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.register-page {
     padding: 30px;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 main {
     height: 100vh;
 }
 
-.registerTextContainer p {
+.register-welcome p {
   color: var(--color-grey);
 }
 
-.registrationForm {
+.registration-form {
     display: flex;
     flex-direction: column;
 }
 
-.registrationForm input {
+.registration-form input {
     border: none;
     border-bottom: 1px solid var(--color-grey);
     margin: 10px 0;
@@ -38,8 +44,57 @@ main {
     align-self: end;
     color: var(--color-grey);
     text-align: center;
+    width: 100%;
 }
 
 .registerErrorMessage {
     color: rgb(151, 16, 16);
+}
+
+/* tablet portrait */
+@media only screen and (min-width: 600px) {
+  .register-bg {
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent), linear-gradient(to bottom, rgba(30, 87, 153, 0.4), transparent),url('../images/bg-welcome.png');
+
+  }
+
+  .register-page {
+    background-color: var(--color-background);
+    padding: 180px 55px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+    .register-bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .register-page {
+        flex-direction: column;
+        height: auto;
+        width: 55vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        padding: 30px;
+    }
+
+    .register-welcome {
+        width: 80%;
+        margin-bottom: 5vh;
+    }
+
+    .registration-form {
+        width: 80%;
+    }
+
+    .sendRegisterForm {
+        margin: 5vh 0;
+    }
 }
