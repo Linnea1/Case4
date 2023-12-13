@@ -7,35 +7,35 @@ const awards = [
         category: "Outstanding Drama Series",
         nominees: [
           {
-            series: "Andor",
+            name: "Andor",
             uri: "Andor.jpeg",
           },
           {
-            series: "Better Call Saul",
+            name: "Better Call Saul",
             uri: "Better-Call-Saul.jpeg",
           },
           {
-            series: "House of the Dragon",
+            name: "House of the Dragon",
             uri: "House-of-the-Dragon.jpeg",
           },
           {
-            series: "Succession",
+            name: "Succession",
             uri: "Succession.jpeg",
           },
           {
-            series: "The Crown",
+            name: "The Crown",
             uri: "The-Crown.jpeg",
           },
           {
-            series: "The Last Of Us",
+            name: "The Last Of Us",
             uri: "The-Last-Of-Us.jpeg",
           },
           {
-            series: "The White Lotus",
+            name: "The White Lotus",
             uri: "The-White-Lotus.jpeg",
           },
           {
-            series: "Yellowjackets",
+            name: "Yellowjackets",
             uri: "Yellowjackets.jpeg",
           },
         ],
@@ -45,35 +45,35 @@ const awards = [
         category: "Outstanding Comedy Series",
         nominees: [
           {
-            series: "Abbott Elementary",
+            name: "Abbott Elementary",
             uri: "Abbott-Elementary.jpeg",
           },
           {
-            series: "Barry",
+            name: "Barry",
             uri: "Barry.jpeg",
           },
           {
-            series: "Jury Duty",
+            name: "Jury Duty",
             uri: "Jury-Duty.jpeg",
           },
           {
-            series: "Only Murders In The Building",
+            name: "Only Murders In The Building",
             uri: "Only-Murders-In-The-Building.jpeg",
           },
           {
-            series: "Ted Lasso",
+            name: "Ted Lasso",
             uri: "Ted-Lasso.jpeg",
           },
           {
-            series: "The Bear",
+            name: "The Bear",
             uri: "The-Bear.jpeg",
           },
           {
-            series: "The Marvelous Mrs. Maisel",
+            name: "The Marvelous Mrs. Maisel",
             uri: "The-Marvelous-Mrs-Maisel.jpeg",
           },
           {
-            series: "Wednesday",
+            name: "Wednesday",
             uri: "Wednesday.jpeg",
           },
         ],

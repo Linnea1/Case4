@@ -1,3 +1,5 @@
+"use strict";
+
 function renderRegisterPage() {
   main.innerHTML = `
   <div class="registerBackground">
@@ -37,7 +39,7 @@ function renderRegisterPage() {
         email: email,
         password: password,
         totalPoints: 0,
-        groups: []
+        groups: [],
       };
 
       const response = await fetch("PHP/register.php", {
@@ -50,11 +52,14 @@ function renderRegisterPage() {
 
       const data = await response.json();
       if (!response.ok) {
-        document.querySelector(".registerErrorMessage").style.color="rgb(151, 16, 16)";
-        document.querySelector(".registerErrorMessage").textContent = data.error;
+        document.querySelector(".registerErrorMessage").style.color =
+          "rgb(151, 16, 16)";
+        document.querySelector(".registerErrorMessage").textContent =
+          data.error;
       } else {
-        document.querySelector(".registerErrorMessage").style.color="white"
-        document.querySelector(".registerErrorMessage").textContent="Registration successful";
+        document.querySelector(".registerErrorMessage").style.color = "white";
+        document.querySelector(".registerErrorMessage").textContent =
+          "Registration successful";
       }
     } catch (error) {
       console.error("Error during registration:", error);

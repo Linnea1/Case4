@@ -39,6 +39,9 @@ function renderAwardsPage(awards) {
     .querySelector(".nav-profile")
     .addEventListener("click", renderProfilePage);
 
+ 
+  document.querySelectorAll("button.award-item").forEach(button => button.addEventListener("click", renderAwardInfoPage));
+
   return renderedContent;
 }
 

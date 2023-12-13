@@ -2,25 +2,28 @@
 
 function renderLoginPage() {
   main.innerHTML = `
-    <div class="login-page">
-      <div><i class="fa-solid fa-arrow-left"></i></div>
-      <div class="login-welcome">
-        <h1>Welcome back!</h1>
-        <p>Log in to continue</p>
+    <h1 class="goldenbet">GoldenBet</h1>
+    <div class="login-container">
+      <div class="login-page">
+        <div class="login-welcome">
+          <h1>Welcome back!</h1>
+          <p>Log in to continue</p>
+        </div>
+        <form class="login-form" action="PHP/login.php" method="POST">
+          <input type="text" class="login-email" placeholder="Email" name="email">
+          <input type="password" class="login-password" placeholder="Password" name="password">
+          <button class="btn-main go-to-home-page" type="submit">Continue</button>
+          <p class="message-login"></p>
+        </form>
+        <footer class="sign-up-from-login">Don’t have an account?
+          <button>Sign up</button>
+        </footer>
       </div>
-      <form class="login-form" action="PHP/login.php" method="POST">
-        <input type="text" class="login-email" placeholder="Email" name="email">
-        <input type="password" class="login-password" placeholder="Password" name="password">
-        <button class="btn-main go-to-home-page" type="submit">Continue</button>
-        <p class="message-login"></p>
-      </form>
-      <footer class="sign-up-from-login">Don’t have an account?
-        <button>Sign up</button>
-      </footer>
     </div>
   `;
 
-  document.querySelector(".fa-arrow-left").addEventListener("click", renderWelcomePage);
+  main.classList.add("login-bg");
+
   document.querySelector(".sign-up-from-login button").addEventListener("click", renderRegisterPage);
 
   let loginMain = document.querySelector("main");

@@ -1,0 +1,163 @@
+#awardInfoContainerAIPage {
+   /*height: 100%;*/
+    min-width: 375px;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+#awardNameAndDate > * {
+    margin: 0;
+}
+
+
+/*#navBarAIPage {
+    background-color: #343434;
+    display: flex;
+}
+
+#navBarAIPage > div {
+    border: 5px solid white;
+    flex-grow: 1;
+    box-sizing: border-box;
+    height: 69px;
+
+}*/
+
+#awardImageContainerAIPage {
+    height: 775px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#awardNameAndDate {
+    border-left: 3px solid white;
+    padding: 20px;
+    margin: 20px;
+}
+
+#awardNameAndDate > h1 {
+    color: white;
+    font-size: 40px;
+}
+
+#awardNameAndDate > p {
+    padding-top: 5px;
+    color: white;
+    font-size: 18px;
+}
+
+#awardInfoContainerAIPage > h2 {
+    margin-top: 68px;
+    margin-left: 20px;
+    color: white;
+    font-size: 22px;
+}
+
+.categoryAIPage {
+    border-left: 3px solid white;
+    margin-top: 20px; 
+    padding-left: 20px;
+    margin-left: 20px;
+    height: 88.6px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.categoryAIPage > * {
+    color: white;
+}
+
+.categoryAIPage > h3 {
+    margin: 0;
+}
+
+.categoryAIPage > div {
+    padding-top: 6.7px;
+}
+
+#startBettingAwardBettingPage {
+    height: 63px;
+    width: 350px;
+    color: #9E9E9E;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/*Betting page CSS below*/
+
+#bettingPageContainer {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    background-color: black;
+    overflow: scroll;
+
+}
+
+.bettingChoiceContainer {
+    border-left: 3px solid white;
+    margin-top: 20px; 
+    padding-left: 20px;
+    margin-left: 20px;
+    height: 88.6px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#bettingPageContainer > h1 {
+    color: white;
+    font-size: 22px;
+
+}
+
+.bettingChoiceContainer > * {
+    color: white;
+}
+
+#continueButtonBettingPage {
+    color: white;
+    height: 63px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #343434;
+    align-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#changeCategoryContainerBettingPage {
+    display: flex;
+    flex-direction: row;
+}
+
+#previousCategoryBettingPage {
+    color: white;
+    height: 63px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #343434;
+    align-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
