@@ -23,8 +23,6 @@ async function renderAwardInfoPage(event) {
      
 
         if(resource.message !== undefined) {
-            console.log(award.charAt(0).toUpperCase());
-            console.log(award.slice(1));
             let awardFirstLetterUppercase = award.charAt(0).toUpperCase() + award.slice(1);
 
             let dateOfAward;
@@ -56,7 +54,6 @@ async function renderAwardInfoPage(event) {
                 if(awards[i].award === awardFirstLetterUppercase) {
                     let categoriesArray = awards[i].categories;
                     for(let ii = 0; ii < categoriesArray.length; ii++) {
-                        console.log(categoriesArray);
                         let categoryContainer = document.createElement("div");
                         categoryContainer.classList.add("categoryAIPage");
                         let categoryName = document.createElement("h3");
@@ -136,7 +133,6 @@ function renderBettingPage(event) {
     let dateOfAward;
     let i = 0;
     while(i < awards.length) {
-        console.log(awards[i]);
         if(firstCategoryOfCurrentAward === awards[i]["categories"][0].category) {
             currentAward = awards[i]["award"];
             dateOfAward = awards[i]["date"];
@@ -146,8 +142,6 @@ function renderBettingPage(event) {
         i++
     }
 
-    console.log(currentAward);
-    console.log(firstCategoryOfCurrentAward);
     main.innerHTML =  `
     <div id="bettingPageContainer">
         <h1></h1>
@@ -160,9 +154,6 @@ function renderBettingPage(event) {
 
     let categoryNameHeading = document.querySelector("div#bettingPageContainer > h1");
     categoryNameHeading.textContent = firstCategoryOfCurrentAward;
-    console.log(event);
-    console.log(this);
-    console.log(event.currentTarget);
 
     let nomineesArray;
     let categoriesArray;
@@ -311,8 +302,6 @@ function renderBettingPage(event) {
         //1. Save in the same index again, in case user changed betting choice
         //2. Have a boolean variable that checks whether user is landing on a betting page
         //where they have already clicked on a choice before, in which case display choice
-        console.log(userAwardArray[0]);
-        console.log(userAwardArray);
 
         //Everytime the continue button is pressed, increment variable to show next 
         //category nominees
@@ -320,8 +309,7 @@ function renderBettingPage(event) {
 
         //Is the lastCategory variable ever used?
         let lastCategory;
-        console.log(categoriesArray);
-        console.log(categoryIndex);
+     
         for(let i = 0; i < categoriesArray.length; i++) {
             if(i === categoryIndex) {
                 nextObjectToShow = categoriesArray[i];
@@ -440,7 +428,6 @@ function renderBettingPage(event) {
     }
 
     function renderPreviousCategory(event) {
-        console.log(categoryIndex);
         
         //Below it is checked if the previous betting page was the last one
         if(categoryIndex === categoriesArray.length-1) {
@@ -449,7 +436,6 @@ function renderBettingPage(event) {
             continueButton.addEventListener("click", continueBetting);
         }
         categoryIndex--;
-        console.log(categoryIndex);
 
         let previousChoice;
         for(let i = 0; i < userAwardArray.length; i++) {
@@ -480,7 +466,6 @@ function renderBettingPage(event) {
 
             if(firstCategoryOfCurrentAward === "Best Picture") {
                 bettingsContainer.innerHTML = "";
-                console.log(nextObjectToShow);
 
                 for(let i = 0; i < nextObjectToShow.nominees.length; i++) {
                     let bettingChoiceContainer = document.createElement("div");
@@ -532,7 +517,6 @@ function renderBettingPage(event) {
             return;
         }
 
-        console.log(nextObjectToShow);
         if(firstCategoryOfCurrentAward === "Best Picture") {
             bettingsContainer.innerHTML = "";
             for(let i = 0; i < nextObjectToShow.nominees.length; i++) {
@@ -568,7 +552,6 @@ function renderBettingPage(event) {
                     }
                 }
 
-                console.log(rightKey);
                 let rightValue = nextObjectToShow.nominees[i][rightKey];
                 console.log(rightValue);
                 let bettingChoiceContainer = document.createElement("div");
@@ -618,7 +601,6 @@ function renderBettingPage(event) {
         usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
 
         for(let i = 0; i < nomineeAlternatives.length; i++) {
-            console.log(previousChoice);
             if(nomineeAlternatives[i].textContent === previousChoice) {
                 usersPossibleChoices[i].style.backgroundColor = "darkgrey";
                 continueButton.style.pointerEvents = "auto";
@@ -630,7 +612,6 @@ function renderBettingPage(event) {
     async function showDoneAwardInfoPage(event) {
         //-Make checkmark show on award page with all the awards
 
-        console.log(event);
         categoryIndex++;
 
         if(userAwardArray.length === categoryIndex-1) {
