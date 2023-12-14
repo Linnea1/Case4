@@ -9,7 +9,8 @@
             "pointsInAllGroups": 3,
             "groups": [
                 1,
-                2
+                2,
+                5
             ]
         },
         {
@@ -32,7 +33,8 @@
             "pointsInAllGroups": 6,
             "groups": [
                 2,
-                4
+                4,
+                5
             ]
         },
         {
@@ -190,7 +192,8 @@
             "profilePicture": "images\/profilePictures\/1701780363.jpeg",
             "pointsInAllGroups": 0,
             "groups": [
-                4
+                4,
+                5
             ]
         }
     ],
@@ -669,7 +672,43 @@
                             },
                             "userTotalPointsForGame": 0
                         },
-                        "grammys": [],
+                        "grammys": {
+                            "RecordoftheYear": {
+                                "guess": "Adele",
+                                "context": "Easy on Me",
+                                "categoryName": "Record of the Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "SongOfTheYear": {
+                                "guess": "Harry Styles",
+                                "context": "As It Was",
+                                "categoryName": "Song Of The Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "BestNewArtist": {
+                                "guess": "Anitta",
+                                "categoryName": "Best New Artist",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "AlbumOfTheYear": {
+                                "guess": "Harry Styles",
+                                "context": "Harry\u2019s House",
+                                "categoryName": "Album Of The Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "BestPopSoloPerformance": {
+                                "guess": "Lizzo",
+                                "context": "About Damn Time",
+                                "categoryName": "Best Pop Solo Performance",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "userTotalPointsForGame": 0
+                        },
                         "oscars": [],
                         "userTotalPointsForGroup": 0
                     }
@@ -695,6 +734,81 @@
                 {
                     "name": "Mia",
                     "userId": 12,
+                    "games": {
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
+                    }
+                }
+            ]
+        },
+        {
+            "groupId": 5,
+            "groupName": "My group",
+            "members": [
+                18,
+                1,
+                3
+            ],
+            "users": [
+                {
+                    "name": "Linnea",
+                    "userId": 18,
+                    "games": {
+                        "emmys": [],
+                        "grammys": {
+                            "RecordoftheYear": {
+                                "guess": "Adele",
+                                "context": "Easy on Me",
+                                "categoryName": "Record of the Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "SongOfTheYear": {
+                                "guess": "Harry Styles",
+                                "context": "As It Was",
+                                "categoryName": "Song Of The Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "BestNewArtist": {
+                                "guess": "Anitta",
+                                "categoryName": "Best New Artist",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "AlbumOfTheYear": {
+                                "guess": "Harry Styles",
+                                "context": "Harry\u2019s House",
+                                "categoryName": "Album Of The Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "BestPopSoloPerformance": {
+                                "guess": "Lizzo",
+                                "context": "About Damn Time",
+                                "categoryName": "Best Pop Solo Performance",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "userTotalPointsForGame": 0
+                        },
+                        "oscars": [],
+                        "userTotalPointsForGroup": 0
+                    }
+                },
+                {
+                    "name": "Elin",
+                    "userId": 1,
+                    "games": {
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
+                    }
+                },
+                {
+                    "name": "James",
+                    "userId": 3,
                     "games": {
                         "emmys": [],
                         "grammys": [],
