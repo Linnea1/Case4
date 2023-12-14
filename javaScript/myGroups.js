@@ -1,6 +1,6 @@
 "use strict";
 
-async function renderMyGroups() {
+async function renderMyGroups(newGroupCreated) {
   let userGroups = await getUserTeams();
 
   main.innerHTML = `
@@ -40,16 +40,28 @@ async function renderMyGroups() {
   });
 
   let popUp = document.querySelector(".popup");
-  popUp.classList.remove("shown");
+
+  if (newGroupCreated) {
+    popUp.classList.add("shown");
+    let inputContent = document.querySelector(".inputContent");
+    inputContent.innerHTML = `
+      <button>
+        <i class="fa-solid fa-xmark go-to-my-groups" aria-hidden="true"></i>
+      </button>
+      <p>Your group has been successfully created!</p>
+    `;
+
+    document.querySelector(".go-to-my-groups").addEventListener("click", () => {
+      popUp.classList.remove("shown");
+    });
+  }
 
   document.querySelector(".fa-people-group").classList.add("current-page");
   document.querySelector(".text-groups").classList.add("current-page");
 
   document.querySelector(".tablet-create-group").addEventListener("click", renderCreateNewGroupPage);
   document.querySelector(".create-group").addEventListener("click", renderCreateNewGroupPage);
-  document
-    .querySelector(".nav-home")
-    .addEventListener("click", renderHomePage);
+  document.querySelector(".nav-home").addEventListener("click", renderHomePage);
   document
     .querySelector(".nav-awards")
     .addEventListener("click", () => renderAwardsPage(awards));

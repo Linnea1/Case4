@@ -39,7 +39,7 @@ async function renderHomePage() {
 
   document
     .querySelector(".nav-groups")
-    .addEventListener("click", renderMyGroups);
+    .addEventListener("click", () => renderMyGroups(false));
   document
     .querySelector(".nav-awards")
     .addEventListener("click", () => renderAwardsPage(awards));

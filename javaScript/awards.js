@@ -34,12 +34,12 @@ function renderAwardsPage(awards) {
     .addEventListener("click", renderHomePage);
   document
     .querySelector(".nav-groups")
-    .addEventListener("click", renderMyGroups);
+    .addEventListener("click", () => renderMyGroups(false));
   document
     .querySelector(".nav-profile")
     .addEventListener("click", renderProfilePage);
 
- 
+
   document.querySelectorAll("button.award-item").forEach(button => button.addEventListener("click", renderAwardInfoPage));
 
   return renderedContent;

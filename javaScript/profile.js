@@ -12,7 +12,7 @@ async function renderProfilePage(){
     main.innerHTML=`
     <div class="profilePageWrapper">
         <div class="backgroundPictureProfile">
-            <div class="profilePicture"></div> 
+            <div class="profilePicture"></div>
             <h2 class="profileName"><span>${userData.username}</span></h2>
         </div>
         <div class="profileContent"></div>
@@ -31,7 +31,7 @@ async function renderProfilePage(){
         renderWelcomePage();
         main.classList.remove("bg-home");
     }
-    
+
     profileContent.innerHTML=`
             <div class="settingsContentWrapper">
                 <div class="settingsContainer">
@@ -60,10 +60,10 @@ async function renderProfilePage(){
                 </div>
             </div>
         `
-        
+
         document
             .querySelector(".nav-groups")
-            .addEventListener("click", renderMyGroups);
+            .addEventListener("click", () => renderMyGroups(false));
         document
             .querySelector(".nav-awards")
             .addEventListener("click", () => renderAwardsPage(awards));
@@ -141,7 +141,7 @@ async function renderProfilePage(){
         });
 
         document.querySelector(".profilePictureButton").addEventListener("click",e=>
-        { 
+        {
             popup(`
         <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
         <form id="profilePictureForm" method="POST" enctype="multipart/form-data">
@@ -150,12 +150,12 @@ async function renderProfilePage(){
             <p class="settingsErrorMessagePP"></p>
             <button type="submit" class="profilePictureFormButton">Change profile Picture</button>
         </form>
-        `); 
+        `);
             document.getElementById("profilePictureForm").addEventListener("submit", async function(event){
                 event.preventDefault();
                 let fileForm = document.getElementById("profilePictureForm");
                 let fileInput = document.getElementById("fileInput");
-    
+
                 if (fileInput.files.length === 0) {
                     console.log("File input is empty");
                     document.querySelector(".settingsErrorMessagePP").textContent = "Please upload a picture";
@@ -164,14 +164,14 @@ async function renderProfilePage(){
                     const formData = new FormData(fileForm);
                     formData.append("id", userData.userId);
                     console.log(formData);
-    
+
                     try {
 
                         const response = await fetch("PHP/settings.php", {
                             method: "POST",
                             body: formData,
                         });
-                
+
                         if (!response.ok) {
                             console.error("Error in response:", response);
 
@@ -194,7 +194,7 @@ async function renderProfilePage(){
     document.querySelector(".fa-user").classList.add("current-page");
     document.querySelector(".text-profile").classList.add("current-page");
 
-    
+
 
 }
 function hidePassword(password) {

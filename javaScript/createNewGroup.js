@@ -6,9 +6,6 @@ async function renderCreateNewGroupPage() {
   main.innerHTML = `
     <div class="page-create-new-group">
       <div class="create-new-group-container">
-        <button>
-          <i class="fa-solid fa-xmark go-to-my-groups" aria-hidden="true"></i>
-        </button>
         <form class="new-group-form" action="PHP/createNewGroup.php" method="POST">
           <div class="new-group-name-container">
             <input type="text" class="new-group-name" placeholder="Enter group name" name="new-group-name" required>
@@ -42,7 +39,6 @@ async function renderCreateNewGroupPage() {
   const message = document.querySelector(".create-new-group-message");
   const newGroupName = document.querySelector(".new-group-name");
   const penIcon = document.querySelector(".fa-pen");
-  const goToMyGroups = document.querySelector(".go-to-my-groups");
 
   usernameInputField.addEventListener("input", () => {
     const usernameInput = usernameInputField.value;
@@ -61,9 +57,9 @@ async function renderCreateNewGroupPage() {
     }
   })
 
-  goToMyGroups.addEventListener("click", () => {
-    renderMyGroups();
-  })
+//   goToMyGroups.addEventListener("click", () => {
+//     renderMyGroups();
+//   })
 }
 
 async function createNewGroup(event, newGroupForm, message) {
@@ -97,7 +93,8 @@ async function createNewGroup(event, newGroupForm, message) {
     if (!response.ok) {
       message.textContent = data.message;
     } else {
-      message.textContent = "Your group has been successfully created!";
+      const newGroupCreated = true;
+      renderMyGroups(newGroupCreated);
     }
   } catch (err) {
     message.textContent = `Error: ${err.message}`;

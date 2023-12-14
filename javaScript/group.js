@@ -59,7 +59,7 @@ async function navigateToGroupPage(selectedGroup) {
     .addEventListener("click", renderHomePage);
   document
     .querySelector(".nav-groups")
-    .addEventListener("click", renderMyGroups);
+    .addEventListener("click", () => renderMyGroups(false));
   document
     .querySelector(".nav-awards")
     .addEventListener("click", () => renderAwardsPage(awards));
@@ -96,7 +96,7 @@ async function leaveGroup(loggedInUser, selectedGroup) {
 
   document
     .querySelector(".button-close")
-    .addEventListener("click", renderMyGroups);
+    .addEventListener("click", () => renderMyGroups(false));
 }
 
 async function putUsersInOrder(selectedGroup) {
