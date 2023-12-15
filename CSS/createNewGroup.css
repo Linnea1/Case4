@@ -175,6 +175,13 @@
   padding-left: 10px;
 }
 
+.closeCreateGroup {
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
 /* tablet portrait */
 @media only screen and (min-width: 600px) {
   .create-new-group-container {
