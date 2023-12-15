@@ -72,6 +72,7 @@ async function renderMyGroups(newGroupCreated) {
 
 function renderGroups(userGroups) {
   const group = userGroups
+    .reverse()
     .map(
       (element) => `
       <button class="group" id="${element.groupName
