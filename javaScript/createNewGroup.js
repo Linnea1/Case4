@@ -106,6 +106,7 @@ async function createNewGroup(event, newGroupForm, message) {
 function searchUsername(allUsers, usernames, usernameInput, usernameInputField, message) {
   const dropdown = document.querySelector(".dropdown-list");
   dropdown.innerHTML = "";
+  dropdown.classList.remove("dropdown-list-height");
 
   if (usernameInput.trim() === "") {
     dropdown.innerHTML = "";
@@ -139,6 +140,7 @@ function searchUsername(allUsers, usernames, usernameInput, usernameInputField, 
     `;
 
     dropdown.appendChild(optionContainer);
+    dropdown.classList.add("dropdown-list-height");
 
     optionContainer.addEventListener("click", () => {
       addUserToList(username, usernameInputField, dropdown, message, userImage);
@@ -150,6 +152,7 @@ function addUserToList(username, usernameInputField, dropdown, message, userImag
   usernameInputField.value = username;
   dropdown.innerHTML = "";
   message.textContent = "";
+  dropdown.classList.remove("dropdown-list-height");
 
   const foundUsername = usernameInputField.value;
   const memberNames = document.querySelector(".group-members-names");

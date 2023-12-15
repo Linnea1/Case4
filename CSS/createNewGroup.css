@@ -9,7 +9,7 @@
 
 .create-new-group-container {
   background-color: var(--color-black);
-  height: 70%;
+  height: 80%;
   width: 90%;
   border-radius: 20px;
   display: flex;
@@ -18,6 +18,7 @@
   align-items: center;
   position: relative;
   overflow: scroll;
+  padding: 0 10px;
 }
 
 .new-group-form {
@@ -86,6 +87,13 @@
 
 .dropdown-list {
   margin-top: 5px;
+  /* height: 65px; */
+}
+
+.dropdown-list-height {
+  height: 65px;
+  overflow-y: scroll;
+
 }
 
 .dropdown-option {
@@ -115,6 +123,8 @@
 .group-members-names {
   padding: 0;
   margin: 5px 0;
+  overflow-y: scroll;
+  height: 140px;
 }
 
 .group-members-names li {
