@@ -18,10 +18,13 @@
     padding: 5px 20px;
 }
 
-.home-welcome h1 {
+.home-welcome h1,
+.home-welcome>h1:nth-child(1)>span:nth-child(1) {
     color: var(--color-white);
     font-family: Sora SemiBold;
 }
+
+
 
 .home-welcome p {
     color: var(--color-grey);
@@ -30,7 +33,7 @@
 .fa-chevron-down {
     display: flex;
     justify-content: center;
-    color: rgb(72, 72, 72);
+    color: var(--color-grey-2);
     padding: 10px;
 }
 

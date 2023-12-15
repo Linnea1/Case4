@@ -9,7 +9,7 @@
 
 .create-new-group-container {
   background-color: var(--color-black);
-  height: 80%;
+  height: 60%;
   width: 90%;
   border-radius: 20px;
   display: flex;
@@ -25,9 +25,15 @@
   width: 90%;
 }
 
+.new-group-name-container {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+}
+
 .new-group-name {
   border: none;
-  font-size: 30px;
+  font-size: 22px;
   width: 60%;
   text-transform: none;
   color: rgb(222, 222, 222);
@@ -35,11 +41,18 @@
 
 .new-group-name::placeholder {
   color: var(--color-white);
-  font-size: 20px;
+  font-size: 22px;
+  font-family: Sora SemiBold;
 }
 
 .new-group-member-container {
   margin: 30px 0;
+}
+
+.new-group-member-container>label:nth-child(1),
+.group-members-list>div:nth-child(1) {
+  font-family: Sora SemiBold;
+  font-size: 14px;
 }
 
 .fa-plus {
@@ -62,29 +75,30 @@
   border: solid 1px rgb(114, 114, 114);
 }
 
-.new-group-member::placeholder  {
+.new-group-member::placeholder {
   height: 20px;
   border: none;
   height: 50px;
 }
 
 .usernameList {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .usernameItem {
-    margin-bottom: 5px;
-    cursor: pointer;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .usernameItem:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .create-new-group {
   padding: 20px;
   margin: 0 auto;
   display: block;
+  font-family: Sora SemiBold;
 }
 
 .dropdown-list {
@@ -161,7 +175,7 @@
   border-radius: 0 5px 5px 0;
 }
 
-.option-container{
+.option-container {
   border-radius: 5px;
   margin-bottom: 5px;
 }
@@ -181,13 +195,14 @@
   flex-grow: 1;
   padding-left: 10px;
   color: rgb(158, 158, 158);
+  font-size: 14px;
 }
 
 .closeCreateGroup {
-    padding: 10px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .fa-minus {

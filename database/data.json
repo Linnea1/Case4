@@ -191,7 +191,7 @@
         },
         {
             "userId": 19,
-            "username": "thea",
+            "username": "Thea",
             "email": "thea@gmail.com",
             "password": "thea",
             "pointsInAllGroups": 0,
@@ -667,18 +667,18 @@
                     "name": "thea",
                     "userId": 19,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
                     }
                 },
                 {
                     "name": "James",
                     "userId": 3,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
                     }
                 }
             ]

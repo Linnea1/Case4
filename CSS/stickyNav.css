@@ -1,6 +1,6 @@
 /* mobile portrait */
 .sticky-nav {
-  height: 84px;
+  height: 75px;
   width: 100%;
   background-color: var(--color-nav);
   bottom: 0;
@@ -35,6 +35,7 @@
 
 .nav-icon-name {
   margin: 3px;
+  font-size: 12px;
   color: var(--color-grey);
 }
 

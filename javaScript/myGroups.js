@@ -14,7 +14,7 @@ async function renderMyGroups(newGroupCreated) {
       <div class="page-my-groups">
         <div class="groups-title-button">
           <h2>My Groups</h2>
-          <button class="btn-main create-group">Create new team</button>
+          <button class="btn-main create-group">Create new group</button>
         </div>
         <div class="groups">
           ${renderGroups(userGroups)}
@@ -76,8 +76,8 @@ function renderGroups(userGroups) {
     .map(
       (element) => `
       <button class="group" id="${element.groupName
-        .toLowerCase()
-        .replace(/\s+/g, "-")}">
+          .toLowerCase()
+          .replace(/\s+/g, "-")}">
         <h3>${element.groupName.toUpperCase()}</h3>
         <div class="group-info">
           <p>${element.members.length} members</p>
