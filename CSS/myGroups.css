@@ -53,6 +53,14 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.popup {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.popupContent {
+  background: none;
+}
+
 /* tablet portrait */
 @media only screen and (min-width: 600px) {
   .groups-container {

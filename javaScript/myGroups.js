@@ -48,7 +48,7 @@ async function renderMyGroups(newGroupCreated) {
       <button>
         <i class="fa-solid fa-xmark go-to-my-groups" aria-hidden="true"></i>
       </button>
-      <p>Your group has been successfully created!</p>
+      <p>Your new group has been created!</p>
     `;
 
     document.querySelector(".go-to-my-groups").addEventListener("click", () => {
