@@ -31,7 +31,8 @@
             "profilePicture": "..\/images\/profilePictures\/James.jpg",
             "pointsInAllGroups": 6,
             "groups": [
-                2
+                2,
+                4
             ]
         },
         {
@@ -187,6 +188,17 @@
             "profilePicture": "images\/profilePictures\/1701780363.jpeg",
             "pointsInAllGroups": 0,
             "groups": []
+        },
+        {
+            "userId": 19,
+            "username": "thea",
+            "email": "thea@gmail.com",
+            "password": "thea",
+            "pointsInAllGroups": 0,
+            "groups": [
+                4
+            ],
+            "profilePicture": "images\/profilePictures\/1702540943.png"
         }
     ],
     "groups": [
@@ -639,6 +651,34 @@
                         "grammys": [],
                         "oscars": [],
                         "userTotalPointsForGroup": 0
+                    }
+                }
+            ]
+        },
+        {
+            "groupId": 4,
+            "groupName": "Theas test",
+            "members": [
+                19,
+                3
+            ],
+            "users": [
+                {
+                    "name": "thea",
+                    "userId": 19,
+                    "games": {
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
+                    }
+                },
+                {
+                    "name": "James",
+                    "userId": 3,
+                    "games": {
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
                     }
                 }
             ]

@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Sora Regular;
+  src: url(../media/Sora/static/Sora-Regular.ttf);
+}
+
+@font-face {
+  font-family: Sora SemiBold;
+  src: url(../media/Sora/static/Sora-SemiBold.ttf);
+}
+
 :root {
   --color-main: rgb(222, 222, 222);
   --color-white: rgb(255, 255, 255);
@@ -10,22 +20,23 @@
 }
 
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Sora Regular;
   box-sizing: border-box;
   color: var(--color-main);
 }
 
 body {
-    width: 100vw;
-    height: auto;
-    margin: 0;
+  width: 100vw;
+  height: auto;
+  margin: 0;
 }
 
 main {
-    width: 100%;
+  width: 100%;
 }
 
-a, img {
+a,
+img {
   border: 0;
 }
 
@@ -34,26 +45,28 @@ button {
   padding: 0;
 }
 
-header, main, nav {
+header,
+main,
+nav {
   display: block;
 }
 
 input {
-    border: none;
-    border-bottom: 1px solid var(--color-grey);
-    background-color: transparent;
-    outline: none;
+  border: none;
+  border-bottom: 1px solid var(--color-grey);
+  background-color: transparent;
+  outline: none;
 }
 
 button {
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .popup {
@@ -66,7 +79,7 @@ button {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.popupContent{
+.popupContent {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -121,4 +134,3 @@ button {
 .shown {
   display: inline;
 }
-

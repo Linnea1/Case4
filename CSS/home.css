@@ -1,6 +1,6 @@
 /* mobile portrait */
 .bg-home {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('../images/bg-home.jpg');
+    background-image: linear-gradient(to bottom, #18181866, #18181866), url('../images/bg-home.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,12 +14,13 @@
 
 .home-welcome {
     border-left: 2px solid var(--color-white);
-    margin: 375px 15px 20px;
+    margin: 60vh 15px 20px;
     padding: 5px 20px;
 }
 
 .home-welcome h1 {
     color: var(--color-white);
+    font-family: Sora SemiBold;
 }
 
 .home-welcome p {
@@ -122,7 +123,7 @@
         display: block;
     }
 
-    .countdownTimers > .timers > .awardCountdown:first-of-type {
+    .countdownTimers>.timers>.awardCountdown:first-of-type {
         gap: 80px;
     }
 }
