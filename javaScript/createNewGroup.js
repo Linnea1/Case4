@@ -15,7 +15,7 @@ async function renderCreateNewGroupPage() {
             <i class="fa-solid fa-pen"></i>
           </div>
           <div class="new-group-member-container">
-            <label for="new-group-member">Add group member</label>
+            <label for="new-group-member">Add group members</label>
             <input type="text" class="new-group-member" placeholder="Enter username" name="new-group-member">
             <div class="dropdown-list"></div>
           </div>
@@ -137,6 +137,9 @@ function searchUsername(allUsers, usernames, usernameInput, usernameInputField, 
     optionContainer.innerHTML = `
       <img class="dropdown-option-image" src="${userImage}">
       <option class="dropdown-option">${username}</option>
+      <button>
+        <i class="fa-solid fa-plus"></i>
+      </button>
     `;
 
     dropdown.appendChild(optionContainer);
@@ -166,7 +169,7 @@ function addUserToList(username, usernameInputField, dropdown, message, userImag
         <div class="new-member">${foundUsername}</div>
       </div>
       <button>
-        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        <i class="fa-solid fa-minus"></i>
       </button>
     `;
 
@@ -180,7 +183,7 @@ function addUserToList(username, usernameInputField, dropdown, message, userImag
 }
 
 function removeListItem(listItemContainer) {
-  const removeListItemButton = listItemContainer.querySelector(".fa-xmark");
+  const removeListItemButton = listItemContainer.querySelector(".fa-minus");
 
   if (removeListItemButton) {
     removeListItemButton.addEventListener("click", () => {
