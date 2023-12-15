@@ -11,13 +11,15 @@ async function renderProfilePage(){
     }
     main.innerHTML=`
         <div class="profilePageWrapper">
-            <button class="logoutButton">Logout</button>
             <div class="backgroundPictureProfile">
-            <div class="profilePicture"></div> 
-            <h2 class="profileName"><span>${userData.username}</span></h2>
-        </div>
-        <div class="profileContent"></div>
-            <div class="profileNavigationBar"></div>
+                <button class="logoutButton">Logout</button>
+                <div class="profilePicAndName">
+                    <div class="profilePicture"></div> 
+                    <h2 class="profileName">${userData.username}</h2>
+                </div>
+                
+            </div>
+            <div class="profileContent"></div>
         </div>
         <nav class="sticky-nav">${stickyNav()}</nav>
     `
@@ -25,6 +27,9 @@ async function renderProfilePage(){
     let profileContent=document.querySelector(".profileContent");
     document.querySelector(".logoutButton").addEventListener("click", logoutFromAccount);
     const hiddenPassword = hidePassword(userData.password);
+    const isPortrait600px = window.matchMedia('(min-width: 600px) and (orientation: portrait)').matches;
+    const isMinWidth600px = window.matchMedia('(min-width: 600px)').matches;
+    
 
     function logoutFromAccount() {
         window.localStorage.removeItem("user");
@@ -34,7 +39,7 @@ async function renderProfilePage(){
     
     profileContent.innerHTML=`
             <div class="myBetsWrapper">
-                <h2>My Bets</h2>
+                <h2 class="myBets">My Bets</h2>
                 <div class="awardsWrapper">
                     <div class="emmysBetButton betButton">Emmys</div>
                     <div class="grammysBetButton betButton">Grammys</div>
@@ -52,6 +57,7 @@ async function renderProfilePage(){
                             <div class="usernameEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
+                    <div class="responsiveContainerUsername"></div>
                     <div class="inputBox">
                         <div>Email: </div>
                         <div class="userInfo"><span>${userData.email}</span></div>
@@ -59,6 +65,7 @@ async function renderProfilePage(){
                             <div class="emailEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
+                    <div class="responsiveContainerEmail"></div>
                     <div class="inputBox">
                         <div>Password: </div>
                         <div class="userInfo hiddenPassword">${hiddenPassword}</div>
@@ -66,10 +73,16 @@ async function renderProfilePage(){
                             <div class="passwordEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
+                    <div class="responsiveContainerPassword"></div>
                     <div class="profilePictureButton">Change profile picture</div>
+                    
                 </div>
             </div>
         `
+        const responsiveContainerUsername=document.querySelector(".responsiveContainerUsername");
+        const responsiveContainerEmail=document.querySelector(".responsiveContainerEmail");
+        const responsiveContainerPassword=document.querySelector(".responsiveContainerPassword");
+
         getBets("emmys", userData.userId);
         document.querySelector(".emmysBetButton").addEventListener("click",e=>{getBets("emmys", userData.userId);})
         document.querySelector(".grammysBetButton").addEventListener("click",e=>{getBets("grammys", userData.userId);})
@@ -83,35 +96,71 @@ async function renderProfilePage(){
         document
             .querySelector(".nav-home")
             .addEventListener("click", renderHomePage);
-        document.querySelector(".usernameEdit").addEventListener("click",e=>
-        {popup(`
-            <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
-            <input type="text" class="settingsInput inputUsername inputOrder1" placeholder="New username">
-            <p class="settingsErrorMessage"></p>
-            <button class="settingsButton settingsButtonUsername">Change username</button>
-            `
-            )
-            document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
-                var settingsUserID=userData.userId;
-                var newUsername=document.querySelector(".inputUsername").value;
+        document.querySelector(".usernameEdit").addEventListener("click", e => {
+            if (isPortrait600px) {
+                responsiveContainerUsername.innerHTML = `
+                    <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
+                    <input type="text" class="settingsInput inputUsername inputOrder1" placeholder="New username">
+                    <p class="settingsErrorMessage"></p>
+                    <div class="settingsButtonsContainer">
+                        <button class="settingsButton settingsButtonCancel">Cancel</button>
+                        <button class="settingsButton settingsButtonUsername">Change username</button>
+                    </div>
+                `;
+            } else if (isMinWidth600px) {
+                // Add your code for min-width 600px if needed
+            } else {
+                popup(`
+                    <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
+                    <input type="text" class="settingsInput inputUsername inputOrder1" placeholder="New username">
+                    <p class="settingsErrorMessage"></p>
+                    <div class="settingsButtonsContainer">
+                        <button class="settingsButton settingsButtonCancel">Cancel</button>
+                        <button class="settingsButton settingsButtonUsername">Change username</button>
+                    </div>
+                `);
+            }
+        
+            document.querySelector(".settingsButtonUsername").addEventListener("click", e => {
+                var settingsUserID = userData.userId;
+                var newUsername = document.querySelector(".inputUsername").value;
                 var newUser = {
-                    id:settingsUserID,
+                    id: settingsUserID,
                     newUsername: newUsername
                 };
-                changeUser(newUser)
-            })
-
+                changeUser(newUser);
+            });
         });
+            
 
         document.querySelector(".emailEdit").addEventListener("click",e=>
-        {popup(`
-            <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
-            <input type="text" class="settingsInput inputEmail inputOrder1" placeholder="New email">
-            <input type="text" class="settingsInput inputEmailRepeat inputOrder2" placeholder="Repeat new email">
-            <p class="settingsErrorMessage"></p>
-            <button class="settingsButton settingsButtonUsername">Change email</button>
-            `
-            )
+        {
+            if (isPortrait600px) {
+                responsiveContainerEmail.innerHTML = `
+                <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
+                <input type="text" class="settingsInput inputEmail inputOrder1" placeholder="New email">
+                <input type="text" class="settingsInput inputEmailRepeat inputOrder2" placeholder="Repeat new email">
+                <p class="settingsErrorMessage"></p>
+                <div class="settingsButtonsContainer">
+                    <button class="settingsButton settingsButtonCancel">Cancel</button>
+                    <button class="settingsButton settingsButtonUsername">Change email</button>
+                </div>
+                
+                `;
+            } else if (isMinWidth600px) {
+                // Add your code for min-width 600px if needed
+            } else {
+                popup(`
+                    <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
+                    <input type="text" class="settingsInput inputEmail inputOrder1" placeholder="New email">
+                    <input type="text" class="settingsInput inputEmailRepeat inputOrder2" placeholder="Repeat new email">
+                    <p class="settingsErrorMessage"></p>
+                    <div class="settingsButtonsContainer">
+                        <button class="settingsButton settingsButtonCancel">Cancel</button>
+                        <button class="settingsButton settingsButtonUsername">Change email</button>
+                    </div>
+                `);
+            }
             document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
                 var settingsUserID=userData.userId;
                 var newEmail=document.querySelector(".inputEmailRepeat").value;
@@ -129,14 +178,34 @@ async function renderProfilePage(){
         });
 
         document.querySelector(".passwordEdit").addEventListener("click",e=>
-        {popup(`
-            <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
-            <input type="text" class="settingsInput inputPassword inputOrder1" placeholder="New password">
-            <input type="text" class="settingsInput inputPasswordRepeat inputOrder2" placeholder="Repeat new password">
-            <p class="settingsErrorMessage"></p>
-            <button class="settingsButton settingsButtonUsername">Change password</button>
-            `
-            )
+        {
+            if (isPortrait600px) {
+                responsiveContainerPassword.innerHTML = `
+                <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
+                <input type="password" class="settingsInput inputPassword inputOrder1" placeholder="New password">
+                <input type="password" class="settingsInput inputPasswordRepeat inputOrder2" placeholder="Repeat new password">
+                <p class="settingsErrorMessage"></p>
+                <div class="settingsButtonsContainer">
+                    <button class="settingsButton settingsButtonCancel">Cancel</button>
+                    <button class="settingsButton settingsButtonUsername">Change password</button>
+                </div>
+                
+                `;
+            } else if (isMinWidth600px) {
+                // Add your code for min-width 600px if needed
+            } else {
+                popup(`
+                <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
+                <input type="password" class="settingsInput inputPassword inputOrder1" placeholder="New password">
+                <input type="password" class="settingsInput inputPasswordRepeat inputOrder2" placeholder="Repeat new password">
+                <p class="settingsErrorMessage"></p>
+                <div class="settingsButtonsContainer">
+                    <button class="settingsButton settingsButtonCancel">Cancel</button>
+                    <button class="settingsButton settingsButtonUsername">Change password</button>
+                </div>
+                `);
+            }
+            
             document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
                 var settingsUserID=userData.userId;
                 var newPassword=document.querySelector(".inputPasswordRepeat").value;
