@@ -99,11 +99,10 @@ async function renderProfilePage(){
         document.querySelector(".usernameEdit").addEventListener("click", e => {
             if (isPortrait600px) {
                 responsiveContainerUsername.innerHTML = `
-                    <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
                     <input type="text" class="settingsInput inputUsername inputOrder1" placeholder="New username">
                     <p class="settingsErrorMessage"></p>
                     <div class="settingsButtonsContainer">
-                        <button class="settingsButton settingsButtonCancel">Cancel</button>
+                        <button class="settingsButton exitPopup">Cancel</button>
                         <button class="settingsButton settingsButtonUsername">Change username</button>
                     </div>
                 `;
@@ -111,11 +110,10 @@ async function renderProfilePage(){
                 // Add your code for min-width 600px if needed
             } else {
                 popup(`
-                    <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
                     <input type="text" class="settingsInput inputUsername inputOrder1" placeholder="New username">
                     <p class="settingsErrorMessage"></p>
                     <div class="settingsButtonsContainer">
-                        <button class="settingsButton settingsButtonCancel">Cancel</button>
+                        <button class="settingsButton exitPopup">Cancel</button>
                         <button class="settingsButton settingsButtonUsername">Change username</button>
                     </div>
                 `);
@@ -137,12 +135,11 @@ async function renderProfilePage(){
         {
             if (isPortrait600px) {
                 responsiveContainerEmail.innerHTML = `
-                <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
                 <input type="text" class="settingsInput inputEmail inputOrder1" placeholder="New email">
                 <input type="text" class="settingsInput inputEmailRepeat inputOrder2" placeholder="Repeat new email">
                 <p class="settingsErrorMessage"></p>
                 <div class="settingsButtonsContainer">
-                    <button class="settingsButton settingsButtonCancel">Cancel</button>
+                    <button class="settingsButton exitPopup">Cancel</button>
                     <button class="settingsButton settingsButtonUsername">Change email</button>
                 </div>
                 
@@ -151,12 +148,11 @@ async function renderProfilePage(){
                 // Add your code for min-width 600px if needed
             } else {
                 popup(`
-                    <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
                     <input type="text" class="settingsInput inputEmail inputOrder1" placeholder="New email">
                     <input type="text" class="settingsInput inputEmailRepeat inputOrder2" placeholder="Repeat new email">
                     <p class="settingsErrorMessage"></p>
                     <div class="settingsButtonsContainer">
-                        <button class="settingsButton settingsButtonCancel">Cancel</button>
+                        <button class="settingsButton exitPopup">Cancel</button>
                         <button class="settingsButton settingsButtonUsername">Change email</button>
                     </div>
                 `);
@@ -181,12 +177,11 @@ async function renderProfilePage(){
         {
             if (isPortrait600px) {
                 responsiveContainerPassword.innerHTML = `
-                <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
                 <input type="password" class="settingsInput inputPassword inputOrder1" placeholder="New password">
                 <input type="password" class="settingsInput inputPasswordRepeat inputOrder2" placeholder="Repeat new password">
                 <p class="settingsErrorMessage"></p>
                 <div class="settingsButtonsContainer">
-                    <button class="settingsButton settingsButtonCancel">Cancel</button>
+                    <button class="settingsButton exitPopup">Cancel</button>
                     <button class="settingsButton settingsButtonUsername">Change password</button>
                 </div>
                 
@@ -195,12 +190,11 @@ async function renderProfilePage(){
                 // Add your code for min-width 600px if needed
             } else {
                 popup(`
-                <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
                 <input type="password" class="settingsInput inputPassword inputOrder1" placeholder="New password">
                 <input type="password" class="settingsInput inputPasswordRepeat inputOrder2" placeholder="Repeat new password">
                 <p class="settingsErrorMessage"></p>
                 <div class="settingsButtonsContainer">
-                    <button class="settingsButton settingsButtonCancel">Cancel</button>
+                    <button class="settingsButton exitPopup">Cancel</button>
                     <button class="settingsButton settingsButtonUsername">Change password</button>
                 </div>
                 `);
@@ -225,7 +219,6 @@ async function renderProfilePage(){
         document.querySelector(".profilePictureButton").addEventListener("click",e=>
         { 
             popup(`
-        <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
         <form id="profilePictureForm" method="POST" enctype="multipart/form-data">
             <label for="fileInput" class="PPlabel">Change profile picture</label>
             <input class="changePicture" type="file" id="fileInput" name="pfp">

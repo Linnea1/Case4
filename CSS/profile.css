@@ -80,22 +80,28 @@
 .settingsInput{
     width: 100%;
 }
-
+.settingsButtonsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .settingsButton{
     background-color: rgb(29, 29, 29);
     width: 100%;
     padding: 10px;
-    grid-row: 8;
     border-radius: 5px;
-    margin-bottom: 40px;
+
 }
 .inputContent{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
+    height: 100%;
 }
 .inputOrder1{
-    grid-row: 3;
+   
 }
 .profileContent{
     grid-row: 2/span 4;
