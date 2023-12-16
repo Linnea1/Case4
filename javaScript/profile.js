@@ -57,7 +57,7 @@ async function renderProfilePage(){
                             <div class="usernameEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
-                    <div class="responsiveContainerUsername"></div>
+                    <div class="responsiveContainerUsername responsiveContainer"></div>
                     <div class="inputBox">
                         <div>Email: </div>
                         <div class="userInfo"><span>${userData.email}</span></div>
@@ -65,7 +65,7 @@ async function renderProfilePage(){
                             <div class="emailEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
-                    <div class="responsiveContainerEmail"></div>
+                    <div class="responsiveContainerEmail responsiveContainer"></div>
                     <div class="inputBox">
                         <div>Password: </div>
                         <div class="userInfo hiddenPassword">${hiddenPassword}</div>
@@ -73,7 +73,7 @@ async function renderProfilePage(){
                             <div class="passwordEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
-                    <div class="responsiveContainerPassword"></div>
+                    <div class="responsiveContainerPassword responsiveContainer"></div>
                     <div class="profilePictureButton">Change profile picture</div>
                     
                 </div>
@@ -99,18 +99,21 @@ async function renderProfilePage(){
         document.querySelector(".usernameEdit").addEventListener("click", e => {
             if (isPortrait600px) {
                 responsiveContainerUsername.innerHTML = `
-                    <input type="text" class="settingsInput inputUsername inputOrder1" placeholder="New username">
+                    <label class="settingsLabel">Enter new username</label>
+                    <input type="text" class="settingsInput inputUsername inputOrder1">
                     <p class="settingsErrorMessage"></p>
                     <div class="settingsButtonsContainer">
                         <button class="settingsButton exitPopup">Cancel</button>
                         <button class="settingsButton settingsButtonUsername">Change username</button>
                     </div>
                 `;
+                document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerUsername.innerHTML=""})
             } else if (isMinWidth600px) {
                 // Add your code for min-width 600px if needed
             } else {
                 popup(`
-                    <input type="text" class="settingsInput inputUsername inputOrder1" placeholder="New username">
+                    <label class="settingsLabel">Enter new username</label>
+                    <input type="text" class="settingsInput inputUsername inputOrder1">
                     <p class="settingsErrorMessage"></p>
                     <div class="settingsButtonsContainer">
                         <button class="settingsButton exitPopup">Cancel</button>
@@ -120,9 +123,9 @@ async function renderProfilePage(){
             }
         
             document.querySelector(".settingsButtonUsername").addEventListener("click", e => {
-                var settingsUserID = userData.userId;
-                var newUsername = document.querySelector(".inputUsername").value;
-                var newUser = {
+                const settingsUserID = userData.userId;
+                const newUsername = document.querySelector(".inputUsername").value;
+                const newUser = {
                     id: settingsUserID,
                     newUsername: newUsername
                 };
@@ -135,21 +138,25 @@ async function renderProfilePage(){
         {
             if (isPortrait600px) {
                 responsiveContainerEmail.innerHTML = `
-                <input type="text" class="settingsInput inputEmail inputOrder1" placeholder="New email">
-                <input type="text" class="settingsInput inputEmailRepeat inputOrder2" placeholder="Repeat new email">
+                <label class="settingsLabel">Enter new email</label>
+                <input type="text" class="settingsInput inputEmail inputOrder1">
+                <label class="settingsLabel">Repeat new email</label>
+                <input type="text" class="settingsInput inputEmailRepeat inputOrder2">
                 <p class="settingsErrorMessage"></p>
                 <div class="settingsButtonsContainer">
                     <button class="settingsButton exitPopup">Cancel</button>
                     <button class="settingsButton settingsButtonUsername">Change email</button>
                 </div>
-                
                 `;
+                document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerEmail.innerHTML=""})
             } else if (isMinWidth600px) {
                 // Add your code for min-width 600px if needed
             } else {
                 popup(`
-                    <input type="text" class="settingsInput inputEmail inputOrder1" placeholder="New email">
-                    <input type="text" class="settingsInput inputEmailRepeat inputOrder2" placeholder="Repeat new email">
+                    <label class="settingsLabel">Enter new email</label>
+                    <input type="text" class="settingsInput inputEmail inputOrder1">
+                    <label class="settingsLabel">Repeat new email</label>
+                    <input type="text" class="settingsInput inputEmailRepeat inputOrder2">
                     <p class="settingsErrorMessage"></p>
                     <div class="settingsButtonsContainer">
                         <button class="settingsButton exitPopup">Cancel</button>
@@ -158,11 +165,11 @@ async function renderProfilePage(){
                 `);
             }
             document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
-                var settingsUserID=userData.userId;
-                var newEmail=document.querySelector(".inputEmailRepeat").value;
-                var newEmailRepeat=document.querySelector(".inputEmail").value;
+                const settingsUserID=userData.userId;
+                const newEmail=document.querySelector(".inputEmailRepeat").value;
+                const newEmailRepeat=document.querySelector(".inputEmail").value;
                 if(newEmail===newEmailRepeat){
-                    var newUser = {
+                    const newUser = {
                         id:settingsUserID,
                         newEmail: newEmail
                     };
@@ -177,21 +184,25 @@ async function renderProfilePage(){
         {
             if (isPortrait600px) {
                 responsiveContainerPassword.innerHTML = `
-                <input type="password" class="settingsInput inputPassword inputOrder1" placeholder="New password">
-                <input type="password" class="settingsInput inputPasswordRepeat inputOrder2" placeholder="Repeat new password">
+                <label class="settingsLabel">Enter new password</label>
+                <input type="password" class="settingsInput inputPassword inputOrder1">
+                <label class="settingsLabel">Repeat new password</label>
+                <input type="password" class="settingsInput inputPasswordRepeat inputOrder2">
                 <p class="settingsErrorMessage"></p>
                 <div class="settingsButtonsContainer">
                     <button class="settingsButton exitPopup">Cancel</button>
                     <button class="settingsButton settingsButtonUsername">Change password</button>
                 </div>
-                
                 `;
+                document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerPassword.innerHTML=""})
             } else if (isMinWidth600px) {
                 // Add your code for min-width 600px if needed
             } else {
                 popup(`
-                <input type="password" class="settingsInput inputPassword inputOrder1" placeholder="New password">
-                <input type="password" class="settingsInput inputPasswordRepeat inputOrder2" placeholder="Repeat new password">
+                <label class="settingsLabel">Enter new password</label>
+                <input type="password" class="settingsInput inputPassword inputOrder1">
+                <label class="settingsLabel">Repeat new password</label>
+                <input type="password" class="settingsInput inputPasswordRepeat inputOrder2">
                 <p class="settingsErrorMessage"></p>
                 <div class="settingsButtonsContainer">
                     <button class="settingsButton exitPopup">Cancel</button>
@@ -201,11 +212,11 @@ async function renderProfilePage(){
             }
             
             document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
-                var settingsUserID=userData.userId;
-                var newPassword=document.querySelector(".inputPasswordRepeat").value;
-                var newPasswordRepeat=document.querySelector(".inputPassword").value;
+                const settingsUserID=userData.userId;
+                const newPassword=document.querySelector(".inputPasswordRepeat").value;
+                const newPasswordRepeat=document.querySelector(".inputPassword").value;
                 if(newPassword===newPasswordRepeat){
-                    var newUser = {
+                    const newUser = {
                         id:settingsUserID,
                         newPassword: newPassword
                     };
