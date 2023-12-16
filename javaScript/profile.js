@@ -97,7 +97,7 @@ async function renderProfilePage(){
             .querySelector(".nav-home")
             .addEventListener("click", renderHomePage);
         document.querySelector(".usernameEdit").addEventListener("click", e => {
-            if (isPortrait600px) {
+            if (isPortrait600px || isMinWidth600px) {
                 responsiveContainerUsername.innerHTML = `
                     <label class="settingsLabel">Enter new username</label>
                     <input type="text" class="settingsInput inputUsername inputOrder1">
@@ -108,8 +108,6 @@ async function renderProfilePage(){
                     </div>
                 `;
                 document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerUsername.innerHTML=""})
-            } else if (isMinWidth600px) {
-                // Add your code for min-width 600px if needed
             } else {
                 popup(`
                     <label class="settingsLabel">Enter new username</label>
@@ -136,7 +134,7 @@ async function renderProfilePage(){
 
         document.querySelector(".emailEdit").addEventListener("click",e=>
         {
-            if (isPortrait600px) {
+            if (isPortrait600px || isMinWidth600px) {
                 responsiveContainerEmail.innerHTML = `
                 <label class="settingsLabel">Enter new email</label>
                 <input type="text" class="settingsInput inputEmail inputOrder1">
@@ -149,9 +147,7 @@ async function renderProfilePage(){
                 </div>
                 `;
                 document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerEmail.innerHTML=""})
-            } else if (isMinWidth600px) {
-                // Add your code for min-width 600px if needed
-            } else {
+            }else {
                 popup(`
                     <label class="settingsLabel">Enter new email</label>
                     <input type="text" class="settingsInput inputEmail inputOrder1">
@@ -182,7 +178,7 @@ async function renderProfilePage(){
 
         document.querySelector(".passwordEdit").addEventListener("click",e=>
         {
-            if (isPortrait600px) {
+            if (isPortrait600px || isMinWidth600px) {
                 responsiveContainerPassword.innerHTML = `
                 <label class="settingsLabel">Enter new password</label>
                 <input type="password" class="settingsInput inputPassword inputOrder1">
@@ -195,9 +191,7 @@ async function renderProfilePage(){
                 </div>
                 `;
                 document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerPassword.innerHTML=""})
-            } else if (isMinWidth600px) {
-                // Add your code for min-width 600px if needed
-            } else {
+            }else {
                 popup(`
                 <label class="settingsLabel">Enter new password</label>
                 <input type="password" class="settingsInput inputPassword inputOrder1">

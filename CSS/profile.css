@@ -134,6 +134,9 @@
     grid-row: 6;
     color: rgb(151, 16, 16);
 }
+.settingsContentWrapper>h2{
+    padding: 10px 0px;
+}
 .chosenAward{
     text-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
     color: var(--color-orange);
@@ -185,14 +188,53 @@
         padding-left: 8%;
         box-sizing: border-box;
     }
+    .profileContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12%;
+    }
+    .settingsContentWrapper{
+        grid-column: 2;
+    }
+    .settingsButton{
+        padding: 16px;
+        background-color: rgb(43, 43, 43);
+    }
+    .settingsButtonsContainer{
+        width: 80%;
+    }
+    .profilePicAndName{
+        align-self: flex-start;
+        display: flex;
+        flex-direction: row;
+    }
 }
 @media only screen and (min-width: 600px) and (orientation: portrait){
+    .profileContent{
+        display: block;
+        
+    }
     .profilePageWrapper{
         padding-left: 14%;
         box-sizing: border-box;
     }
     .profilePicAndName{
         align-self: flex-start;
+        flex-direction: column;
+    }
+    .settingsButton{
+        padding: 16px;
+        background-color: rgb(43, 43, 43);
+    }
+    .settingsButtonsContainer{
+        width: 70%;
+    }
+    .settingsContainer{
+        width: 70%;
+    }
+    .responsiveContainer{
+        display: flex;
+        flex-direction: column;
     }
 }
 
