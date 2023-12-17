@@ -10,21 +10,26 @@ async function renderProfilePage(){
         userProfilePicture=userData.profilePicture;
     }
     main.innerHTML=`
-    <div class="profilePageWrapper">
-        <div class="backgroundPictureProfile">
-            <div class="profilePicture"></div>
-            <h2 class="profileName"><span>${userData.username}</span></h2>
+        <div class="profilePageWrapper">
+            <div class="backgroundPictureProfile">
+                <button class="logoutButton">Logout</button>
+                <div class="profilePicAndName">
+                    <div class="profilePicture"></div> 
+                    <h2 class="profileName">${userData.username}</h2>
+                </div>
+                
+            </div>
+            <div class="profileContent"></div>
         </div>
-        <div class="profileContent"></div>
-        <button class="logoutButton">Logout</button>
-        <div class="profileNavigationBar"></div>
-    </div>
-    <nav class="sticky-nav">${stickyNav()}</nav>
+        <nav class="sticky-nav">${stickyNav()}</nav>
     `
     document.querySelector(".profilePicture").style.backgroundImage=`url('${userProfilePicture}')`;
     let profileContent=document.querySelector(".profileContent");
     document.querySelector(".logoutButton").addEventListener("click", logoutFromAccount);
     const hiddenPassword = hidePassword(userData.password);
+    const isPortrait600px = window.matchMedia('(min-width: 600px) and (orientation: portrait)').matches;
+    const isMinWidth600px = window.matchMedia('(min-width: 600px)').matches;
+    
 
     function logoutFromAccount() {
         window.localStorage.removeItem("user");
@@ -33,7 +38,17 @@ async function renderProfilePage(){
     }
 
     profileContent.innerHTML=`
+            <div class="myBetsWrapper">
+                <h2 class="myBets">My Bets</h2>
+                <div class="awardsWrapper">
+                    <div class="emmysBetButton betButton">Emmys</div>
+                    <div class="grammysBetButton betButton">Grammys</div>
+                    <div class="oscarsBetButton betButton">Oscars</div>
+                </div>
+                <div class="awardsContentWrapper"></div>
+            </div>
             <div class="settingsContentWrapper">
+                <h2>Settings</h2>
                 <div class="settingsContainer">
                     <div class="inputBox">
                         <div>Username: </div>
@@ -42,6 +57,7 @@ async function renderProfilePage(){
                             <div class="usernameEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
+                    <div class="responsiveContainerUsername responsiveContainer"></div>
                     <div class="inputBox">
                         <div>Email: </div>
                         <div class="userInfo"><span>${userData.email}</span></div>
@@ -49,6 +65,7 @@ async function renderProfilePage(){
                             <div class="emailEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
+                    <div class="responsiveContainerEmail responsiveContainer"></div>
                     <div class="inputBox">
                         <div>Password: </div>
                         <div class="userInfo hiddenPassword">${hiddenPassword}</div>
@@ -56,11 +73,20 @@ async function renderProfilePage(){
                             <div class="passwordEdit fa-solid fa-pen"></div>
                         </div>
                     </div>
+                    <div class="responsiveContainerPassword responsiveContainer"></div>
                     <div class="profilePictureButton">Change profile picture</div>
+                    
                 </div>
             </div>
         `
+        const responsiveContainerUsername=document.querySelector(".responsiveContainerUsername");
+        const responsiveContainerEmail=document.querySelector(".responsiveContainerEmail");
+        const responsiveContainerPassword=document.querySelector(".responsiveContainerPassword");
 
+        getBets("emmys", userData.userId);
+        document.querySelector(".emmysBetButton").addEventListener("click",e=>{getBets("emmys", userData.userId);})
+        document.querySelector(".grammysBetButton").addEventListener("click",e=>{getBets("grammys", userData.userId);})
+        document.querySelector(".oscarsBetButton").addEventListener("click",e=>{getBets("oscars", userData.userId);})
         document
             .querySelector(".nav-groups")
             .addEventListener("click", () => renderMyGroups(false));
@@ -70,41 +96,76 @@ async function renderProfilePage(){
         document
             .querySelector(".nav-home")
             .addEventListener("click", renderHomePage);
-        document.querySelector(".usernameEdit").addEventListener("click",e=>
-        {popup(`
-            <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
-            <input type="text" class="settingsInput inputUsername inputOrder1" placeholder="New username">
-            <p class="settingsErrorMessage"></p>
-            <button class="settingsButton settingsButtonUsername">Change username</button>
-            `
-            )
-            document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
-                var settingsUserID=userData.userId;
-                var newUsername=document.querySelector(".inputUsername").value;
-                var newUser = {
-                    id:settingsUserID,
+        document.querySelector(".usernameEdit").addEventListener("click", e => {
+            if (isPortrait600px || isMinWidth600px) {
+                responsiveContainerUsername.innerHTML = `
+                    <label class="settingsLabel">Enter new username</label>
+                    <input type="text" class="settingsInput inputUsername inputOrder1">
+                    <p class="settingsErrorMessage"></p>
+                    <div class="settingsButtonsContainer">
+                        <button class="settingsButton exitPopup">Cancel</button>
+                        <button class="settingsButton settingsButtonUsername">Change username</button>
+                    </div>
+                `;
+                document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerUsername.innerHTML=""})
+            } else {
+                popup(`
+                    <label class="settingsLabel">Enter new username</label>
+                    <input type="text" class="settingsInput inputUsername inputOrder1">
+                    <p class="settingsErrorMessage"></p>
+                    <div class="settingsButtonsContainer">
+                        <button class="settingsButton exitPopup">Cancel</button>
+                        <button class="settingsButton settingsButtonUsername">Change username</button>
+                    </div>
+                `);
+            }
+        
+            document.querySelector(".settingsButtonUsername").addEventListener("click", e => {
+                const settingsUserID = userData.userId;
+                const newUsername = document.querySelector(".inputUsername").value;
+                const newUser = {
+                    id: settingsUserID,
                     newUsername: newUsername
                 };
-                changeUser(newUser)
-            })
-
+                changeUser(newUser);
+            });
         });
+            
 
         document.querySelector(".emailEdit").addEventListener("click",e=>
-        {popup(`
-            <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
-            <input type="text" class="settingsInput inputEmail inputOrder1" placeholder="New email">
-            <input type="text" class="settingsInput inputEmailRepeat inputOrder2" placeholder="Repeat new email">
-            <p class="settingsErrorMessage"></p>
-            <button class="settingsButton settingsButtonUsername">Change email</button>
-            `
-            )
+        {
+            if (isPortrait600px || isMinWidth600px) {
+                responsiveContainerEmail.innerHTML = `
+                <label class="settingsLabel">Enter new email</label>
+                <input type="text" class="settingsInput inputEmail inputOrder1">
+                <label class="settingsLabel">Repeat new email</label>
+                <input type="text" class="settingsInput inputEmailRepeat inputOrder2">
+                <p class="settingsErrorMessage"></p>
+                <div class="settingsButtonsContainer">
+                    <button class="settingsButton exitPopup">Cancel</button>
+                    <button class="settingsButton settingsButtonUsername">Change email</button>
+                </div>
+                `;
+                document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerEmail.innerHTML=""})
+            }else {
+                popup(`
+                    <label class="settingsLabel">Enter new email</label>
+                    <input type="text" class="settingsInput inputEmail inputOrder1">
+                    <label class="settingsLabel">Repeat new email</label>
+                    <input type="text" class="settingsInput inputEmailRepeat inputOrder2">
+                    <p class="settingsErrorMessage"></p>
+                    <div class="settingsButtonsContainer">
+                        <button class="settingsButton exitPopup">Cancel</button>
+                        <button class="settingsButton settingsButtonUsername">Change email</button>
+                    </div>
+                `);
+            }
             document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
-                var settingsUserID=userData.userId;
-                var newEmail=document.querySelector(".inputEmailRepeat").value;
-                var newEmailRepeat=document.querySelector(".inputEmail").value;
+                const settingsUserID=userData.userId;
+                const newEmail=document.querySelector(".inputEmailRepeat").value;
+                const newEmailRepeat=document.querySelector(".inputEmail").value;
                 if(newEmail===newEmailRepeat){
-                    var newUser = {
+                    const newUser = {
                         id:settingsUserID,
                         newEmail: newEmail
                     };
@@ -116,20 +177,40 @@ async function renderProfilePage(){
         });
 
         document.querySelector(".passwordEdit").addEventListener("click",e=>
-        {popup(`
-            <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
-            <input type="text" class="settingsInput inputPassword inputOrder1" placeholder="New password">
-            <input type="text" class="settingsInput inputPasswordRepeat inputOrder2" placeholder="Repeat new password">
-            <p class="settingsErrorMessage"></p>
-            <button class="settingsButton settingsButtonUsername">Change password</button>
-            `
-            )
+        {
+            if (isPortrait600px || isMinWidth600px) {
+                responsiveContainerPassword.innerHTML = `
+                <label class="settingsLabel">Enter new password</label>
+                <input type="password" class="settingsInput inputPassword inputOrder1">
+                <label class="settingsLabel">Repeat new password</label>
+                <input type="password" class="settingsInput inputPasswordRepeat inputOrder2">
+                <p class="settingsErrorMessage"></p>
+                <div class="settingsButtonsContainer">
+                    <button class="settingsButton exitPopup">Cancel</button>
+                    <button class="settingsButton settingsButtonUsername">Change password</button>
+                </div>
+                `;
+                document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerPassword.innerHTML=""})
+            }else {
+                popup(`
+                <label class="settingsLabel">Enter new password</label>
+                <input type="password" class="settingsInput inputPassword inputOrder1">
+                <label class="settingsLabel">Repeat new password</label>
+                <input type="password" class="settingsInput inputPasswordRepeat inputOrder2">
+                <p class="settingsErrorMessage"></p>
+                <div class="settingsButtonsContainer">
+                    <button class="settingsButton exitPopup">Cancel</button>
+                    <button class="settingsButton settingsButtonUsername">Change password</button>
+                </div>
+                `);
+            }
+            
             document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
-                var settingsUserID=userData.userId;
-                var newPassword=document.querySelector(".inputPasswordRepeat").value;
-                var newPasswordRepeat=document.querySelector(".inputPassword").value;
+                const settingsUserID=userData.userId;
+                const newPassword=document.querySelector(".inputPasswordRepeat").value;
+                const newPasswordRepeat=document.querySelector(".inputPassword").value;
                 if(newPassword===newPasswordRepeat){
-                    var newUser = {
+                    const newUser = {
                         id:settingsUserID,
                         newPassword: newPassword
                     };
@@ -143,7 +224,6 @@ async function renderProfilePage(){
         document.querySelector(".profilePictureButton").addEventListener("click",e=>
         {
             popup(`
-        <i class="fa-solid fa-xmark popup-cross exitPopup"></i>
         <form id="profilePictureForm" method="POST" enctype="multipart/form-data">
             <label for="fileInput" class="PPlabel">Change profile picture</label>
             <input class="changePicture" type="file" id="fileInput" name="pfp">
@@ -204,6 +284,44 @@ function popup(htmlContent){
     document.querySelector(".inputContent").innerHTML=htmlContent;
     document.querySelector(".exitPopup").addEventListener("click", e=>{document.querySelector(".popup").style.display = 'none';})
     document.querySelector(".popup").style.display = 'block';
+}
+async function getBets(award, userId){
+    let response = await fetch(`../PHP/userBettingChoices.php?award=${award}&userId=${userId}`);
+    let userBet = await response.json();
+    console.log(userBet);
+
+    let awardsBox = document.querySelector(".awardsContentWrapper");
+    awardsBox.innerHTML="";
+    if(userBet.message){
+        awards.forEach(element => {
+            if(element.award.toLowerCase()===award){
+                element.categories.forEach(category=>{
+                    let betContainer=document.createElement("div");
+                    betContainer.classList.add("betContainer");
+                    betContainer.innerHTML=`
+                    <h3>${category.category}</h3>
+                    <p>No Bet</p>
+                    `;
+                    awardsBox.appendChild(betContainer);
+                })
+            }
+        });
+    }else{
+        userBet.forEach(betObject => {
+            let betContainer=document.createElement("div");
+            betContainer.classList.add("betContainer");
+            betContainer.innerHTML=`
+                <h3>${betObject.category}</h3>
+                <p>${betObject.categoryChoice}</p>
+            `;
+            awardsBox.appendChild(betContainer);
+        });
+    }
+    
+    document.querySelectorAll(".betButton").forEach(function(element) {
+        element.classList.remove("chosenAward");
+    });
+    document.querySelector(`.${award}BetButton`).classList.add("chosenAward");
 }
 async function changeUser(newUser){
     try {

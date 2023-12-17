@@ -2,9 +2,9 @@
     box-sizing: border-box;
     background-color: var(--color-background);
     width: 100%;
-    height: 100%;
+    
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.6fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
 }
 .profileButtons{
     display: flex;
@@ -18,27 +18,49 @@
     cursor:default;
 }
 .profilePicture{
-    margin-top: 30px;
-    width: 26vw;
-    height: 26vw;
+    margin-top: 20px;
+    width: 11vh;
+    aspect-ratio: 1/1;
     border-radius: 15px;
     background-position: center;
     background-size: cover;
+    justify-self: center;
+    align-self: center;
 }
 .backgroundPictureProfile{
-    padding: 10px;
+    padding: 20px;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)),url('../images/bg-stage-2.png');
     background-position: center;
     background-size: cover;
 }
-
+.profilePicAndName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profileName{
+    justify-self: center;
+    align-self: center;
+}
+.myBets{
+    padding: 10px 0px;
+}
+.awardsWrapper{
+    display: flex;
+}
+.betButton{
+    flex-grow:1;
+    text-align: center;
+    border-bottom: 3px solid rgb(43, 43, 43);
+    padding: 10px;
+}
 .settingsContainer{
-    padding: 40px 20px;
+    padding: 10px 0px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -48,7 +70,6 @@
     display: flex;
     align-content: flex-end;
     justify-content: flex-end;
-    border-bottom: 2px solid black;
 }
 .editBox{
     width: 100%;
@@ -58,27 +79,43 @@
 }
 .settingsInput{
     width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgb(43, 43, 43);
+    padding: 8px;
 }
 
+.settingsButtonsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 .settingsButton{
     background-color: rgb(29, 29, 29);
     width: 100%;
     padding: 10px;
-    grid-row: 8;
     border-radius: 5px;
-    margin-bottom: 40px;
+    font-size: 14px;
+}
+.settingsLabel{
+    width: 100%;
+    text-align: left;
 }
 .inputContent{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-}
-.inputOrder1{
-    grid-row: 3;
+    height: 100%;
+    gap: 10px;
 }
 .profileContent{
     grid-row: 2/span 4;
+    padding: 20px;
 }
+
 .inputOrder2{
     grid-row: 5;
 }
@@ -96,6 +133,19 @@
     font-size: 12px;
     grid-row: 6;
     color: rgb(151, 16, 16);
+}
+.settingsContentWrapper>h2{
+    padding: 10px 0px;
+}
+.chosenAward{
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+    color: var(--color-orange);
+    box-shadow: 0px 5px 5px 0 rgba(255, 165, 0, 0.5);
+    border-bottom: 3px solid var(--color-orange);
+}
+.betContainer{
+    border-bottom: 2px solid rgb(43, 43, 43);
+    padding: 10px;
 }
 .profilePictureFormButton{
     background-color: rgb(29, 29, 29);
@@ -125,14 +175,76 @@
     grid-row: 4;
 }
 .logoutButton {
-    background-color: rgba(15, 15, 15, 0);
-    text-decoration: underline;
-    width: 15%;
-    text-align: center;
-    border-radius: 10px;
-    grid-row: 7;
-    padding: 0 20px;
+    background-color: rgb(24, 24, 24);
+    border-radius: 7px;
+    padding: 10px 20px;
+    align-self: flex-end;
 }
 .userInfo{
     padding-left: 6px;
 }
+@media only screen and (min-width: 600px){
+    .profilePageWrapper{
+        padding-left: 8%;
+        box-sizing: border-box;
+    }
+    .profileContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12%;
+    }
+    .settingsContentWrapper{
+        grid-column: 2;
+    }
+    .settingsButton{
+        padding: 16px;
+        background-color: rgb(43, 43, 43);
+    }
+    .settingsButtonsContainer{
+        width: 80%;
+    }
+    .profilePicAndName{
+        align-self: flex-start;
+        display: flex;
+        flex-direction: row;
+        justify-self: baseline;
+    }
+    .profileName{
+        display: flex;
+        align-self: flex-end;
+        margin: 0 15px;  /* Remove margin (spacing) on the bottom */
+        padding-bottom: 0;
+        font-size: 42px;
+    }
+}
+@media only screen and (min-width: 600px) and (orientation: portrait){
+    .profileContent{
+        display: block;
+        
+    }
+    .profilePageWrapper{
+        padding-left: 14%;
+        box-sizing: border-box;
+    }
+    .profilePicAndName{
+        align-self: flex-start;
+        display: flex;
+        flex-direction: row;
+        justify-self: baseline;
+    }
+    .settingsButton{
+        padding: 16px;
+        background-color: rgb(43, 43, 43);
+    }
+    .settingsButtonsContainer{
+        width: 70%;
+    }
+    .settingsContainer{
+        width: 70%;
+    }
+    .responsiveContainer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
