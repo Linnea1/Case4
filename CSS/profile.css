@@ -1,6 +1,6 @@
 .profilePageWrapper{
     box-sizing: border-box;
-    background-color: var(--color-background);
+    background-color: rgb(30, 30, 30);
     width: 100%;
     
     display: grid;
