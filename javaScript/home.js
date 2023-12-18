@@ -19,10 +19,10 @@ async function renderHomePage() {
           </h1>
           <p>Ready to predict like a pro? Let's start the betting frenzy!</p>
         </div>
-        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down arrow"></i>
 
         <div class="countdown">
-          <h2>Countdown to the ....</h2>
+          <h2></h2>
           <div class="countdownTimers">
             ${renderCountDown()}
           </div>
@@ -70,6 +70,7 @@ function renderCountDown() {
             <div>Seconds</div>
         </div>
       </div>
+      <div class="awardsContentWrapper"> TEST</diV>
     </div>
   `);
 

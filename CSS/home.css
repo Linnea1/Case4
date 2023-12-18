@@ -8,7 +8,7 @@
 }
 
 .home-container {
-    background-color: var(--color-background);
+    background-color: #181818;
     height: 190vh;
 }
 
@@ -50,13 +50,15 @@
 
 .countdown {
     padding: 40px 30px;
+    box-sizing: border-box;
 }
 
 .awardCountdown {
-    background-color: rgba(28, 28, 28);
     margin-bottom: 30px;
     padding: 20px;
-    border-radius: 26px;
+    border-radius: 15px;
+    box-shadow:
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
 }
 
 .timers h3 {
@@ -111,6 +113,9 @@
     .timers:first-child {
         flex-grow: 1;
     }
+    .arrow{
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 600px) and (orientation: portrait) {
@@ -119,14 +124,22 @@
     }
 
     .bg-home {
-        height: 30vh;
+        height: 38vh;
+        background-image: linear-gradient(to bottom, #18181846, #181818), url('../images/bg-home.jpg');
     }
 
     .countdownTimers {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
-
+    .oscars-grammys{
+        display: flex;
+        flex-direction: column;
+    }
     .countdownTimers>.timers>.awardCountdown:first-of-type {
         gap: 80px;
+    }
+    .arrow{
+        display: none;
     }
 }
