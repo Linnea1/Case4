@@ -51,7 +51,7 @@ async function renderHomePage() {
 function renderCountDown() {
   const awardsHtml = awards.map((element) => `
     <div class="timers">
-      <h3>${element.award}</h3>
+      <h3 class="awardHeader">${element.award}</h3>
       <div class=awardCountdown>
         <div class="days">
             <div>10</div>
@@ -70,7 +70,7 @@ function renderCountDown() {
             <div>Seconds</div>
         </div>
       </div>
-      <div class="awardsContentWrapper"> TEST</diV>
+      <div class="awardsContentWrapper ${element.award}Bets"></diV>
     </div>
   `);
 
@@ -81,7 +81,7 @@ function renderCountDown() {
         </div>
       `
     );
-
+    getBetsHome()
     return awardsHtml.join("");
 }
 
@@ -90,3 +90,46 @@ function logoutFromAccount() {
   renderWelcomePage();
   main.classList.remove("bg-home");
 }
+
+async function getBetsHome() {
+  let data = await fetch(`../PHP/getUserData.php?userId=${getUserData().userId}`);
+  const userData = await data.json();
+
+  // Use Promise.all to wait for all fetch calls to resolve
+  await Promise.all(awards.map(async (awardObject) => {
+    let award=awardObject.award;
+    console.log(award)
+    let lowerCaseAward = award.toLowerCase();
+    let response = await fetch(`../PHP/userBettingChoices.php?award=${lowerCaseAward}&userId=${userData.userId}`);
+    let userBet = await response.json();
+    let awardsBox = document.querySelector(`.${award}Bets`);
+    awardsBox.innerHTML = "";
+    console.log(userBet)
+    if (userBet.message) {
+      awards.forEach((element) => {
+        if (element.award.toLowerCase() === lowerCaseAward) {
+          element.categories.forEach((category) => {
+            let betContainer = document.createElement("div");
+            betContainer.classList.add("betContainer");
+            betContainer.innerHTML = `
+              <h3>${category.category}</h3>
+              <p>No Bet</p>
+            `;
+            awardsBox.appendChild(betContainer);
+          });
+        }
+      });
+    } else {
+      userBet.forEach((betObject) => {
+        let betContainer = document.createElement("div");
+        betContainer.classList.add("betContainer");
+        betContainer.innerHTML = `
+          <h3>${betObject.category}</h3>
+          <p>${betObject.categoryChoice}</p>
+        `;
+        awardsBox.appendChild(betContainer);
+      });
+    }
+  }));
+}
+

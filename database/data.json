@@ -731,36 +731,79 @@
                     "name": "Linnea",
                     "userId": 20,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
+                        "emmys": {
+                            "OutstandingDramaSeries": {
+                                "guess": "Better Call Saul",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Bob Odenkirk",
+                                "context": "Better Call Saul",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeriess": {
+                                "guess": "Bella Ramsey",
+                                "context": "The Last Of Us",
+                                "categoryName": "Outstanding Lead Actress in a Drama Seriess",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Rachel Brosnahan",
+                                "context": "The Marvelous Mrs. Maisel",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "userTotalPointsForGame": 0
+                        },
+                        "grammys": [],
+                        "oscars": [],
+                        "userTotalPointsForGroup": 0
                     }
                 },
                 {
                     "name": "Liam",
                     "userId": 9,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
                     }
                 },
                 {
                     "name": "Ava",
                     "userId": 6,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
                     }
                 },
                 {
                     "name": "Olivia",
                     "userId": 4,
                     "games": {
-                        "emmys": {},
-                        "grammys": {},
-                        "oscars": {}
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
                     }
                 }
             ]
