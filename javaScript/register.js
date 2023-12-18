@@ -34,11 +34,11 @@ function renderRegisterPage() {
 
   async function register() {
     try {
-      var username = document.querySelector(".username").value;
-      var email = document.querySelector(".email").value;
-      var password = document.querySelector(".password").value;
+      const username = document.querySelector(".username").value;
+      const email = document.querySelector(".email").value;
+      const password = document.querySelector(".password").value;
 
-      var newUser = {
+      let newUser = {
         username: username,
         email: email,
         password: password,

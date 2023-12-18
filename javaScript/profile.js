@@ -228,6 +228,7 @@ async function renderProfilePage(){
             <label for="fileInput" class="PPlabel">Change profile picture</label>
             <input class="changePicture" type="file" id="fileInput" name="pfp">
             <p class="settingsErrorMessagePP"></p>
+            <button class="settingsButton exitPopup">Cancel</button>
             <button type="submit" class="profilePictureFormButton">Change profile Picture</button>
         </form>
         `);
@@ -299,23 +300,28 @@ async function getBets(award, userId){
                     let betContainer=document.createElement("div");
                     betContainer.classList.add("betContainer");
                     betContainer.innerHTML=`
-                    <h3>${category.category}</h3>
-                    <p>No Bet</p>
+                    <h3 class="betHeader">${category.category}</h3>
+                    <p class="betChoice">No Bet</p>
                     `;
                     awardsBox.appendChild(betContainer);
                 })
             }
         });
     }else{
-        userBet.forEach(betObject => {
-            let betContainer=document.createElement("div");
-            betContainer.classList.add("betContainer");
-            betContainer.innerHTML=`
-                <h3>${betObject.category}</h3>
-                <p>${betObject.categoryChoice}</p>
-            `;
-            awardsBox.appendChild(betContainer);
-        });
+        for (let index = 0; index < userBet.length; index++) {
+            const betObject = userBet[index];
+            if (betObject === userBet[userBet.length - 1]) {
+              continue;
+            } else {
+              let betContainer = document.createElement("div");
+              betContainer.classList.add("betContainer");
+              betContainer.innerHTML = `
+                <h3 class="betHeader">${betObject.category}</h3>
+                <p class="betChoice">${betObject.categoryChoice}</p>
+              `;
+              awardsBox.appendChild(betContainer);
+            }
+        }
     }
     
     document.querySelectorAll(".betButton").forEach(function(element) {
