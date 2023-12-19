@@ -45,6 +45,10 @@ main {
   padding-bottom: 30px;
 }
 
+.continueToLogin{
+  width: 50%;
+}
+
 /* tablet portrait */
 @media only screen and (min-width: 600px) {
   .register-page {

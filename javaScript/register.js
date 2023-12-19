@@ -70,9 +70,17 @@ function renderRegisterPage() {
         document.querySelector(".registerErrorMessage").textContent =
           data.error;
       } else {
-        document.querySelector(".registerErrorMessage").style.color = "white";
-        document.querySelector(".registerErrorMessage").textContent =
-          "Registration successful";
+        popup(`
+          <div class="registrationSuccessfulContainer">
+            <h2 class="registrationSuccessful">Registration successful</h2>
+            <div class="exitPopup" style="display: none;"></div>
+            <button class="settingsButton continueToLogin">Continue to login</button>
+          </div>
+       `);
+        document.querySelector(".continueToLogin").addEventListener("click", e=>{
+          renderLoginPage();
+          document.querySelector(".popup").style.display = 'none';
+        })
       }
     } catch (error) {
       console.error("Error during registration:", error);

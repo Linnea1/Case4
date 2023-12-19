@@ -208,14 +208,23 @@
     width: 70%;
     padding: 16px;
     border-radius: 5px;
-    grid-row: 7;
     text-align: center;
 }
 
+.profilePictureCancel{
+    grid-row: 7;
+}
+
 #profilePictureForm {
-    grid-row: 2/ span 8;
+    width: 70%;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr 1.5fr 1.5fr 1fr;
+}
+
+.PPbuttonContainer{
+    grid-row: 7;
+    display: flex;
+    gap: 20px;
 }
 
 .PPlabel {

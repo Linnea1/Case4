@@ -228,8 +228,10 @@ async function renderProfilePage(){
             <label for="fileInput" class="PPlabel">Change profile picture</label>
             <input class="changePicture" type="file" id="fileInput" name="pfp">
             <p class="settingsErrorMessagePP"></p>
-            <button class="settingsButton exitPopup">Cancel</button>
-            <button type="submit" class="profilePictureFormButton">Change profile Picture</button>
+            <div class="PPbuttonContainer">
+                <button class="settingsButton exitPopup profilePictureCancel">Cancel</button>
+                <button type="submit" class="profilePictureFormButton settingsButton">Change profile Picture</button>
+            </div>
         </form>
         `);
             document.getElementById("profilePictureForm").addEventListener("submit", async function(event){

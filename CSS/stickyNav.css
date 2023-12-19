@@ -5,6 +5,7 @@
   background-color: var(--color-nav);
   bottom: 0;
   position: fixed;
+  z-index: 7;
 }
 
 .sticky-nav ul {
