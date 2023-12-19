@@ -115,7 +115,6 @@
             "profilePicture": "..\/images\/profilePictures\/Emma.jpg",
             "pointsInAllGroups": 7,
             "groups": [
-                3,
                 4
             ]
         },
@@ -138,7 +137,6 @@
             "profilePicture": "..\/images\/profilePictures\/Mia.jpg",
             "pointsInAllGroups": 7,
             "groups": [
-                3,
                 4
             ]
         },
@@ -658,33 +656,6 @@
                         "grammys": [],
                         "oscars": [],
                         "userTotalPointsForGroup": 0
-                    }
-                },
-                {
-                    "name": "Emma",
-                    "userId": 10,
-                    "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
-                    }
-                },
-                {
-                    "name": "James",
-                    "userId": 3,
-                    "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
-                    }
-                },
-                {
-                    "name": "Mia",
-                    "userId": 12,
-                    "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
                     }
                 }
             ]
