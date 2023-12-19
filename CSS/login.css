@@ -1,17 +1,10 @@
 /* mobile portrait */
-.login-bg {
-  background: linear-gradient(rgb(33, 61, 86), rgb(0, 0, 0));
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .login-page {
-  padding: 30px;
-  height: 100vh;
+  height: 100%;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
-  justify-content: space-between;
+  padding: 30px;
 }
 
 .login-welcome p {
@@ -50,44 +43,50 @@
 
 .message-login {
   color: var(--color-red);
+  padding-bottom: 30px;
+}
+
+.go-to-welcome-page {
+  width: 35px;
 }
 
 /* tablet portrait */
 @media only screen and (min-width: 600px) {
   .goldenbet {
     display: block;
-    margin: 40px 0 0 40px;
   }
 
-  .login-bg {
+  .login-container {
+    width: 35%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .blurred-background-login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent), linear-gradient(to bottom, rgba(30, 87, 153, 0.4), transparent),url('../images/bg-welcome.png');
-    display: flex;
-    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: -1;
+    transform: scale(1.1);
   }
 
-  .login-page {
-    background-color: var(--color-background);
-    padding: 180px 55px;
+  .go-to-welcome-page {
+    display: none;
   }
 }
 
-
 @media only screen and (min-width: 600px) and (orientation: portrait) {
-  .login-bg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
   .login-page {
-    height: auto;
-    width: 55vw;
-    display: flex;
-    justify-content: center;
+    height: 50%;
     align-items: center;
-    background-color: black;
-    padding: 30px;
   }
 
   .goldenbet {
@@ -99,7 +98,6 @@
 
   .login-welcome {
     width: 80%;
-    margin-bottom: 5vh;
   }
 
   .login-form {
@@ -108,9 +106,5 @@
 
   .sign-up-from-login {
     width: 80%;
-  }
-
-  .go-to-home-page {
-    margin: 5vh 0;
   }
 }

@@ -2,19 +2,25 @@
 
 function renderLoginPage() {
   main.innerHTML = `
-    <h1 class="goldenbet">GoldenBet</h1>
-    <div class="login-container">
-      <div class="login-page">
+    <div class="backdrop mobile-backdrop">
+      <h1 class="goldenbet">GoldenBet</h1>
+
+      <div class="blurred-background-login"></div>
+
+      <div class="login-page black-box">
+        <img src="../images/arrow-left.png" alt="arrow-left" class="go-to-welcome-page">
         <div class="login-welcome">
-          <h1>Welcome back!</h1>
+          <h2>Welcome back!</h2>
           <p>Log in to continue</p>
         </div>
+
         <form class="login-form" action="PHP/login.php" method="POST">
           <input type="text" class="login-email" placeholder="Email" name="email">
           <input type="password" class="login-password" placeholder="Password" name="password">
           <button class="btn-main go-to-home-page" type="submit">Continue</button>
           <p class="message-login"></p>
         </form>
+
         <footer class="sign-up-from-login">Don’t have an account?
           <button>Sign up</button>
         </footer>
@@ -22,8 +28,9 @@ function renderLoginPage() {
     </div>
   `;
 
-  main.classList.add("login-bg");
-
+  document.querySelector(".go-to-welcome-page").addEventListener("click", () => {
+    renderWelcomePage();
+  });
   document.querySelector(".sign-up-from-login button").addEventListener("click", renderRegisterPage);
 
   let loginMain = document.querySelector("main");

@@ -2,20 +2,26 @@
 
 function renderRegisterPage() {
   main.innerHTML = `
-    <h1 class="goldenbet">GoldenBet</h1>
-    <div class="register-container">
-      <div class="register-page">
+    <div class="backdrop mobile-backdrop">
+      <h1 class="goldenbet">GoldenBet</h1>
+
+      <div class="blurred-background-register"></div>
+
+      <div class="register-page black-box">
+        <img src="../images/arrow-left.png" alt="arrow-left" class="go-to-welcome-page">
         <div class="register-welcome">
-          <h1>Hi!</h1>
+          <h2>Welcome!</h2>
           <p>Create an account to continue</p>
         </div>
+
         <form class="registration-form">
           <input type="text" class="username registerBox" name="username" placeholder="Username" required><br>
           <input type="text" class="email registerBox" name="email" placeholder="Email" required><br>
           <input type="password" class="password registerBox" name="password" placeholder="Password" required><br>
-          <p class="registerErrorMessage"></p>
           <button class="btn-main sendRegisterForm" type="button">Continue</button>
+          <p class="registerErrorMessage"></p>
         </form>
+
         <footer class="alreadyAccount">Already have an account?
           <button>Log In</button>
         </footer>
@@ -23,8 +29,11 @@ function renderRegisterPage() {
     </div>
   `;
 
-  main.classList.add("register-bg");
-
+  document
+    .querySelector(".go-to-welcome-page")
+    .addEventListener("click", () => {
+      renderWelcomePage();
+    });
   document
     .querySelector(".sendRegisterForm")
     .addEventListener("click", register);

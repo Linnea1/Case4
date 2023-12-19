@@ -20,7 +20,7 @@
   --color-grey: rgb(158, 158, 158);
   --color-orange: rgb(252, 197, 146);
   --color-accent-1: #FCC592;
-  --color-red: #B45B5B;
+  --color-red: #DC4343;
   --color-green: #529454;
   --color-background: #2B2B2B;
   --color-nav: #0C0C0C;
@@ -140,4 +140,54 @@ button {
 
 .shown {
   display: inline;
+}
+
+/* Blackbox and backdrop */
+.backdrop {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mobile-backdrop {
+  background: linear-gradient(rgb(13, 41, 66), rgb(0, 0, 0));
+}
+
+.black-box {
+  z-index: 1;
+  padding: 20px 0;
+}
+
+@media only screen and (min-width: 600px) {
+ .black-box {
+    background-color: #181818;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .mobile-backdrop {
+    background: none;
+  }
+}
+
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .backdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .black-box {
+    position: inherit;
+    height: 50%;
+    width: 50%;
+  }
 }
