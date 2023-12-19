@@ -134,7 +134,8 @@
 /* tablet portrait */
 @media only screen and (min-width: 600px) {
   .profile-heading-bg {
-    height: 40vh;
+    height: 32vh;
+    background-position: bottom;
   }
 
   .group-container {
@@ -173,11 +174,16 @@
     justify-content: space-between;
   }
 
+  .tablet-groups {
+    height: 80vh;
+    overflow: scroll;
+  }
+
   .tablet-group-left {
     display: block;
     background-color: var(--color-background);
     width: 30%;
-    padding: 20px;
+    padding: 100px 20px;
   }
 
   .tablet-group-right {
