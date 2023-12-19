@@ -14,7 +14,7 @@
 
 .home-welcome {
     border-left: 2px solid var(--color-white);
-    margin: 60vh 15px 20px;
+    margin: 52vh 15px 10px;
     padding: 5px 20px;
 }
 
@@ -24,14 +24,9 @@
     font-family: Sora SemiBold;
 }
 
-.awardHeader{
-    padding-top: 60px;
+.award-header {
     color: rgb(201, 134, 73);
-    font-size: 20pt;
-}
-
-.home-welcome p {
-    color: var(--color-grey);
+    margin-top: 50px;
 }
 
 .fa-chevron-down {
@@ -41,15 +36,11 @@
     padding: 10px;
 }
 
-.awardCountdown {
+.award-countdown {
     display: flex;
     justify-content: center;
     gap: 10px;
     text-align: center;
-}
-
-.countdownTimers {
-    padding-top: 20px;
 }
 
 .countdown {
@@ -58,7 +49,7 @@
     background-color: #181818;
 }
 
-.awardCountdown {
+.award-countdown {
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 15px;
@@ -66,15 +57,12 @@
     0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
 }
 
-.timers h3 {
-    margin-top: 0;
+.betHeader {
+    font-size: 16px;;
 }
 
-.betHeader{
-    font-size: 16pt;;
-}
-.betChoice{
-    font-size: 14pt;
+.betChoice {
+    font-size: 14px;
     color: rgb(158, 158, 158);
 }
 
@@ -124,16 +112,17 @@
         flex-grow: 2;
     }
 
-    .timers:first-child {
-        flex-grow: 1;
-    }
-    .arrow{
+    .arrow {
         display: none;
     }
-    .awardHeader{
-        padding-top: 0px;
+
+    .award-header {
+        padding-top: 0;
     }
-    
+
+    .countdown {
+        padding: 30px;
+    }
 }
 
 @media only screen and (min-width: 600px) and (orientation: portrait) {
@@ -149,19 +138,19 @@
     .countdownTimers {
         display: flex;
         flex-direction: column;
+        width: 65%;
     }
-    .oscars-grammys{
+
+    .oscars-grammys {
         display: flex;
         flex-direction: column;
     }
-    .countdownTimers>.timers>.awardCountdown:first-of-type {
+
+    .countdownTimers>.timers>.award-countdown:first-of-type {
         gap: 50px;
     }
-    .arrow{
-        display: none;
-    }
-    .countdown {
-        padding:5px 25vw 20vh 30px;
 
+    .arrow {
+        display: none;
     }
 }

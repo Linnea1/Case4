@@ -8,13 +8,16 @@ async function renderMyGroups(newGroupCreated) {
       <div class="bg-group">
         <div class="tablet-group-title-button">
           <h2>My Groups</h2>
-          <button class="btn-main tablet-create-group">Create new team</button>
+          <button class="btn-main tablet-create-group">
+            <i class="fa-solid fa-plus"></i>New group
+          </button>
         </div>
       </div>
       <div class="page-my-groups">
         <div class="groups-title-button">
           <h2>My Groups</h2>
-          <button class="btn-main create-group">Create new group</button>
+          <button class="btn-main create-group">
+            <i class="fa-solid fa-plus"></i>New group</button>
         </div>
         <div class="groups">
           ${renderGroups(userGroups)}
@@ -40,6 +43,7 @@ async function renderMyGroups(newGroupCreated) {
   });
 
   let popUp = document.querySelector(".popup");
+  popUp.classList.remove("shown");
 
   if (newGroupCreated) {
     popUp.classList.add("shown");

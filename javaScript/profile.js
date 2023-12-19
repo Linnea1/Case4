@@ -14,10 +14,10 @@ async function renderProfilePage(){
             <div class="backgroundPictureProfile">
                 <button class="logoutButton">Logout</button>
                 <div class="profilePicAndName">
-                    <div class="profilePicture"></div> 
+                    <div class="profilePicture"></div>
                     <h2 class="profileName">${userData.username}</h2>
                 </div>
-                
+
             </div>
             <div class="profileContent"></div>
         </div>
@@ -29,7 +29,7 @@ async function renderProfilePage(){
     const hiddenPassword = hidePassword(userData.password);
     const isPortrait600px = window.matchMedia('(min-width: 600px) and (orientation: portrait)').matches;
     const isMinWidth600px = window.matchMedia('(min-width: 600px)').matches;
-    
+
 
     function logoutFromAccount() {
         window.localStorage.removeItem("user");
@@ -75,7 +75,7 @@ async function renderProfilePage(){
                     </div>
                     <div class="responsiveContainerPassword responsiveContainer"></div>
                     <div class="profilePictureButton">Change profile picture</div>
-                    
+
                 </div>
             </div>
         `
@@ -99,12 +99,12 @@ async function renderProfilePage(){
         document.querySelector(".usernameEdit").addEventListener("click", e => {
             if (isPortrait600px || isMinWidth600px) {
                 responsiveContainerUsername.innerHTML = `
-                    <label class="settingsLabel">Enter new username</label>
+                    <label class="settingsLabel"> New username</label>
                     <input type="text" class="settingsInput inputUsername inputOrder1">
                     <p class="settingsErrorMessage"></p>
                     <div class="settingsButtonsContainer">
                         <button class="settingsButton exitPopup">Cancel</button>
-                        <button class="settingsButton settingsButtonUsername">Change username</button>
+                        <button class="settingsButton settingsButtonUsername">Confirm</button>
                     </div>
                 `;
                 document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerUsername.innerHTML=""})
@@ -115,11 +115,11 @@ async function renderProfilePage(){
                     <p class="settingsErrorMessage"></p>
                     <div class="settingsButtonsContainer">
                         <button class="settingsButton exitPopup">Cancel</button>
-                        <button class="settingsButton settingsButtonUsername">Change username</button>
+                        <button class="settingsButton settingsButtonUsername">Confirm</button>
                     </div>
                 `);
             }
-        
+
             document.querySelector(".settingsButtonUsername").addEventListener("click", e => {
                 const settingsUserID = userData.userId;
                 const newUsername = document.querySelector(".inputUsername").value;
@@ -130,7 +130,7 @@ async function renderProfilePage(){
                 changeUser(newUser);
             });
         });
-            
+
 
         document.querySelector(".emailEdit").addEventListener("click",e=>
         {
@@ -143,7 +143,7 @@ async function renderProfilePage(){
                 <p class="settingsErrorMessage"></p>
                 <div class="settingsButtonsContainer">
                     <button class="settingsButton exitPopup">Cancel</button>
-                    <button class="settingsButton settingsButtonUsername">Change email</button>
+                    <button class="settingsButton settingsButtonUsername">Confirm</button>
                 </div>
                 `;
                 document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerEmail.innerHTML=""})
@@ -156,7 +156,7 @@ async function renderProfilePage(){
                     <p class="settingsErrorMessage"></p>
                     <div class="settingsButtonsContainer">
                         <button class="settingsButton exitPopup">Cancel</button>
-                        <button class="settingsButton settingsButtonUsername">Change email</button>
+                        <button class="settingsButton settingsButtonUsername">Confirm</button>
                     </div>
                 `);
             }
@@ -187,7 +187,7 @@ async function renderProfilePage(){
                 <p class="settingsErrorMessage"></p>
                 <div class="settingsButtonsContainer">
                     <button class="settingsButton exitPopup">Cancel</button>
-                    <button class="settingsButton settingsButtonUsername">Change password</button>
+                    <button class="settingsButton settingsButtonUsername">Confirm</button>
                 </div>
                 `;
                 document.querySelector(".exitPopup").addEventListener("click", e=>{responsiveContainerPassword.innerHTML=""})
@@ -200,11 +200,11 @@ async function renderProfilePage(){
                 <p class="settingsErrorMessage"></p>
                 <div class="settingsButtonsContainer">
                     <button class="settingsButton exitPopup">Cancel</button>
-                    <button class="settingsButton settingsButtonUsername">Change password</button>
+                    <button class="settingsButton settingsButtonUsername">Confirm</button>
                 </div>
                 `);
             }
-            
+
             document.querySelector(".settingsButtonUsername").addEventListener("click", e=>{
                 const settingsUserID=userData.userId;
                 const newPassword=document.querySelector(".inputPasswordRepeat").value;
@@ -283,6 +283,7 @@ function hidePassword(password) {
 }
 function popup(htmlContent){
     document.querySelector(".inputContent").innerHTML=htmlContent;
+    document.querySelector(".inputContent").classList.add("inputContent-profile");
     document.querySelector(".exitPopup").addEventListener("click", e=>{document.querySelector(".popup").style.display = 'none';})
     document.querySelector(".popup").style.display = 'block';
 }
@@ -323,7 +324,7 @@ async function getBets(award, userId){
             }
         }
     }
-    
+
     document.querySelectorAll(".betButton").forEach(function(element) {
         element.classList.remove("chosenAward");
     });

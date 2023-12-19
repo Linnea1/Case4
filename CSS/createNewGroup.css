@@ -9,7 +9,7 @@
 
 .create-new-group-container {
   background-color: var(--color-black);
-  height: 60%;
+  height: 70%;
   width: 90%;
   border-radius: 20px;
   display: flex;
@@ -17,24 +17,24 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: scroll;
-  padding: 0 10px;
+  padding: 20px;
 }
 
 .new-group-form {
   width: 90%;
+  overflow: scroll;
 }
 
 .new-group-name-container {
-  width: 90vw;
   display: flex;
   align-items: center;
+  padding: 20px 0 0;
 }
 
 .new-group-name {
   border: none;
   font-size: 22px;
-  width: 60%;
+  width: 80%;
   text-transform: none;
   color: rgb(222, 222, 222);
 }
@@ -106,7 +106,7 @@
 }
 
 .dropdown-list-height {
-  height: 65px;
+  height: 70px;
   overflow-y: scroll;
 
 }
@@ -129,7 +129,6 @@
   padding: 0;
   margin: 5px 0;
   overflow-y: scroll;
-  height: 140px;
 }
 
 .group-members-names li {
@@ -166,18 +165,15 @@
   width: 50px;
   height: 50px;
   object-fit: cover;
-  border-radius: 5px 0 0 5px
+  border-radius: 5px;
 }
 
 .option-container {
   display: flex;
   background-color: rgb(36, 36, 36);
   border-radius: 0 5px 5px 0;
-}
-
-.option-container {
+  padding: 10px;
   border-radius: 5px;
-  margin-bottom: 5px;
 }
 
 .hidden {
@@ -201,7 +197,7 @@
 .closeCreateGroup {
   padding: 10px;
   position: absolute;
-  right: 20px;
+  right: 28px;
   top: 20px;
 }
 

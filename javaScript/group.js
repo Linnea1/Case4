@@ -15,17 +15,29 @@ async function navigateToGroupPage(selectedGroup) {
       <div class="tablet-group-right">
         <div class="profile-heading-bg">
           <h2>And the winner is...</h2>
-            <img src="" alt="">
-            <h1>X</h1>
+            <div class="question-box">
+              <i class="fa-solid fa-question"></i>
+            </div>
         </div>
         <div class="group-text">
-          <h2 class="group-name">${selectedGroup.groupName.toUpperCase()}</h2>
-          <button class="button-leave">Leave Group</button>
+          <div class="group-name-result-history">
+            <h2 class="group-name">${selectedGroup.groupName.toUpperCase()}</h2>
+            <button class="btn-main tablet-result-history">RESULT HISTORY</button>
+          </div>
           <h3>Results</h3>
           <div class="users-in-rank">${await putUsersInOrder(
             selectedGroup
           )}</div>
-          <button class="tablet-button-leave">Leave Group</button>
+
+          <div class="add-group-members-grouppage">
+            <i class="fa-solid fa-plus"></i>
+            <p>Add group members</p>
+          </div>
+
+          <div class="btn-result-leave">
+            <button class="btn-main result-history">RESULT HISTORY</button>
+            <button class="btn-main button-leave">LEAVE GROUP</button>
+          </div>
         </div>
       </div>
     </div>
@@ -50,9 +62,6 @@ async function navigateToGroupPage(selectedGroup) {
 
   document
     .querySelector(".button-leave")
-    .addEventListener("click", () => leaveGroup(loggedInUser, selectedGroup));
-  document
-    .querySelector(".tablet-button-leave")
     .addEventListener("click", () => leaveGroup(loggedInUser, selectedGroup));
   document
     .querySelector(".nav-home")
