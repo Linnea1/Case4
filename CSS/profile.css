@@ -1,4 +1,4 @@
-.profilePageWrapper{
+.profilePageWrapper {
     box-sizing: border-box;
     background-color: rgb(24, 24, 24);
     width: 100%;
@@ -6,20 +6,24 @@
     display: grid;
     grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
 }
-.profileButtons{
+
+.profileButtons {
     display: flex;
     gap: 10px;
 }
-.profileButtons>div{
+
+.profileButtons>div {
     background-color: orange;
     padding: 10px;
 }
-.active:hover{
-    cursor:default;
+
+.active:hover {
+    cursor: default;
 }
-.profilePicture{
+
+.profilePicture {
     margin-top: 20px;
-    width: 11vh;
+    width: 14vh;
     aspect-ratio: 1/1;
     border-radius: 15px;
     background-position: center;
@@ -27,16 +31,18 @@
     justify-self: center;
     align-self: center;
 }
-.backgroundPictureProfile{
+
+.backgroundPictureProfile {
     padding: 20px;
     width: 100%;
     height: 38vh;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to bottom, #18181836, #181818),url('../images/profileBg.jpg');
+    background-image: linear-gradient(to bottom, #18181836, #181818), url('../images/profileBg.jpg');
     background-position: center;
     background-size: cover;
 }
+
 .profilePicAndName {
     display: flex;
     flex-direction: column;
@@ -45,41 +51,51 @@
     margin-top: auto;
     margin-bottom: auto;
 }
-.profileName{
+
+.profileName {
     justify-self: center;
     align-self: center;
 }
-.myBets{
+
+.myBets {
     padding: 10px 0px;
+    font-size: 22px;
+    font-family: Sora SemiBold;
 }
-.awardsWrapper{
+
+.awardsWrapper {
     display: flex;
 }
-.betButton{
-    flex-grow:1;
+
+.betButton {
+    flex-grow: 1;
     text-align: center;
     border-bottom: 3px solid rgb(43, 43, 43);
     padding: 10px;
 }
-.settingsContainer{
+
+.settingsContainer {
     padding: 10px 0px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
 
 }
-.inputBox{
+
+.inputBox {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
-.editBox{
+
+.editBox {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
-.settingsInput{
+
+.settingsInput {
     width: 100%;
     box-sizing: border-box;
     border: solid 1px rgb(72, 72, 72);
@@ -87,14 +103,15 @@
     border-radius: 5px;
 }
 
-.settingsButtonsContainer{
+.settingsButtonsContainer {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.settingsButton{
+
+.settingsButton {
     background-color: rgb(32, 32, 32);
     width: 100%;
     padding: 15px;
@@ -102,31 +119,36 @@
     font-size: 14px;
     border: solid 1px rgb(72, 72, 72);
 }
-.settingsLabel{
+
+.settingsLabel {
     width: 100%;
     text-align: left;
 }
-.inputContent{
+
+.inputContent {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
     gap: 10px;
 }
+
 .inputContent-profile {
     background-color: #000000;
 }
-.profileContent{
+
+.profileContent {
     grid-row: 2/span 4;
     padding: 20px;
 }
 
-.inputOrder2{
+.inputOrder2 {
     grid-row: 5;
 }
-.settingsErrorMessage{
+
+.settingsErrorMessage {
     display: flex;
     font-size: 12px;
     grid-row: 7;
@@ -136,135 +158,167 @@
     justify-content: center;
     align-items: center;
 }
-.settingsErrorMessagePP{
+
+.settingsErrorMessagePP {
     font-size: 12px;
     grid-row: 6;
     color: rgb(151, 16, 16);
 }
-.settingsContentWrapper>h2{
-    padding: 10px 0px;
+
+.settingsContentWrapper>h2 {
+    padding: 30px 0 10px 0px;
+    font-size: 22px;
+    font-family: Sora SemiBold;
 }
+
 .chosenAward {
     position: relative;
     color: var(--color-orange);
 }
 
 .chosenAward::before {
+    cursor: pointer;
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 3px; /* Adjust the thickness of the bottom border */
+    height: 3px;
+    /* Adjust the thickness of the bottom border */
     background-color: var(--color-orange);
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); /* Adjust the glow effect */
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+    /* Adjust the glow effect */
 }
-.betContainer{
+
+.betContainer {
     border-bottom: 2px solid rgb(43, 43, 43);
     padding: 10px;
 }
-.profilePictureFormButton{
-    background-color: rgb(29, 29, 29);
+
+.profilePictureFormButton {
+    background-color: var(--color-grey-0);
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     grid-row: 7;
 }
-.profilePictureButton{
+
+.profilePictureButton {
     background-color: rgb(43, 43, 43);
     width: 70%;
-    padding:16px;
+    padding: 16px;
     border-radius: 5px;
     grid-row: 7;
     text-align: center;
 }
-#profilePictureForm{
+
+#profilePictureForm {
     grid-row: 2/ span 8;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr 1.5fr 1.5fr 1fr;
 }
-.PPlabel{
+
+.PPlabel {
     grid-row: 2/span 2;
     align-self: center;
 }
-.changePicture{
+
+.changePicture {
     grid-row: 4;
 }
+
 .logoutButton {
     background-color: rgb(24, 24, 24);
     border-radius: 5px;
     padding: 10px 20px;
     align-self: flex-end;
 }
-.userInfo{
+
+.userInfo {
     padding-left: 6px;
 }
-.usernameEdit, .emailEdit, .passwordEdit {
+
+.usernameEdit,
+.emailEdit,
+.passwordEdit {
     padding: 10px;
 }
 
-@media only screen and (min-width: 600px){
-    .profilePageWrapper{
+@media only screen and (min-width: 600px) {
+    .profilePageWrapper {
         padding-left: 8%;
         box-sizing: border-box;
     }
-    .profileContent{
+
+    .profileContent {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 12%;
     }
-    .settingsContentWrapper{
+
+    .settingsContentWrapper {
         grid-column: 2;
     }
-    .settingsButton{
+
+    .settingsButton {
         padding: 16px;
         background-color: rgb(43, 43, 43);
     }
-    .settingsButtonsContainer{
+
+    .settingsButtonsContainer {
         width: 80%;
     }
-    .profilePicAndName{
+
+    .profilePicAndName {
         align-self: flex-start;
         display: flex;
         flex-direction: row;
         justify-self: baseline;
     }
-    .profileName{
+
+    .profileName {
         display: flex;
         align-self: flex-end;
-        margin: 0 15px;  /* Remove margin (spacing) on the bottom */
+        margin: 0 15px;
+        /* Remove margin (spacing) on the bottom */
         padding-bottom: 0;
         font-size: 50px;
     }
 }
-@media only screen and (min-width: 600px) and (orientation: portrait){
-    .profileContent{
+
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+    .profileContent {
         display: block;
 
     }
-    .profilePageWrapper{
+
+    .profilePageWrapper {
         padding-left: 14%;
         box-sizing: border-box;
     }
-    .profilePicAndName{
+
+    .profilePicAndName {
         align-self: flex-start;
         display: flex;
         flex-direction: row;
         justify-self: baseline;
     }
-    .settingsButton{
+
+    .settingsButton {
         padding: 16px;
         background-color: rgb(43, 43, 43);
     }
-    .settingsButtonsContainer{
+
+    .settingsButtonsContainer {
         width: 80%;
     }
-    .settingsContainer{
+
+    .settingsContainer {
         width: 70%;
     }
-    .responsiveContainer{
+
+    .responsiveContainer {
         display: flex;
         flex-direction: column;
     }
 }
-

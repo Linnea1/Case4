@@ -1,11 +1,12 @@
 #awardInfoContainerAIPage {
-   /*height: 100%;*/
+    /*height: 100%;*/
     min-width: 375px;
-    background-color: black;
+    background-color: var(--color-background);
     box-sizing: border-box;
+    height: 220vh;
 }
 
-#awardNameAndDate > * {
+#awardNameAndDate>* {
     margin: 0;
 }
 
@@ -24,39 +25,50 @@
 }*/
 
 #awardImageContainerAIPage {
-    height: 775px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    background-image: url(../images/Oscars/oscars-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    border-bottom: var(--color-background) 2px;
 }
 
 #awardNameAndDate {
     border-left: 3px solid white;
     padding: 20px;
     margin: 20px;
+    margin-bottom: 20vh;
 }
 
-#awardNameAndDate > h1 {
+#awardNameAndDate>h1 {
     color: white;
     font-size: 40px;
 }
 
-#awardNameAndDate > p {
+#awardNameAndDate>p {
     padding-top: 5px;
     color: white;
     font-size: 18px;
 }
 
-#awardInfoContainerAIPage > h2 {
-    margin-top: 68px;
+#awardInfoContainerAIPage>h2 {
+    margin-top: 60px;
     margin-left: 20px;
     color: white;
     font-size: 22px;
 }
 
+#awardCategoriesContainer {
+    margin: 5vh 0;
+}
+
+
+
 .categoryAIPage {
-    border-left: 3px solid white;
-    margin-top: 20px; 
+    border-left: 3px solid var(--color-grey-3);
+    margin-top: 20px;
     padding-left: 20px;
     margin-left: 20px;
     height: 88.6px;
@@ -67,28 +79,37 @@
     justify-content: center;
 }
 
-.categoryAIPage > * {
+.categoryAIPage>* {
     color: white;
 }
 
-.categoryAIPage > h3 {
+.categoryAIPage>h3 {
     margin: 0;
+    font-size: 16px;
+    font-family: Sora SemiBold;
 }
 
-.categoryAIPage > div {
+.categoryAIPage>div {
     padding-top: 6.7px;
+    font-size: 14px;
+    color: var(--color-grey-4);
 }
 
 #startBettingAwardBettingPage {
-    height: 63px;
-    width: 350px;
-    color: #9E9E9E;
-    
+    height: 55px;
+    width: 90vw;
+
+    background-color: var(--color-accent-2);
+    color: var(--color-black);
+    border-radius: 5px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: Sora SemiBold;
+    margin: 30px auto 90px auto;
 }
 
 
@@ -99,14 +120,14 @@
     flex-direction: column;
 
     height: 100%;
-    background-color: black;
+    background-color: var(--color-background);
     overflow: scroll;
 
 }
 
 .bettingChoiceContainer {
     border-left: 3px solid white;
-    margin-top: 20px; 
+    margin-top: 20px;
     padding-left: 20px;
     margin-left: 20px;
     height: 88.6px;
@@ -117,13 +138,13 @@
     justify-content: center;
 }
 
-#bettingPageContainer > h1 {
+#bettingPageContainer>h1 {
     color: white;
     font-size: 22px;
 
 }
 
-.bettingChoiceContainer > * {
+.bettingChoiceContainer>* {
     color: white;
 }
 

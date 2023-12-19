@@ -20,9 +20,10 @@
   --color-grey: rgb(158, 158, 158);
   --color-orange: rgb(252, 197, 146);
   --color-accent-1: #FCC592;
+  --color-accent-2: #C98649;
   --color-red: #DC4343;
   --color-green: #529454;
-  --color-background: rgb(24, 24, 24);
+  --color-background: #181818;
   --color-nav: #0C0C0C;
 }
 
@@ -36,6 +37,7 @@ body {
   width: 100vw;
   height: auto;
   margin: 0;
+  background-color: var(--color-background);
 }
 
 main {
@@ -128,10 +130,11 @@ button {
   border-radius: 10px;
   color: var(--color-grey);
   background-color: rgb(36, 36, 36);
-  height: 50px;
+  height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
 }
 
 .btn-main:hover {
@@ -160,14 +163,14 @@ button {
 }
 
 @media only screen and (min-width: 600px) {
- .black-box {
+  .black-box {
     background-color: #181818;
     width: 30%;
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
-    padding: 40px 60px;
+    padding: 40px 45px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

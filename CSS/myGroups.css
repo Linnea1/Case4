@@ -10,9 +10,16 @@
   margin: 0;
 }
 
+.groups-title-button h2 {
+  font-family: Sora SemiBold;
+}
+
 .create-group {
   margin: 20px 0;
   width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  height: 55px;
 }
 
 .groups {
@@ -26,14 +33,25 @@
   margin-bottom: 20px;
   text-align: left;
   border-radius: 5px;
+  height: 25vh;
+}
+
+.group h3 {
+  font-size: 20px;
 }
 
 .group-info {
   padding-top: 10px;
 }
 
+.group-info>p:nth-child(1) {
+  font-family: Sora SemiBold;
+}
+
 .group-info p {
-  color: var(--color-grey);
+  color: var(--color-grey-3);
+  margin: 8px 0;
+  font-size: 14px;
 }
 
 .bg-group {
@@ -110,7 +128,7 @@
     z-index: 2;
   }
 
-  .page-my-groups {
+  .page-my-groups {
     height: auto;
     flex-grow: 1;
   }
