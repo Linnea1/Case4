@@ -11,25 +11,24 @@ async function renderHomePage() {
   main.innerHTML = `
     <div class="home-container">
       <div class="bg-home">
-      <div class="home-content">
-        <button class="logoutButton">Logout</button>
-        <div class="home-welcome">
-          <h1>Hi
-            <span>${userData.username}</span>
-          </h1>
-          <p>Ready to predict like a pro? Let's start the betting frenzy!</p>
-        </div>
-        <i class="fas fa-chevron-down arrow"></i>
-
-        <div class="countdown">
-          <h2></h2>
-          <div class="countdownTimers">
-            ${renderCountDown()}
+        <div class="home-content">
+          <button class="logoutButton">Logout</button>
+          <div class="home-welcome">
+            <h1>Hi
+              <span>${userData.username}</span>
+            </h1>
+            <p>Ready to predict like a pro? Let's start the betting frenzy!</p>
           </div>
-        </div>
+          <i class="fas fa-chevron-down arrow"></i>
 
-      </div>
-      <nav class="sticky-nav">${stickyNav()}</nav>
+          <div class="countdown">
+            <div class="countdownTimers">
+              ${renderCountDown()}
+            </div>
+          </div>
+
+        </div>
+        <nav class="sticky-nav">${stickyNav()}</nav>
       <div>
     <div>
   `;
@@ -51,8 +50,8 @@ async function renderHomePage() {
 function renderCountDown() {
   const awardsHtml = awards.map((element) => `
     <div class="timers">
-      <h3 class="awardHeader">${element.award}</h3>
-      <div class=awardCountdown>
+      <h3 class="award-header">${element.award}</h3>
+      <div class="award-countdown">
         <div class="days">
             <div>10</div>
             <div>Days</div>
@@ -81,6 +80,7 @@ function renderCountDown() {
         </div>
       `
     );
+
     getBetsHome()
     return awardsHtml.join("");
 }
@@ -95,16 +95,14 @@ async function getBetsHome() {
   let data = await fetch(`../PHP/getUserData.php?userId=${getUserData().userId}`);
   const userData = await data.json();
 
-  // Use Promise.all to wait for all fetch calls to resolve
   await Promise.all(awards.map(async (awardObject) => {
     let award=awardObject.award;
-    console.log(award)
     let lowerCaseAward = award.toLowerCase();
     let response = await fetch(`../PHP/userBettingChoices.php?award=${lowerCaseAward}&userId=${userData.userId}`);
     let userBet = await response.json();
     let awardsBox = document.querySelector(`.${award}Bets`);
     awardsBox.innerHTML = "";
-    console.log(userBet)
+
     if (userBet.message) {
       awards.forEach((element) => {
         if (element.award.toLowerCase() === lowerCaseAward) {
@@ -133,8 +131,7 @@ async function getBetsHome() {
           `;
           awardsBox.appendChild(betContainer);
         }
-    }
+      }
     }
   }));
 }
-
