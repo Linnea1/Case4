@@ -8,8 +8,8 @@
 }
 
 .home-container {
-    background-color: var(--color-background);
-    height: 190vh;
+    background-color: #181818;
+    height: auto;
 }
 
 .home-welcome {
@@ -24,7 +24,11 @@
     font-family: Sora SemiBold;
 }
 
-
+.awardHeader{
+    padding-top: 60px;
+    color: rgb(201, 134, 73);
+    font-size: 20pt;
+}
 
 .home-welcome p {
     color: var(--color-grey);
@@ -49,18 +53,29 @@
 }
 
 .countdown {
-    padding: 40px 30px;
+    padding:5px 30px 20vh 30px;
+    box-sizing: border-box;
+    background-color: #181818;
 }
 
 .awardCountdown {
-    background-color: rgba(28, 28, 28);
     margin-bottom: 30px;
     padding: 20px;
-    border-radius: 26px;
+    border-radius: 15px;
+    box-shadow:
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
 }
 
 .timers h3 {
     margin-top: 0;
+}
+
+.betHeader{
+    font-size: 16pt;;
+}
+.betChoice{
+    font-size: 14pt;
+    color: rgb(158, 158, 158);
 }
 
 .days div,
@@ -89,6 +104,7 @@
 
     .bg-home {
         height: 45vh;
+        background-image: linear-gradient(to bottom, #18181846, #181818), url('../images/bg-home.jpg');
     }
 
     .home-container {
@@ -98,19 +114,26 @@
     .countdownTimers {
         display: flex;
         justify-content: center;
-        gap: 40px;
+        gap: 25px;
     }
 
     .oscars-grammys {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        gap: 25px;
         flex-grow: 2;
     }
 
     .timers:first-child {
         flex-grow: 1;
     }
+    .arrow{
+        display: none;
+    }
+    .awardHeader{
+        padding-top: 0px;
+    }
+    
 }
 
 @media only screen and (min-width: 600px) and (orientation: portrait) {
@@ -119,14 +142,26 @@
     }
 
     .bg-home {
-        height: 30vh;
+        height: 38vh;
+        background-image: linear-gradient(to bottom, #18181846, #181818), url('../images/bg-home.jpg');
     }
 
     .countdownTimers {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
-
+    .oscars-grammys{
+        display: flex;
+        flex-direction: column;
+    }
     .countdownTimers>.timers>.awardCountdown:first-of-type {
-        gap: 80px;
+        gap: 50px;
+    }
+    .arrow{
+        display: none;
+    }
+    .countdown {
+        padding:5px 25vw 20vh 30px;
+
     }
 }

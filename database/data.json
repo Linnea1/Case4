@@ -45,7 +45,8 @@
             "pointsInAllGroups": 27,
             "groups": [
                 2,
-                3
+                3,
+                5
             ]
         },
         {
@@ -67,7 +68,8 @@
             "profilePicture": "..\/images\/profilePictures\/Ava.jpg",
             "pointsInAllGroups": 3,
             "groups": [
-                1
+                1,
+                5
             ]
         },
         {
@@ -101,7 +103,8 @@
             "profilePicture": "..\/images\/profilePictures\/Liam.jpg",
             "pointsInAllGroups": 6,
             "groups": [
-                2
+                2,
+                5
             ]
         },
         {
@@ -184,15 +187,6 @@
             ]
         },
         {
-            "userId": 18,
-            "username": "Linnea",
-            "email": "linnea@gmail.com",
-            "password": "123",
-            "profilePicture": "images\/profilePictures\/1701780363.jpeg",
-            "pointsInAllGroups": 0,
-            "groups": []
-        },
-        {
             "userId": 19,
             "username": "Thea",
             "email": "thea@gmail.com",
@@ -202,6 +196,16 @@
                 4
             ],
             "profilePicture": "images\/profilePictures\/1702540943.png"
+        },
+        {
+            "userId": 20,
+            "username": "Linnea",
+            "email": "linnea@.com",
+            "password": "123",
+            "pointsInAllGroups": 0,
+            "groups": [
+                5
+            ]
         }
     ],
     "groups": [
@@ -686,81 +690,6 @@
             ]
         },
         {
-            "groupId": 5,
-            "groupName": "My group",
-            "members": [
-                18,
-                1,
-                3
-            ],
-            "users": [
-                {
-                    "name": "Linnea",
-                    "userId": 18,
-                    "games": {
-                        "emmys": [],
-                        "grammys": {
-                            "RecordoftheYear": {
-                                "guess": "Adele",
-                                "context": "Easy on Me",
-                                "categoryName": "Record of the Year",
-                                "pointsReceived": 0,
-                                "winner": []
-                            },
-                            "SongOfTheYear": {
-                                "guess": "Harry Styles",
-                                "context": "As It Was",
-                                "categoryName": "Song Of The Year",
-                                "pointsReceived": 0,
-                                "winner": []
-                            },
-                            "BestNewArtist": {
-                                "guess": "Anitta",
-                                "categoryName": "Best New Artist",
-                                "pointsReceived": 0,
-                                "winner": []
-                            },
-                            "AlbumOfTheYear": {
-                                "guess": "Harry Styles",
-                                "context": "Harry\u2019s House",
-                                "categoryName": "Album Of The Year",
-                                "pointsReceived": 0,
-                                "winner": []
-                            },
-                            "BestPopSoloPerformance": {
-                                "guess": "Lizzo",
-                                "context": "About Damn Time",
-                                "categoryName": "Best Pop Solo Performance",
-                                "pointsReceived": 0,
-                                "winner": []
-                            },
-                            "userTotalPointsForGame": 0
-                        },
-                        "oscars": [],
-                        "userTotalPointsForGroup": 0
-                    }
-                },
-                {
-                    "name": "Elin",
-                    "userId": 1,
-                    "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
-                    }
-                },
-                {
-                    "name": "James",
-                    "userId": 3,
-                    "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
-                    }
-                }
-            ]
-        },
-        {
             "groupId": 4,
             "groupName": "Theas test",
             "members": [
@@ -780,6 +709,97 @@
                 {
                     "name": "James",
                     "userId": 3,
+                    "games": {
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
+                    }
+                }
+            ]
+        },
+        {
+            "groupId": 5,
+            "groupName": "Linn\u00e9a's Group",
+            "members": [
+                20,
+                9,
+                6,
+                4
+            ],
+            "users": [
+                {
+                    "name": "Linnea",
+                    "userId": 20,
+                    "games": {
+                        "emmys": {
+                            "OutstandingDramaSeries": {
+                                "guess": "Better Call Saul",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Bob Odenkirk",
+                                "context": "Better Call Saul",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeriess": {
+                                "guess": "Bella Ramsey",
+                                "context": "The Last Of Us",
+                                "categoryName": "Outstanding Lead Actress in a Drama Seriess",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Rachel Brosnahan",
+                                "context": "The Marvelous Mrs. Maisel",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "userTotalPointsForGame": 0
+                        },
+                        "grammys": [],
+                        "oscars": [],
+                        "userTotalPointsForGroup": 0
+                    }
+                },
+                {
+                    "name": "Liam",
+                    "userId": 9,
+                    "games": {
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
+                    }
+                },
+                {
+                    "name": "Ava",
+                    "userId": 6,
+                    "games": {
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
+                    }
+                },
+                {
+                    "name": "Olivia",
+                    "userId": 4,
                     "games": {
                         "emmys": [],
                         "grammys": [],
