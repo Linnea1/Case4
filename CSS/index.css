@@ -11,7 +11,7 @@
 :root {
   --color-main: rgb(222, 222, 222);
   --color-white: #DEDEDE;
-  --color-black: #0E0E0E;
+  --color-black: #0D0D0D;
   --color-grey-1: #3C3C3C;
   --color-grey-2: #484848;
   --color-grey-3: #727272;
@@ -22,7 +22,7 @@
   --color-accent-1: #FCC592;
   --color-red: #DC4343;
   --color-green: #529454;
-  --color-background: #2B2B2B;
+  --color-background: rgb(24, 24, 24);
   --color-nav: #0C0C0C;
 }
 
@@ -127,7 +127,7 @@ button {
   padding: 10px;
   border-radius: 10px;
   color: var(--color-grey);
-  background-color: rgb(43, 43, 43);
+  background-color: rgb(36, 36, 36);
   height: 50px;
   display: flex;
   justify-content: center;
