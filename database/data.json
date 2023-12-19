@@ -206,6 +206,14 @@
             "groups": [
                 5
             ]
+        },
+        {
+            "userId": 21,
+            "username": "amelie",
+            "email": "amelie@hej.gmail",
+            "password": "123",
+            "pointsInAllGroups": 0,
+            "groups": []
         }
     ],
     "groups": [
