@@ -43,6 +43,7 @@ async function renderMyGroups(newGroupCreated) {
   });
 
   let popUp = document.querySelector(".popup");
+  popUp.classList.remove("shown");
 
   if (newGroupCreated) {
     popUp.classList.add("shown");
