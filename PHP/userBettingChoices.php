@@ -26,11 +26,21 @@ function saveUserChoices() {
     $userId = $userChoicesArray[$arrayLength-1]["userId"];
 
     $userGroupArray = [];
+    
     if(isset($userId)) {
         foreach($users as $user) {
       
           if ($user["userId"] == $userId) {
             $userGroupArray = $user["groups"];
+          }
+        }
+    }
+
+    if(isset($userId)) {
+        foreach($users as $userArrayUserIndex => $userData) {
+      
+          if ($userData["userId"] == $userId) {
+            $data["users"][$userArrayUserIndex]["pointsInAllGroups"] = 0;
           }
         }
     }
@@ -41,13 +51,16 @@ function saveUserChoices() {
                 $usersInGroup = $group["users"];
                 foreach($usersInGroup as $userIndex => $userInGroup) {
                     if($userInGroup["userId"] == $userId) {
-                        $arrayLength = count($userChoicesArray);
                         $currentAward = strtolower($userChoicesArray[$arrayLength-1]["currentAward"]);
                     
                         $games = $userInGroup["games"];
                     
+                        $data["groups"][$index]["users"][$userIndex]["games"]["userTotalPointsForGroup"] = 0;
+
                         foreach($games as $gameName => $gameData) {
                             if($gameName == $currentAward) {
+                                $data["groups"][$index]["users"][$userIndex]["games"][$gameName]["userTotalPointsForGame"] = 0;
+
                                 $userArrayIndex = 0;
                                 while($userArrayIndex < count($userChoicesArray)-1) {
                     
@@ -74,14 +87,39 @@ function saveUserChoices() {
                                         );
                                     }
                     
+                                    $winnerForCategory = $userChoicesArray[$userArrayIndex]["winner"];
+                                    if($valueToSave == $winnerForCategory) {
+                                        $data["groups"][$index]["users"][$userIndex]["games"][$gameName][$keyName]["pointsReceived"] = 1;
+                                        //$data["groups"][$index]["users"][$userIndex]["games"][$gameName][$keyName]["winner"] 
+                                        $data["groups"][$index]["users"][$userIndex]["games"][$gameName]["userTotalPointsForGame"] += 1;
+
+                                    } else {
+                                        $data["groups"][$index]["users"][$userIndex]["games"][$gameName][$keyName]["pointsReceived"] = 0;
+
+                                    }
+
                                     $userArrayIndex++;
                                 }
-                                $data["groups"][$index]["users"][$userIndex]["games"][$gameName]["userTotalPointsForGame"] = 0;
                             }
-                    
-                            $data["groups"][$index]["users"][$userIndex]["games"]["userTotalPointsForGroup"] = 0;
+
+                            if(isset($data["groups"][$index]["users"][$userIndex]["games"][$gameName]["userTotalPointsForGame"])) {
+                                $pointsToAdd = $data["groups"][$index]["users"][$userIndex]["games"][$gameName]["userTotalPointsForGame"];
+                                $data["groups"][$index]["users"][$userIndex]["games"]["userTotalPointsForGroup"] += $pointsToAdd;
+                            }
+
                         }
-                        
+
+                        if(isset( $data["groups"][$index]["users"][$userIndex]["games"]["userTotalPointsForGroup"])) {
+                            $userPointsInOneGroup =  $data["groups"][$index]["users"][$userIndex]["games"]["userTotalPointsForGroup"];
+                            if(isset($userId)) {
+                                foreach($users as $userArrayUserIndex => $userData) {
+                              
+                                  if ($userData["userId"] == $userId) {
+                                    $data["users"][$userArrayUserIndex]["pointsInAllGroups"] += $userPointsInOneGroup;
+                                  }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -134,8 +172,7 @@ function checkIfUserHasBetted() {
                                         foreach($array as $categoryIndex => $categoryValue) {
                                             if($categoryIndex == "context") {
                                                 $contextKeyExists = true;
-                                            }
-                                            
+                                            }  
                                         }
                                         
                                         if(isset($array["guess"]) && isset($array["categoryName"])) {
@@ -154,14 +191,11 @@ function checkIfUserHasBetted() {
                                                     "categoryChoice" => $string
                                                 );
                                             }
-                                        }
-                                          
+                                        }    
                                     }
                                 }
                             }
-                    
-                        }
-                        
+                        } 
                     }
                 }
             }

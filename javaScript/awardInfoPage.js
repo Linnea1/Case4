@@ -271,6 +271,7 @@ function renderBettingPage(event) {
                     }
                     awardObject.category = categoryNameHeading.textContent;
                     awardObject.categoryChoice = bettingChoice;
+                    awardObject.winner = categoriesArray[categoryIndex-1].winner;
                     userAwardArray.push(awardObject);
                 }
             }
@@ -289,6 +290,7 @@ function renderBettingPage(event) {
                             }
                             awardObject.category = categoryNameHeading.textContent;
                             awardObject.categoryChoice = bettingChoice;
+                            awardObject.winner = categoriesArray[categoryIndex-1].winner;
                             userAwardArray[i] = awardObject;
                         }
                     }
@@ -630,6 +632,7 @@ function renderBettingPage(event) {
                     }
                     awardObject.category = categoryNameHeading.textContent;
                     awardObject.categoryChoice = bettingChoice;
+                    awardObject.winner = categoriesArray[categoryIndex-1].winner;
                     userAwardArray.push(awardObject);
                 }
             }
@@ -648,6 +651,7 @@ function renderBettingPage(event) {
                             }
                             awardObject.category = categoryNameHeading.textContent;
                             awardObject.categoryChoice = bettingChoice;
+                            awardObject.winner = categoriesArray[categoryIndex-1].winner;
                             userAwardArray[i] = awardObject;
                         }
                     }

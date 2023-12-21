@@ -6,11 +6,10 @@
             "email": "elin@gmail.com",
             "password": "123",
             "profilePicture": "..\/images\/profilePictures\/Elin.jpg",
-            "pointsInAllGroups": 3,
+            "pointsInAllGroups": 20,
             "groups": [
                 1,
-                2,
-                5
+                2
             ]
         },
         {
@@ -42,7 +41,7 @@
             "email": "olivia@gmail.com",
             "password": "123",
             "profilePicture": "..\/images\/profilePictures\/Olivia.jpg",
-            "pointsInAllGroups": 27,
+            "pointsInAllGroups": 36,
             "groups": [
                 2,
                 3,
@@ -66,7 +65,7 @@
             "email": "ava@gmail.com",
             "password": "123",
             "profilePicture": "..\/images\/profilePictures\/Ava.jpg",
-            "pointsInAllGroups": 3,
+            "pointsInAllGroups": 28,
             "groups": [
                 1,
                 5
@@ -230,52 +229,52 @@
                     "userId": 1,
                     "games": {
                         "emmys": {
+                            "userTotalPointsForGame": 6,
                             "OutstandingDramaSeries": {
-                                "guess": "Yellowjackets",
+                                "guess": "Succession",
                                 "categoryName": "Outstanding Drama Series",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "OutstandingComedySeries": {
-                                "guess": "Wednesday",
+                                "guess": "The Bear",
                                 "categoryName": "Outstanding Comedy Series",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "OutstandingLeadActorinaDramaSeries": {
-                                "guess": "Jeremy Strong",
+                                "guess": "Kieran Culkin",
                                 "context": "Succession",
                                 "categoryName": "Outstanding Lead Actor in a Drama Series",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
-                            "OutstandingLeadActressinaDramaSeriess": {
+                            "OutstandingLeadActressinaDramaSeries": {
                                 "guess": "Sarah Snook",
                                 "context": "Succession",
-                                "categoryName": "Outstanding Lead Actress in a Drama Seriess",
-                                "pointsReceived": 0,
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "OutstandingLeadActressinaComedySeries": {
-                                "guess": "Jenna Ortega",
-                                "context": "Wednesday",
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
                                 "categoryName": "Outstanding Lead Actress in a Comedy Series",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "OutstandingLeadActorinaComedySeries": {
                                 "guess": "Jeremy Allen White",
                                 "context": "The Bear",
                                 "categoryName": "Outstanding Lead Actor in a Comedy Series",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
-                            },
-                            "userTotalPointsForGame": 0
+                            }
                         },
                         "grammys": {
                             "RecordoftheYear": {
-                                "guess": "Brandi Carlile Featuring Lucius",
-                                "context": "You and Me on the Rock",
+                                "guess": "Doja Cat",
+                                "context": "Woman",
                                 "categoryName": "Record of the Year",
                                 "pointsReceived": 0,
                                 "winner": []
@@ -301,8 +300,8 @@
                                 "winner": []
                             },
                             "BestPopSoloPerformance": {
-                                "guess": "Harry Styles",
-                                "context": "As It Was",
+                                "guess": "Steve Lacy",
+                                "context": "Bad Habit",
                                 "categoryName": "Best Pop Solo Performance",
                                 "pointsReceived": 0,
                                 "winner": []
@@ -311,21 +310,21 @@
                         },
                         "oscars": {
                             "BestPicture": {
-                                "guess": "Avatar: The Way of Water",
+                                "guess": "Everything Everywhere All at Once",
                                 "categoryName": "Best Picture",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "ActorinaLeadingRole": {
-                                "guess": "Bill Nighy",
-                                "context": "Living",
+                                "guess": "Brendan Fraser",
+                                "context": "The Whale",
                                 "categoryName": "Actor in a Leading Role",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "ActressinaLeadingRole": {
-                                "guess": "Andrea Riseborough",
-                                "context": "To Leslie",
+                                "guess": "Michelle Williams",
+                                "context": "The Fabelmans",
                                 "categoryName": "Actress in a Leading Role",
                                 "pointsReceived": 0,
                                 "winner": []
@@ -334,19 +333,19 @@
                                 "guess": "Ke Huy Quan",
                                 "context": "Everything Everywhere All at Once",
                                 "categoryName": "Actor in a Supporting Role",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "ActressinaSupportingRole": {
-                                "guess": "Stephanie Hsu",
+                                "guess": "Jamie Lee Curtis",
                                 "context": "Everything Everywhere All at Once",
                                 "categoryName": "Actress in a Supporting Role",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
-                            "userTotalPointsForGame": 0
+                            "userTotalPointsForGame": 4
                         },
-                        "userTotalPointsForGroup": 0
+                        "userTotalPointsForGroup": 10
                     }
                 },
                 {
@@ -373,10 +372,124 @@
                     "name": "Ava",
                     "userId": 6,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
-                        "userTotalPointsForGroup": 0
+                        "emmys": {
+                            "userTotalPointsForGame": 6,
+                            "OutstandingDramaSeries": {
+                                "guess": "Succession",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Kieran Culkin",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "grammys": {
+                            "userTotalPointsForGame": 4,
+                            "RecordoftheYear": {
+                                "guess": "Mary J. Blige",
+                                "context": "Good Morning Gorgeous",
+                                "categoryName": "Record of the Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "SongOfTheYear": {
+                                "guess": "Bonnie Raitt",
+                                "context": "Just Like That",
+                                "categoryName": "Song Of The Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "BestNewArtist": {
+                                "guess": "Samara Joy",
+                                "categoryName": "Best New Artist",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "AlbumOfTheYear": {
+                                "guess": "Harry Styles",
+                                "context": "Harry\u2019s House",
+                                "categoryName": "Album Of The Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "BestPopSoloPerformance": {
+                                "guess": "Adele",
+                                "context": "Easy on Me",
+                                "categoryName": "Best Pop Solo Performance",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "oscars": {
+                            "userTotalPointsForGame": 4,
+                            "BestPicture": {
+                                "guess": "Everything Everywhere All at Once",
+                                "categoryName": "Best Picture",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActorinaLeadingRole": {
+                                "guess": "Bill Nighy",
+                                "context": "Living",
+                                "categoryName": "Actor in a Leading Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActressinaLeadingRole": {
+                                "guess": "Michelle Yeoh",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Leading Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActorinaSupportingRole": {
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actor in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaSupportingRole": {
+                                "guess": "Jamie Lee Curtis",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "userTotalPointsForGroup": 14
                     }
                 }
             ]
@@ -398,52 +511,52 @@
                     "userId": 1,
                     "games": {
                         "emmys": {
+                            "userTotalPointsForGame": 6,
                             "OutstandingDramaSeries": {
-                                "guess": "Yellowjackets",
+                                "guess": "Succession",
                                 "categoryName": "Outstanding Drama Series",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "OutstandingComedySeries": {
-                                "guess": "Wednesday",
+                                "guess": "The Bear",
                                 "categoryName": "Outstanding Comedy Series",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "OutstandingLeadActorinaDramaSeries": {
-                                "guess": "Jeremy Strong",
+                                "guess": "Kieran Culkin",
                                 "context": "Succession",
                                 "categoryName": "Outstanding Lead Actor in a Drama Series",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
-                            "OutstandingLeadActressinaDramaSeriess": {
+                            "OutstandingLeadActressinaDramaSeries": {
                                 "guess": "Sarah Snook",
                                 "context": "Succession",
-                                "categoryName": "Outstanding Lead Actress in a Drama Seriess",
-                                "pointsReceived": 0,
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "OutstandingLeadActressinaComedySeries": {
-                                "guess": "Jenna Ortega",
-                                "context": "Wednesday",
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
                                 "categoryName": "Outstanding Lead Actress in a Comedy Series",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "OutstandingLeadActorinaComedySeries": {
                                 "guess": "Jeremy Allen White",
                                 "context": "The Bear",
                                 "categoryName": "Outstanding Lead Actor in a Comedy Series",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
-                            },
-                            "userTotalPointsForGame": 0
+                            }
                         },
                         "grammys": {
                             "RecordoftheYear": {
-                                "guess": "Brandi Carlile Featuring Lucius",
-                                "context": "You and Me on the Rock",
+                                "guess": "Doja Cat",
+                                "context": "Woman",
                                 "categoryName": "Record of the Year",
                                 "pointsReceived": 0,
                                 "winner": []
@@ -469,8 +582,8 @@
                                 "winner": []
                             },
                             "BestPopSoloPerformance": {
-                                "guess": "Harry Styles",
-                                "context": "As It Was",
+                                "guess": "Steve Lacy",
+                                "context": "Bad Habit",
                                 "categoryName": "Best Pop Solo Performance",
                                 "pointsReceived": 0,
                                 "winner": []
@@ -479,21 +592,21 @@
                         },
                         "oscars": {
                             "BestPicture": {
-                                "guess": "Avatar: The Way of Water",
+                                "guess": "Everything Everywhere All at Once",
                                 "categoryName": "Best Picture",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "ActorinaLeadingRole": {
-                                "guess": "Bill Nighy",
-                                "context": "Living",
+                                "guess": "Brendan Fraser",
+                                "context": "The Whale",
                                 "categoryName": "Actor in a Leading Role",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "ActressinaLeadingRole": {
-                                "guess": "Andrea Riseborough",
-                                "context": "To Leslie",
+                                "guess": "Michelle Williams",
+                                "context": "The Fabelmans",
                                 "categoryName": "Actress in a Leading Role",
                                 "pointsReceived": 0,
                                 "winner": []
@@ -502,19 +615,19 @@
                                 "guess": "Ke Huy Quan",
                                 "context": "Everything Everywhere All at Once",
                                 "categoryName": "Actor in a Supporting Role",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
                             "ActressinaSupportingRole": {
-                                "guess": "Stephanie Hsu",
+                                "guess": "Jamie Lee Curtis",
                                 "context": "Everything Everywhere All at Once",
                                 "categoryName": "Actress in a Supporting Role",
-                                "pointsReceived": 0,
+                                "pointsReceived": 1,
                                 "winner": []
                             },
-                            "userTotalPointsForGame": 0
+                            "userTotalPointsForGame": 4
                         },
-                        "userTotalPointsForGroup": 0
+                        "userTotalPointsForGroup": 10
                     }
                 },
                 {
@@ -531,10 +644,124 @@
                     "name": "Olivia",
                     "userId": 4,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
-                        "userTotalPointsForGroup": 0
+                        "emmys": {
+                            "userTotalPointsForGame": 5,
+                            "OutstandingDramaSeries": {
+                                "guess": "Succession",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Bob Odenkirk",
+                                "context": "Better Call Saul",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "grammys": {
+                            "userTotalPointsForGame": 4,
+                            "RecordoftheYear": {
+                                "guess": "Lizzo",
+                                "context": "About Damn Time",
+                                "categoryName": "Record of the Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "SongOfTheYear": {
+                                "guess": "Bonnie Raitt",
+                                "context": "Just Like That",
+                                "categoryName": "Song Of The Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "BestNewArtist": {
+                                "guess": "Samara Joy",
+                                "categoryName": "Best New Artist",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "AlbumOfTheYear": {
+                                "guess": "Lizzo",
+                                "context": "Special",
+                                "categoryName": "Album Of The Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "BestPopSoloPerformance": {
+                                "guess": "Adele",
+                                "context": "Easy on Me",
+                                "categoryName": "Best Pop Solo Performance",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "oscars": {
+                            "userTotalPointsForGame": 3,
+                            "BestPicture": {
+                                "guess": "Triangle of Sadness",
+                                "categoryName": "Best Picture",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaLeadingRole": {
+                                "guess": "Brendan Fraser",
+                                "context": "The Whale",
+                                "categoryName": "Actor in a Leading Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaLeadingRole": {
+                                "guess": "Michelle Williams",
+                                "context": "The Fabelmans",
+                                "categoryName": "Actress in a Leading Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaSupportingRole": {
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actor in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaSupportingRole": {
+                                "guess": "Jamie Lee Curtis",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "userTotalPointsForGroup": 12
                     }
                 },
                 {
@@ -551,8 +778,86 @@
                     "name": "Sophia",
                     "userId": 8,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
+                        "emmys": {
+                            "userTotalPointsForGame": 3,
+                            "OutstandingDramaSeries": {
+                                "guess": "Succession",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Marvelous Mrs. Maisel",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Kieran Culkin",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Jenna Ortega",
+                                "context": "Wednesday",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jason Sudeikis",
+                                "context": "Ted Lasso",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            }
+                        },
+                        "grammys": {
+                            "RecordoftheYear": {
+                                "guess": "Steve Lacy",
+                                "context": "Bad Habit",
+                                "categoryName": "Record of the Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "SongOfTheYear": {
+                                "guess": "Steve Lacy",
+                                "context": "Bad Habit",
+                                "categoryName": "Song Of The Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "BestNewArtist": {
+                                "guess": "Omar Apollo",
+                                "categoryName": "Best New Artist",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "AlbumOfTheYear": {
+                                "guess": "Lizzo",
+                                "context": "Special",
+                                "categoryName": "Album Of The Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "BestPopSoloPerformance": {
+                                "guess": "Adele",
+                                "context": "Easy on Me",
+                                "categoryName": "Best Pop Solo Performance",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "userTotalPointsForGame": 1
+                        },
                         "oscars": {
                             "BestPicture": {
                                 "guess": "Elvis",
@@ -561,22 +866,22 @@
                                 "winner": []
                             },
                             "ActorinaLeadingRole": {
-                                "guess": "Bill Nighy",
-                                "context": "Living",
+                                "guess": "Paul Mescal",
+                                "context": "Aftersun",
                                 "categoryName": "Actor in a Leading Role",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "ActressinaLeadingRole": {
-                                "guess": "Michelle Yeoh",
-                                "context": "Everything Everywhere All at Once",
+                                "guess": "Michelle Williams",
+                                "context": "The Fabelmans",
                                 "categoryName": "Actress in a Leading Role",
                                 "pointsReceived": 0,
                                 "winner": []
                             },
                             "ActorinaSupportingRole": {
-                                "guess": "Ke Huy Quan",
-                                "context": "Everything Everywhere All at Once",
+                                "guess": "Barry Keoghan",
+                                "context": "The Banshees of Inisherin",
                                 "categoryName": "Actor in a Supporting Role",
                                 "pointsReceived": 0,
                                 "winner": []
@@ -590,7 +895,7 @@
                             },
                             "userTotalPointsForGame": 0
                         },
-                        "userTotalPointsForGroup": 0
+                        "userTotalPointsForGroup": 4
                     }
                 },
                 {
@@ -620,10 +925,124 @@
                     "name": "Olivia",
                     "userId": 4,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
-                        "userTotalPointsForGroup": 0
+                        "emmys": {
+                            "userTotalPointsForGame": 5,
+                            "OutstandingDramaSeries": {
+                                "guess": "Succession",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Bob Odenkirk",
+                                "context": "Better Call Saul",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "grammys": {
+                            "userTotalPointsForGame": 4,
+                            "RecordoftheYear": {
+                                "guess": "Lizzo",
+                                "context": "About Damn Time",
+                                "categoryName": "Record of the Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "SongOfTheYear": {
+                                "guess": "Bonnie Raitt",
+                                "context": "Just Like That",
+                                "categoryName": "Song Of The Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "BestNewArtist": {
+                                "guess": "Samara Joy",
+                                "categoryName": "Best New Artist",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "AlbumOfTheYear": {
+                                "guess": "Lizzo",
+                                "context": "Special",
+                                "categoryName": "Album Of The Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "BestPopSoloPerformance": {
+                                "guess": "Adele",
+                                "context": "Easy on Me",
+                                "categoryName": "Best Pop Solo Performance",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "oscars": {
+                            "userTotalPointsForGame": 3,
+                            "BestPicture": {
+                                "guess": "Triangle of Sadness",
+                                "categoryName": "Best Picture",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaLeadingRole": {
+                                "guess": "Brendan Fraser",
+                                "context": "The Whale",
+                                "categoryName": "Actor in a Leading Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaLeadingRole": {
+                                "guess": "Michelle Williams",
+                                "context": "The Fabelmans",
+                                "categoryName": "Actress in a Leading Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaSupportingRole": {
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actor in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaSupportingRole": {
+                                "guess": "Jamie Lee Curtis",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "userTotalPointsForGroup": 12
                     }
                 },
                 {
@@ -710,49 +1129,7 @@
                     "name": "Linnea",
                     "userId": 20,
                     "games": {
-                        "emmys": {
-                            "OutstandingDramaSeries": {
-                                "guess": "Better Call Saul",
-                                "categoryName": "Outstanding Drama Series",
-                                "pointsReceived": 0,
-                                "winner": []
-                            },
-                            "OutstandingComedySeries": {
-                                "guess": "The Bear",
-                                "categoryName": "Outstanding Comedy Series",
-                                "pointsReceived": 0,
-                                "winner": []
-                            },
-                            "OutstandingLeadActorinaDramaSeries": {
-                                "guess": "Bob Odenkirk",
-                                "context": "Better Call Saul",
-                                "categoryName": "Outstanding Lead Actor in a Drama Series",
-                                "pointsReceived": 0,
-                                "winner": []
-                            },
-                            "OutstandingLeadActressinaDramaSeriess": {
-                                "guess": "Bella Ramsey",
-                                "context": "The Last Of Us",
-                                "categoryName": "Outstanding Lead Actress in a Drama Seriess",
-                                "pointsReceived": 0,
-                                "winner": []
-                            },
-                            "OutstandingLeadActressinaComedySeries": {
-                                "guess": "Rachel Brosnahan",
-                                "context": "The Marvelous Mrs. Maisel",
-                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
-                                "pointsReceived": 0,
-                                "winner": []
-                            },
-                            "OutstandingLeadActorinaComedySeries": {
-                                "guess": "Jeremy Allen White",
-                                "context": "The Bear",
-                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
-                                "pointsReceived": 0,
-                                "winner": []
-                            },
-                            "userTotalPointsForGame": 0
-                        },
+                        "emmys": [],
                         "grammys": [],
                         "oscars": [],
                         "userTotalPointsForGroup": 0
@@ -771,18 +1148,248 @@
                     "name": "Ava",
                     "userId": 6,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
+                        "emmys": {
+                            "userTotalPointsForGame": 6,
+                            "OutstandingDramaSeries": {
+                                "guess": "Succession",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Kieran Culkin",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "grammys": {
+                            "userTotalPointsForGame": 4,
+                            "RecordoftheYear": {
+                                "guess": "Mary J. Blige",
+                                "context": "Good Morning Gorgeous",
+                                "categoryName": "Record of the Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "SongOfTheYear": {
+                                "guess": "Bonnie Raitt",
+                                "context": "Just Like That",
+                                "categoryName": "Song Of The Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "BestNewArtist": {
+                                "guess": "Samara Joy",
+                                "categoryName": "Best New Artist",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "AlbumOfTheYear": {
+                                "guess": "Harry Styles",
+                                "context": "Harry\u2019s House",
+                                "categoryName": "Album Of The Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "BestPopSoloPerformance": {
+                                "guess": "Adele",
+                                "context": "Easy on Me",
+                                "categoryName": "Best Pop Solo Performance",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "oscars": {
+                            "userTotalPointsForGame": 4,
+                            "BestPicture": {
+                                "guess": "Everything Everywhere All at Once",
+                                "categoryName": "Best Picture",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActorinaLeadingRole": {
+                                "guess": "Bill Nighy",
+                                "context": "Living",
+                                "categoryName": "Actor in a Leading Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActressinaLeadingRole": {
+                                "guess": "Michelle Yeoh",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Leading Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActorinaSupportingRole": {
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actor in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaSupportingRole": {
+                                "guess": "Jamie Lee Curtis",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "userTotalPointsForGroup": 14
                     }
                 },
                 {
                     "name": "Olivia",
                     "userId": 4,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
+                        "emmys": {
+                            "userTotalPointsForGame": 5,
+                            "OutstandingDramaSeries": {
+                                "guess": "Succession",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Bob Odenkirk",
+                                "context": "Better Call Saul",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "grammys": {
+                            "userTotalPointsForGame": 4,
+                            "RecordoftheYear": {
+                                "guess": "Lizzo",
+                                "context": "About Damn Time",
+                                "categoryName": "Record of the Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "SongOfTheYear": {
+                                "guess": "Bonnie Raitt",
+                                "context": "Just Like That",
+                                "categoryName": "Song Of The Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "BestNewArtist": {
+                                "guess": "Samara Joy",
+                                "categoryName": "Best New Artist",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "AlbumOfTheYear": {
+                                "guess": "Lizzo",
+                                "context": "Special",
+                                "categoryName": "Album Of The Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "BestPopSoloPerformance": {
+                                "guess": "Adele",
+                                "context": "Easy on Me",
+                                "categoryName": "Best Pop Solo Performance",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "oscars": {
+                            "userTotalPointsForGame": 3,
+                            "BestPicture": {
+                                "guess": "Triangle of Sadness",
+                                "categoryName": "Best Picture",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaLeadingRole": {
+                                "guess": "Brendan Fraser",
+                                "context": "The Whale",
+                                "categoryName": "Actor in a Leading Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaLeadingRole": {
+                                "guess": "Michelle Williams",
+                                "context": "The Fabelmans",
+                                "categoryName": "Actress in a Leading Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaSupportingRole": {
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actor in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaSupportingRole": {
+                                "guess": "Jamie Lee Curtis",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "userTotalPointsForGroup": 12
                     }
                 }
             ]

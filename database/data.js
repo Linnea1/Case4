@@ -116,7 +116,7 @@ const awards = [
         winner: "Kieran Culkin",
       },
       {
-        category: "Outstanding Lead Actress in a Drama Seriess",
+        category: "Outstanding Lead Actress in a Drama Series",
         nominees: [
           {
             name: "Sharon Horgan",
