@@ -352,9 +352,9 @@
                     "name": "Emily",
                     "userId": 2,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -362,9 +362,9 @@
                     "name": "Benjamin",
                     "userId": 5,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -634,9 +634,9 @@
                     "name": "James",
                     "userId": 3,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -1016,9 +1016,9 @@
                     "name": "Liam",
                     "userId": 9,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 }
@@ -1287,9 +1287,9 @@
                     "name": "Emma",
                     "userId": 10,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -1297,9 +1297,9 @@
                     "name": "Noah",
                     "userId": 11,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -1307,9 +1307,9 @@
                     "name": "Mia",
                     "userId": 12,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 }
@@ -1327,18 +1327,18 @@
                     "name": "thea",
                     "userId": 19,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
                     }
                 },
                 {
                     "name": "James",
                     "userId": 3,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
                     }
                 }
             ]
@@ -1357,9 +1357,9 @@
                     "name": "Linnea",
                     "userId": 20,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -1367,9 +1367,9 @@
                     "name": "Liam",
                     "userId": 9,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
                     }
                 },
                 {
