@@ -28,6 +28,7 @@
 .sticky-nav .fa-solid {
   font-size: 24px;
   padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .nav-icon {
@@ -49,7 +50,7 @@
 @media only screen and (min-width: 600px) {
   .sticky-nav {
     height: 100%;
-    width: 8%;
+    width: 7%;
   }
 
   .sticky-nav ul {
@@ -74,7 +75,7 @@
 
 @media only screen and (min-width: 600px) and (orientation: portrait) {
   .sticky-nav {
-    width: 14%;
+    width: 10%;
   }
 }
 
