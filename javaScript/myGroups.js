@@ -85,14 +85,33 @@ function renderGroups(userGroups) {
         <h3>${element.groupName.toUpperCase()}</h3>
         <div class="group-info">
           <p>${element.members.length} members</p>
-          <p>/${element.members.length} members have placed their bet</p>
+          <p>${checkAmountOfBettedMembers(element)}/${element.members.length} members have placed their bet</p>
         </div>
       </button>
     `
     )
     .join("");
 
-  return `
-    ${group}
-  `;
+  return group;
+}
+
+function checkAmountOfBettedMembers(element) {
+  let numbersOfBettedUsers = 0;
+  const users = element.users;
+
+  for(const user of users) {
+    const games = user.games;
+
+    const gameWithBettedResult = (
+      Object.values(games)
+      .filter(element => typeof element === 'object')
+      .filter(element => Object.keys(element).length)
+    );
+
+      if(gameWithBettedResult.length > 0) {
+        numbersOfBettedUsers++;
+      }
+    }
+
+  return numbersOfBettedUsers;
 }
