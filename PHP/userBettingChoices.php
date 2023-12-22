@@ -150,15 +150,23 @@ function checkIfUserHasBetted() {
             }
         }
 
+        if(count($userGroupArray) == 0) {
+            $warningMessage = [
+                                "warning" => "This user does not belong to a group yet, and therefore cannot start betting",
+                                "message" => "No bets have been made"
+                            ];
+            send($warningMessage, 404);
+        }
+
         $userFirstTime = false;
         foreach($groups as $index => $group) {
             if($group["groupId"] == $userGroupArray[0]) {
+                //If the user has no bets saved in the first group, i.e. game-object length is 0 or 1,
+                //the user has not played before, no matter if the user belongs to other groups.
                 $usersInGroup = $group["users"];
                 foreach($usersInGroup as $userIndex => $userInGroup) {
                     if($userInGroup["userId"] == $userToFind) {
-                    
                         $games = $userInGroup["games"];
-                    
                         foreach($games as $gameName => $gameData) {
                             if($gameName == $awardToFind) {
                                 if((count($games[$gameName]) == 1) ||  (count($games[$gameName]) == 0)) {

@@ -6,10 +6,11 @@
             "email": "elin@gmail.com",
             "password": "123",
             "profilePicture": "..\/images\/profilePictures\/Elin.jpg",
-            "pointsInAllGroups": 20,
+            "pointsInAllGroups": 26,
             "groups": [
                 1,
-                2
+                2,
+                6
             ]
         },
         {
@@ -45,7 +46,8 @@
             "groups": [
                 2,
                 3,
-                5
+                5,
+                6
             ]
         },
         {
@@ -68,7 +70,8 @@
             "pointsInAllGroups": 28,
             "groups": [
                 1,
-                5
+                5,
+                6
             ]
         },
         {
@@ -211,6 +214,38 @@
             "password": "123",
             "pointsInAllGroups": 0,
             "groups": []
+        },
+        {
+            "userId": 22,
+            "username": "Aria",
+            "email": "aria@gmail.com",
+            "password": "123",
+            "pointsInAllGroups": 5,
+            "groups": [
+                6,
+                7
+            ]
+        },
+        {
+            "userId": 23,
+            "username": "Luna",
+            "email": "luna@gmail.com",
+            "password": "123",
+            "pointsInAllGroups": 4,
+            "groups": [
+                7,
+                8
+            ]
+        },
+        {
+            "userId": 24,
+            "username": "Julia",
+            "email": "julia@gmail.com",
+            "password": "123",
+            "pointsInAllGroups": 0,
+            "groups": [
+                8
+            ]
         }
     ],
     "groups": [
@@ -1390,6 +1425,233 @@
                             }
                         },
                         "userTotalPointsForGroup": 12
+                    }
+                }
+            ]
+        },
+        {
+            "groupId": 6,
+            "groupName": "Aria's group",
+            "members": [
+                22,
+                1,
+                6,
+                4
+            ],
+            "users": [
+                {
+                    "name": "Aria",
+                    "userId": 22,
+                    "games": {
+                        "emmys": {
+                            "userTotalPointsForGame": 5,
+                            "OutstandingDramaSeries": {
+                                "guess": "The White Lotus",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Kieran Culkin",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "grammys": [],
+                        "oscars": [],
+                        "userTotalPointsForGroup": 5
+                    }
+                },
+                {
+                    "name": "Elin",
+                    "userId": 1,
+                    "games": {
+                        "emmys": {
+                            "userTotalPointsForGame": 6,
+                            "OutstandingDramaSeries": {
+                                "guess": "Succession",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Kieran Culkin",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "grammys": [],
+                        "oscars": [],
+                        "userTotalPointsForGroup": 6
+                    }
+                },
+                {
+                    "name": "Ava",
+                    "userId": 6,
+                    "games": {
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
+                    }
+                },
+                {
+                    "name": "Olivia",
+                    "userId": 4,
+                    "games": {
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
+                    }
+                }
+            ]
+        },
+        {
+            "groupId": 7,
+            "groupName": "Luna and Aria",
+            "members": [
+                23,
+                22
+            ],
+            "users": [
+                {
+                    "name": "Luna",
+                    "userId": 23,
+                    "games": {
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": {
+                            "userTotalPointsForGame": 4,
+                            "BestPicture": {
+                                "guess": "Elvis",
+                                "categoryName": "Best Picture",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaLeadingRole": {
+                                "guess": "Brendan Fraser",
+                                "context": "The Whale",
+                                "categoryName": "Actor in a Leading Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaLeadingRole": {
+                                "guess": "Michelle Yeoh",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Leading Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActorinaSupportingRole": {
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actor in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaSupportingRole": {
+                                "guess": "Jamie Lee Curtis",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "userTotalPointsForGroup": 4
+                    }
+                },
+                {
+                    "name": "Aria",
+                    "userId": 22,
+                    "games": {
+                        "emmys": [],
+                        "grammys": [],
+                        "oscars": []
+                    }
+                }
+            ]
+        },
+        {
+            "groupId": 8,
+            "groupName": "Julia and Luna",
+            "members": [
+                24,
+                23
+            ],
+            "users": [
+                {
+                    "name": "Julia",
+                    "userId": 24,
+                    "games": {
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
+                    }
+                },
+                {
+                    "name": "Luna",
+                    "userId": 23,
+                    "games": {
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
                     }
                 }
             ]

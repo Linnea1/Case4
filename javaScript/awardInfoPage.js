@@ -72,6 +72,12 @@ async function renderAwardInfoPage(event) {
                 
             let startBettingButton = document.querySelector("div#startBettingAwardBettingPage");
             startBettingButton.addEventListener("click", renderBettingPage);
+
+            if(resource.warning !== undefined) {
+                startBettingButton.style.pointerEvents = "none";
+            } else {
+                startBettingButton.style.pointerEvents = "auto";
+            }
         } else {
             let array = resource;
             console.log(array);
