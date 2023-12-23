@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 92vh;
 }
 
 .home-container {
@@ -14,7 +14,7 @@
 
 .home-welcome {
     border-left: 2px solid var(--color-white);
-    margin: 52vh 15px 10px;
+    margin: 60vh 15px 10px;
     padding: 5px 20px;
 }
 
@@ -22,11 +22,17 @@
 .home-welcome>h1:nth-child(1)>span:nth-child(1) {
     color: var(--color-white);
     font-family: Sora SemiBold;
+    margin-bottom: 10px;
+}
+
+.home-welcome>p:nth-child(2) {
+    font-size: 15px;
 }
 
 .award-header {
     color: rgb(201, 134, 73);
     margin-top: 50px;
+    margin-top: 0;
 }
 
 .fa-chevron-down {
@@ -44,7 +50,7 @@
 }
 
 .countdown {
-    padding:5px 30px 20vh 30px;
+    padding: 5vh 30px 20vh 30px;
     box-sizing: border-box;
     background-color: #181818;
 }
@@ -54,11 +60,12 @@
     padding: 20px;
     border-radius: 15px;
     box-shadow:
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
 }
 
 .betHeader {
-    font-size: 16px;;
+    font-size: 14px;
+    font-family: Sora SemiBold;
 }
 
 .betChoice {
@@ -66,18 +73,32 @@
     color: rgb(158, 158, 158);
 }
 
-.days div,
+/* .days div,
 .hours div,
 .minutes div,
 .seconds div {
     color: var(--color-grey);
+    font-size: 14px;
+
+} */
+
+.days p,
+.hours p,
+.minutes p,
+.seconds p {
+    color: var(--color-grey-5);
+    font-size: 14px;
+    font-family: Sora SemiBold;
+    padding-bottom: 10px;
+    margin: 0;
 }
 
-.days div:first-child,
-.hours div:first-child,
-.minutes div:first-child,
-.seconds div:first-child {
-    padding-bottom: 10px;
+.days div,
+.hours div,
+.minutes div,
+.seconds div {
+    color: var(--color-grey-4);
+    font-size: 14px;
 }
 
 /* tablet portrait */

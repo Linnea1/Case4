@@ -53,19 +53,19 @@ function renderCountDown() {
       <h3 class="award-header">${element.award}</h3>
       <div class="award-countdown">
         <div class="days">
-            <div>10</div>
+            <p>10</p>
             <div>Days</div>
         </div>
         <div class="hours">
-            <div>2</div>
+            <p>2</p>
             <div>Hours</div>
         </div>
         <div class="minutes">
-            <div>59</div>
+            <p>59</p>
             <div>Minutes</div>
         </div>
         <div class="seconds">
-            <div>59</div>
+            <p>59</p>
             <div>Seconds</div>
         </div>
       </div>
@@ -73,16 +73,16 @@ function renderCountDown() {
     </div>
   `);
 
-    awardsHtml.splice(-2,2,
-      `
+  awardsHtml.splice(-2, 2,
+    `
         <div class="oscars-grammys">
           ${awardsHtml.slice(-2).join("")}
         </div>
       `
-    );
+  );
 
-    getBetsHome()
-    return awardsHtml.join("");
+  getBetsHome()
+  return awardsHtml.join("");
 }
 
 function logoutFromAccount() {
@@ -96,7 +96,7 @@ async function getBetsHome() {
   const userData = await data.json();
 
   await Promise.all(awards.map(async (awardObject) => {
-    let award=awardObject.award;
+    let award = awardObject.award;
     let lowerCaseAward = award.toLowerCase();
     let response = await fetch(`../PHP/userBettingChoices.php?award=${lowerCaseAward}&userId=${userData.userId}`);
     let userBet = await response.json();

@@ -1,11 +1,12 @@
 .awards-page {
   background-color: var(--color-background);
   height: 100vh;
-  padding: 30px;
+  padding: 60px 20px 100px;
 }
 
 .awards-page h2 {
   margin: 0;
+  font-family: Sora SemiBold;
 }
 
 .awards-container {

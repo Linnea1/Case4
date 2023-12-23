@@ -155,9 +155,9 @@ button {
   overflow: hidden;
 }
 
-.mobile-backdrop {
-  background: linear-gradient(rgb(13, 41, 66), rgb(0, 0, 0));
-}
+/* .mobile-backdrop {
+  background: linear-gradient(#0f2639, #181818);
+} */
 
 .black-box {
   z-index: 1;
@@ -182,7 +182,7 @@ button {
     background: none;
   }
 
-  .popupContent{
+  .popupContent {
     width: 70vw;
     height: 50vh;
   }
@@ -200,7 +200,8 @@ button {
     height: 50%;
     width: 50%;
   }
-  .popupContent{
+
+  .popupContent {
     width: 80vw;
     height: 40vh;
   }

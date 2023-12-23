@@ -65,6 +65,7 @@ if(
             "emmys" => array(),
             "grammys" => array(),
             "oscars" => array(),
+            "userTotalPointsForGroup" => 0
           ),
         );
 

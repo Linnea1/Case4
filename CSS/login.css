@@ -7,6 +7,11 @@
   padding: 30px;
 }
 
+.login-welcome>h2:nth-child(1) {
+  font-size: 26px;
+  font-family: Sora SemiBold;
+}
+
 .login-welcome p {
   color: var(--color-grey);
 }
@@ -17,16 +22,18 @@
 }
 
 .login-form input {
-    margin: 20px 0;
-    padding-bottom: 10px;
+  margin: 20px 0;
+  padding-bottom: 10px;
+  color: var(--color-grey-5);
+  border-bottom: 1px solid var(--color-grey-1);
 }
 
 .go-to-home-page {
-    flex-grow: 1;
-    text-align: center;
-    padding: 10px;
-    margin-top: 30px;
-    border-radius: 10px;
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 10px;
 }
 
 .sign-up-from-login {
@@ -34,16 +41,19 @@
 }
 
 .sign-up-from-login button {
+  font-family: Sora SemiBold;
   padding: 0;
 }
 
 .sign-up-from-login {
+  font-size: 14px;
   color: var(--color-grey);
 }
 
 .message-login {
   color: var(--color-red);
   padding-bottom: 30px;
+  font-size: 12px;
 }
 
 .go-to-welcome-page {
@@ -69,7 +79,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent), linear-gradient(to bottom, rgba(30, 87, 153, 0.4), transparent),url('../images/bg-welcome.png');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent), linear-gradient(to bottom, rgba(30, 87, 153, 0.4), transparent), url('../images/bg-welcome.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

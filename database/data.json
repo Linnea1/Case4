@@ -387,9 +387,9 @@
                     "name": "Emily",
                     "userId": 2,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -397,9 +397,9 @@
                     "name": "Benjamin",
                     "userId": 5,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -669,9 +669,9 @@
                     "name": "James",
                     "userId": 3,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -803,10 +803,124 @@
                     "name": "Ethan",
                     "userId": 7,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
-                        "userTotalPointsForGroup": 0
+                        "emmys": {
+                            "userTotalPointsForGame": 6,
+                            "OutstandingDramaSeries": {
+                                "guess": "Succession",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Kieran Culkin",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "grammys": {
+                            "userTotalPointsForGame": 4,
+                            "RecordoftheYear": {
+                                "guess": "ABBA",
+                                "context": "Don\u2019t Shut Me Down",
+                                "categoryName": "Record of the Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "SongOfTheYear": {
+                                "guess": "Bonnie Raitt",
+                                "context": "Just Like That",
+                                "categoryName": "Song Of The Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "BestNewArtist": {
+                                "guess": "Samara Joy",
+                                "categoryName": "Best New Artist",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "AlbumOfTheYear": {
+                                "guess": "Harry Styles",
+                                "context": "Harry\u2019s House",
+                                "categoryName": "Album Of The Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "BestPopSoloPerformance": {
+                                "guess": "Adele",
+                                "context": "Easy on Me",
+                                "categoryName": "Best Pop Solo Performance",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "oscars": {
+                            "userTotalPointsForGame": 3,
+                            "BestPicture": {
+                                "guess": "Everything Everywhere All at Once",
+                                "categoryName": "Best Picture",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActorinaLeadingRole": {
+                                "guess": "Brendan Fraser",
+                                "context": "The Whale",
+                                "categoryName": "Actor in a Leading Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaLeadingRole": {
+                                "guess": "Michelle Williams",
+                                "context": "The Fabelmans",
+                                "categoryName": "Actress in a Leading Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaSupportingRole": {
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actor in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaSupportingRole": {
+                                "guess": "Angela Bassett",
+                                "context": "Black Panther: Wakanda Forever",
+                                "categoryName": "Actress in a Supporting Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            }
+                        },
+                        "userTotalPointsForGroup": 13
                     }
                 },
                 {
@@ -937,9 +1051,9 @@
                     "name": "Liam",
                     "userId": 9,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 }
@@ -1084,19 +1198,133 @@
                     "name": "Ethan",
                     "userId": 7,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
-                        "userTotalPointsForGroup": 0
+                        "emmys": {
+                            "userTotalPointsForGame": 6,
+                            "OutstandingDramaSeries": {
+                                "guess": "Succession",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Kieran Culkin",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "grammys": {
+                            "userTotalPointsForGame": 4,
+                            "RecordoftheYear": {
+                                "guess": "ABBA",
+                                "context": "Don\u2019t Shut Me Down",
+                                "categoryName": "Record of the Year",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "SongOfTheYear": {
+                                "guess": "Bonnie Raitt",
+                                "context": "Just Like That",
+                                "categoryName": "Song Of The Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "BestNewArtist": {
+                                "guess": "Samara Joy",
+                                "categoryName": "Best New Artist",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "AlbumOfTheYear": {
+                                "guess": "Harry Styles",
+                                "context": "Harry\u2019s House",
+                                "categoryName": "Album Of The Year",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "BestPopSoloPerformance": {
+                                "guess": "Adele",
+                                "context": "Easy on Me",
+                                "categoryName": "Best Pop Solo Performance",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "oscars": {
+                            "userTotalPointsForGame": 3,
+                            "BestPicture": {
+                                "guess": "Everything Everywhere All at Once",
+                                "categoryName": "Best Picture",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActorinaLeadingRole": {
+                                "guess": "Brendan Fraser",
+                                "context": "The Whale",
+                                "categoryName": "Actor in a Leading Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaLeadingRole": {
+                                "guess": "Michelle Williams",
+                                "context": "The Fabelmans",
+                                "categoryName": "Actress in a Leading Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaSupportingRole": {
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actor in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaSupportingRole": {
+                                "guess": "Angela Bassett",
+                                "context": "Black Panther: Wakanda Forever",
+                                "categoryName": "Actress in a Supporting Role",
+                                "pointsReceived": 0,
+                                "winner": []
+                            }
+                        },
+                        "userTotalPointsForGroup": 13
                     }
                 },
                 {
                     "name": "Emma",
                     "userId": 10,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -1104,9 +1332,9 @@
                     "name": "Noah",
                     "userId": 11,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -1114,9 +1342,9 @@
                     "name": "Mia",
                     "userId": 12,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 }
@@ -1134,18 +1362,18 @@
                     "name": "thea",
                     "userId": 19,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
                     }
                 },
                 {
                     "name": "James",
                     "userId": 3,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
                     }
                 }
             ]
@@ -1164,9 +1392,9 @@
                     "name": "Linnea",
                     "userId": 20,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": [],
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {},
                         "userTotalPointsForGroup": 0
                     }
                 },
@@ -1174,9 +1402,9 @@
                     "name": "Liam",
                     "userId": 9,
                     "games": {
-                        "emmys": [],
-                        "grammys": [],
-                        "oscars": []
+                        "emmys": {},
+                        "grammys": {},
+                        "oscars": {}
                     }
                 },
                 {

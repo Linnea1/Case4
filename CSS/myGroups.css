@@ -1,8 +1,12 @@
 /* mobile portrait */
+.tablet-group-title-button>h2:nth-child(1) {
+  font-family: Sora SemiBold;
+}
+
 .groups-container {
   background-color: var(--color-background);
   height: 100vh;
-  padding: 60px 30px 100px;
+  padding: 60px 20px 100px;
   overflow: scroll;
 }
 
@@ -38,6 +42,7 @@
 
 .group h3 {
   font-size: 20px;
+  font-family: Sora SemiBold;
 }
 
 .group-info {
@@ -124,6 +129,10 @@
     margin: 20px;
   }
 
+  .group {
+    padding-left: 2.5vw;
+  }
+
   .sticky-nav {
     z-index: 2;
   }
@@ -140,6 +149,11 @@
     display: flex;
     flex-direction: column;
     height: 100vh
+  }
+
+  .group {
+    height: 18vh;
+    padding-left: 4vw;
   }
 
   .groups {
