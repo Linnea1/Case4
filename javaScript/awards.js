@@ -26,6 +26,8 @@ function renderAwardsPage(awards) {
     <nav class="sticky-nav">${stickyNav()}</nav>
   `;
 
+  checkIfBetsAreThere();
+  
   document.querySelector(".fa-trophy").classList.add("current-page");
   document.querySelector(".text-awards").classList.add("current-page");
 

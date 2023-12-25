@@ -9,8 +9,10 @@ $requestMethod = $_SERVER["REQUEST_METHOD"];
 if($requestMethod == "POST"){
     allowJSON();
     saveUserChoices();
-} else if($requestMethod == "GET") {
+} else if($requestMethod == "GET" && isset($_GET["award"])) {
     checkIfUserHasBetted();
+} else {
+    makeAllUserGroupsSame();
 }
 
 function saveUserChoices() {
@@ -127,7 +129,7 @@ function saveUserChoices() {
     }
      $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
      file_put_contents($filename, $newJsonString);
-     $message = ["message" => "Saving betting choices were successful"];
+     $message = ["message" => "The betting choices were saved successfully"];
      send($message);
     
 }
@@ -222,6 +224,111 @@ function checkIfUserHasBetted() {
         send($arrayToSendBack);
     }
 
+}
+
+function makeAllUserGroupsSame() {
+    if(isset($_GET["userId"])) {
+        $userToFind = $_GET["userId"];
+
+        $filename = "../database/data.json";
+        $json = file_get_contents($filename);
+        $data = json_decode($json, true);
+        $users = $data["users"];
+        $groups = $data["groups"];
+
+        //Groups-array for user gets saved in array below
+        $userGroupArray = [];
+        
+        //User bets to send back gets saved in array below
+        $arrayOfAwards = [];
+
+        foreach($users as $user) {
+            if ($user["userId"] == $userToFind) {
+                $userGroupArray = $user["groups"];
+                $arrayOfAwards["userPointsInAllGroups"] = $user["pointsInAllGroups"];
+            }
+        }
+
+        if(count($userGroupArray) == 0) {
+            $warningMessage = [
+                                "warning" => "This user does not belong to a group yet, and therefore cannot start betting",
+                                "message" => "No bets have been made"
+                            ];
+            send($warningMessage, 404);
+        }
+
+        foreach($groups as $index => $group) {
+            if($group["groupId"] == $userGroupArray[0]) {
+                //If the user has no bets saved in the first group, i.e. game-object length is 0 or 1,
+                //the user has not played before, no matter if the user belongs to other groups.
+                $usersInGroup = $group["users"];
+                foreach($usersInGroup as $userIndex => $userInGroup) {
+                    if($userInGroup["userId"] == $userToFind) {
+                        $games = $userInGroup["games"];
+
+                        $arrayOfAwards["userTotalPointsForGroup"] = $userInGroup["games"]["userTotalPointsForGroup"];
+
+                        foreach($games as $gameName => $gameData) {
+                            $gameData = (array) $gameData;
+                            if(count($gameData) == 0) {
+                                $arrayOfAwards[$gameName] = [];
+                                continue;
+                            }
+                                $award = (array) $games[$gameName];
+                                foreach($award as $awardCategory => $value) {
+                                    $value = (array) $value;
+                                    if(count($value) == 1) {
+                                        if(isset($games[$gameName]["userTotalPointsForGame"])) {
+                                            $arrayOfAwards[$gameName]["userTotalPointsForGame"] = $games[$gameName]["userTotalPointsForGame"];
+            
+                                        }
+                                        continue;
+                                    }
+
+                                    $contextKeyExists = false;
+                                    $array = (array) $value;
+                                    foreach($array as $categoryIndex => $categoryValue) {
+                                        if($categoryIndex == "context") {
+                                            $contextKeyExists = true;
+                                        }  
+                                    }
+                                    
+                                    if(isset($array["guess"]) && isset($array["categoryName"]) && isset($array["pointsReceived"]) && isset($array["winner"])) {
+                                        $string = $array["guess"];
+                                        $stringCategory = $array["categoryName"];
+
+                                        if($contextKeyExists) {
+                                            $arrayOfAwards[$gameName][] = array(
+                                                "categoryName" => $array["categoryName"],
+                                                "guess" => $array["guess"],
+                                                "context" => $array["context"],
+                                                "pointsReceived" => $array["pointsReceived"],
+                                                "winner" => $array["winner"]
+                                            );
+
+                                        } else {
+                                            $arrayOfAwards[$gameName][] = array(
+                                                "categoryName" => $stringCategory,
+                                                "guess" => $string,
+                                                "pointsReceived" => $array["pointsReceived"],
+                                                "winner" => $array["winner"]
+
+                                            );
+                                        }
+                                    }    
+                                }
+                            }
+                        } 
+                    }
+                }
+            }
+        }
+
+
+        $arrayOfAwards["userId"] = intval($userToFind);
+       
+        send($arrayOfAwards);
+    
 }
 
 ?>

@@ -119,10 +119,10 @@
     display: flex;
     flex-direction: column;
 
-    height: 100%;
+    /*height: 100%;*/
     background-color: var(--color-background);
-    overflow: scroll;
-
+    /*overflow: scroll;*/
+    /*height: 220vh;*/
 }
 
 .bettingChoiceContainer {
@@ -166,6 +166,7 @@
 #changeCategoryContainerBettingPage {
     display: flex;
     flex-direction: row;
+    margin-bottom: 15vh;
 }
 
 #previousCategoryBettingPage {
@@ -181,4 +182,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*First award page checkmark CSS below*/
+.checkmark {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 22.5px;
+    height: 22.5px;
+    top: 0px;
+    right: 120px;
+    position: absolute;
+}
+
+.award-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.award-item > p {
+    position: relative;
+}
+
+.award-item > * {
+    text-align: left;
+}
+
+.awards-page {
+    margin-bottom: 10vh;
 }

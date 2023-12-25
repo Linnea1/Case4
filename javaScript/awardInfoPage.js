@@ -4,16 +4,14 @@ async function renderAwardInfoPage(event) {
     //if event currentTarget is one thing, send to API
     //otherwise, get from API and display
     //based on award, search json array, if award object is empty, user hasn't made bet yet,
-    //-> render starting betting page?
-    //if award object is not empty, have the server send back array and run last part of 
-    //this function
-
-    //let response = await fetch(`../PHP/groupInfo.php?userId=${userId}`);
-    
+    //--> render starting betting page?
+    //if award object is not empty, have the server send back an array
 
     if((event !== undefined) && (event.currentTarget.classList[0] === "award-item")) {
         let award = event.currentTarget.classList[1];
         console.log(award);
+        window.localStorage.setItem("award", `${award}`);
+
         let user = JSON.parse(localStorage.getItem("user"));
         let userId = JSON.stringify(user.userId);
     
@@ -46,7 +44,8 @@ async function renderAwardInfoPage(event) {
                 <h2>Välj nominering</h2>
                 <div id="awardCategoriesContainer">
                 </div>
-                <div id="startBettingAwardBettingPage">Tippa</div>
+                <div id="startBettingAwardBettingPage">START BETTING</div>
+                <nav class="sticky-nav">${stickyNav()}</nav>
             </div>
             `;
         
@@ -104,6 +103,115 @@ async function renderAwardInfoPage(event) {
                 <h2>Categories</h2>
                 <div id="awardCategoriesContainer"></div>
                 <div id="startBettingAwardBettingPage">Change bets</div>
+                <nav class="sticky-nav">${stickyNav()}</nav>
+            </div>
+            `;
+
+            let awardCategoriesContainer = document.querySelector("div#awardCategoriesContainer");
+            for(let i = 0; i < userAwardArray.length - 1; i++) {
+                let categoryContainer = document.createElement("div");
+                categoryContainer.classList.add("categoryAIPage");
+                let categoryName = document.createElement("h3");
+                categoryName.classList.add("categoryNameAIPage");
+                let userBettingChoice = document.createElement("div");
+                userBettingChoice.classList.add("bettingChoiceAIPage");
+                categoryContainer.appendChild(categoryName);
+                categoryContainer.appendChild(userBettingChoice);
+
+                awardCategoriesContainer.appendChild(categoryContainer);
+                categoryName.textContent = `${userAwardArray[i].category}`;
+                userBettingChoice.textContent = `${userAwardArray[i].categoryChoice}`;
+            }
+
+            document.querySelector("div#startBettingAwardBettingPage").addEventListener("click", renderBettingPage);
+        }
+    } else {
+        let award = window.localStorage.getItem("award");
+        let user = JSON.parse(localStorage.getItem("user"));
+        let userId = JSON.stringify(user.userId);
+    
+        let response = await fetch(`../PHP/userBettingChoices.php?award=${award}&userId=${userId}`);
+        let resource = await response.json();
+
+        if(resource.message !== undefined) {
+            let awardFirstLetterUppercase = award.charAt(0).toUpperCase() + award.slice(1);
+
+            let dateOfAward;
+            
+            for(let i = 0; i < awards.length; i++) {
+                if(awards[i].award === awardFirstLetterUppercase) {
+                    dateOfAward = awards[i].date;
+                   
+                }
+            }
+            
+            main.innerHTML = `
+            <div id="awardInfoContainerAIPage">
+                <div id="awardImageContainerAIPage">
+                    <div id="awardNameAndDate">
+                        <h1>${awardFirstLetterUppercase}</h1>
+                        <p>${dateOfAward}</p>
+                    </div>
+                </div>
+              
+                <h2>Välj nominering</h2>
+                <div id="awardCategoriesContainer">
+                </div>
+                <div id="startBettingAwardBettingPage">START BETTING</div>
+                <nav class="sticky-nav">${stickyNav()}</nav>
+            </div>
+            `;
+        
+            for(let i = 0; i < awards.length; i++) {
+                if(awards[i].award === awardFirstLetterUppercase) {
+                    let categoriesArray = awards[i].categories;
+                    for(let ii = 0; ii < categoriesArray.length; ii++) {
+                        let categoryContainer = document.createElement("div");
+                        categoryContainer.classList.add("categoryAIPage");
+                        let categoryName = document.createElement("h3");
+                        categoryName.classList.add("categoryNameAIPage");
+                        categoryName.textContent = categoriesArray[ii].category;
+                        let bettingChoice = document.createElement("div");
+                        bettingChoice.classList.add("bettingChoiceAIPage");
+                        bettingChoice.textContent = "No bet";
+                        categoryContainer.appendChild(categoryName);
+                        categoryContainer.appendChild(bettingChoice);
+                        document.querySelector("div#awardCategoriesContainer").appendChild(categoryContainer);
+                    }
+                }
+            }
+
+                
+            let startBettingButton = document.querySelector("div#startBettingAwardBettingPage");
+            startBettingButton.addEventListener("click", renderBettingPage);
+            startBettingButton.style.pointerEvents = "auto";
+        } else {
+            let array = resource;
+            console.log(array);
+
+            award = array[array.length-1].currentAward;
+            for(let i = 0; i < awards.length; i++) {
+                if(awards[i].award === award) {
+                    let dateOfAward = awards[i].date;
+                    array[array.length-1]["date"] = dateOfAward;
+                    console.log(array);
+                }
+            }
+
+            let userAwardArray = array;
+            main.innerHTML = `
+            <div id="awardInfoContainerAIPage">
+                <div id="awardImageContainerAIPage">
+                    <div id="awardNameAndDate">
+                        <h1>${userAwardArray[userAwardArray.length-1].currentAward}</h1>
+                        <p>${userAwardArray[userAwardArray.length-1].date}</p>
+                    </div>
+                </div>
+
+                <h2>Categories</h2>
+                <div id="awardCategoriesContainer"></div>
+                <div id="startBettingAwardBettingPage">Change bets</div>
+                <nav class="sticky-nav">${stickyNav()}</nav>
             </div>
             `;
 
@@ -127,6 +235,18 @@ async function renderAwardInfoPage(event) {
         }
     }
 
+    document.querySelector(".fa-trophy").classList.add("current-page");
+    document.querySelector(".text-awards").classList.add("current-page");
+  
+    document.querySelector(".nav-groups").addEventListener("click", () => renderMyGroups(false));
+    document.querySelector(".nav-awards").addEventListener("click", () => renderAwardsPage(awards));
+    document.querySelector(".nav-profile").addEventListener("click", renderProfilePage);
+    document.querySelector(".nav-home").addEventListener("click", renderHomePage);
+
+    
+    /*let response = await fetch(`../PHP/userBettingChoices.php?userId=${userId}`);
+    let resource = await response.json();
+    console.log(resource);*/
 }
 
 function renderBettingPage(event) {
@@ -135,8 +255,9 @@ function renderBettingPage(event) {
     let awardCategories = document.querySelectorAll("div.categoryAIPage");
     let firstCategoryOfCurrentAward = awardCategories[0].firstElementChild.innerHTML;
     console.log(firstCategoryOfCurrentAward);
-    
     console.log(awardCategories[0]);
+
+    //Find right award
     let currentAward;
     let dateOfAward;
     let i = 0;
@@ -144,7 +265,6 @@ function renderBettingPage(event) {
         if(firstCategoryOfCurrentAward === awards[i]["categories"][0].category) {
             currentAward = awards[i]["award"];
             dateOfAward = awards[i]["date"];
-            //Find right award
         }
 
         i++
@@ -153,15 +273,36 @@ function renderBettingPage(event) {
     main.innerHTML =  `
     <div id="bettingPageContainer">
         <h1></h1>
+        <div id="cancelButton">Cancel</div>
         <div id="bettingsContainerBettingPage"></div>
         <div id="changeCategoryContainerBettingPage">
         <div id="continueButtonBettingPage">Next</div> 
         </div>
+        <nav class="sticky-nav">${stickyNav()}</nav>
     </div>
     `;
 
+    //Navbar addEventListeners to different part of the app below
+    document.querySelector(".fa-trophy").classList.add("current-page");
+    document.querySelector(".text-awards").classList.add("current-page");
+
+    document.querySelector(".nav-groups").addEventListener("click", () => renderMyGroups(false));
+    document.querySelector(".nav-awards").addEventListener("click", () => renderAwardsPage(awards));
+    document.querySelector(".nav-profile").addEventListener("click", renderProfilePage);
+    document.querySelector(".nav-home").addEventListener("click", renderHomePage);
+
+    let previousCategory = document.createElement("div");
+    document.querySelector("div#changeCategoryContainerBettingPage").prepend(previousCategory);
+    previousCategory.setAttribute("id", "previousCategoryBettingPage");
+    previousCategory.textContent = "Previous";
+    previousCategory.addEventListener("click", renderPreviousCategory);
+    
+    previousCategory.style.pointerEvents = "none";
+
     let categoryNameHeading = document.querySelector("div#bettingPageContainer > h1");
     categoryNameHeading.textContent = firstCategoryOfCurrentAward;
+
+    document.querySelector("div#cancelButton").addEventListener("click", renderAwardInfoPage);
 
     let nomineesArray;
     let categoriesArray;
@@ -253,14 +394,17 @@ function renderBettingPage(event) {
         continueButton.style.pointerEvents = "none";
         continueButton.style.backgroundColor = "#343434";
 
-        if(!document.querySelector("div#previousCategoryBettingPage")) {
+        /*if(!document.querySelector("div#previousCategoryBettingPage")) {
             let previousCategory = document.createElement("div");
             document.querySelector("div#changeCategoryContainerBettingPage").prepend(previousCategory);
             previousCategory.setAttribute("id", "previousCategoryBettingPage");
             previousCategory.textContent = "Previous";
             previousCategory.addEventListener("click", renderPreviousCategory);
-        }
+        }*/
         
+        document.querySelector("div#previousCategoryBettingPage").style.pointerEvents = "auto";
+        document.querySelector("div#previousCategoryBettingPage").addEventListener("click", renderPreviousCategory);
+
         categoryIndex++;
         
         if(userAwardArray.length === categoryIndex-1) {
@@ -468,11 +612,14 @@ function renderBettingPage(event) {
         if(categoryIndex === 0) {
             console.log(nextObjectToShow);
             changeCategoryContainer.innerHTML = `
+            <div id="previousCategoryBettingPage">Previous</div>
             <div id="continueButtonBettingPage">Next</div> 
             `;
+
             continueButton = document.querySelector("div#continueButtonBettingPage");
             continueButton.style.backgroundColor = "#343434";
             continueButton.addEventListener("click", continueBetting);
+            document.querySelector("div#previousCategoryBettingPage").style.pointerEvents = "none";
 
             if(firstCategoryOfCurrentAward === "Best Picture") {
                 bettingsContainer.innerHTML = "";
@@ -676,8 +823,6 @@ function renderBettingPage(event) {
 
         userAwardArray.push(lastArrayObject);
 
-
-        //userId måste skickas med, tillsammans med array
         console.log(userAwardArray);
         let postRequestDetails = {
             method: "POST",
@@ -709,8 +854,18 @@ function renderBettingPage(event) {
             <h2>Categories</h2>
             <div id="awardCategoriesContainer"></div>
             <div id="startBettingAwardBettingPage">Change bets</div>
+            <nav class="sticky-nav">${stickyNav()}</nav>
         </div>
         `;
+
+        //Navbar addEventListeners to different part of the app below
+        document.querySelector(".fa-trophy").classList.add("current-page");
+        document.querySelector(".text-awards").classList.add("current-page");
+
+        document.querySelector(".nav-groups").addEventListener("click", () => renderMyGroups(false));
+        document.querySelector(".nav-awards").addEventListener("click", () => renderAwardsPage(awards));
+        document.querySelector(".nav-profile").addEventListener("click", renderProfilePage);
+        document.querySelector(".nav-home").addEventListener("click", renderHomePage);
 
         let awardCategoriesContainer = document.querySelector("div#awardCategoriesContainer");
         for(let i = 0; i < userAwardArray.length - 1; i++) {
@@ -729,7 +884,31 @@ function renderBettingPage(event) {
         }
 
         document.querySelector("div#startBettingAwardBettingPage").addEventListener("click", renderBettingPage);
+    }
+}
 
-  
+async function checkIfBetsAreThere() {
+
+    let user = JSON.parse(localStorage.getItem("user"));
+    let userId = JSON.stringify(user.userId);
+
+    let awardItems = document.querySelectorAll("button.award-item");
+    let dates = document.querySelectorAll("button.award-item > p");
+
+
+    for(let i = 0; i < awardItems.length; i++ ) {
+        let award = awardItems[i].classList[1];
+
+        let response = await fetch(`../PHP/userBettingChoices.php?award=${award}&userId=${userId}`);
+
+        let resource = await response.json();
+
+        if(resource.message === undefined) {
+            console.log(resource);
+            let checkmark = document.createElement("img");
+            checkmark.setAttribute("src", "../images/awardCheckmark.png");
+            dates[i].appendChild(checkmark);
+            checkmark.setAttribute("class", "checkmark");
+        }
     }
 }
