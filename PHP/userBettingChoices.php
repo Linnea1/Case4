@@ -12,7 +12,7 @@ if($requestMethod == "POST"){
 } else if($requestMethod == "GET" && isset($_GET["award"])) {
     checkIfUserHasBetted();
 } else {
-    makeAllUserGroupsSame();
+    createArrayWithAllUserData();
 }
 
 function saveUserChoices() {
@@ -226,7 +226,7 @@ function checkIfUserHasBetted() {
 
 }
 
-function makeAllUserGroupsSame() {
+function createArrayWithAllUserData() {
     if(isset($_GET["userId"])) {
         $userToFind = $_GET["userId"];
 

@@ -18,7 +18,9 @@ async function renderAwardInfoPage(event) {
         let response = await fetch(`../PHP/userBettingChoices.php?award=${award}&userId=${userId}`);
         let resource = await response.json();
 
-     
+        /*let response1 = await fetch(`../PHP/userBettingChoices.php?userId=${userId}`);
+        let resource2 = await response1.json();
+        console.log(resource2);*/
 
         if(resource.message !== undefined) {
             let awardFirstLetterUppercase = award.charAt(0).toUpperCase() + award.slice(1);
@@ -244,9 +246,6 @@ async function renderAwardInfoPage(event) {
     document.querySelector(".nav-home").addEventListener("click", renderHomePage);
 
     
-    /*let response = await fetch(`../PHP/userBettingChoices.php?userId=${userId}`);
-    let resource = await response.json();
-    console.log(resource);*/
 }
 
 function renderBettingPage(event) {

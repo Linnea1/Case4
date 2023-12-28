@@ -231,7 +231,7 @@
             "username": "Luna",
             "email": "luna@gmail.com",
             "password": "123",
-            "pointsInAllGroups": 12,
+            "pointsInAllGroups": 16,
             "groups": [
                 7,
                 8
@@ -1916,7 +1916,7 @@
                         "oscars": {
                             "userTotalPointsForGame": 4,
                             "BestPicture": {
-                                "guess": "Elvis",
+                                "guess": "Women Talking",
                                 "categoryName": "Best Picture",
                                 "pointsReceived": 0,
                                 "winner": []
@@ -2253,8 +2253,44 @@
                                 "winner": []
                             }
                         },
-                        "oscars": [],
-                        "userTotalPointsForGroup": 4
+                        "oscars": {
+                            "userTotalPointsForGame": 4,
+                            "BestPicture": {
+                                "guess": "Women Talking",
+                                "categoryName": "Best Picture",
+                                "pointsReceived": 0,
+                                "winner": []
+                            },
+                            "ActorinaLeadingRole": {
+                                "guess": "Brendan Fraser",
+                                "context": "The Whale",
+                                "categoryName": "Actor in a Leading Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaLeadingRole": {
+                                "guess": "Michelle Yeoh",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Leading Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActorinaSupportingRole": {
+                                "guess": "Ke Huy Quan",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actor in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "ActressinaSupportingRole": {
+                                "guess": "Jamie Lee Curtis",
+                                "context": "Everything Everywhere All at Once",
+                                "categoryName": "Actress in a Supporting Role",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
+                        "userTotalPointsForGroup": 8
                     }
                 }
             ]
