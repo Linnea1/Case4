@@ -23,7 +23,9 @@ $requestData = json_decode($requestJSON, true);
 if(
   !isset(
     $requestData["groupName"],
-    $requestData["groupMembers"]
+    $requestData["groupMembers"],
+    $requestData["loggedInUsername"],
+    $requestData["loggedInUserResult"]
   ) || (
     $requestData["groupName"] === "" ||
     $requestData["groupMembers"] === ""
@@ -33,6 +35,8 @@ if(
   abort($error, 400);
 } else {
   $groupName = $requestData["groupName"];
+  $loggedInUsername = $requestData["loggedInUsername"];
+  $loggedInUserResult = $requestData["loggedInUserResult"];
 
   if (strlen($groupName) > $maxGroupNameLength) {
     $error = ["message" => "Group name can only contain 15 characters."];
@@ -69,9 +73,12 @@ if(
           ),
         );
 
-        $newUser["games"]["emmys"] = new stdClass();
-        $newUser["games"]["grammys"] = new stdClass();
-        $newUser["games"]["oscars"] = new stdClass();
+        if ($groupMember === $loggedInUsername) {
+            $newUser["games"]["emmys"] = $loggedInUserResult["emmys"];
+            $newUser["games"]["grammys"] = $loggedInUserResult["grammys"];
+            $newUser["games"]["oscars"] = $loggedInUserResult["oscars"];
+            $newUser["games"]["userTotalPointsForGroup"] = $loggedInUserResult["userTotalPointsForGroup"];
+        }
 
         $newGroup["users"][] = $newUser;
 
