@@ -2,6 +2,11 @@
 
 async function renderCreateNewGroupPage() {
   let loggedInUser = getUserData();
+  let username = loggedInUser.username;
+  let userId = loggedInUser.userId;
+  let response = await fetch(`../PHP/userBettingChoices.php?userId=${userId}`);
+  let userResult = await response.json();
+
   main.classList.remove("bg-home");
   main.innerHTML = `
     <div class="page-create-new-group">
@@ -50,7 +55,7 @@ async function renderCreateNewGroupPage() {
   });
 
   newGroupForm.addEventListener("submit", (event) =>
-    createNewGroup(event, newGroupForm, message)
+    createNewGroup(event, newGroupForm, message, username, userResult)
   );
 
   newGroupName.addEventListener("input", () => {
@@ -64,7 +69,7 @@ async function renderCreateNewGroupPage() {
   closeCreateGroup.addEventListener("click", () => renderMyGroups(false));
 }
 
-async function createNewGroup(event, newGroupForm, message) {
+async function createNewGroup(event, newGroupForm, message, username, userResult) {
   event.preventDefault();
 
   const listItemContainer = document.querySelectorAll(".list-item-container");
@@ -87,6 +92,8 @@ async function createNewGroup(event, newGroupForm, message) {
       body: JSON.stringify({
         groupName: newGroupForm.querySelector(".new-group-name").value,
         groupMembers: groupMembers,
+        loggedInUsername: username,
+        loggedInUserResult: userResult,
       }),
     });
 
