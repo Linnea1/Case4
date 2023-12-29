@@ -227,7 +227,7 @@ async function renderProfilePage() {
             <p class="settingsErrorMessagePP"></p>
             <div class="PPbuttonContainer">
                 <button class="settingsButton exitPopup profilePictureCancel">Cancel</button>
-                <button type="submit" class="profilePictureFormButton settingsButton">Change profile Picture</button>
+                <button type="submit" class="profilePictureFormButton settingsButton">Save</button>
             </div>
         </form>
         `);
