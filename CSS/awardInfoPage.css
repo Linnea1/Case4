@@ -580,7 +580,21 @@ div#cancelButton {
 @media only screen and (max-height: 1000px) and (min-width: 600px) and (orientation: portrait) {
     #awardInfoContainerAIPage {
         margin-left: 9.71%;
-        height: 112vh;
+        height: 120vh;
+    }
+
+    div#cancelButton {
+        min-height: 45px;
+        position: relative;
+        bottom: 17vh;
+        left: 70vw;
+    }
+}
+
+@media only screen and (max-height: 800px) and (min-width: 600px) and (orientation: portrait) {
+    #awardInfoContainerAIPage {
+        margin-left: 9.71%;
+        height: 132vh;
     }
 
     div#cancelButton {
@@ -593,7 +607,7 @@ div#cancelButton {
 
 @media only screen and (max-height: 780px) and (min-width: 600px) and (orientation: landscape) {
 
-    #awardImageContainerAIPage {
+    div#awardImageContainerAIPage {
         height: 45vh;
         background-position: center;
         background-size: cover;
