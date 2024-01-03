@@ -9,7 +9,6 @@ async function renderAwardInfoPage(event) {
 
     if((event !== undefined) && (event.currentTarget.classList[0] === "award-item")) {
         let award = event.currentTarget.classList[1];
-        console.log(award);
         window.localStorage.setItem("award", `${award}`);
 
         let user = JSON.parse(localStorage.getItem("user"));
@@ -18,9 +17,8 @@ async function renderAwardInfoPage(event) {
         let response = await fetch(`../PHP/userBettingChoices.php?award=${award}&userId=${userId}`);
         let resource = await response.json();
 
-        /*let response1 = await fetch(`../PHP/userBettingChoices.php?userId=${userId}`);
+        let response1 = await fetch(`../PHP/userBettingChoices.php?userId=${userId}`);
         let resource2 = await response1.json();
-        console.log(resource2);*/
 
         if(resource.message !== undefined) {
             let awardFirstLetterUppercase = award.charAt(0).toUpperCase() + award.slice(1);
@@ -43,12 +41,12 @@ async function renderAwardInfoPage(event) {
                     </div>
                 </div>
               
-                <h2>Välj nominering</h2>
+                <h2>Place your bets</h2>
                 <div id="awardCategoriesContainer">
                 </div>
                 <div id="startBettingAwardBettingPage">START BETTING</div>
-                <nav class="sticky-nav">${stickyNav()}</nav>
             </div>
+            <nav class="sticky-nav">${stickyNav()}</nav>
             `;
         
             for(let i = 0; i < awards.length; i++) {
@@ -80,15 +78,16 @@ async function renderAwardInfoPage(event) {
                 startBettingButton.style.pointerEvents = "auto";
             }
         } else {
+
+            //Make it so results show for one award in this instruction block
+
             let array = resource;
-            console.log(array);
 
             award = array[array.length-1].currentAward;
             for(let i = 0; i < awards.length; i++) {
                 if(awards[i].award === award) {
                     let dateOfAward = awards[i].date;
                     array[array.length-1]["date"] = dateOfAward;
-                    console.log(array);
                 }
             }
 
@@ -105,8 +104,8 @@ async function renderAwardInfoPage(event) {
                 <h2>Categories</h2>
                 <div id="awardCategoriesContainer"></div>
                 <div id="startBettingAwardBettingPage">Change bets</div>
-                <nav class="sticky-nav">${stickyNav()}</nav>
             </div>
+            <nav class="sticky-nav">${stickyNav()}</nav>
             `;
 
             let awardCategoriesContainer = document.querySelector("div#awardCategoriesContainer");
@@ -160,8 +159,8 @@ async function renderAwardInfoPage(event) {
                 <div id="awardCategoriesContainer">
                 </div>
                 <div id="startBettingAwardBettingPage">START BETTING</div>
-                <nav class="sticky-nav">${stickyNav()}</nav>
             </div>
+            <nav class="sticky-nav">${stickyNav()}</nav>
             `;
         
             for(let i = 0; i < awards.length; i++) {
@@ -189,14 +188,12 @@ async function renderAwardInfoPage(event) {
             startBettingButton.style.pointerEvents = "auto";
         } else {
             let array = resource;
-            console.log(array);
 
             award = array[array.length-1].currentAward;
             for(let i = 0; i < awards.length; i++) {
                 if(awards[i].award === award) {
                     let dateOfAward = awards[i].date;
                     array[array.length-1]["date"] = dateOfAward;
-                    console.log(array);
                 }
             }
 
@@ -213,8 +210,9 @@ async function renderAwardInfoPage(event) {
                 <h2>Categories</h2>
                 <div id="awardCategoriesContainer"></div>
                 <div id="startBettingAwardBettingPage">Change bets</div>
-                <nav class="sticky-nav">${stickyNav()}</nav>
             </div>
+            <nav class="sticky-nav">${stickyNav()}</nav>
+
             `;
 
             let awardCategoriesContainer = document.querySelector("div#awardCategoriesContainer");
@@ -253,8 +251,6 @@ function renderBettingPage(event) {
     let userAwardArray = [];
     let awardCategories = document.querySelectorAll("div.categoryAIPage");
     let firstCategoryOfCurrentAward = awardCategories[0].firstElementChild.innerHTML;
-    console.log(firstCategoryOfCurrentAward);
-    console.log(awardCategories[0]);
 
     //Find right award
     let currentAward;
@@ -277,8 +273,9 @@ function renderBettingPage(event) {
         <div id="changeCategoryContainerBettingPage">
         <div id="continueButtonBettingPage">Next</div> 
         </div>
-        <nav class="sticky-nav">${stickyNav()}</nav>
     </div>
+    <nav class="sticky-nav">${stickyNav()}</nav>
+
     `;
 
     //Navbar addEventListeners to different part of the app below
@@ -297,6 +294,8 @@ function renderBettingPage(event) {
     previousCategory.addEventListener("click", renderPreviousCategory);
     
     previousCategory.style.pointerEvents = "none";
+    previousCategory.style.backgroundColor = "#181818";
+    previousCategory.style.border = "1px solid #484848";
 
     let categoryNameHeading = document.querySelector("div#bettingPageContainer > h1");
     categoryNameHeading.textContent = firstCategoryOfCurrentAward;
@@ -357,23 +356,32 @@ function renderBettingPage(event) {
 
     let continueButton = document.querySelector("div#continueButtonBettingPage");
     continueButton.style.pointerEvents = "none";
-    continueButton.style.backgroundColor = "#343434";
+    continueButton.style.backgroundColor = "rgb(24, 24, 24)";
+    continueButton.style.border = "1px solid #484848";
+
     continueButton.addEventListener("click", continueBetting);
 
     function displayUserChoice(event) {
         usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
         continueButton = document.querySelector("div#continueButtonBettingPage");
-
-        if(this.style.backgroundColor !== "darkgrey") {
+        if(this.style.backgroundColor !== "rgba(222, 141, 67, 0.3)") {
             
-            this.style.backgroundColor = "darkgrey";
+            this.style.backgroundColor = "rgba(222, 141, 67, 0.3)";
             continueButton.style.pointerEvents = "auto";
-            continueButton.style.backgroundColor = "darkgrey";
-        } else if(this.style.backgroundColor === "darkgrey") {
+            continueButton.style.backgroundColor = "#C98649";
+            continueButton.style.color = "#000000";
+            this.style.borderLeft = "solid 3px #DEDEDE";
 
-            this.style.backgroundColor = "black";
+
+        } else if(this.style.backgroundColor === "rgba(222, 141, 67, 0.3)") {
+
+            this.style.backgroundColor = "#181818";
+            this.style.borderLeft = "solid 3px #727272";
+
             continueButton.style.pointerEvents = "none";
-            continueButton.style.backgroundColor = "#343434";
+            continueButton.style.backgroundColor = "rgb(24, 24, 24)";
+            continueButton.style.border = "1px solid #484848";
+            continueButton.style.color = "rgb(222, 222, 222)";
         }
 
         for(let i = 0; i < usersPossibleChoices.length; i++) {
@@ -381,8 +389,9 @@ function renderBettingPage(event) {
             continue;
            }
 
-            if(usersPossibleChoices[i].style.backgroundColor === "darkgrey") {
-                usersPossibleChoices[i].style.backgroundColor = "black";
+            if(usersPossibleChoices[i].style.backgroundColor === "rgba(222, 141, 67, 0.3)") {
+                usersPossibleChoices[i].style.backgroundColor = "#181818";
+                usersPossibleChoices[i].style.borderLeft = "solid 3px #727272";
             } 
         }
     }
@@ -391,7 +400,9 @@ function renderBettingPage(event) {
     function continueBetting(event) {
        
         continueButton.style.pointerEvents = "none";
-        continueButton.style.backgroundColor = "#343434";
+        continueButton.style.backgroundColor = "rgb(24, 24, 24)";
+        continueButton.style.border = "1px solid #484848";
+        continueButton.style.color = "rgb(222, 222, 222)";
 
         /*if(!document.querySelector("div#previousCategoryBettingPage")) {
             let previousCategory = document.createElement("div");
@@ -403,13 +414,15 @@ function renderBettingPage(event) {
         
         document.querySelector("div#previousCategoryBettingPage").style.pointerEvents = "auto";
         document.querySelector("div#previousCategoryBettingPage").addEventListener("click", renderPreviousCategory);
+        document.querySelector("div#previousCategoryBettingPage").style.backgroundColor = "#C98649";
+        document.querySelector("div#previousCategoryBettingPage").style.color = "#000000";
 
         categoryIndex++;
         
         if(userAwardArray.length === categoryIndex-1) {
             let usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
             for(let i = 0; i < usersPossibleChoices.length; i++) {
-                if(usersPossibleChoices[i].style.backgroundColor === "darkgrey") {
+                if(usersPossibleChoices[i].style.backgroundColor === "rgba(222, 141, 67, 0.3)") {
                     let awardObject = {};
 
                     let bettingChoice = usersPossibleChoices[i].children[0].textContent;
@@ -428,7 +441,7 @@ function renderBettingPage(event) {
             for(let i = 0; i < userAwardArray.length; i++) {
                 if(i === categoryIndex-1) {
                     for(let ii = 0; ii < usersPossibleChoices.length; ii++) {
-                        if(usersPossibleChoices[ii].style.backgroundColor === "darkgrey") {
+                        if(usersPossibleChoices[ii].style.backgroundColor === "rgba(222, 141, 67, 0.3)") {
                             let awardObject = {};
 
                             let bettingChoice = usersPossibleChoices[ii].children[0].textContent;
@@ -470,12 +483,11 @@ function renderBettingPage(event) {
 
             if(categoryIndex === categoriesArray.length-1) {
                 lastCategory = categoriesArray[i];
-                continueButton.textContent = "Submit";
+                continueButton.textContent = "Submit Bets";
                 continueButton.removeEventListener("click", continueBetting);
                 continueButton.addEventListener("click", showDoneAwardInfoPage);
             } 
         }
-        console.log(nextObjectToShow);
         
         categoryNameHeading.textContent = nextObjectToShow.category;
 
@@ -568,9 +580,10 @@ function renderBettingPage(event) {
 
                     for(let i = 0; i < nomineeAlternatives.length; i++) {
                         if(nomineeAlternatives[i].textContent === choiceToHighlight) {
-                            usersPossibleChoices[i].style.backgroundColor = "darkgrey";
+                            usersPossibleChoices[i].style.backgroundColor = "rgba(222, 141, 67, 0.3)";
                             continueButton.style.pointerEvents = "auto";
-                            continueButton.style.backgroundColor = "darkgrey";
+                            continueButton.style.backgroundColor = "#C98649";
+                            continueButton.style.color = "#000000";
                         }
                     }
                 }
@@ -594,7 +607,6 @@ function renderBettingPage(event) {
         for(let i = 0; i < userAwardArray.length; i++) {
             if(i === categoryIndex) {
                 previousChoice = userAwardArray[i].categoryChoice;
-                console.log(previousChoice);
             }
         }
 
@@ -609,16 +621,21 @@ function renderBettingPage(event) {
         categoryNameHeading.textContent = nextObjectToShow.category;
 
         if(categoryIndex === 0) {
-            console.log(nextObjectToShow);
             changeCategoryContainer.innerHTML = `
             <div id="previousCategoryBettingPage">Previous</div>
             <div id="continueButtonBettingPage">Next</div> 
             `;
 
             continueButton = document.querySelector("div#continueButtonBettingPage");
-            continueButton.style.backgroundColor = "#343434";
+            continueButton.style.backgroundColor = "#C98649";
+            continueButton.style.color = "#000000";
             continueButton.addEventListener("click", continueBetting);
             document.querySelector("div#previousCategoryBettingPage").style.pointerEvents = "none";
+
+            document.querySelector("div#previousCategoryBettingPage").style.pointerEvents = "none";
+            document.querySelector("div#previousCategoryBettingPage").style.backgroundColor = "#181818";
+            document.querySelector("div#previousCategoryBettingPage").style.border = "1px solid #484848";
+
 
             if(firstCategoryOfCurrentAward === "Best Picture") {
                 bettingsContainer.innerHTML = "";
@@ -664,9 +681,11 @@ function renderBettingPage(event) {
 
             for(let i = 0; i < nomineeAlternatives.length; i++) {
                 if(nomineeAlternatives[i].textContent === previousChoice) {
-                    usersPossibleChoices[i].style.backgroundColor = "darkgrey";
+                    usersPossibleChoices[i].style.backgroundColor = "rgba(222, 141, 67, 0.3)";
+                    usersPossibleChoices[i].style.borderLeft = "solid 3px #DEDEDE";
+
                     continueButton.style.pointerEvents = "auto";
-                    continueButton.style.backgroundColor = "darkgrey";
+                    continueButton.style.backgroundColor = "#C98649";
                 }
             }
 
@@ -757,9 +776,12 @@ function renderBettingPage(event) {
 
         for(let i = 0; i < nomineeAlternatives.length; i++) {
             if(nomineeAlternatives[i].textContent === previousChoice) {
-                usersPossibleChoices[i].style.backgroundColor = "darkgrey";
+                usersPossibleChoices[i].style.backgroundColor = "rgba(222, 141, 67, 0.3)";
+                usersPossibleChoices[i].style.borderLeft = "solid 3px #DEDEDE";
+
                 continueButton.style.pointerEvents = "auto";
-                continueButton.style.backgroundColor = "darkgrey";
+                continueButton.style.backgroundColor = "#C98649";
+                continueButton.style.color = "#000000";
             }
         }
     }
@@ -773,7 +795,7 @@ function renderBettingPage(event) {
         if(userAwardArray.length === categoryIndex-1) {
             let usersPossibleChoices = document.querySelectorAll(".bettingChoiceContainer");
             for(let i = 0; i < usersPossibleChoices.length; i++) {
-                if(usersPossibleChoices[i].style.backgroundColor === "darkgrey") {
+                if(usersPossibleChoices[i].style.backgroundColor === "rgba(222, 141, 67, 0.3)") {
                     let awardObject = {};
 
                     let bettingChoice = usersPossibleChoices[i].children[0].textContent;
@@ -792,7 +814,7 @@ function renderBettingPage(event) {
             for(let i = 0; i < userAwardArray.length; i++) {
                 if(i === categoryIndex-1) {
                     for(let ii = 0; ii < usersPossibleChoices.length; ii++) {
-                        if(usersPossibleChoices[ii].style.backgroundColor === "darkgrey") {
+                        if(usersPossibleChoices[ii].style.backgroundColor === "rgba(222, 141, 67, 0.3)") {
                             let awardObject = {};
 
                             let bettingChoice = usersPossibleChoices[ii].children[0].textContent;
@@ -822,7 +844,6 @@ function renderBettingPage(event) {
 
         userAwardArray.push(lastArrayObject);
 
-        console.log(userAwardArray);
         let postRequestDetails = {
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -835,11 +856,7 @@ function renderBettingPage(event) {
         if(!response.ok) {
             console.log(response);
 
-        } else {
-            console.log(response);
-            console.log(resource);
-
-        }
+        } 
 
         main.innerHTML = `
         <div id="awardInfoContainerAIPage">
@@ -853,8 +870,8 @@ function renderBettingPage(event) {
             <h2>Categories</h2>
             <div id="awardCategoriesContainer"></div>
             <div id="startBettingAwardBettingPage">Change bets</div>
-            <nav class="sticky-nav">${stickyNav()}</nav>
         </div>
+        <nav class="sticky-nav">${stickyNav()}</nav>
         `;
 
         //Navbar addEventListeners to different part of the app below
@@ -903,7 +920,6 @@ async function checkIfBetsAreThere() {
         let resource = await response.json();
 
         if(resource.message === undefined) {
-            console.log(resource);
             let checkmark = document.createElement("img");
             checkmark.setAttribute("src", "../images/awardCheckmark.png");
             dates[i].appendChild(checkmark);

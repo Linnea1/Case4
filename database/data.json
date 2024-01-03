@@ -231,7 +231,7 @@
             "username": "Luna",
             "email": "luna@gmail.com",
             "password": "123",
-            "pointsInAllGroups": 16,
+            "pointsInAllGroups": 28,
             "groups": [
                 7,
                 8
@@ -1875,7 +1875,49 @@
                     "name": "Luna",
                     "userId": 23,
                     "games": {
-                        "emmys": [],
+                        "emmys": {
+                            "userTotalPointsForGame": 6,
+                            "OutstandingDramaSeries": {
+                                "guess": "Succession",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Kieran Culkin",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
                         "grammys": {
                             "userTotalPointsForGame": 4,
                             "RecordoftheYear": {
@@ -1950,7 +1992,7 @@
                                 "winner": []
                             }
                         },
-                        "userTotalPointsForGroup": 8
+                        "userTotalPointsForGroup": 14
                     }
                 },
                 {
@@ -2215,7 +2257,49 @@
                     "name": "Luna",
                     "userId": 23,
                     "games": {
-                        "emmys": [],
+                        "emmys": {
+                            "userTotalPointsForGame": 6,
+                            "OutstandingDramaSeries": {
+                                "guess": "Succession",
+                                "categoryName": "Outstanding Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingComedySeries": {
+                                "guess": "The Bear",
+                                "categoryName": "Outstanding Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaDramaSeries": {
+                                "guess": "Kieran Culkin",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actor in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaDramaSeries": {
+                                "guess": "Sarah Snook",
+                                "context": "Succession",
+                                "categoryName": "Outstanding Lead Actress in a Drama Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActressinaComedySeries": {
+                                "guess": "Quinta Brunson",
+                                "context": "Abbott Elementary",
+                                "categoryName": "Outstanding Lead Actress in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            },
+                            "OutstandingLeadActorinaComedySeries": {
+                                "guess": "Jeremy Allen White",
+                                "context": "The Bear",
+                                "categoryName": "Outstanding Lead Actor in a Comedy Series",
+                                "pointsReceived": 1,
+                                "winner": []
+                            }
+                        },
                         "grammys": {
                             "userTotalPointsForGame": 4,
                             "RecordoftheYear": {
@@ -2290,7 +2374,7 @@
                                 "winner": []
                             }
                         },
-                        "userTotalPointsForGroup": 8
+                        "userTotalPointsForGroup": 14
                     }
                 }
             ]

@@ -1,6 +1,5 @@
 #awardInfoContainerAIPage {
-    /*height: 100%;*/
-    min-width: 375px;
+    min-width: 390px;
     background-color: var(--color-background);
     box-sizing: border-box;
     height: 220vh;
@@ -9,20 +8,6 @@
 #awardNameAndDate>* {
     margin: 0;
 }
-
-
-/*#navBarAIPage {
-    background-color: #343434;
-    display: flex;
-}
-
-#navBarAIPage > div {
-    border: 5px solid white;
-    flex-grow: 1;
-    box-sizing: border-box;
-    height: 69px;
-
-}*/
 
 #awardImageContainerAIPage {
     height: 100vh;
@@ -67,11 +52,11 @@
 
 
 .categoryAIPage {
-    border-left: 3px solid var(--color-grey-3);
+    border-left: 3px solid rgba(222, 141, 67, 0.3);
     margin-top: 20px;
     padding-left: 20px;
     margin-left: 20px;
-    height: 88.6px;
+    min-height: 88.6px;
     cursor: pointer;
 
     display: flex;
@@ -126,7 +111,7 @@
 }
 
 .bettingChoiceContainer {
-    border-left: 3px solid white;
+    border-left: 3px solid var(--color-grey-3);
     margin-top: 20px;
     padding-left: 20px;
     margin-left: 20px;
@@ -141,7 +126,11 @@
 #bettingPageContainer>h1 {
     color: white;
     font-size: 22px;
-
+    height: 28px;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 100px;
+    /*margin-top: 131px?*/
 }
 
 .bettingChoiceContainer>* {
@@ -149,39 +138,66 @@
 }
 
 #continueButtonBettingPage {
-    color: white;
-    height: 63px;
-    margin: 20px;
+    height: 55px;
+    width: 167px;
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
     background-color: #343434;
     align-self: center;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#bettingsContainerBettingPage {
+    margin-bottom: 40px;
 }
 
 #changeCategoryContainerBettingPage {
     display: flex;
     flex-direction: row;
-    margin-bottom: 15vh;
+    margin-bottom: 20vh;
+    gap: 16px;
+    justify-content: center;
+}
+
+#changeCategoryContainerBettingPage > * {
+    padding: 0 30px;
+    font-weight: 600;
 }
 
 #previousCategoryBettingPage {
-    color: white;
-    height: 63px;
-    margin: 20px;
+    height: 55px;
+    width: 167px;
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
-    background-color: #343434;
     align-self: center;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+div#cancelButton {
+    background-color: #2E2E2EA8;
+    width: 95px;
+    height: 45px;
+    margin-top: 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #9E9E9E;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /*First award page checkmark CSS below*/
@@ -192,7 +208,7 @@
     width: 22.5px;
     height: 22.5px;
     top: 0px;
-    right: 120px;
+    right: 44%;
     position: absolute;
 }
 
@@ -212,4 +228,394 @@
 
 .awards-page {
     margin-bottom: 10vh;
+}
+
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+    #awardInfoContainerAIPage {
+        margin-left: 9.71%;
+        height: 100vh;
+        margin-bottom: 12vh;
+    }
+
+    #awardNameAndDate {
+        margin-left: 5.04%;
+        border: 0;
+        padding-left: 0;
+    }
+
+    #awardCategoriesContainer {
+        display: grid;
+        grid-template-rows: repeat(5, 7.3%);
+        grid-auto-columns: 46%;
+        grid-auto-flow: column;
+        /*grid-template-columns: 27.64% 27.64% 27.64%;*/
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 5.04%;
+        /*margin-right: 13.40%;*/
+    }
+
+    #awardInfoContainerAIPage>h2 {
+        margin-left: 5.04%;
+        margin-top: 6.95%;
+    }
+
+    #awardCategoriesContainer > div.categoryAIPage {
+        margin-top: 22px;
+        /*margin-left: 1.84%;*/
+        padding-left: 20px;
+        margin: 0;
+
+    }
+
+    #startBettingAwardBettingPage {
+        width: 25.18%;
+        position: absolute;
+        right: 34px;
+        height: 50px;
+        margin-top: 9.80%;
+        margin-bottom: 7.45%;
+        /*height: 6%;*/
+    }
+
+    #awardImageContainerAIPage {
+        height: 30vh;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+
+    #awardNameAndDate {
+        margin-left: 3.18%;
+        border: 0;
+        padding-left: 0;
+        margin-bottom: 12.90%;
+        position: absolute;
+        top: 18.59%;
+    }
+
+    /*Betting page CSS below*/
+    div#bettingPageContainer {
+        margin-left: 9.71%;
+        height: 100vh;
+    }
+
+    div#bettingPageContainer {
+        margin-top: 18.59%;
+    }
+
+    #bettingsContainerBettingPage {
+        display: grid;
+        grid-template-rows: repeat(5, 7.3%);
+        grid-auto-columns: 46%;
+        grid-auto-flow: column;
+        /*grid-template-columns: 27.64% 27.64% 27.64%;*/
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 5.04%;
+        /*margin-right: 13.40%;*/
+    }
+
+    #continueButtonBettingPage {
+        width: 25.18%;
+        
+        height: 50px;
+        margin-top: 9.80%;
+        margin-bottom: 7.45%;
+    }
+
+    #previousCategoryBettingPage {
+        width: 25.18%;
+       
+        margin-top: 9.80%;
+        margin-bottom: 7.45%;
+        height: 50px;
+    }
+
+    #changeCategoryContainerBettingPage {
+        margin-bottom: 7vh;
+        padding: 0 34px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bettingChoiceContainer {
+        margin-left: 0;
+    }
+
+    div#cancelButton {
+        min-height: 45px;
+        position: relative;
+        bottom: 10.9vh;
+        left: 70vw;
+    }
+
+    #bettingPageContainer > h1 {
+        margin-bottom: 12.90%;
+        margin-top: 15.80%;
+    }
+
+    /*First award page CSS below*/
+    .awards-page {
+        margin-left: 9.71%;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.awards-page > h2 {
+        margin-left: 10%;
+        align-self: flex-start;
+    }
+
+    .awards-container {
+        width: 80.34%;
+        padding-top: 3.7vh;
+    }
+
+    .checkmark {
+        position: relative;
+        top: 20%;
+        left: 5%;
+    }
+
+    .award-item {
+        height: 22.61%;
+    }
+    
+}
+
+@media only screen and (min-width: 600px) and (orientation: landscape) {
+    #awardInfoContainerAIPage {
+        margin-left: 7%;
+        height: 137vh;
+    }
+
+    #awardImageContainerAIPage {
+        height: 35vh;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+
+    #awardCategoriesContainer {
+        width: 86.60%;
+        display: grid;
+        grid-auto-rows: 120px;
+        grid-template-columns: 34% 34% 34%;
+        /*grid-template-columns: 27.64% 27.64% 27.64%;*/
+        gap: 1.84%;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 3.18%;
+        margin-right: 13.40%;
+    }
+
+    #awardNameAndDate {
+        margin-left: 3.18%;
+        border: 0;
+        padding-left: 0;
+        margin-bottom: 12vh;
+    }
+
+    #awardInfoContainerAIPage>h2 {
+        margin-left: 3.18%;
+        
+    }
+
+    #awardCategoriesContainer > div.categoryAIPage {
+        margin-top: 22px;
+        /*margin-left: 1.84%;*/
+        padding-left: 20px;
+        margin: 0;
+
+    }
+
+    #startBettingAwardBettingPage {
+        width: 20.44%;
+        position: absolute;
+        right: 34px;
+        height: 50px;
+        /*height: 6%;*/
+    }
+
+    /*Betting page CSS below*/
+
+    #bettingPageContainer {
+        margin-left: 7%;
+        position: relative;
+    }
+
+    #bettingsContainerBettingPage {
+        width: 86.60%;
+        display: grid;
+        grid-auto-rows: 120px;
+        grid-template-columns: 35% 35% 35%;
+        /*grid-template-columns: 27.64% 27.64% 27.64%;*/
+        gap: 1.84%;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 3.18%;
+    }
+
+    div#cancelButton {
+        margin-left: 3.18%;
+        font-size: 14px;
+    }
+
+    #bettingPageContainer > h1 {
+        margin-left: 3.18%;
+        font-size: 32px;
+        height: 40px;
+    }
+
+    .bettingChoiceContainer {
+        margin-left: 0;
+    }
+
+    #previousCategoryBettingPage {
+        position: absolute;
+        left: 3.18%;
+        font-size: 14px;
+    }
+
+    #continueButtonBettingPage {
+        position: absolute;
+        right: 3.18%;
+        font-size: 14px;
+    }
+
+    #changeCategoryContainerBettingPage {
+        margin-top: 11%;
+    }
+
+    .nomineeAlternativeBettingPage {
+        font-size: 16px;
+        line-height: 20.16px;
+        height: 23.63px;
+    }
+
+    .bettingChoiceContainer > div:last-child {
+        font-size: 14px;
+        line-height: 17.64px;
+        height: 18px;
+    }
+
+    /*First award page CSS below*/
+    div.awards-page {
+        margin-left: 9.71%;
+        margin-bottom: 0;
+        
+    }
+
+    div.awards-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button.award-item {
+        height: 23.98vh;
+        padding: 2%;
+
+    }
+
+    img.checkmark {
+        position: relative;
+        top: 10%;
+        left: 7%;
+        height: 15px;
+        width: 15px;
+    }
+
+    div.awards-page > h2 {
+        margin-top: 17%;
+        align-self: flex-start;
+        margin-bottom: 9%;
+    }
+
+    button.award-item > h2 {
+        font-size: 130%;
+    }
+
+    .award-item > p {
+        position: relative;
+        font-size: 90%;
+    }
+}
+
+@media only screen and (min-width: 800px) and (orientation: landscape) {
+    button.award-item {
+        height: 23.98vh;
+        padding: 20px;
+
+    }
+
+    button.award-item > h2 {
+        font-size: 24px;
+    }
+
+    .award-item > p {
+        position: relative;
+        font-size: 16px;
+    }
+
+    img.checkmark {
+        position: relative;
+        top: 10%;
+        left: 7%;
+        height: 22.5px;
+        width: 22.5px;
+    }
+
+}
+
+@media only screen and (max-height: 1000px) and (min-width: 600px) and (orientation: portrait) {
+    #awardInfoContainerAIPage {
+        margin-left: 9.71%;
+        height: 112vh;
+    }
+
+    div#cancelButton {
+        min-height: 45px;
+        position: relative;
+        bottom: 17vh;
+        left: 70vw;
+    }
+}
+
+@media only screen and (max-height: 780px) and (min-width: 600px) and (orientation: landscape) {
+
+    #awardImageContainerAIPage {
+        height: 45vh;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+
+    #awardInfoContainerAIPage {
+        margin-left: 7%;
+        height: 145vh;
+    }
+}
+
+@media only screen and (min-height: 751px) and (max-height: 999px) and (min-width: 600px) and (orientation: portrait) {
+    div#cancelButton {
+        min-height: 45px;
+        position: relative;
+        bottom: 14.8vh;
+        left: 70vw;
+    }
+
+    div#bettingPageContainer {
+        margin-top: 12%;
+    }
 }

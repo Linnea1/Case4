@@ -296,9 +296,11 @@ function createArrayWithAllUserData() {
                                     if(isset($array["guess"]) && isset($array["categoryName"]) && isset($array["pointsReceived"]) && isset($array["winner"])) {
                                         $string = $array["guess"];
                                         $stringCategory = $array["categoryName"];
+                                        $keyName = str_replace(" ", "", $stringCategory);
+
 
                                         if($contextKeyExists) {
-                                            $arrayOfAwards[$gameName][] = array(
+                                            $arrayOfAwards[$gameName][$keyName] = array(
                                                 "categoryName" => $array["categoryName"],
                                                 "guess" => $array["guess"],
                                                 "context" => $array["context"],
@@ -307,7 +309,7 @@ function createArrayWithAllUserData() {
                                             );
 
                                         } else {
-                                            $arrayOfAwards[$gameName][] = array(
+                                            $arrayOfAwards[$gameName][$keyName] = array(
                                                 "categoryName" => $stringCategory,
                                                 "guess" => $string,
                                                 "pointsReceived" => $array["pointsReceived"],
