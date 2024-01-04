@@ -105,6 +105,9 @@
     visibility: hidden;
 }
 
+.timers {
+    margin-bottom: 40px;
+}
 /* tablet portrait */
 @media only screen and (min-width: 600px) {
     .home-content {
