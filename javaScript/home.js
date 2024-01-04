@@ -12,7 +12,7 @@ async function renderHomePage() {
     <div class="home-container">
       <div class="bg-home">
         <div class="home-content">
-          <button class="logoutButton">Logout</button>
+          <button class="logoutButton home-logout-button">Logout</button>
           <div class="home-welcome">
             <h1>Hi
               <span>${userData.username}</span>
@@ -44,7 +44,7 @@ async function renderHomePage() {
     .addEventListener("click", () => renderAwardsPage(awards));
   document.querySelector(".nav-profile").addEventListener("click", renderProfilePage);
 
-  // document.querySelector(".logoutButton").addEventListener("click", logoutFromAccount);
+  document.querySelector(".logoutButton").addEventListener("click", logoutFromAccount);
 }
 
 function renderCountDown() {
