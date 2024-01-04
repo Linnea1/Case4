@@ -44,7 +44,7 @@ async function renderHomePage() {
     .addEventListener("click", () => renderAwardsPage(awards));
   document.querySelector(".nav-profile").addEventListener("click", renderProfilePage);
 
-  document.querySelector(".logoutButton").addEventListener("click", logoutFromAccount);
+  // document.querySelector(".logoutButton").addEventListener("click", logoutFromAccount);
 }
 
 function renderCountDown() {
